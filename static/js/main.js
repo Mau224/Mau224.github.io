@@ -20,6 +20,29 @@ $(function () {
 });
 "use strict";
 
+function initMap() {
+  var mapProp = {
+    center: new google.maps.LatLng(59.938624, 30.323085),
+    zoom: 16,
+    disableDefaultUI: true
+  };
+  var map = new google.maps.Map(document.getElementById("map"), mapProp);
+  var coordinates = {
+    lat: 59.938624,
+    lng: 30.323085
+  };
+  var noPoi = [{
+    featureType: "poi",
+    stylers: [{
+      visibility: "off"
+    }]
+  }];
+  map.setOptions({
+    styles: noPoi
+  });
+}
+"use strict";
+
 if (window.localStorage) {
   var elements = document.querySelectorAll('[name]');
 
