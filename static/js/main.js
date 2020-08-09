@@ -18,23 +18,25 @@ $('.header-content__input--name').on('input', function () {
 $(function () {
   $('#tel').mask('+7 (999)–999–99-99');
 });
+// ymaps.ready(function () {
+// 	var myMap = new ymaps.Map("map", {
+// 		center: [59.938635, 30.323118],
+// 		zoom: 16,
+// 		controls: []
+// 	});
+//
+// 	myMap.panes.get('ground').getElement().style.filter = 'grayscale(50%)';
+//
+// 	var placemark3 = new ymaps.Placemark([59.938635, 30.323118], {
+// 		hintContent: 'Вам сюда',
+// 		iconContent: 'Вам сюда'
+// 	}, {
+// 		'preset': 'islands#greenStretchyIcon'
+// 	});
+//
+// 	myMap.geoObjects.add(placemark3);
+// });
 "use strict";
-
-ymaps.ready(function () {
-  var myMap = new ymaps.Map("map", {
-    center: [59.938635, 30.323118],
-    zoom: 16,
-    controls: []
-  });
-  myMap.panes.get('ground').getElement().style.filter = 'grayscale(50%)';
-  var placemark3 = new ymaps.Placemark([59.938635, 30.323118], {
-    hintContent: 'Вам сюда',
-    iconContent: 'Вам сюда'
-  }, {
-    'preset': 'islands#greenStretchyIcon'
-  });
-  myMap.geoObjects.add(placemark3);
-});
 "use strict";
 
 if (window.localStorage) {
