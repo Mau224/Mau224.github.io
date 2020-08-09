@@ -7,21 +7,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="static/css/styles.min.css">
+    <link rel="preload" href="/static/fonts/opensans/opensans/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/static/fonts/opensans/opensansbold/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/static/images/common/favicon-32x32.png" type="image/png">
   </head>
   <body>
     <div class="wrapper">
       <header>
         <div class="header">
           <div class="header__container">
-            <div class="header__body">
-              <div class="header__logo-block">
+            <div class="header__body"><a class="header__logo-block">
                 <svg class="svg-sprite-icon icon-logo">
                   <use xlink:href="static/images/sprite/symbol/sprite.svg#logo"></use>
-                </svg>
-              </div>
+                </svg></a>
               <div class="header__burger"><span></span></div>
               <nav class="header__menu">
-                <div class="header__list"><a href="#">О нас</a><a href="#">Виды велосипедов</a><a href="#">Видео про велосипеды</a><a href="#">Контакты</a></div>
+                <div class="header__list"><a class="header__link" href="#adva">О нас</a><a class="header__link" href="#type">Виды велосипедов</a><a class="header__link" href="#video">Видео про велосипеды</a><a class="header__link" href="#map">Контакты</a></div>
               </nav>
             </div>
           </div>
@@ -42,16 +43,18 @@
             <div class="header-content__form-block">
               <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
               <form class="header-content__form" method="post" id="commentform">
-                <input class="header-content__input header-content__input--name" type="text" name="name" id="name" placeholder="Введите Ваше Имя" title="Введите Имя" minlength="1" maxlength="30" pattern="[А-Яа-яЁё]" required>
+                <label for="name" aria-label="name-user"></label>
+                <input class="header-content__input header-content__input--name" type="text" name="name" id="name" placeholder="Введите Ваше Имя" title="Введите Имя" minlength="2" maxlength="30" required>
+                <label for="tel" aria-label="phone-number"></label>
                 <input class="header-content__input" type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона" title="Введите телефон" minlength="1" maxlength="12" required>
-                <button class="header__btn-sub header-btn" type="submit">Подобрать велосипед мечты</button>
+                <button class="header-content__btn-sub header-btn" type="submit">Подобрать велосипед мечты</button>
               </form>
             </div>
           </div>
         </div>
       </header>
       <section>
-        <div class="advantages">
+        <div class="advantages"><a name="adva"></a>
           <h1>Несколько фактов о нас</h1>
           <div class="advantages__list">
             <div class="advantages__item">
@@ -74,30 +77,30 @@
         </div>
       </section>
       <section>
-        <div class="types">
+        <div class="types"><a name="type"></a>
           <h1>Виды велосипедов</h1>
           <div class="types__block">
             <div class="types__block-item types__block-item--first">
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="static/images/content/bike-1.webp 1x, static/images/content/bike-1@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1023px)" srcset="static/images/content/bike-1-tab.webp 1x, static/images/content/bike-1-tab@2x.webp 2x">
-                <source media="(min-width: 1023px)" srcset="static/images/content/bike-1-tab.jpg 1x, static/images/content/bike-1-tab@2x.jpg 2x"><img src="static/images/content/bike-1.jpg" srcset="static/images/content/bike-1@2x.jpg" width="342" height="503" alt="картинка велосипеда">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="static/images/content/bike-1-tab.webp 1x, static/images/content/bike-1-tab@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="static/images/content/bike-1-tab.jpg 1x, static/images/content/bike-1-tab@2x.jpg 2x"><img src="static/images/content/bike-1.jpg" srcset="static/images/content/bike-1@2x.jpg" width="342" height="503" alt="картинка велосипеда">
               </picture>
               <p>Дорожный велосипед</p>
             </div>
             <div class="types__block-item types__block-item--center">
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="static/images/content/bike-2.webp 1x, static/images/content/bike-2@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1023px)" srcset="static/images/content/bike-2-tab.webp 1x, static/images/content/bike-2-tab@2x.webp 2x">
-                <source media="(min-width: 1023px)" srcset="static/images/content/bike-2-tab.jpg 1x, static/images/content/bike-2-tab@2x.jpg 2x"><img src="static/images/content/bike-2.jpg" srcset="static/images/content/bike-2@2x.jpg" width="342" height="566" alt="картинка велосипеда">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="static/images/content/bike-2-tab.webp 1x, static/images/content/bike-2-tab@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="static/images/content/bike-2-tab.jpg 1x, static/images/content/bike-2-tab@2x.jpg 2x"><img src="static/images/content/bike-2.jpg" srcset="static/images/content/bike-2@2x.jpg" width="342" height="566" alt="картинка велосипеда">
               </picture>
               <p>Горный велосипед</p>
             </div>
             <div class="types__block-item types__block-item--last">
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="static/images/content/bike-3.webp 1x, static/images/content/bike-3@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1023px)" srcset="static/images/content/bike-3-tab.webp 1x, static/images/content/bike-3-tab@2x.webp 2x">
-                <source media="(min-width: 1023px)" srcset="static/images/content/bike-3-tab.jpg 1x, static/images/content/bike-3-tab@2x.jpg 2x"><img src="static/images/content/bike-3.jpg" srcset="static/images/content/bike-3@2x.jpg" width="342" height="503" alt="картинка велосипеда">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="static/images/content/bike-3-tab.webp 1x, static/images/content/bike-3-tab@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="static/images/content/bike-3-tab.jpg 1x, static/images/content/bike-3-tab@2x.jpg 2x"><img src="static/images/content/bike-3.jpg" srcset="static/images/content/bike-3@2x.jpg" width="342" height="512" alt="картинка велосипеда">
               </picture>
               <p>Детский велосипед</p>
             </div>
@@ -105,7 +108,7 @@
         </div>
       </section>
       <section>
-        <div class="video">
+        <div class="video"><a name="video"></a>
           <div class="video__wrapper">
             <div class="video__block">
               <h1>Видео про велосипеды</h1>
@@ -113,10 +116,10 @@
               <div class="video__content-block">
                 <picture>
                   <source type="image/webp" media="(min-width: 1024px)" srcset="static/images/content/bike-video@2x.webp 1x, static/images/content/bike-video@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 1023px)" srcset="static/images/content/bike-video-tab.webp 1x, static/images/content/bike-video-tab@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="static/images/content/bike-video-mob.webp 1x, static/images/content/bike-video-mob@2x.webp 2x">
-                  <source media="(min-width: 1023px)" srcset="static/images/content/bike-video-tab.jpg 1x, static/images/content/bike-video-tab@2x.jpg 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="static/images/content/bike-video-mob.jpg 1x, static/images/content/bike-video-mob@2x.jpg 2x"><img src="static/images/content/bike-video.jpg" srcset="static/images/content/bike-video@2x.jpg" width="929px" height="522px" alt="видео про велосипед">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="static/images/content/bike-video-mob.webp 1x, static/images/content/bike-video-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="static/images/content/bike-video-tab.webp 1x, static/images/content/bike-video-tab@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="static/images/content/bike-video-mob.jpg 1x, static/images/content/bike-video-mob@2x.jpg 2x">
+                  <source media="(max-width: 1023px)" srcset="static/images/content/bike-video-tab.jpg 1x, static/images/content/bike-video-tab@2x.jpg 2x"><img src="static/images/content/bike-video.jpg" srcset="static/images/content/bike-video@2x.jpg" width="929" height="522" alt="видео про велосипед">
                 </picture>
               </div>
             </div>
@@ -124,19 +127,19 @@
         </div>
       </section>
       <section>
-        <div class="map">
+        <div class="map"><a name="map"></a>
           <div class="map__wrapper">
             <h1>Как нас найти?</h1>
             <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
             <div class="map__block">
-              <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.32089461617356!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1596887289126!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <iframe class="map__main" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.32089461617356!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1596887289126!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
             <div class="map__footer"><a class="map__link map__link--mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a><a class="map__link map__link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a></div>
           </div>
         </div>
       </section>
     </div>
-    <script src="static/js/libs.js"></script>
+    <script src="static/js/vendors.js"></script>
     <script src="static/js/main.js"></script>
   </body>
 </html>
