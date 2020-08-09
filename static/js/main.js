@@ -1,23 +1,27 @@
-"use strict";
+'use strict';
 
-$(document).ready(function () {
-  $('.header__burger').click(function (event) {
-    $('.header__burger,.header__menu,.header__body').toggleClass('active');
-    $('body').toggleClass('lock');
-  });
+$(document).ready(function() {
+    $('.header__burger').click(function(event) {
+        $('.header__burger,.header__menu,.header__body').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
 });
-$(document).ready(function () {
-  $('.header__link').click(function () {
-    $('.header__burger,.header__menu,.header__body').removeClass('active');
-    $('body').removeClass('lock');
-  });
+
+$(document).ready(function(){
+    $('.header__link').click(function () {
+        $('.header__burger,.header__menu,.header__body').removeClass('active');
+        $('body').removeClass('lock');
+    });
 });
-$('.header-content__input--name').on('input', function () {
-  $(this).val($(this).val().replace(/^[ 0-9]+$/, ''));
+
+$('.header-content__input--name').on('input', function() {
+    $(this).val($(this).val().replace(/^[ 0-9]+$/, ''))
 });
+
 $(function () {
-  $('#tel').mask('+7 (999)–999–99-99');
+    $('#tel').mask('+7 (999)–999–99-99');
 });
+
 // ymaps.ready(function () {
 // 	var myMap = new ymaps.Map("map", {
 // 		center: [59.938635, 30.323118],
@@ -36,18 +40,20 @@ $(function () {
 //
 // 	myMap.geoObjects.add(placemark3);
 // });
-"use strict";
-"use strict";
+
+
+
 
 if (window.localStorage) {
   var elements = document.querySelectorAll('[name]');
 
   for (var i = 0, length = elements.length; i < length; i++) {
-    (function (element) {
+    (function(element) {
       var name = element.getAttribute('name');
+
       element.value = localStorage.getItem(name) || '';
 
-      element.onkeyup = function () {
+      element.onkeyup = function() {
         localStorage.setItem(name, element.value);
       };
     })(elements[i]);
