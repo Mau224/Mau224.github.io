@@ -115,7 +115,7 @@
               <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
               <div class="video__content-block">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1024px)" srcset="static/images/content/bike-video@2x.webp 1x, static/images/content/bike-video@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="static/images/content/bike-video.webp 1x, static/images/content/bike-video@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 767px)" srcset="static/images/content/bike-video-mob.webp 1x, static/images/content/bike-video-mob@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="static/images/content/bike-video-tab.webp 1x, static/images/content/bike-video-tab@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 767px)" srcset="static/images/content/bike-video-mob.jpg 1x, static/images/content/bike-video-mob@2x.jpg 2x">
@@ -132,14 +132,19 @@
             <h1>Как нас найти?</h1>
             <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
             <div class="map__block">
-              <div class="map__main" id="map"></div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="static/images/content/map.webp 1x, static/images/content/map@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)" srcset="static/images/content/map-mob.webp 1x, static/images/content/map-mob@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="static/images/content/map-tab.webp 1x, static/images/content/map-tab@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)" srcset="static/images/content/map-mob.jpg 1x, static/images/content/map-mob@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="static/images/content/map-tab.jpg 1x, static/images/content/map-tab@2x.jpg 2x"><img class="map__main" src="static/images/content/map.jpg" srcset="static/images/content/map@2x.jpg" width="957" height="530" alt="карта">
+              </picture>
             </div>
             <div class="map__footer"><a class="map__link map__link--mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a><a class="map__link map__link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a></div>
           </div>
         </div>
       </section>
     </div>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=88450800-c3cf-4124-9321-04e971d0c3d8&amp;lang=ru_RU"></script>
     <script src="static/js/vendors.js"></script>
     <script src="static/js/main.js"></script>
   </body>
