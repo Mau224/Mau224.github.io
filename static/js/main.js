@@ -20,27 +20,21 @@ $(function () {
 });
 "use strict";
 
-function initMap() {
-  var mapProp = {
-    center: new google.maps.LatLng(59.938624, 30.323085),
+ymaps.ready(function () {
+  var myMap = new ymaps.Map("map", {
+    center: [59.938635, 30.323118],
     zoom: 16,
-    disableDefaultUI: true
-  };
-  var map = new google.maps.Map(document.getElementById("map"), mapProp);
-  var coordinates = {
-    lat: 59.938624,
-    lng: 30.323085
-  };
-  var noPoi = [{
-    featureType: "poi",
-    stylers: [{
-      visibility: "off"
-    }]
-  }];
-  map.setOptions({
-    styles: noPoi
+    controls: []
   });
-}
+  myMap.panes.get('ground').getElement().style.filter = 'grayscale(50%)';
+  var placemark3 = new ymaps.Placemark([59.938635, 30.323118], {
+    hintContent: 'Вам сюда',
+    iconContent: 'Вам сюда'
+  }, {
+    'preset': 'islands#greenStretchyIcon'
+  });
+  myMap.geoObjects.add(placemark3);
+});
 "use strict";
 
 if (window.localStorage) {
