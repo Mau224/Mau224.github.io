@@ -89,7 +89,47 @@ $(document).ready(function(){
         infinite: false,
         slidesToShow: 2,
         slidesToScroll: 2,
-        dots: true
+        dots: true,
+        arrow: false,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    autoplay: false,
+                    speed: 1000,
+                    autoplaySpeed: 800,
+                    slidesToShow: 1
+                }
+            },
+        ]
+    });
+});
+
+
+$(document).ready(function(){
+    $('.service__container').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrow: false,
+        rows: 3
+    });
+    $(window).on('load resize', function() {
+        if ($(window).width() < 767) {
+            $('.service__container:not(.slick-initialized)').slick({
+                dots: true,
+                infinite: true,
+                arrow: false,
+                speed: 100,
+                slidesToShow: 1,
+                rows: 3
+            });
+        } else {
+            $(".service__container.slick-initialized").slick("unslick");
+        }
     });
 });
 
