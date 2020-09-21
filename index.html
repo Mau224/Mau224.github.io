@@ -109,7 +109,7 @@
       <section>
         <div class="servtype">
           <h2>Какие виды машин мы предлагаем</h2>
-          <div class="servtype__container">
+          <div class="servtype__container slider-mob">
             <div class="servtype__item"><img src="images/content/serv-img1.png" width="374" height="210" alt="картинка минвэна">
               <h3>Бизнес - класс Mercedes V-class</h3>
               <button class="servtype__sub-btn servtype__btn" type="submit">Заказать минивэн</button><a class="servtype__link" href="#">Подробнее</a>
@@ -128,7 +128,7 @@
       <section>
         <div class="advantages">
           <h2>Чем мы отличаемся?</h2>
-          <div class="advantages__container">
+          <div class="advantages__container slider-mob slider-mob-dark">
             <div class="advantages__item" id="1">
               <div class="advantages__item-block">
                 <svg class="svg-sprite-icon icon-tick">
@@ -222,13 +222,13 @@
             <input type="text" name="name" id="name" placeholder="Введите имя" title="Введите имя" minlength="2" maxlength="30" required>
             <label for="phone" aria-label="name-where"></label>
             <input type="tel" name="phone" id="phone" placeholder="Введите телефон" title="Введите телефон" minlength="3" maxlength="30" required>
-            <button class="form__btn form__btn-sub" type="submit">Заказать звонок</button>
+            <button class="form__btn adaptive-btn form__btn-sub" type="submit">Заказать звонок</button>
           </form>
         </div>
       </section>
       <section class="quality">
         <h2>Почему стоит выбрать минивэн для вашей поездки?</h2>
-        <div class="quality__container">
+        <div class="quality__container slider-mob slider-mob-dark slider-mob-dark-dt">
           <div class="quality__item" id="1">
             <div class="quality__item-block">
               <h4>1</h4>
@@ -287,235 +287,9 @@
           </div>
         </div>
       </section>
-      <section class="service">
-        <h2>Какие транспортные услуги вы можете получить в такси Starex</h2>
-        <div class="service__container">
-          <div class="service__item" id="1">
-            <div class="service__item-block">
-              <h3>Встреча в аэропорту</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="2">
-            <div class="service__item-block">
-              <h3>Встреча из дома</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="3">
-            <div class="service__item-block">
-              <h3>Встреча на вокзале</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="4">
-            <div class="service__item-block">
-              <h3>Встреча из роддома</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="5">
-            <div class="service__item-block">
-              <h3>Поездка с детьми и членами семьи</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="6">
-            <div class="service__item-block">
-              <h3>Минивэн на дни рождения и свадьбу</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="7">
-            <div class="service__item-block">
-              <h3>Междугородние поездки</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="8">
-            <div class="service__item-block">
-              <h3>Аренда минивэна по городу</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="9">
-            <div class="service__item-block">
-              <h3>Детское такси</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="10">
-            <div class="service__item-block">
-              <h3>Аренда минивэна с водителем в Москве</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="11">
-            <div class="service__item-block">
-              <h3>Минивэн на дачу и с дачи</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="12">
-            <div class="service__item-block">
-              <h3>Минивэн в дома отдыха</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-        </div>
-        <button class="service__button" type="button">Развернуть</button>
-      </section>
-      <section class="map">
-        <h2>Закажите машину заранее и получите ее с гарантией 100%</h2>
-        <p>Оставьте заявку, и наш оператор перезвонит вам через 5 минут для уточнения деталей и подтверждения заказа</p>
-        <div class="map__container">
-          <div class="map__select-block">
-            <label for="from" aria-label="name-from"></label>
-            <input type="text" name="from" id="from" placeholder="Откуда вы едите?" title="ВВедите откуда вы едите" minlength="2" maxlength="30" required>
-            <label for="where" aria-label="name-where"></label>
-            <input type="text" name="where" id="where" placeholder="Куда вы едите?" title="Введите куда вы едите" minlength="3" maxlength="30" required>
-            <div class="map__select select">
-              <div class="map__select-header select__header"><span class="map__select-current select__current">Количество человек</span></div>
-              <div class="map__select-body">
-                <div class="map__select-item select__item">1</div>
-                <div class="map__select-item select__item">2</div>
-                <div class="map__select-item select__item">3</div>
-                <div class="map__select-item select__item">4</div>
-                <div class="map__select-item select__item">5</div>
-                <div class="map__select-item select__item">6</div>
-                <div class="map__select-item select__item">7</div>
-                <div class="map__select-item select__item">8</div>
-                <div class="map__select-item select__item">9</div>
-                <div class="map__select-item select__item">10</div>
-              </div>
-            </div>
-            <div class="map__select select">
-              <div class="map__select-header select__header"><span class="map__select-current select__current">Количество детей до 7 лет</span></div>
-              <div class="map__select-body">
-                <div class="map__select-item select__item">1</div>
-                <div class="map__select-item select__item">2</div>
-                <div class="map__select-item select__item">3</div>
-                <div class="map__select-item select__item">4</div>
-                <div class="map__select-item select__item">5</div>
-                <div class="map__select-item select__item">6</div>
-                <div class="map__select-item select__item">7</div>
-                <div class="map__select-item select__item">8</div>
-                <div class="map__select-item select__item">9</div>
-                <div class="map__select-item select__item">10</div>
-              </div>
-            </div>
-            <div class="map__select select">
-              <div class="map__select-header select__header"><span class="map__select-current select__current">Наличие багажа</span></div>
-              <div class="map__select-body">
-                <div class="map__select-item map__select-item--bag select__item">да</div>
-                <div class="map__select-item map__select-item--bag select__item">нет</div>
-              </div>
-            </div>
-            <div class="map__select select">
-              <div class="map__select-header select__header"><span class="map__select-current select__current">Класс машины</span></div>
-              <div class="map__select-body">
-                <div class="map__select-item map__select-item--class select__item">Бизнес - класс Mercedes V-class</div>
-                <div class="map__select-item map__select-item--class select__item">Бизнес - класс Mercedes V-class</div>
-              </div>
-            </div>
-            <input type="tel" name="phone" id="phone" placeholder="Введите телефон" title="Введите телефон" minlength="3" maxlength="30" required>
-            <div class="map__select select">
-              <div class="map__select-header select__header"><span class="map__select-current select__current">Время и дата заказа такси</span></div>
-              <div class="map__select-body">
-                <div id="datepicker"></div>
-                <input class="select__item" type="hidden" id="datepicker_value" value="01.01.2020">
-              </div>
-            </div>
-            <input class="map__sub-btn" type="submit">
-          </div>
-          <div class="map__imd-block"></div>
-        </div>
-      </section>
-      <section class="slider">
-        <h2>Что говорят о нас наши клиенты?</h2>
-        <div class="slider__container">
-          <div class="slider__item" id="1"><img src="/images/content/avatar.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года</h3>
-            <h4>На уровне</h4>
-            <p>«Вовремя забрали из аэропорта и с кофмортом довезли до пункта назначения. За такой сервис и денег не жалко! Буду советовать всем своим друзьям и знакомым!</p>
-          </div>
-          <div class="slider__item" id="2"><img src="/images/content/avatar2.jpg" width="80px" heidht="80px">
-            <h3>Алена, 28 лет</h3>
-            <h4>Прекрасный сервис</h4>
-            <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
-          </div>
-          <div class="slider__item" id="3"><img src="/images/content/avatar.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 1</h3>
-            <h4>На уровне</h4>
-            <p>«Вовремя забрали из аэропорта и с кофмортом довезли до пункта назначения. За такой сервис и денег не жалко! Буду советовать всем своим друзьям и знакомым!</p>
-          </div>
-          <div class="slider__item" id="2"><img src="/images/content/avatar2.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 2</h3>
-            <h4>Прекрасный сервис</h4>
-            <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
-          </div>
-          <div class="slider__item" id="1"><img src="/images/content/avatar.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 1</h3>
-            <h4>На уровне</h4>
-            <p>«Вовремя забрали из аэропорта и с кофмортом довезли до пункта назначения. За такой сервис и денег не жалко! Буду советовать всем своим друзьям и знакомым!</p>
-          </div>
-          <div class="slider__item" id="2"><img src="/images/content/avatar2.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 2</h3>
-            <h4>Прекрасный сервис</h4>
-            <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
-          </div>
-          <div class="slider__item" id="1"><img src="/images/content/avatar.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 1</h3>
-            <h4>На уровне</h4>
-            <p>«Вовремя забрали из аэропорта и с кофмортом довезли до пункта назначения. За такой сервис и денег не жалко! Буду советовать всем своим друзьям и знакомым!</p>
-          </div>
-          <div class="slider__item" id="2"><img src="/images/content/avatar2.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 2</h3>
-            <h4>Прекрасный сервис</h4>
-            <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
-          </div>
-          <div class="slider__item" id="1"><img src="/images/content/avatar.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 1</h3>
-            <h4>На уровне</h4>
-            <p>«Вовремя забрали из аэропорта и с кофмортом довезли до пункта назначения. За такой сервис и денег не жалко! Буду советовать всем своим друзьям и знакомым!</p>
-          </div>
-          <div class="slider__item" id="2"><img src="/images/content/avatar2.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 2</h3>
-            <h4>Прекрасный сервис</h4>
-            <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
-          </div>
-          <div class="slider__item" id="1"><img src="/images/content/avatar.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 1</h3>
-            <h4>На уровне</h4>
-            <p>«Вовремя забрали из аэропорта и с кофмортом довезли до пункта назначения. За такой сервис и денег не жалко! Буду советовать всем своим друзьям и знакомым!</p>
-          </div>
-          <div class="slider__item" id="2"><img src="/images/content/avatar2.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 2</h3>
-            <h4>Прекрасный сервис</h4>
-            <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
-          </div>
-          <div class="slider__item" id="1"><img src="/images/content/avatar.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 1</h3>
-            <h4>На уровне</h4>
-            <p>«Вовремя забрали из аэропорта и с кофмортом довезли до пункта назначения. За такой сервис и денег не жалко! Буду советовать всем своим друзьям и знакомым!</p>
-          </div>
-          <div class="slider__item" id="2"><img src="/images/content/avatar2.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 2</h3>
-            <h4>Прекрасный сервис</h4>
-            <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
-          </div>
-          <div class="slider__item" id="1"><img src="/images/content/avatar.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 1</h3>
-            <h4>На уровне</h4>
-            <p>«Вовремя забрали из аэропорта и с кофмортом довезли до пункта назначения. За такой сервис и денег не жалко! Буду советовать всем своим друзьям и знакомым!</p>
-          </div>
-          <div class="slider__item" id="2"><img src="/images/content/avatar2.jpg" width="80px" heidht="80px">
-            <h3>Максим, 32 года 2</h3>
-            <h4>Прекрасный сервис</h4>
-            <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
-          </div>
-        </div>
-      </section>
+      <!--include ../modules/service-->
+      <!--include ../modules/map-->
+      <!--include ../modules/slider-->
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__main-block footer__col">
@@ -559,14 +333,17 @@
                 </svg></a>
             </div>
             <div class="footer__form-container">
-              <h3>Остались вопросы?</h3>
-              <form class="footer__form" id="footerform" name="footerform" method="post">
-                <label for="name" aria-label="name"></label>
-                <input type="text" name="name" id="name" placeholder="Введите имя" title="Введите имя" minlength="2" maxlength="30" required>
-                <label for="number" aria-label="name-number"></label>
-                <input type="tel" name="phone" id="number" placeholder="Введите телефон" title="Введите телефон" minlength="3" maxlength="30" required>
-                <button class="footer__form-btn footer__form-btn--sub" type="submit">Перезвоните мне</button>
-              </form>
+              <button class="footer__btn" type="submit">Заказать звонок</button>
+              <div class="footer__form-wrapper">
+                <h3>Остались вопросы?</h3>
+                <form class="footer__form" id="footerform" name="footerform" method="post">
+                  <label for="name" aria-label="name"></label>
+                  <input type="text" name="name" id="name" placeholder="Введите имя" title="Введите имя" minlength="2" maxlength="30" required>
+                  <label for="number" aria-label="name-number"></label>
+                  <input type="tel" name="phone" id="number" placeholder="Введите телефон" title="Введите телефон" minlength="3" maxlength="30" required>
+                  <button class="footer__form-btn footer__form-btn--sub" type="submit">Перезвоните мне</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
