@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title><!--[if IE]>
+    <title>Услуги</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -10,7 +10,7 @@
     <link rel="preload" href="fonts/roboto/roboto/roboto.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/roboto/robotobold/robotobold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/roboto/robotolight/robotolight.woff2" as="font" crossorigin="anonymous">
-    <link rel="shortcut icon" href="images/common/favicon-32x32.png" type="image/png"><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/common/favicon-32x32.png" type="image/png">
   </head>
   <body>
     <div class="wrapper">
@@ -75,346 +75,144 @@
           </div>
         </div>
       </header>
-      <div class="header-content">
-        <div class="header-content__block">
-          <p class="header-content__header">МИНИВЭНЫ И МИКРОАВТОБУСЫ СТОЛИЦЫ</p>
-          <h2>ДОВЕЗЕМ ОТ МЕСТА ДО МЕСТА БЕЗОПАСНО И С КОМФОРТОМ</h2>
-          <p class="header-content__footer">Закажите такси-минивэн прямо сейчас и получите <span>скидку 25%</span> на первую поездку</p>
-          <div class="header-content__bg-mob"></div>
-        </div>
-        <div class="header-content__form-block">
-          <form class="header-content__form" id="commentform" name="commentform" method="post">
-            <div class="header-content__form-header">
-              <label for="from" aria-label="name-from"></label>
-              <input type="text" name="from" id="from" placeholder="Откуда вы едите?" title="ВВедите откуда вы едите" minlength="2" maxlength="30" required>
-              <label for="where" aria-label="name-where"></label>
-              <input type="text" name="where" id="where" placeholder="Куда вы едите?" title="Введите куда вы едите" minlength="3" maxlength="30" required>
+      <section class="transfer">
+        <div class="transfer__container">
+          <div class="transfer__info-block">
+            <h2>Трансфер в аэропорт</h2>
+            <div class="transfer__info-item">
+              <svg class="svg-sprite-icon icon-tick">
+                <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
+              </svg>
+              <p>100% подача машины в срок</p>
             </div>
-            <div class="header-content__form-class">
-              <div class="header-content__select select">
-                <div class="header-content__select-header select__header"><span class="header-content__select-current select__current">Класс машины</span></div>
-                <div class="header-content__select-body">
-                  <div class="header-content__select-item">Бизнес - класс Mercedes V-class</div>
-                  <div class="header-content__select-item">Эконом - класс Huyndai Starex</div>
-                  <div class="header-content__select-item">Комфорт - класс Volkswagen Caravella</div>
-                </div>
-              </div>
-              <label for="tel" aria-label="name-where"></label>
-              <input type="tel" name="tel" id="tel" placeholder="Ваш телефон" title="Введите ваш телефон" minlength="3" maxlength="30" required>
-              <button class="modal-open header-content__btn-sub header-btn" type="submit">Заказать минивэн</button>
+            <div class="transfer__info-item">
+              <svg class="svg-sprite-icon icon-tick">
+                <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
+              </svg>
+              <p>Только профессиональные водители</p>
             </div>
-          </form>
-        </div>
-      </div>
-      <section>
-        <div class="servtype">
-          <h2>Какие виды машин мы предлагаем</h2>
-          <div class="servtype__container slider-mob">
-            <div class="servtype__item"><img src="images/content/serv-img1.png" width="374" height="210" alt="картинка минвэна">
-              <h3>Бизнес - класс Mercedes V-class</h3>
-              <div class="servtype__footer">
-                <button class="servtype__sub-btn servtype__btn" type="submit">Заказать минивэн</button><a class="servtype__link" href="#">Подробнее</a>
-              </div>
-            </div>
-            <div class="servtype__item"><img src="images/content/serv-img2.png" width="374" height="210" alt="картинка минвэна">
-              <h3>Эконом - класс Huyndai Starex</h3>
-              <div class="servtype__footer">
-                <button class="servtype__sub-btn servtype__btn" type="submit">Заказать минивэн</button><a class="servtype__link" href="#">Подробнее</a>
-              </div>
-            </div>
-            <div class="servtype__item"><img src="images/content/serv-img3.png" width="374" height="210" alt="картинка минвэна">
-              <h3>Комфорт - класс Volkswagen Caravella</h3>
-              <div class="servtype__footer">
-                <button class="servtype__sub-btn servtype__btn" type="submit">Заказать минивэн</button><a class="servtype__link" href="#">Подробнее</a>
-              </div>
+            <div class="transfer__info-item">
+              <svg class="svg-sprite-icon icon-tick">
+                <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
+              </svg>
+              <p>Безопасность и комфорт</p>
             </div>
           </div>
+          <div class="transfer__img-block"></div>
         </div>
       </section>
-      <section>
-        <div class="advantages">
-          <h2>Чем мы отличаемся?</h2>
-          <div class="advantages__container slider-mob slider-mob-dark">
-            <div class="advantages__item" id="1">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-            <div class="advantages__item" id="2">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-            <div class="advantages__item" id="3">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-            <div class="advantages__item" id="4">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-            <div class="advantages__item" id="5">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-            <div class="advantages__item" id="6">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-            <div class="advantages__item" id="7">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-            <div class="advantages__item" id="8">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-            <div class="advantages__item" id="9">
-              <div class="advantages__item-block">
-                <svg class="svg-sprite-icon icon-tick">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#tick"></use>
-                </svg>
-                <h3>Большой опыт</h3>
-                <p>Наша компания существует с 2008 года, за это время мы оказали большое количество услуг и помогли многим нашим клиентам добраться с комфортом до пункта назначения</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="form">
-          <h2>Нужна машина прямо сейчас?</h2>
-          <p>Оставьте номер телефона, и мы перезвоним вам в течение 5 минут для принятия заказа</p>
-          <form class="form__main" id="mainform" name="mainform" method="post">
+      <section class="servform">
+        <div class="servform__form">
+          <form class="servform__form" id="commentform" name="commentform" method="post">
             <label for="name" aria-label="name-from"></label>
             <input type="text" name="name" id="name" placeholder="Введите имя" title="Введите имя" minlength="2" maxlength="30" required>
             <label for="phone" aria-label="name-where"></label>
             <input type="tel" name="phone" id="phone" placeholder="Введите телефон" title="Введите телефон" minlength="3" maxlength="30" required>
-            <button class="form__btn adaptive-btn form__btn-sub" type="submit">Заказать звонок</button>
+            <div class="servform__form-footer">
+              <button class="servform__btn" type="submit">Заказать звонок</button><small>*мы перезвоним вам в течение 5-ти минут для принятия заказа</small>
+            </div>
           </form>
         </div>
       </section>
-      <section class="quality">
-        <h2>Почему стоит выбрать минивэн для вашей поездки?</h2>
-        <div class="quality__container">
-          <div class="quality__item" id="1">
-            <div class="quality__item-block">
-              <h4>1</h4>
-              <h3>Большая вместительность</h3>
-              <p>Один минивэн можно сравнить по вместительности с несколькими легковыми автомобилями.</p>
-            </div>
+      <section class="offers">
+        <h2>Что получаете вы, заказывая такси у нас?</h2>
+        <div class="offers__container">
+          <div class="offers__info">
+            <p>Гарантия доставки машины в назначенное время по указанному адресу</p>
+            <p>Отслеживание рейса</p>
+            <p>Бесплатное ожидание в аэропорту в течение часа</p>
+            <p>Встреча с табличкой</p>
+            <p>Помощь с багажом</p>
+            <button class="offers__btn" type="button">Заказать минивэн</button>
           </div>
-          <div class="quality__item" id="2">
-            <div class="quality__item-block">
-              <h4>2</h4>
-              <h3>Возможность перевозить багаж</h3>
-              <p>Данный автомобиль используется не только для перевозки пассажиров, но и багажа, а возможно и всех вместе.</p>
-            </div>
-          </div>
-          <div class="quality__item" id="3">
-            <div class="quality__item-block">
-              <h4>3</h4>
-              <h3>Маневренность</h3>
-              <p>В городском режиме автомобиль намного маневреннее, чем микроавтобус или автобус, что позволяет сэкономить время, требуемое для достижения места назначения. </p>
-            </div>
-          </div>
-          <div class="quality__item" id="4">
-            <div class="quality__item-block">
-              <h4>4</h4>
-              <h3>Возможность перевозить животных</h3>
-              <p>В минивэнах можно перевозить и домашних питомцев, что очень важно дли их владельцев, так как не каждый водитель согласится перевозить животных.</p>
-            </div>
-          </div>
-          <div class="quality__item" id="5">
-            <div class="quality__item-block">
-              <h4>5</h4>
-              <h3>Комфорт</h3>
-              <p>Дизайн и конструкция автомобиля позволяет чувствовать себя очень удобно и удобно, что немаловажно для пассажиров пожилого возраста или для пассажиров с детьми.</p>
-            </div>
-          </div>
-          <div class="quality__item" id="6">
-            <div class="quality__item-block">
-              <h4>6</h4>
-              <h3>Экономия</h3>
-              <p>Благодаря тому, что данный минивэн имеет возможность вместить пассажиров и багаж одновременно, есть возможность сэкономить на заказе дополнительной машины.</p>
-            </div>
-          </div>
-          <div class="quality__item" id="7">
-            <div class="quality__item-block">
-              <h4>7</h4>
-              <h3>Отличное состояние машин</h3>
-              <p>Наш автопарк состоит из новых машин в полностью исправном состоянии, не имеющие никаких ДТП и повреждений.</p>
-            </div>
-          </div>
-          <div class="quality__item" id="8">
-            <div class="quality__item-block">
-              <h4>8</h4>
-              <h3>Безопасность</h3>
-              <p>Поездка в наших машинах с нашими водителями покажется не только комфортной, но и полностью безопасной. Никаких резких маневров, необдуманных обгонов и полное сосредоточение на дороге.</p>
-            </div>
-          </div>
+          <div class="offers__imgs"><img src="images/content/offers-img1.jpg" width="264" height="161" alt="картинка"><img src="images/content/offers-img2.jpg" width="264" height="161" alt="картинка"><img src="images/content/offers-img3.jpg" width="264" height="161" alt="картинка"><img src="images/content/offers-img4.jpg" width="264" height="161" alt="картинка"></div>
         </div>
       </section>
-      <section class="service">
-        <h2>Какие транспортные услуги вы можете получить в такси Starex</h2>
-        <div class="service__container one">
-          <div class="service__item" id="1">
-            <div class="service__item-block">
-              <h3>Встреча в аэропорту</h3>
+      <section class="tarif">
+        <h2>Выберите подходящий вам тариф</h2>
+        <div class="tarif__container">
+          <div class="tarif__item">
+            <div class="tarif__img-block">
+              <h3>Тариф «БИЗНЕС»</h3><img src="images/content/serv-img1.png" width="374" height="210" alt="картинка минвэна">
             </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="2">
-            <div class="service__item-block">
-              <h3>Встреча из дома</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="3">
-            <div class="service__item-block">
-              <h3>Встреча на вокзале</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="4">
-            <div class="service__item-block">
-              <h3>Встреча из роддома</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="5">
-            <div class="service__item-block">
-              <h3>Поездка с детьми и членами семьи</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="6">
-            <div class="service__item-block">
-              <h3>Минивэн на дни рождения и свадьбу</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="7">
-            <div class="service__item-block">
-              <h3>Междугородние поездки</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="8">
-            <div class="service__item-block">
-              <h3>Аренда минивэна по городу</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="9">
-            <div class="service__item-block">
-              <h3>Детское такси</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="10">
-            <div class="service__item-block">
-              <h3>Аренда минивэна с водителем в Москве</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="11">
-            <div class="service__item-block">
-              <h3>Минивэн на дачу и с дачи</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="service__item" id="12">
-            <div class="service__item-block">
-              <h3>Минивэн в дома отдыха</h3>
-            </div>
-            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
-          </div>
-          <div class="item-block">
-            <div class="item-block__wrapper">
-              <div class="service__item" id="1">
-                <div class="service__item-block">
-                  <h3>Встреча в аэропорту</h3>
+            <div class="tarif__info-block">
+              <div class="tarif__adapt1"></div>
+              <p class="tarif__text">Самым престижным и дорогим минивэном на сегодняшний день является Mercedes V-class. Его основные особенности — это роскошная отделка интерьера из элитных материалов и строгий, презентабельный внешний дизайн, способный придать успешный имидж для всех пассажиров.</p>
+              <div class="tarif__info-content">
+                <div class="tarif__footer-wrapper">
+                  <div class="tarif__car">
+                    <div class="tarif__car-parag">
+                      <p>Минимальное время заказа</p>
+                      <p>Стоимость указана за</p>
+                      <p>Дополнительное время</p>
+                    </div>
+                    <div class="tarif__car-spans"><span>2 часа</span><span>2 часа</span><span>1500 р./час</span></div>
+                  </div>
+                  <div class="tarif__car-imgs" data-da="tarif__adapt1,first,768"><img src="images/content/item1-img1.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item1-img2.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item1-img3.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item1-img4.png" width="80px" height="80px" alt="картинка салона">
+                  </div>
+                </div>
+                <div class="tarif__price">
+                  <h3>5000 р.</h3>
+                  <button class="tarif__price-btn" type="button">Заказать минивэн</button>
                 </div>
               </div>
-              <div class="service__item" id="2">
-                <div class="service__item-block">
-                  <h3>Встреча из дома</h3>
+            </div>
+          </div>
+          <div class="tarif__item">
+            <div class="tarif__img-block">
+              <h3>Тариф «ЭКОНОМ»</h3><img src="images/content/serv-img2.png" width="374" height="210" alt="картинка минвэна">
+            </div>
+            <div class="tarif__info-block">
+              <div class="tarif__adapt2"></div>
+              <p class="tarif__text">Такси-минивэн Хендай Старекс – прекрасная возможность в любой ситуации. Его обширный салон разместит всех пассажиров со всеми удобствами. А доступная цена соблазнит каждого!</p>
+              <div class="tarif__info-content">
+                <div class="tarif__footer-wrapper">
+                  <div class="tarif__car">
+                    <div class="tarif__car-parag">
+                      <p>Минимальное время заказа</p>
+                      <p>Стоимость указана за</p>
+                      <p>Дополнительное время</p>
+                    </div>
+                    <div class="tarif__car-spans"><span>2 часа</span><span>2 часа</span><span>1200 р./час</span></div>
+                  </div>
+                  <div class="tarif__car-imgs" data-da="tarif__adapt2,last,768"><img src="images/content/item2-img1.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item2-img2.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item2-img3.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item2-img4.png" width="80px" height="80px" alt="картинка салона">
+                  </div>
+                </div>
+                <div class="tarif__price">
+                  <h3>3000 р.</h3>
+                  <button class="tarif__price-btn" type="button">Заказать минивэн</button>
                 </div>
               </div>
-              <div class="service__item" id="3">
-                <div class="service__item-block">
-                  <h3>Встреча на вокзале</h3>
+            </div>
+          </div>
+          <div class="tarif__item">
+            <div class="tarif__img-block">
+              <h3>Тариф «КОМФОРТ»</h3><img src="images/content/serv-img3.png" width="374" height="210" alt="картинка минвэна">
+            </div>
+            <div class="tarif__info-block">
+              <div class="tarif__adapt3"></div>
+              <p class="tarif__text">Такси-минивэн Хендай Старекс – прекрасная возможность в любой ситуации. Его обширный салон разместит всех пассажиров со всеми удобствами. А доступная цена соблазнит каждого!</p>
+              <div class="tarif__info-content">
+                <div class="tarif__footer-wrapper">
+                  <div class="tarif__car">
+                    <div class="tarif__car-parag">
+                      <p>Минимальное время заказа</p>
+                      <p>Стоимость указана за</p>
+                      <p>Дополнительное время</p>
+                    </div>
+                    <div class="tarif__car-spans"><span>2 часа</span><span>2 часа</span><span>1000 р./час</span></div>
+                  </div>
+                  <div class="tarif__car-imgs" data-da="tarif__adapt3,last,768"><img src="images/content/item3-img1.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item3-img2.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item3-img3.png" width="80px" height="80px" alt="картинка салона"><img src="images/content/item3-img4.png" width="80px" height="80px" alt="картинка салона">
+                  </div>
                 </div>
-              </div>
-              <div class="service__item" id="4">
-                <div class="service__item-block">
-                  <h3>Встреча из роддома</h3>
-                </div>
-              </div>
-              <div class="service__item" id="5">
-                <div class="service__item-block">
-                  <h3>Поездка с детьми и членами семьи</h3>
-                </div>
-              </div>
-              <div class="service__item" id="6">
-                <div class="service__item-block">
-                  <h3>Минивэн на дни рождения и свадьбу</h3>
-                </div>
-              </div>
-              <div class="service__item" id="7">
-                <div class="service__item-block">
-                  <h3>Междугородние поездки</h3>
-                </div>
-              </div>
-              <div class="service__item" id="8">
-                <div class="service__item-block">
-                  <h3>Аренда минивэна по городу</h3>
+                <div class="tarif__price">
+                  <h3>2500 р.</h3>
+                  <button class="tarif__price-btn" type="button">Заказать минивэн</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <button class="service__button spoiler-open opener-sp" type="button">Развернуть</button>
-        <button class="service__button spoiler-open spoiler-open-two" type="button">Свернуть</button>
       </section>
       <section class="map">
         <h2>Закажите машину заранее и получите ее с гарантией 100%</h2>
@@ -569,6 +367,59 @@
             <h3>Максим, 32 года 2</h3>
             <h4>Прекрасный сервис</h4>
             <p>Была приятно удивлена, когда заказала минивэн. Вместе с семьей провели прекрасное время. В том числе, благодаря такси Starex. Нас встретил очень вежливый и опытный водитель. Все было на высшем уровне. Хотелось бы сказать СПАСИБО от всей семьи».</p>
+          </div>
+        </div>
+      </section>
+      <section class="service">
+        <h2>Какие транспортные услуги вы можете получить в такси Starex</h2>
+        <div class="service__container one">
+          <div class="service__item" id="1">
+            <div class="service__item-block">
+              <h3>Встреча в аэропорту</h3>
+            </div>
+            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
+          </div>
+          <div class="service__item" id="2">
+            <div class="service__item-block">
+              <h3>Встреча из дома</h3>
+            </div>
+            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
+          </div>
+          <div class="service__item" id="3">
+            <div class="service__item-block">
+              <h3>Встреча на вокзале</h3>
+            </div>
+            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
+          </div>
+          <div class="service__item" id="4">
+            <div class="service__item-block">
+              <h3>Встреча из роддома</h3>
+            </div>
+            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
+          </div>
+          <div class="service__item" id="5">
+            <div class="service__item-block">
+              <h3>Поездка с детьми и членами семьи</h3>
+            </div>
+            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
+          </div>
+          <div class="service__item" id="6">
+            <div class="service__item-block">
+              <h3>Минивэн на дни рождения и свадьбу</h3>
+            </div>
+            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
+          </div>
+          <div class="service__item" id="7">
+            <div class="service__item-block">
+              <h3>Междугородние поездки</h3>
+            </div>
+            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
+          </div>
+          <div class="service__item" id="8">
+            <div class="service__item-block">
+              <h3>Аренда минивэна по городу</h3>
+            </div>
+            <div class="service__popup-block"><a class="service__link" href="#">Подробнее</a></div>
           </div>
         </div>
       </section>
