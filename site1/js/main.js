@@ -131,16 +131,43 @@
 	}
 }());
 
-$(function(){
-    $("#datepicker").datepicker({
-        monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-        dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
-        onSelect: function(date){
-            $('#datepicker_value').val(date)
-        }
+jQuery.datetimepicker.setLocale('ru');
+
+$(function() {
+    $("#date").datetimepicker({
+        inline: false,
+        format:'d.m H:i',
+        formatDate:'m/d',
+        dayOfWeekStart: 1,
+        monthChangeSpinner: false,
+        onChangeMonth: false,
+        yearOffset: 0,
+        todayButton: false,
+        defaultSelect:false,
+        scrollMonth: false,
+        minDate: 0,
+        allowTimes: ['8:00','09:00','10:00','11:00','12:00','13:00','14:00', '15:00','16:00','17:00','18:00'],
     });
-    // $("#datepicker").datepicker("setDate", $('#datepicker_value').val());
 });
+
+// $(document).ready(function() {
+//     $('#date').datetimepicker({
+//         inline: true,
+//         format:'d.m H:i',
+//         formatDate:'m/d',
+//         dayOfWeekStart: 1,
+//         monthChangeSpinner: false,
+//         onChangeMonth: false,
+//         yearOffset: 0,
+//         todayButton: false,
+//         defaultSelect:false,
+//         scrollMonth: false,
+//         minDate: 0,
+//         allowTimes: ['8:00','09:00','10:00','11:00','12:00','13:00','14:00', '15:00','16:00','17:00','18:00'],
+//     });
+// });
+
+// $('#date').CustomFormat = "MMMM dd";
 
 'use strict';
 
@@ -151,26 +178,122 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
-    $('.spoiler-open').click(function(event) {
-        if($('.service__container').hasClass('one')){
-        }
-        $('.item-block').toggleClass('active').slideToggle(300);
-        // $('body').toggleClass('lock');
-    });
-
-    // $('.opener-sp').click(function(event) {
-    //     $('.spoiler-open-two').toggleClass('disabled-sp').slideToggle(300);
-    //     // $('body').toggleClass('lock');
-    // });
-});
-
 // $(document).ready(function() {
 //     $('.spoiler-open').click(function(event) {
-
-//         $(this).toggleClass('active').$('.item-block').slideToggle(300);
+//         if($('.service__container').hasClass('one')){
+//         }
+//         $('.item-block').toggleClass('active').slideToggle(300);
+//         // $('body').toggleClass('lock');
 //     });
+//
+//     // $('.opener-sp').click(function(event) {
+//     //     $('.spoiler-open-two').toggleClass('disabled-sp').slideToggle(300);
+//     //     // $('body').toggleClass('lock');
+//     // });
 // });
+
+$(document).ready(function(){
+    $('.spoiler-open').click(function(){
+        $('.item-block').slideDown(200);
+        $(this).hide();
+        $('.spoiler-close').show(200);
+    });
+    $('.spoiler-close').click(function(){
+        $('.item-block').slideUp(200);
+        $(this).hide();
+        $('.spoiler-open').show(200);
+    });
+});
+
+
+$(document).ready(function(){
+    setTimeout(function(){
+        window.scrollTo(0, 0);
+    }, 1);
+});
+
+var map;
+var directionsService;
+
+var markerArr = [];
+var directions = [];
+
+function initMap() {
+    directionsService = new google.maps.DirectionsService();
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+            lat: 55.4792046,
+            lng: 37.3273304
+        },
+        zoom: 10,
+    });
+    google.maps.event.addListener(map, 'click', function(e) {
+        placeMarker(e.latLng);
+    });
+}
+
+function placeMarker(position) {
+    var marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        draggable: true
+    });
+    google.maps.event.addListener(marker, 'dragend', function(marker) {
+        calculateAndDisplayRoute();
+    });
+    marker.addListener("click", () => {
+        for (let i = 0; i < markerArr.length; i++) {
+            if (markerArr[i] == marker) {
+                markerArr[i].setMap(null);
+                markerArr = markerArr.filter(elem => elem.map != null);
+            }
+        }
+        calculateAndDisplayRoute();
+    });
+    markerArr.push(marker);
+    calculateAndDisplayRoute();
+}
+
+function calculateAndDisplayRoute() {
+    for (var i = 0; i < directions.length; i++) {
+        directions[i].setMap(null);
+    }
+    directions = [];
+    for (let i = 0; i < markerArr.length - 1; i++) {
+        directionsService.route({
+                origin: new google.maps.LatLng(markerArr[i].position.lat(), markerArr[i].position.lng()),
+                destination: new google.maps.LatLng(markerArr[i + 1].position.lat(), markerArr[i + 1].position.lng()),
+                travelMode: google.maps.TravelMode.DRIVING
+            },
+            (response, status) => {
+                if (status === "OK") {
+                    var dirRenderer = new google.maps.DirectionsRenderer({
+                        map: map,
+                        suppressMarkers: true,
+                        suppressInfoWindows: true
+                    });
+                    dirRenderer.setDirections(response);
+                    directions.push(dirRenderer);
+                }
+            }
+        );
+    }
+}
+
+function initsecondMap() {
+    var mapProp = {
+        center: new google.maps.LatLng(55.63591045, 37.6814969),
+        zoom: 10,
+        disableDefaultUI: true,
+    };
+
+    var maps = new google.maps.Map(document.getElementById("map__about"), mapProp);
+    var coordinates = {lat: 55.63591045, lng: 37.6814969};
+    var marker = new google.maps.Marker({
+        position: coordinates,
+        map: maps,
+    });
+}
 
 let select = function () {
     let selectHeader = document.querySelectorAll('.select__header');
@@ -287,6 +410,7 @@ $(document).ready(function(){
         slidesToShow: 2,
         slidesToScroll: 2,
         dots: true,
+        dotsClass: 'slider__dots slick-dots',
         responsive: [
                 {
                     breakpoint: 1023,
@@ -312,6 +436,46 @@ $(document).ready(function(){
             },
         ]
     });
+
+    var dots = $('.slider__container li');
+    //вешаем обработчик на наши точки
+    dots.click(function(){
+        var $this = $(this);
+        dots.removeClass('before after');
+        //отображаем 2 предыдущие точки
+        $this
+            .prev().addClass('before')
+            .prev().addClass('before');
+        //отображаем 2 следующие точки
+        $this
+            .next().addClass('after')
+            .next().addClass('after');
+
+
+        //если мы в самом начале - добавляем пару последующих точек
+        if(!$this.prev().length) {
+            $this.next().next().next()
+                .addClass('after').next()
+                .addClass('after');
+        }
+        //на 2й позиции - добавляем одну точку
+        if(!$this.prev().prev().length) {
+            $this.next().next().next()
+                .addClass('after');
+        }
+        //в самом конце - добавляем пару доп. предыдущих точек
+        if(!$this.next().length) {
+            $this.prev().prev().prev()
+                .addClass('before').prev()
+                .addClass('before');
+        }
+        //предпоследний элемента - добавляем одну пред. точку
+        if(!$this.next().next().length) {
+            $this.prev().prev().prev()
+                .addClass('before');
+        }
+    });
+    dots.eq(0).click();//кликаем на первую точку
 });
 
 
@@ -344,7 +508,6 @@ $(document).ready(function($) {
   var body = document.querySelector('body');
   $('.popup-open').click(function() {
     $('.popup-fade').fadeIn();
-    $('#tel').focus();
     body.classList.add('hidden');
     return false;
   });
@@ -405,30 +568,12 @@ $(document).ready(function($) {
 
 $(document).ready(function($) {
   var body = document.querySelector('body');
-  $('#commentform').submit(function(e) {
-    if (($('input').val().length > 8)) {
-      $('.modal').fadeIn();
-      body.classList.add('hidden');
-      return;
-    }
+  $('.modal-open').click(function() {
+    $('.modal').fadeIn();
+    body.classList.add('hidden');
+    return false;
   });
-//
-//   $('#commentpopup').submit(function(e) {
-//     if (($('input').val().length > 8)) {
-//       $('.modal').fadeIn();
-//       body.classList.add('hidden');
-//       $('.popup-fade').fadeOut();
-//       return false;
-//     }
-//   });
 
-// $(document).ready(function($) {
-//   var body = document.querySelector('body');
-//   $('.modal-open').click(function() {
-//     $('.modal').fadeIn();
-//     body.classList.add('hidden');
-//     return false;
-//   });
 
   $('.modal__close').click(function() {
     $(this).parents('.modal').fadeOut();
@@ -455,5 +600,28 @@ $(document).ready(function($) {
 $(document).ready(function($) {
   $('#tel,#phone').on('input', function() {
     $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''));
+  });
+});
+
+
+$(document).ready(function() {
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth(),
+        elem = $(".header-content__btn-sub"); // лучше сохранять объект в переменную, многократно чтобы не насиловать
+    // страницу для поиска нужного элемента
+    if(windowWidth < 768){
+      elem.removeClass('modal-open');
+      elem.addClass('popup-open');
+    }
+    else{
+      elem.removeClass('popup-open');
+      elem.addClass('modal-open');
+    }
+  }
+
+  checkWidth(); // проверит при загрузке страницы
+
+  $(window).resize(function(){
+    checkWidth(); // проверит при изменении размера окна клиента
   });
 });
