@@ -264,6 +264,82 @@
           </div>
         </div>
       </section>
+      <section class="map">
+        <h2>Закажите машину заранее и получите ее с гарантией 100%</h2>
+        <p>Оставьте заявку, и наш оператор перезвонит вам через 5 минут для уточнения деталей и подтверждения заказа</p>
+        <div class="map__container">
+          <div class="map__block-mob">
+            <button class="map__btn-open form-open" type="button">Заказать минивэн</button>
+          </div>
+          <div class="map__select-block">
+            <from class="map__form" method="post" id="mainform"><a class="form__close" href="#"></a>
+              <label for="from" aria-label="name-from"></label>
+              <input type="text" name="from" id="from" placeholder="Откуда" title="Введите откуда вы едите" minlength="2" maxlength="30" required>
+              <label for="where" aria-label="name-where"></label>
+              <input type="text" name="where" id="where" placeholder="Куда" title="Введите куда вы едите" minlength="3" maxlength="30" required>
+              <div class="map__select select">
+                <div class="map__select-header select__header"><span class="map__select-current select__current">Количество человек</span></div>
+                <div class="map__select-body">
+                  <div class="map__select-item select__item">1</div>
+                  <div class="map__select-item select__item">2</div>
+                  <div class="map__select-item select__item">3</div>
+                  <div class="map__select-item select__item">4</div>
+                  <div class="map__select-item select__item">5</div>
+                  <div class="map__select-item select__item">6</div>
+                  <div class="map__select-item select__item">7</div>
+                  <div class="map__select-item select__item">8</div>
+                  <div class="map__select-item select__item">9</div>
+                  <div class="map__select-item select__item">10</div>
+                </div>
+              </div>
+              <div class="map__select select slect-disbled">
+                <div class="map__select-header select__header"><span class="map__select-current select__current">Количество детей до 7 лет</span></div>
+                <div class="map__select-body">
+                  <div class="map__select-item select__item">1</div>
+                  <div class="map__select-item select__item">2</div>
+                  <div class="map__select-item select__item">3</div>
+                  <div class="map__select-item select__item">4</div>
+                  <div class="map__select-item select__item">5</div>
+                  <div class="map__select-item select__item">6</div>
+                  <div class="map__select-item select__item">7</div>
+                  <div class="map__select-item select__item">8</div>
+                  <div class="map__select-item select__item">9</div>
+                  <div class="map__select-item select__item">10</div>
+                </div>
+              </div>
+              <div class="map__select select slect-disbled">
+                <div class="map__select-header select__header"><span class="map__select-current select__current">Наличие багажа</span></div>
+                <div class="map__select-body">
+                  <div class="map__select-item map__select-item--bag select__item">да</div>
+                  <div class="map__select-item map__select-item--bag select__item">нет</div>
+                </div>
+              </div>
+              <div class="map__select select">
+                <div class="map__select-header select__header"><span class="map__select-current select__current">Класс машины</span></div>
+                <div class="map__select-body">
+                  <div class="map__select-item map__select-item--class select__item">Бизнес - класс Mercedes V-class</div>
+                  <div class="map__select-item map__select-item--class select__item">Бизнес - класс Mercedes V-class</div>
+                </div>
+              </div>
+              <input type="tel" name="phone" id="phone-num" placeholder="Введите телефон" title="Введите телефон" minlength="3" maxlength="30" required>
+              <input class="map__date" type="text" id="date" placeholder="Время и дата заказа такси">
+              <input class="map__sub-btn" type="submit" value="Заказать минивэн">
+            </from>
+          </div>
+          <div class="map__imd-block">
+            <div class="map__controls" id="controls">Укажите две точки на карте
+              <!--label.map__control-nav-->
+              <!--    span От куда:-->
+              <!--    input(type="text" name="from")-->
+              <!--label.map__control-nav.map__control-nav--second-->
+              <!--    span Куда:-->
+              <!--    input(type="text" name="to")-->
+              <!--    p-->
+            </div>
+            <div id="map"></div>
+          </div>
+        </div>
+      </section>
       <section class="slider">
         <h2>Что говорят о нас наши клиенты?</h2>
         <div class="slider__container">

@@ -136,15 +136,16 @@ jQuery.datetimepicker.setLocale('ru');
 $(function() {
     $("#date").datetimepicker({
         inline: false,
-        format:'d.m H:i',
-        formatDate:'m/d',
+        dateFormat: 'dd/mm/yy',
+        autoclose: true,
+        startDate: new Date,
         dayOfWeekStart: 1,
-        monthChangeSpinner: false,
-        onChangeMonth: false,
+        // monthChangeSpinner: false,
+        // onChangeMonth: false,
         yearOffset: 0,
         todayButton: false,
-        defaultSelect:false,
-        scrollMonth: false,
+        // defaultSelect:false,
+        // scrollMonth: false,
         minDate: 0,
         allowTimes: ['8:00','09:00','10:00','11:00','12:00','13:00','14:00', '15:00','16:00','17:00','18:00'],
     });
@@ -210,6 +211,11 @@ $(document).ready(function(){
     setTimeout(function(){
         window.scrollTo(0, 0);
     }, 1);
+});
+
+
+$(function () {
+    $('input[type="tel"]').mask('+7 9999999999');
 });
 
 var map;
@@ -597,11 +603,11 @@ $(document).ready(function($) {
   });
 });
 
-$(document).ready(function($) {
-  $('#tel,#phone').on('input', function() {
-    $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''));
-  });
-});
+// $(document).ready(function($) {
+//   $('#tel,#phone').on('input', function() {
+//     $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''));
+//   });
+// });
 
 
 $(document).ready(function() {
@@ -625,3 +631,5 @@ $(document).ready(function() {
     checkWidth(); // проверит при изменении размера окна клиента
   });
 });
+
+
