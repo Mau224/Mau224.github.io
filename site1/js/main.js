@@ -618,6 +618,7 @@ $(document).ready(function() {
     if(windowWidth < 768){
       elem.removeClass('modal-open');
       elem.addClass('popup-open');
+      // $('.popup-fade').fadeIn();
     }
     else{
       elem.removeClass('popup-open');
