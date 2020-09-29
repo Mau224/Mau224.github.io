@@ -218,6 +218,18 @@ $(function () {
     $('input[type="tel"]').mask('+7 9999999999');
 });
 
+(function() {
+    var onResizeHandler = function(event) {
+        if (this.innerWidth < 768) {
+            console.log('Делаем что-то 1 раз');
+            // Действия
+            $(window).unbind('resize', onResizeHandler);
+        }
+    };
+
+    $(window).bind('resize', onResizeHandler);
+})();
+
 var map;
 var directionsService;
 
@@ -342,7 +354,7 @@ $(document).ready(function(){
         centerPadding: '10px',
         responsive: [
             {
-                breakpoint: 767,
+                breakpoint: 768,
                 settings: {
                     dots: true,
                     arrows: false,
@@ -358,8 +370,8 @@ $(document).ready(function(){
         ]
     });
 
-    $(window).on('load resize', function() {
-        if ($(window).width() < 767) {
+    $(window).on('resize', function() {
+        if ($(window).width() < 768) {
             $('.slider-mob:not(.slick-initialized)').slick({
                 arrow: false,
                 dots: true,
@@ -373,7 +385,6 @@ $(document).ready(function(){
     });
 });
 
-
 $(document).ready(function(){
     $('.quality__container').slick({
         arrows: false,
@@ -381,7 +392,7 @@ $(document).ready(function(){
         autoplay: false,
         responsive: [
             {
-                breakpoint: 767,
+                breakpoint: 768,
                 settings: {
                     dots: true,
                     arrows: false,
@@ -395,7 +406,7 @@ $(document).ready(function(){
     });
 
     $(window).on('load resize', function() {
-        if ($(window).width() < 767) {
+        if ($(window).width() < 768) {
             $('.quality__container:not(.slick-initialized)').slick({
                 arrow: false,
                 dots: true,
@@ -430,7 +441,7 @@ $(document).ready(function(){
                     }
                 },
                 {
-                    breakpoint: 767,
+                    breakpoint: 768,
                     settings: {
                         dots: true,
                         arrows: false,
@@ -495,7 +506,7 @@ $(document).ready(function(){
         rows: 3
     });
     $(window).on('load resize', function() {
-        if ($(window).width() < 767) {
+        if ($(window).width() < 768) {
             $('.service__container:not(.slick-initialized)').slick({
                 arrow: false,
                 dots: true,
@@ -508,6 +519,13 @@ $(document).ready(function(){
             $(".service__container.slick-initialized").slick("unslick");
         }
     });
+});
+
+
+$( window ).resize(function() {
+    if ($(window).width() < 768) {
+        window.location.reload();
+    }
 });
 
 $(document).ready(function($) {
