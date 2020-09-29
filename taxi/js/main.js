@@ -213,7 +213,6 @@ $(document).ready(function(){
     }, 1);
 });
 
-
 $(function () {
     $('input[type="tel"]').mask('+7 9999999999');
 });
