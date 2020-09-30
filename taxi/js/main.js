@@ -217,17 +217,17 @@ $(function () {
     $('input[type="tel"]').mask('+7 9999999999');
 });
 
-(function() {
-    var onResizeHandler = function(event) {
-        if (this.innerWidth < 768) {
-            console.log('Делаем что-то 1 раз');
-            // Действия
-            $(window).unbind('resize', onResizeHandler);
-        }
-    };
-
-    $(window).bind('resize', onResizeHandler);
-})();
+// (function() {
+//     var onResizeHandler = function(event) {
+//         if (this.innerWidth < 768) {
+//             console.log('Делаем что-то 1 раз');
+//             // Действия
+//             $(window).unbind('resize', onResizeHandler);
+//         }
+//     };
+//
+//     $(window).bind('resize', onResizeHandler);
+// })();
 
 var map;
 var directionsService;
@@ -344,14 +344,19 @@ select();
 
 
 $(document).ready(function(){
-    $('.slider-mob').slick({
+    $('.servtype__container').slick({
         arrows: false,
         dots: true,
         autoplay: false,
         centerMode: true,
         variableWidth: true,
         centerPadding: '10px',
+        mobileFirst: true,
         responsive: [
+            {
+                breakpoint: 3500,
+                settings: "unslick"
+            },
             {
                 breakpoint: 768,
                 settings: {
@@ -369,17 +374,54 @@ $(document).ready(function(){
         ]
     });
 
-    $(window).on('resize', function() {
+    $(window).on('load resize', function() {
         if ($(window).width() < 768) {
-            $('.slider-mob:not(.slick-initialized)').slick({
+            $('.servtype__container:not(.slick-initialized)').slick({
                 arrow: false,
                 dots: true,
-                infinite: true,
+                infinite: false,
                 speed: 100,
                 slidesToShow: 1
             });
         } else {
-            $(".slider-mob.slick-initialized").slick("unslick");
+            $(".servtype__container.slick-initialized").slick("unslick");
+        }
+    });
+});
+
+
+$(document).ready(function(){
+    $('.advantages__container').slick({
+        arrows: false,
+        dots: true,
+        autoplay: false,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    autoplay: false,
+                    speed: 1000,
+                    autoplaySpeed: 800,
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    });
+
+    $(window).on('load resize', function() {
+        if ($(window).width() < 768) {
+            $('.advantages__container:not(.slick-initialized)').slick({
+                arrow: false,
+                dots: true,
+                infinite: false,
+                speed: 100,
+                slidesToShow: 1
+            });
+        } else {
+            $(".advantages__container.slick-initialized").slick("unslick");
         }
     });
 });
