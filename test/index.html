@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная страница</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link rel="preload" href="fonts/mulish/mulish.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/mulishbold/mulishbold.woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header></header>
+      <section class="container">
+        <div class="form__sidebar"></div>
+        <form class="form__content" method="post">
+          <div class="form__container">
+            <h2>Submit Your Proposal</h2>
+            <h3 class="from__title">Wow the client with your plan to<span>achieve their goals</span></h3>
+            <div class="form__wrapper">
+              <div class="form__header">
+                <p>PR for a new startup</p>
+                <div class="form__header-text">
+                  <svg class="svg-sprite-icon icon-bag">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#bag"></use>
+                  </svg>
+                  <p>Vegasmic Vegan toys</p>
+                </div>
+              </div>
+              <div class="form__main">
+                <h3>Package:</h3>
+                <div class="form__checkbox-wrapper">
+                  <label class="form__checkbox"><span class="form__checkbox-text">Retainer - ongoing monthly support</span>
+                    <input type="checkbox"><span class="form__checkbox-custom"></span>
+                  </label>
+                  <label class="form__checkbox"><span class="form__checkbox-text">Project - with a start and end date</span>
+                    <input type="checkbox"><span class="form__checkbox-custom"></span>
+                  </label>
+                </div>
+                <div class="form__inputs-wrapper">
+                  <div class="form__inputs-item">
+                    <label>Start date:</label>
+                    <input type="text" name="start" placeholder="MM DDD YYYY">
+                  </div>
+                  <div class="form__inputs-item">
+                    <label>Completion date:</label>
+                    <input type="text" name="finish" placeholder="MM DDD YYYY">
+                  </div>
+                  <div class="form__inputs-item">
+                    <label>Proposed budget<span>(Monthly fee):</span></label>
+                    <input type="number" name="price" placeholder="£">
+                  </div>
+                </div>
+                <div class="form__upload-wrapper">
+                  <div class="form__upload">
+                    <h3>Upload your proposal and contract:</h3>
+                    <div class="form__group">
+                      <label class="form__upload-label">
+                        <svg class="svg-sprite-icon icon-vector">
+                          <use xlink:href="images/sprite/symbol/sprite.svg#vector"></use>
+                        </svg>
+                        <p class="form__upload-span">Drag and drop your files</p><span>(Max 2 files, 10MB)</span>
+                        <input type="file">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__mini-uploads">
+                    <div class="form__mini-wrapper">
+                      <div class="form__upload-mini">
+                        <div class="form__group">
+                          <label class="form__upload-label">
+                            <svg class="svg-sprite-icon icon-vector">
+                              <use xlink:href="images/sprite/symbol/sprite.svg#vector"></use>
+                            </svg>
+                            <div class="form__upload-text">
+                              <p class="form__upload-span">Proposal</p><span>.DOCX</span>
+                              <input type="file">
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__upload-mini">
+                        <div class="form__group">
+                          <label class="form__upload-label">
+                            <svg class="svg-sprite-icon icon-vector">
+                              <use xlink:href="images/sprite/symbol/sprite.svg#vector"></use>
+                            </svg>
+                            <div class="form__upload-text">
+                              <p class="form__upload-span">Contract</p><span>.PDF</span>
+                              <input type="file">
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__mini-text">
+                      <p>When submitting a proposal, you must upload a contract between yourself and the client, outlining the work you'll deliver and any key information.</p>
+                      <p>If you don't have your own, we have created a template you can personalise based on the work you're doing.</p>
+                      <p>You can find this in the<span>resources</span>section.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__text">
+                  <h3>Write your cover message here:</h3>
+                  <textarea class="form__textarea" placeholder="The client may have received a number of proposals, so this is your opportunity to stand out from the crowd. Give them a taster of what’s within your proposal, the results they can expect to achieve and demonstrate how passionate and driven you are about ther PR work!"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form__buttons">
+              <div class="form__buttons-wrapper">
+                <button class="form__btn form__back" type="submit">Back</button>
+                <button class="form__btn" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+      <footer></footer>
+    </div>
+    <script src="js/vendors.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
