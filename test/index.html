@@ -2,123 +2,192 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title><!--[if IE]>
+    <title>Blog</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="css/styles.min.css">
-    <link rel="preload" href="fonts/mulish/mulish.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/mulishbold/mulishbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/EuclidCircularB/EuclidCircularB.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/EuclidCircularB-bold/EuclidCircularB-bold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
-    <div class="wrapper">
-      <header></header>
-      <section class="container">
-        <div class="form__sidebar"></div>
-        <form class="form__content" method="post">
-          <div class="form__container">
-            <h2>Submit Your Proposal</h2>
-            <h3 class="from__title">Wow the client with your plan to<span>achieve their goals</span></h3>
-            <div class="form__wrapper">
-              <div class="form__header">
-                <p>PR for a new startup</p>
-                <div class="form__header-text">
-                  <svg class="svg-sprite-icon icon-bag">
-                    <use xlink:href="images/sprite/symbol/sprite.svg#bag"></use>
-                  </svg>
-                  <p>Vegasmic Vegan toys</p>
-                </div>
-              </div>
-              <div class="form__main">
-                <h3>Package:</h3>
-                <div class="form__checkbox-wrapper">
-                  <label class="form__checkbox"><span class="form__checkbox-text">Retainer - ongoing monthly support</span>
-                    <input type="checkbox"><span class="form__checkbox-custom"></span>
-                  </label>
-                  <label class="form__checkbox"><span class="form__checkbox-text">Project - with a start and end date</span>
-                    <input type="checkbox"><span class="form__checkbox-custom"></span>
-                  </label>
-                </div>
-                <div class="form__inputs-wrapper">
-                  <div class="form__inputs-item">
-                    <label>Start date:</label>
-                    <input type="text" name="start" placeholder="MM DDD YYYY">
-                  </div>
-                  <div class="form__inputs-item">
-                    <label>Completion date:</label>
-                    <input type="text" name="finish" placeholder="MM DDD YYYY">
-                  </div>
-                  <div class="form__inputs-item">
-                    <label>Proposed budget<span>(Monthly fee):</span></label>
-                    <input type="number" name="price" placeholder="£">
-                  </div>
-                </div>
-                <div class="form__upload-wrapper">
-                  <div class="form__upload">
-                    <h3>Upload your proposal and contract:</h3>
-                    <div class="form__group">
-                      <label class="form__upload-label">
-                        <svg class="svg-sprite-icon icon-vector">
-                          <use xlink:href="images/sprite/symbol/sprite.svg#vector"></use>
-                        </svg>
-                        <p class="form__upload-span">Drag and drop your files</p><span>(Max 2 files, 10MB)</span>
-                        <input type="file">
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form__mini-uploads">
-                    <div class="form__mini-wrapper">
-                      <div class="form__upload-mini">
-                        <div class="form__group">
-                          <label class="form__upload-label">
-                            <svg class="svg-sprite-icon icon-vector">
-                              <use xlink:href="images/sprite/symbol/sprite.svg#vector"></use>
-                            </svg>
-                            <div class="form__upload-text">
-                              <p class="form__upload-span">Proposal</p><span>.DOCX</span>
-                              <input type="file">
-                            </div>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="form__upload-mini">
-                        <div class="form__group">
-                          <label class="form__upload-label">
-                            <svg class="svg-sprite-icon icon-vector">
-                              <use xlink:href="images/sprite/symbol/sprite.svg#vector"></use>
-                            </svg>
-                            <div class="form__upload-text">
-                              <p class="form__upload-span">Contract</p><span>.PDF</span>
-                              <input type="file">
-                            </div>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form__mini-text">
-                      <p>When submitting a proposal, you must upload a contract between yourself and the client, outlining the work you'll deliver and any key information.</p>
-                      <p>If you don't have your own, we have created a template you can personalise based on the work you're doing.</p>
-                      <p>You can find this in the<span>resources</span>section.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__text">
-                  <h3>Write your cover message here:</h3>
-                  <textarea class="form__textarea" placeholder="The client may have received a number of proposals, so this is your opportunity to stand out from the crowd. Give them a taster of what’s within your proposal, the results they can expect to achieve and demonstrate how passionate and driven you are about ther PR work!"></textarea>
-                </div>
-              </div>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo-wrapper"><img src="/images/common/logo.png" width="36" height="36" alt="логотип сайта">
+          <h1>EDIA SHAPER</h1>
+          <p>маркетинговое агентство</p>
+        </div>
+        <div class="header__social-wrapper">
+          <div class="header__btn-wrapper">
+            <button class="header__btn" type="submit">Заполнить бриф</button>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav-block">
+        <p>Главная /</p>
+        <p>Блог /</p>
+        <p>Айдентика и бренд-персонаж программы стажировки «Пятерочка Челлендж» от студии DEZA</p>
+      </div>
+    </header>
+    <section class="blogpage">
+      <div class="blogpage__container">
+        <div class="blogpage__header">
+          <div class="blogpage__header-bg">
+            <div class="blogpage__header-categories">
+              <p>веб-дизайн</p>
+              <p>Разработка сайта</p>
             </div>
-            <div class="form__buttons">
-              <div class="form__buttons-wrapper">
-                <button class="form__btn form__back" type="submit">Back</button>
-                <button class="form__btn" type="submit">Submit</button>
-              </div>
+            <h2 data-da="blogpage__info,last,768">Айдентика и бренд-персонаж программы стажировки «Пятерочка Челлендж» от студии DEZA</h2>
+          </div>
+        </div>
+        <div class="blogpage__info">
+          <div class="blogpage__logo-wrapper"><img src="/images/common/logo-blogpage.png" width="40" height="40" alt="логотип публикующей статью компании">
+            <h3>Media Shaper</h3>
+            <p>вчера</p>
+          </div>
+          <div class="blogpage__views-wrapper" data-da="blogpage__header-bg,last,768">
+            <div class="blogpage__views">
+              <p>123</p>
+            </div>
+            <svg class="svg-sprite-icon icon-eye">
+              <use xlink:href="images/sprite/symbol/sprite.svg#eye"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="blogpage__main-block">
+          <div class="blogpage__socials">
+            <svg class="svg-sprite-icon icon-vk">
+              <use xlink:href="images/sprite/symbol/sprite.svg#vk"></use>
+            </svg>
+            <svg class="svg-sprite-icon icon-fb">
+              <use xlink:href="images/sprite/symbol/sprite.svg#fb"></use>
+            </svg>
+            <svg class="svg-sprite-icon icon-tg">
+              <use xlink:href="images/sprite/symbol/sprite.svg#tg"></use>
+            </svg>
+            <div class="blogpage__cont-like">
+              <svg class="svg-sprite-icon icon-like">
+                <use xlink:href="images/sprite/symbol/sprite.svg#like"></use>
+              </svg>
+              <p>77</p>
             </div>
           </div>
-        </form>
-      </section>
-      <footer></footer>
+          <div class="blogpage__main-text">
+            <p>«Пятерочка» — крупнейшая торговая сеть формата «магазин у дома», вместе с «Перекрестком» и «Каруселью» входит в холдинг X5 Retail Group.  Недавно «Пятерочка» запустила программу стажировок для студентов старших курсов и выпускников на административные должности в магазинах сети. «Пятерочка Челлендж» дает студентам возможность начать карьеру еще до окончания вуза. Для компании это возможность привлечь в команду молодых специалистов, готовых внедрять и адаптировать новые технологии в продуктовом ритейле.</p>
+            <p>Компания обратилась к нам за разработкой визуальных составляющих программы стажировки. В ходе брифинга мы совместно с клиентом определили задачи проекта</p>
+            <div class="blogpage__cat-text">
+              <p>- создать бренд-персонажа;</p>
+              <p>- разработать айдентику;</p>
+              <p>- разработать дизайн и наполнение сувенирных наборов.</p>
+            </div>
+            <div class="blogpage__img-wrap"><img src="/images/content/bg_blog-text.png" width="1258" height="532" alt="картинка внутри главного текста"></div>
+            <h3>Старший друг, он же котолев</h3>
+            <p>У программы стажировки уже существовал логотип и знак, оттуда и родился наш главный символ, симпатичный бренд-персонаж, — дружелюбный кот с гривой льва. Грива кота — обязательный и постоянный элемент, символизирующий взросление, профессиональный рост, обрастание опытом и полезными навыками в процессе обучения.</p>
+            <p>Бренд-персонаж довольно взрослый, спокойный и по-житейски мудрый, он выступает в качестве наставника и старшего друга стажеров.</p>
+            <p>Пятерочка» — крупнейшая торговая сеть формата «магазин у дома», вместе с «Перекрестком» и «Каруселью» входит в холдинг X5 Retail Group.</p>
+            <p>Недавно «Пятерочка» запустила программу стажировок для студентов старших курсов и выпускников на административные должности в магазинах сети. «Пятерочка Челлендж» дает студентам возможность начать карьеру еще до окончания вуза. Для компании это возможность привлечь в команду молодых специалистов, готовых внедрять и адаптировать новые технологии в продуктовом ритейле. Компания обратилась к нам за разработкой визуальных составляющих программы стажировки. В ходе брифинга мы совместно с клиентом определили задачи проекта:</p>
+            <div class="blogpage__cat-text">
+              <p>- создать бренд-персонажа;</p>
+              <p>- разработать айдентику;</p>
+              <p>- разработать дизайн и наполнение сувенирных наборов.</p>
+            </div>
+            <div class="blogpage__text-imgs">
+              <div class="blogpage__text-img"><img src="/images/content/bg__blog-footer-left-img.png" width="621" height="350" alt="картинка внутри главного текста"></div>
+              <div class="blogpage__text-img"><img src="/images/content/bg__blog-footer-right-img.png" width="621" height="350" alt="картинка внутри главного текста"></div>
+            </div>
+            <p>У программы стажировки уже существовал логотип и знак, оттуда и родился наш главный символ, симпатичный бренд-персонаж, — дружелюбный кот с гривой льва. Грива кота — обязательный и постоянный элемент, символизирующий взросление, профессиональный рост, обрастание опытом и полезными навыками в процессе обучения.</p>
+            <p>Бренд-персонаж довольно взрослый, спокойный и по-житейски мудрый, он выступает в качестве наставника и старшего друга стажеров.</p>
+          </div>
+        </div>
+      </div>
+      <div class="blogpage__recomendtion">
+        <h2>Мы рекомендем</h2>
+        <ul class="blogpage__list">
+          <li class="blogpage__item blog__item">
+            <div class="blogpage__item-wrapper blog__item-wrapper">
+              <div class="blogpage__logo-wrapper blogpage__logo-item blog__logo-item"><img src="/images/common/logo-blogpage.png" width="40" height="40" alt="логотип публикующей статью компании">
+                <h3>Media Shaper</h3>
+                <p>вчера</p>
+              </div>
+              <h4>Массфолловинг в Instagram – есть ли смысл?</h4>
+              <p>Чтобы раскрутить свой аккаунт с целью увеличения доходов, многие сегодня прибегают к различным способам привлечения подписчиков. Одним из наиболее распространенных вариантов является массфолловинг.</p>
+            </div><img src="/images/content/img1-item.jpg" width="714" height="350" alt="картинка итема">
+            <div class="blogpage__item-footer blog__item-footer"><a class="blog__item-link blogpage__item-link" href="#">Читайть статью</a>
+              <div class="blogpage__cont-like blog__cont-like">
+                <div class="blogpage__like-wrap">
+                  <svg class="svg-sprite-icon icon-like">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#like"></use>
+                  </svg>
+                </div>
+                <p>77</p>
+              </div>
+            </div>
+          </li>
+          <li class="blogpage__item blog__item">
+            <div class="blogpage__item-wrapper blog__item-wrapper">
+              <div class="blogpage__logo-wrapper blogpage__logo-item blog__logo-item"><img src="/images/common/logo-blogpage.png" width="40" height="40" alt="логотип публикующей статью компании">
+                <h3>Media Shaper</h3>
+                <p>вчера</p>
+              </div>
+              <h4>Массфолловинг в Instagram – есть ли смысл?</h4>
+              <p>Чтобы раскрутить свой аккаунт с целью увеличения доходов, многие сегодня прибегают к различным способам привлечения подписчиков. Одним из наиболее распространенных вариантов является массфолловинг.</p>
+            </div><img src="/images/content/img1-item.jpg" width="714" height="350" alt="картинка итема">
+            <div class="blogpage__item-footer blog__item-footer">
+              <div class="blogpage__link-wrapper blog__link-wrapper"><a class="blogpage__item-link" href="#">Читайть статью</a></div>
+              <div class="blogpage__cont-like blog__cont-like">
+                <svg class="svg-sprite-icon icon-like">
+                  <use xlink:href="images/sprite/symbol/sprite.svg#like"></use>
+                </svg>
+                <p>77</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="vcru"><img class="vcru__link" src="/images/content/vcru.png">
+      <div class="vcru__imgs"><img src="/images/content/vcru-img1.png" width="90" height="90" alt="каритна"><img src="/images/content/vcru-img2.png" width="90" height="90" alt="каритна"><img src="/images/content/vcru-img3.png" width="90" height="90" alt="каритна"><img src="/images/content/vcru-img4.png" width="90" height="90" alt="каритна"></div>
     </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top-block">
+          <div class="footer__top-write">
+            <h2>Обсудим проект?</h2><a class="footer__link" href="#">Написать нам</a>
+          </div>
+          <div class="footer__brief-link"><a class="footer__link-style" href="#">Заполнить бриф</a></div>
+        </div>
+        <div class="footer__contacts-wrapper">
+          <div class="footer__contacts">
+            <div class="footer__link-mob">
+              <p>Наш телефон</p><a href="#">+7 (495) 147-47-45</a>
+            </div>
+            <div class="footer__link-addr">
+              <p>Наш адрес</p><a href="#">Малая очаковская 4, Москва</a>
+            </div>
+          </div>
+          <div class="footer__socials">
+            <ul class="footer__list-option">
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Работы</a></li>
+              <li><a href="#">Медиацентр</a></li>
+            </ul>
+            <ul class="footer__list-social">
+              <li><a href="#">Behance</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">VC.ru</a></li>
+              <li><a href="#">TikTok</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Youtube</a></li>
+              <li><a href="#">linkedin</a></li>
+              <li><a href="#">Rating Runeta</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>©2020 MEDIA SHAPER - Все права защищены</p><a>Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
     <script src="js/vendors.js"></script>
     <script src="js/main.js"></script>
   </body>
