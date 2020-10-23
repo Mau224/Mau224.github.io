@@ -1,0 +1,44 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-eye {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-eye-dims {
+	width: 22px;
+	height: 18px;
+}
+
+.svg-fb {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-fb-dims {
+	width: 9px;
+	height: 19px;
+}
+
+.svg-tg {
+	@extend %svg-common;
+	background-position: 37.5% 90%;
+}
+
+.svg-tg-dims {
+	width: 18px;
+	height: 17px;
+}
+
+.svg-vk {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-vk-dims {
+	width: 20px;
+	height: 12px;
+}
+
