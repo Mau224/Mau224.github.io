@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="Описание страницы сайта.">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link rel="preload" href="fonts/EuclidCircularB/EuclidCircularB.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/EuclidCircularB-bold/EuclidCircularB-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/EuclidCircularB-light/EuclidCircularB-light.woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo-wrapper"><img src="images/common/logo.svg" width="36" height="36" alt="логотип сайта">
+          <h1>EDIA SHAPER</h1>
+          <p>маркетинговое агентство</p>
+        </div>
+        <div class="header__social-wrapper">
+          <div class="header__menu-text">
+            <p>меню</p>
+          </div>
+          <label class="header__switch">
+            <input type="checkbox"><span class="header__slider round"></span>
+          </label><a class="header__video-link" href="#"><img src="images/content/video-header.png" width="42" height="42" alt="картинка с видео"></a><a class="header__btn" href="#">Заполнить бриф</a>
+        </div>
+      </div>
+    </header>
+    <div class="form">
+      <form class="form__container" method="POST" action="">
+        <h1>Заполните бриф</h1>
+        <h2>Оставьте заявку, либо свяжитесь с нами и мы сами всё заполним.</h2>
+        <div class="form__goals form__radio">
+          <h2>Цель проекта</h2>
+          <div class="select">
+            <div class="select__header"><span class="select__current">Выбрать</span></div>
+            <div class="form__rabs select__body">
+              <input type="radio" id="tab-1" name="radioname" checked>
+              <label class="from__fp-label" for="tab-1">
+                <p class="select__item">Продажи</p>
+              </label>
+              <input type="radio" id="tab-2" name="radioname">
+              <label for="tab-2">
+                <p class="select__item">Рост узнаваемости бренда</p>
+              </label>
+              <input type="radio" id="tab-3" name="radioname">
+              <label for="tab-3">
+                <p class="select__item">Поддержка</p>
+              </label>
+              <input type="radio" id="tab-4" name="radioname" checked>
+              <label for="tab-4">
+                <p class="select__item">Развитие личного бренда</p>
+              </label>
+              <input type="radio" id="tab-5" name="radioname">
+              <label for="tab-5">
+                <p class="select__item">Изучение рынка</p>
+              </label>
+              <input type="radio" id="tab-6" name="radioname">
+              <label for="tab-6">
+                <p class="select__item">Запуск стартапа</p>
+              </label>
+              <input type="radio" id="tab-7" name="radioname">
+              <label for="tab-7">
+                <p class="select__item">Другое</p>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form__price form__radio">
+          <h2>Бюджет</h2>
+          <div class="select">
+            <div class="select__header"><span class="select__current">Выбрать</span></div>
+            <div class="form__rabs select__body">
+              <input type="radio" id="price-1" name="radioname" checked>
+              <label class="from__fp-label" for="price-1">Менее 1 млн.</label>
+              <input type="radio" id="price-2" name="radioname">
+              <label for="price-2">1–3 млн</label>
+              <input type="radio" id="price-3" name="radioname">
+              <label for="price-3">3–5 млн</label>
+              <input type="radio" id="price-4" name="radioname" checked>
+              <label for="price-4">5–15 млн</label>
+              <input type="radio" id="price-5" name="radioname">
+              <label for="price-5">Более 20 млн</label>
+              <input type="radio" id="price-6" name="radioname">
+              <label for="price-6">Другая сумма</label>
+            </div>
+          </div>
+        </div>
+        <div class="form__project form__radio">
+          <h2>Выберите тип проекта</h2>
+          <div class="select">
+            <div class="select__header"><span class="select__current">Выбрать</span></div>
+            <div class="form__rabs form__rabs-project select__body">
+              <input type="radio" id="project-1" name="radioname" checked>
+              <label class="from__project-label" for="project-1">Система или сервис</label>
+              <input type="radio" id="project-2" name="radioname">
+              <label for="project-2">Интернет-магазин</label>
+              <input type="radio" id="project-3" name="radioname">
+              <label for="project-3">Мобильное приложение</label>
+              <input type="radio" id="project-4" name="radioname" checked>
+              <label for="project-4">Корпоративный сайт</label>
+              <input type="radio" id="project-5" name="radioname">
+              <label for="project-5">Брендинг</label>
+              <input type="radio" id="project-6" name="radioname">
+              <label for="project-6">Дизайн-поддержка</label>
+              <input type="radio" id="project-7" name="radioname" checked>
+              <label for="project-7">Фотосъемка</label>
+              <input type="radio" id="project-8" name="radioname">
+              <label for="project-8">Презентации</label>
+              <input type="radio" id="project-9" name="radioname">
+              <label for="project-9">Рекламные ролики</label>
+            </div>
+          </div>
+        </div>
+        <div class="form__texterea-block">
+          <h2>Задача</h2>
+          <textarea name="text" placeholder="Опишите вкратце задачу"></textarea>
+          <div class="form__file-input">
+            <input type="file" name="file" id="file">
+            <label for="file">Прикрепить файл</label>
+          </div>
+        </div>
+        <div class="form__main-block">
+          <div class="form__input-item">
+            <label for="name" aria-label="name">Ваше имя</label>
+            <input type="text" name="name" id="name" placeholder="Введите имя" title="Введите имя" minlength="2" maxlength="30" required>
+          </div>
+          <div class="form__input-item">
+            <label for="mobail" aria-label="name-where">Номер телефона</label>
+            <input type="tel" name="phone" id="mobail" placeholder="Номер телефона*" title="Номер телефона*" minlength="3" maxlength="30" required>
+          </div>
+        </div>
+        <div class="form__btn-block">
+          <button class="form__btn adaptive-btn form__btn-sub" type="submit">Отправить</button>
+          <p>Нажимая на кнопку «Отправить», вы даёте согласие на обработку своих<span><a href="#">персональных данных</a></span></p>
+        </div>
+      </form>
+    </div>
+    <div class="vcru"><a class="vcru__link-wrap" href="https://vc.ru/">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/vcru.webp 1x, images/content/vcru@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)" srcset="images/content/vcru-mob.webp 1x, images/content/vcru-mob@2x.webp 2x"><img class="vcru__link" src="images/content/vcru.png" srcset="images/content/vcru@2x.png" width="315" height="92" alt="картинка ссылка на vc.ru">
+        </picture></a>
+      <div class="vcru__imgs">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/vcru-img1.webp 1x, images/content/vcru-img1@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)" srcset="images/content/vcru-img2-mob.webp 1x, images/content/vcru-img2-mob@2x.webp 2x"><img src="images/content/vcru-img1.png" srcset="images/content/vcru-img1@2x.png" width="90" height="90" alt="каритна">
+        </picture>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/vcru-img2.webp 1x, images/content/vcru-img2@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)" srcset="images/content/vcru-img2-mob.webp 1x, images/content/vcru-img2-mob@2x.webp 2x"><img src="images/content/vcru-img2.png" srcset="images/content/vcru-img2@2x.png" width="90" height="90" alt="каритна">
+        </picture>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/vcru-img3.webp 1x, images/content/vcru-img3@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)" srcset="images/content/vcru-img3-mob.webp 1x, images/content/vcru-img3-mob@2x.webp 2x"><img src="images/content/vcru-img3.png" srcset="images/content/vcru-img3@2x.png" width="90" height="90" alt="каритна">
+        </picture>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/vcru-img4.webp 1x, images/content/vcru-img4@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)" srcset="images/content/vcru-img4-mob.webp 1x, images/content/vcru-img4-mob@2x.webp 2x"><img src="images/content/vcru-img4.png" srcset="images/content/vcru-img4@2x.png" width="90" height="90" alt="каритна">
+        </picture>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top-block">
+          <div class="footer__top-write">
+            <h2>Обсудим проект?</h2><a class="footer__link" href="#">Написать нам</a>
+          </div>
+          <div class="footer__brief-link"><a class="footer__link-style" href="#">Заполнить бриф</a></div>
+        </div>
+        <div class="footer__contacts-wrapper">
+          <div class="footer__contacts">
+            <div class="footer__link-mob">
+              <p>Наш телефон</p><a href="tel:+74951474745">+7 (495) 147-47-45</a>
+            </div>
+            <div class="footer__link-addr">
+              <p>Наш адрес</p><a class="footer__addr-link" href="https://maps.google.com?saddr=Current+Location&amp;daddr=55.6703087,37.44039112">Малая очаковская 4,<br>Москва</a>
+            </div>
+          </div>
+          <div class="footer__socials">
+            <ul class="footer__list-option">
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Работы</a></li>
+              <li><a href="#">Медиацентр</a></li>
+            </ul>
+            <ul class="footer__list-social">
+              <li><a href="#">Behance</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">VC.ru</a></li>
+              <li><a href="#">TikTok</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Youtube</a></li>
+              <li><a href="#">linkedin</a></li>
+              <li><a href="#">Rating Runeta</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>©2020 MEDIA SHAPER - Все права защищены</p><a href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
