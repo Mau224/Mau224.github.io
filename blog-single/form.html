@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru-RU" data-theme="light">
   <head>
     <meta charset="utf-8">
     <title>Form</title><!--[if IE]>
@@ -24,7 +24,7 @@
             <p>меню</p>
           </div>
           <label class="header__switch">
-            <input type="checkbox"><span class="header__slider round"></span>
+            <input class="switch-theme" type="checkbox"><span class="header__slider round"></span>
           </label><a class="header__video-link" href="#"><img src="images/content/video-header.png" width="42" height="42" alt="картинка с видео"></a><a class="header__btn" href="#">Заполнить бриф</a>
         </div>
       </div>
@@ -75,17 +75,29 @@
             <div class="select__header"><span class="select__current">Выбрать</span></div>
             <div class="form__rabs select__body">
               <input type="radio" id="price-1" name="radioname" checked>
-              <label class="from__fp-label" for="price-1">Менее 1 млн.</label>
+              <label class="from__fp-label" for="price-1">
+                <p class="select__item">Менее 1 млн.</p>
+              </label>
               <input type="radio" id="price-2" name="radioname">
-              <label for="price-2">1–3 млн</label>
+              <label for="price-2">
+                <p class="select__item">1–3 млн</p>
+              </label>
               <input type="radio" id="price-3" name="radioname">
-              <label for="price-3">3–5 млн</label>
+              <label for="price-3">
+                <p class="select__item">3–5 млн</p>
+              </label>
               <input type="radio" id="price-4" name="radioname" checked>
-              <label for="price-4">5–15 млн</label>
+              <label for="price-4">
+                <p class="select__item">5–15 млн</p>
+              </label>
               <input type="radio" id="price-5" name="radioname">
-              <label for="price-5">Более 20 млн</label>
+              <label for="price-5">
+                <p class="select__item">Более 20 млн</p>
+              </label>
               <input type="radio" id="price-6" name="radioname">
-              <label for="price-6">Другая сумма</label>
+              <label for="price-6">
+                <p class="select__item">Другая сумма</p>
+              </label>
             </div>
           </div>
         </div>
@@ -95,23 +107,41 @@
             <div class="select__header"><span class="select__current">Выбрать</span></div>
             <div class="form__rabs form__rabs-project select__body">
               <input type="radio" id="project-1" name="radioname" checked>
-              <label class="from__project-label" for="project-1">Система или сервис</label>
+              <label class="from__project-label" for="project-1">
+                <p class="select__item">Система или сервис</p>
+              </label>
               <input type="radio" id="project-2" name="radioname">
-              <label for="project-2">Интернет-магазин</label>
+              <label for="project-2">
+                <p class="select__item">Интернет-магазин</p>
+              </label>
               <input type="radio" id="project-3" name="radioname">
-              <label for="project-3">Мобильное приложение</label>
+              <label for="project-3">
+                <p class="select__item">Мобильное приложение</p>
+              </label>
               <input type="radio" id="project-4" name="radioname" checked>
-              <label for="project-4">Корпоративный сайт</label>
+              <label for="project-4">
+                <p class="select__item">Корпоративный сайт</p>
+              </label>
               <input type="radio" id="project-5" name="radioname">
-              <label for="project-5">Брендинг</label>
+              <label for="project-5">
+                <p class="select__item">Брендинг</p>
+              </label>
               <input type="radio" id="project-6" name="radioname">
-              <label for="project-6">Дизайн-поддержка</label>
+              <label for="project-6">
+                <p class="select__item">Дизайн-поддержка</p>
+              </label>
               <input type="radio" id="project-7" name="radioname" checked>
-              <label for="project-7">Фотосъемка</label>
+              <label for="project-7">
+                <p class="select__item">Фотосъемка</p>
+              </label>
               <input type="radio" id="project-8" name="radioname">
-              <label for="project-8">Презентации</label>
+              <label for="project-8">
+                <p class="select__item">Презентации</p>
+              </label>
               <input type="radio" id="project-9" name="radioname">
-              <label for="project-9">Рекламные ролики</label>
+              <label for="project-9">
+                <p class="select__item">Рекламные ролики</p>
+              </label>
             </div>
           </div>
         </div>
