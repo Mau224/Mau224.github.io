@@ -4,7 +4,7 @@
 
 .svg-eye {
 	@extend %svg-common;
-	background-position: 0 0;
+	background-position: 0 100%;
 }
 
 .svg-eye-dims {
@@ -14,7 +14,7 @@
 
 .svg-fb {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 49.12280701754386% 80%;
 }
 
 .svg-fb-dims {
@@ -24,7 +24,7 @@
 
 .svg-tg {
 	@extend %svg-common;
-	background-position: 37.5% 90%;
+	background-position: 100% 0;
 }
 
 .svg-tg-dims {
@@ -34,11 +34,21 @@
 
 .svg-vk {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 60.869565217391305% 0;
 }
 
 .svg-vk-dims {
 	width: 20px;
 	height: 12px;
+}
+
+.svg-w {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-w-dims {
+	width: 28px;
+	height: 16px;
 }
 
