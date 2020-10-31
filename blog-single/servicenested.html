@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Home</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="Описание страницы сайта.">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -20,9 +20,10 @@
           <p>маркетинговое агентство</p>
         </div>
         <div class="header__social-wrapper">
-          <div class="header__menu-text">
+          <div class="header__menu-text"><span></span>
             <p>меню</p>
           </div>
+          <p class="header__lang">Eng</p>
           <label class="header__switch">
             <input class="switch-theme" type="checkbox"><span class="header__slider round"></span>
           </label><a class="header__video-link" href="#"><img src="images/content/video-header.png" width="42" height="42" alt="картинка с видео"></a><a class="header__btn" href="#">Заполнить бриф</a>
@@ -73,7 +74,11 @@
             <p>на какую аудиторию направлен бизнес;</p>
             <p>насколько платежеспособны целевые потребители;</p>
             <p>каковы позиции сайта в рейтинге поисковых запросов;</p>
-            <p>использовались ли технологии продвижения, каковы их результаты.</p><img src="images/content/service-img2.jpg" srcset="images/content/service-img@2x.jpg" width="1600" height="600" alt="главная картинка страницы">
+            <p>использовались ли технологии продвижения, каковы их результаты.</p>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/service-img2.webp 1x, images/content/service-img2@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 768px)" srcset="images/content/service-img-mob2.webp 1x, images/content/service-img-mob2@2x.webp 2x"><img src="images/content/service-img2.jpg" srcset="images/content/service-img2@2x.jpg" width="1600" height="600" alt="главная картинка страницы">
+            </picture>
           </div>
           <p>Наша компания предоставляет весь спектр маркетинговых услуг, от рекламы на ТВ до таргетированной рекламы в TikTok</p>
         </div>

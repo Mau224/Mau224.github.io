@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Project</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="Описание страницы сайта.">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -20,9 +20,10 @@
           <p>маркетинговое агентство</p>
         </div>
         <div class="header__social-wrapper">
-          <div class="header__menu-text">
+          <div class="header__menu-text"><span></span>
             <p>меню</p>
           </div>
+          <p class="header__lang">Eng</p>
           <label class="header__switch">
             <input class="switch-theme" type="checkbox"><span class="header__slider round"></span>
           </label><a class="header__video-link" href="#"><img src="images/content/video-header.png" width="42" height="42" alt="картинка с видео"></a><a class="header__btn" href="#">Заполнить бриф</a>
@@ -34,18 +35,33 @@
         <div class="project-single__container">
           <h1>Профильмет</h1>
           <p>Продажа металлопроката – не единственная услуга нашей компании. Еще мы предлагаем обширный перечень дополнительных услуг: резку, оцинковку металлов и пр.</p>
-          <div class="project-single__links-block"><a class="project-single__main-link" href="#">Ссылка на проект</a>
+          <div class="project-single__links-block">
+            <div class="project-single__main-link-wrap">
+              <div class="project-single__circle"></div><a class="project-single__main-link" href="#">Ссылка на проект</a>
+            </div>
             <div class="project-single__links-container"><a class="project-single__link" href="#">Дизайн</a><a class="project-single__link" href="#">Разработка</a><a class="project-single__link" href="#">SMM</a></div>
           </div>
-        </div><img src="images/content/project-img.png" width="1600" height="900" alt="картинка проекта">
+        </div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/project-img@2x.webp 1x, images/content/project-img@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)" srcset="images/content/project-img-mob.webp 1x, images/content/project-img-mob@2x.webp 2x"><img src="images/content/project-img.png" srcset="images/content/project-img@2x.png" width="1600" height="900" alt="картинка проекта">
+        </picture>
         <p>Продажа металлопроката – не единственная услуга нашей компании. Еще мы предлагаем обширный перечень дополнительных услуг: резку, оцинковку металлов и пр.</p>
         <video width="1600" height="900" muted="muted" autoplay="true" poster="images/content/project-img2.png">
           <source src="images/content/Atoms - 13232.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
         </video>
-        <p>Продажа металлопроката – не единственная услуга нашей компании. Еще мы предлагаем обширный перечень дополнительных услуг: резку, оцинковку металлов и пр.</p><img src="images/content/project-big-img.png" width="1600" height="1585" alt="большая картинка проекта">
+        <p>Продажа металлопроката – не единственная услуга нашей компании. Еще мы предлагаем обширный перечень дополнительных услуг: резку, оцинковку металлов и пр.</p>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/project-big-img@2x.webp 1x, images/content/project-big-img@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)" srcset="images/content/project-big-img-mob.webp 1x, images/content/project-big-img-mob@2x.webp 2x"><img class="project-single__big-img" src="images/content/project-big-img.png" srcset="images/content/project-big-img@2x.png" width="1600" height="1585" alt="большая картинка проекта">
+        </picture>
         <div class="project-single__container">
           <p>Продажа металлопроката – не единственная услуга нашей компании. Еще мы предлагаем обширный перечень дополнительных услуг: резку, оцинковку металлов и пр.</p>
-        </div><img src="images/content/project-img3.png" width="1600" height="900" alt="картинка проекта"><a class="project-single__big-link" href="#">Следующий проект</a>
+        </div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/project-img3@2x.webp 1x, images/content/project-img3@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 768px)" srcset="images/content/project-img-mob3.webp 1x, images/content/project-img-mob3@2x.webp 2x"><img src="images/content/project-img3.png" srcset="images/content/project-img3@2x.png" width="1600" height="900" alt="картинка проекта">
+        </picture><a class="project-single__big-link" href="#">Следующий проект</a>
       </section>
       <footer>
         <div class="footer">

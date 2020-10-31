@@ -171,6 +171,14 @@ checkbox.addEventListener('change', function (){
 })
 
 
+const input = document.getElementById('widthOne');
+const div = document.getElementById('one');
+
+input.addEventListener('change', ()=>{
+    div.style.width = input.value + 'px';
+    div.style.height = 'calc(' + input.value + 'px / 2)';
+});
+
 // 'use strict';
 // var multiItemSlider = (function () {
 //

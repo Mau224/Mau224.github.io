@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Home</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="Описание страницы сайта.">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -20,9 +20,10 @@
           <p>маркетинговое агентство</p>
         </div>
         <div class="header__social-wrapper">
-          <div class="header__menu-text">
+          <div class="header__menu-text"><span></span>
             <p>меню</p>
           </div>
+          <p class="header__lang">Eng</p>
           <label class="header__switch">
             <input class="switch-theme" type="checkbox"><span class="header__slider round"></span>
           </label><a class="header__video-link" href="#"><img src="images/content/video-header.png" width="42" height="42" alt="картинка с видео"></a><a class="header__btn" href="#">Заполнить бриф</a>
@@ -33,46 +34,51 @@
       <section class="home">
         <div class="home__container">
           <div class="home__header-block">
-            <h1>DIGITAL РЕШЕНИЯ ВЕСЬ СПЕКТР</h1>
+            <h1>DIGITAL РЕШЕНИЯ</h1>
+            <h1>ВЕСЬ СПЕКТР</h1>
             <div class="home__nav-block"><a class="home__main-link" href="#">Digital-маркетинг</a><a class="home__main-link" href="#">Программирование</a><a class="home__main-link" href="#">Видеопродакшн</a><a class="home__main-link" href="#">Упаковка продукта</a></div>
+            <div class="home__preiews"><img src="images/content/home-prev.png" width="335" height="103" alt="картинка превью"></div>
             <div class="home__anchor">
               <div class="header__anchor-arrow"><a class="home__link-anchor" href="#">Листайте вниз</a></div>
             </div>
           </div>
-          <div class="home__profects projets">
-            <div class="home__projects-block">
-              <h2>Избранные проекты</h2>
-              <div class="home__projects-container">
-                <div class="home__projects-list">
-                  <div class="home__project-item">
-                    <div class="home__item-wrapper"><img src="images/content/home__tablet.png" width="370" height="292" alt="картинка телефонов"><img src="images/content/home__single-phone.png" width="322" height="168" alt="картинка телефонов"></div>
-                    <div class="home__item-title-block">
-                      <h3>Dialogecup</h3>
-                      <p> Корпоротивный сайт инвестиционной компании</p>
-                    </div>
+        </div>
+        <div class="home__projects projets">
+          <div class="home__projects-block">
+            <h2>Избранные проекты</h2>
+            <div class="home__projects-container">
+              <div class="home__projects-list">
+                <div class="home__project-item">
+                  <div class="home__item-wrapper">
+                    <!--img(src="images/content/home__tablet.png" width="370" height="292" alt="картинка телефонов")-->
+                    <!--img(src="images/content/home__single-phone.png" width="322" height="168" alt="картинка телефонов")-->
                   </div>
-                  <div class="home__project-item">
-                    <div class="home__item-wrapper home__item-wrapper--second home__item-wrapper--red"><img src="images/content/home__phones.png" width="651" height="565" alt="картинка телефонов"></div>
-                    <div class="home__item-title-block">
-                      <h3>ПРОФИЛЬМЕТ</h3>
-                      <p> Корпоротивный портал по продаже металла</p>
-                    </div>
+                  <div class="home__item-title-block">
+                    <h3>Dialogecup</h3>
+                    <p> Корпоротивный сайт инвестиционной компании</p>
                   </div>
                 </div>
-                <div class="home__projects-list">
-                  <div class="home__project-item">
-                    <div class="home__item-wrapper home__item-wrapper--second home__item-wrapper--blue"></div>
-                    <div class="home__item-title-block">
-                      <h3>Рггу</h3>
-                      <p> Корпоротивный сайт инвестиционной компании</p>
-                    </div>
+                <div class="home__project-item home__project-item--big">
+                  <div class="home__item-wrapper home__item-wrapper--second home__item-wrapper--blue"></div>
+                  <div class="home__item-title-block">
+                    <h3>Рггу</h3>
+                    <p> Корпоротивный сайт инвестиционной компании</p>
                   </div>
-                  <div class="home__project-item">
-                    <div class="home__item-wrapper home__item-wrapper--orange"></div>
-                    <div class="home__item-title-block">
-                      <h3>Деловые решения</h3>
-                      <p> Корпоротивный сайт инвестиционной компании</p>
-                    </div>
+                </div>
+                <div class="home__project-item home__project-item--big">
+                  <div class="home__item-wrapper home__item-wrapper--second home__item-wrapper--red">
+                    <!--img(src="images/content/home__phones.png" width="651" height="565" alt="картинка телефонов")-->
+                  </div>
+                  <div class="home__item-title-block">
+                    <h3>Профильмет</h3>
+                    <p> Корпоротивный портал по продаже металла</p>
+                  </div>
+                </div>
+                <div class="home__project-item">
+                  <div class="home__item-wrapper home__item-wrapper--orange"></div>
+                  <div class="home__item-title-block">
+                    <h3>Деловые решения</h3>
+                    <p> Корпоротивный сайт инвестиционной компании</p>
                   </div>
                 </div>
               </div>
@@ -84,40 +90,42 @@
         <div class="home__logos-container">
           <h2>Мы работаем с международными и местными компаниями, чтобы создавать захватывающие и полезные цифровые технологии.</h2>
           <div class="home__link-wrapper"><a class="home__project-link" href="#">Посмотреть больше работ</a></div>
+        </div>
+        <div class="home__sliders-wrapper">
           <div class="home__slider">
             <div class="home__slider-wrapper slider__wrapper">
               <div class="slider__item home__slider-item"><img src="images/content/slider-item.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item2.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item3.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item4.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item5.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item6.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item7.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item8.svg" width="168" height="68" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item2.svg" width="166" height="69" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item3.svg" width="126" height="73" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item4.svg" width="96" height="64" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item5.svg" width="158" height="89" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item6.svg" width="147" height="77" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item7.svg" width="166" height="101" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item8.svg" width="183" height="85" alt="логотип компании"></div>
             </div>
           </div>
           <div class="home__slider-center">
             <div class="home__slider-wrapper-center slider__wrapper">
               <div class="slider__item home__slider-item"><img src="images/content/slider-item.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item2.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item3.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item4.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item5.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item6.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item7.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item8.svg" width="168" height="68" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item2.svg" width="166" height="69" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item3.svg" width="126" height="73" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item4.svg" width="96" height="64" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item5.svg" width="158" height="89" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item6.svg" width="147" height="77" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item7.svg" width="166" height="101" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item8.svg" width="183" height="85" alt="логотип компании"></div>
             </div>
           </div>
           <div class="home__slider-last">
             <div class="home__slider-wrapper slider__wrapper">
               <div class="slider__item home__slider-item"><img src="images/content/slider-item.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item2.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item3.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item4.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item5.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item6.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item7.svg" width="168" height="68" alt="логотип компании"></div>
-              <div class="slider__item home__slider-item"><img src="images/content/slider-item8.svg" width="168" height="68" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item2.svg" width="166" height="69" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item3.svg" width="126" height="73" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item4.svg" width="96" height="64" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item5.svg" width="158" height="89" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item6.svg" width="147" height="77" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item7.svg" width="166" height="101" alt="логотип компании"></div>
+              <div class="slider__item home__slider-item"><img src="images/content/slider-item8.svg" width="183" height="85" alt="логотип компании"></div>
             </div>
           </div>
         </div>
