@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru-RU" data-theme="dark">
+<html lang="ru-RU" data-theme="light">
   <head>
     <meta charset="utf-8">
     <title>Projects</title><!--[if IE]>
@@ -17,13 +17,20 @@
     <header class="header header__dark-bg">
       <div class="header__container">
         <div class="header__logo-wrapper"><img src="images/common/logo.svg" width="36" height="36" alt="логотип сайта">
-          <h1>EDIA SHAPER</h1>
+          <h1>EDIA SHAPER
+            <svg class="svg-sprite-icon icon-r">
+              <use xlink:href="images/sprite/symbol/sprite.svg#r"></use>
+            </svg>
+          </h1>
           <p>маркетинговое агентство</p>
         </div>
         <div class="header__social-wrapper">
-          <div class="header__menu-text">
+          <div class="header__menu-text"><span></span>
             <p>меню</p>
           </div>
+          <label class="header__lang">Eng
+            <input class="switch-lang" type="checkbox">
+          </label>
           <label class="header__switch">
             <input class="switch-theme" type="checkbox"><span class="header__slider round"></span>
           </label><a class="header__video-link" href="#"><img src="images/content/video-header.png" width="42" height="42" alt="картинка с видео"></a><a class="header__btn" href="#">Заполнить бриф</a>
