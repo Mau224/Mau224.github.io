@@ -22,6 +22,16 @@
 	height: 19px;
 }
 
+.svg-r {
+	@extend %svg-common;
+	background-position: 88.88888888888889% 77.27272727272727%;
+}
+
+.svg-r-dims {
+	width: 12px;
+	height: 12px;
+}
+
 .svg-tg {
 	@extend %svg-common;
 	background-position: 100% 0;
