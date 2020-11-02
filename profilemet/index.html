@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru-RU" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="keywords" content="">
+    <meta name="description" content="Описание страницы сайта.">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preload" href="fonts/Qanelas/Qanelas.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/QanelasBold/QanelasBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/QanelasMedium/QanelasMedium.woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__top">
+          <div class="header__wrapper header__wrapper--top">
+            <div class="select header__select" data-da="header__burger-nav--top,last,1023">
+              <div class="select__header"><span class="select__current">г.Москва</span></div>
+              <div class="select__body">
+                <div class="select__item">123</div>
+                <div class="select__item">321</div>
+                <div class="select__item">456</div>
+              </div>
+            </div><a class="header__phone-link" href="#">8 (800) 333-31-24
+              <svg class="svg-sprite-icon icon-phone">
+                <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
+              </svg></a>
+            <div class="select header__select" data-da="header__burger-nav--bottom,first,1023">
+              <div class="select__header"><span class="select__current">zakaz@profilmet.ru</span></div>
+              <div class="select__body">
+                <div class="select__item">123</div>
+                <div class="select__item">321</div>
+                <div class="select__item">456</div>
+              </div>
+            </div><a href="#" data-da="header__burger-nav--top,last,1023">Калькулятор</a><a href="#" data-da="header__burger-footer,last,1023">USD 78.0915 EUR 91.5779 LME 14 285</a>
+            <div class="header__switch-wrap" data-da="header__burger-nav--top,last,1023">
+              <p>Тема:</p>
+              <label class="header__switch">
+                <input class="switch-theme" type="checkbox"><span class="header__slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__wrapper"><img src="images/common/logo.png" width="203" height="47" alt="логотип"><a class="header__menu" onclick="openNav()">
+              <p>Меню</p><span></span></a>
+            <div class="overlay" id="myNav">
+              <div class="header__burger-nav header__burger-nav--top"></div>
+              <div class="header__burger-nav header__burger-nav--bottom">
+                <div class="header__menu-close" onclick="closeNav()">
+                  <p>Меню</p>
+                </div>
+              </div>
+              <div class="header__burger-content">
+                <div class="header__burger-services">
+                  <h3>Каталог металлопроката</h3>
+                  <ul>
+                    <li data-text="Сортовой прокат">Сортовой прокат</li>
+                    <li data-text="Сортовой прокат">Сортовой прокат</li>
+                    <li data-text="Сортовой прокат">Сортовой прокат</li>
+                    <li data-text="Сортовой прокат">Сортовой прокат</li>
+                  </ul>
+                  <div class="header__title-list">
+                    <h4>О нас</h4>
+                    <h4>Пресс-центр</h4>
+                    <h4>Услуги</h4>
+                    <h4>Производство</h4>
+                    <h4>Доставка</h4>
+                    <h4>ГОСТы и ТУ</h4>
+                    <h4>Калькулятор</h4>
+                    <h4>Статистика</h4>
+                    <h4>Новости рынка</h4>
+                    <h4>Контакты</h4>
+                    <h4>Филиалы</h4>
+                    <h4>Документы</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="header__burger-footer"></div>
+            </div>
+            <div class="header__group-text"><a href="#">Каталог металлопроката</a><a href="#">О компании</a><a href="#">Доставка</a></div>
+            <div class="header__group-logo" data-da="header__wrapper--top,last,1023"><a href="#">Поиск</a>
+              <svg class="svg-sprite-icon icon-search">
+                <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+              </svg><a href="#">Вход</a>
+              <svg class="svg-sprite-icon icon-profile">
+                <use xlink:href="images/sprite/symbol/sprite.svg#profile"></use>
+              </svg>
+              <div class="header__basket-wrap"><a href="#">Корзина</a>
+                <svg class="svg-sprite-icon icon-basket">
+                  <use xlink:href="images/sprite/symbol/sprite.svg#basket"></use>
+                </svg><a class="header__count" href="#">0</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="home-block">
+      <div class="home-block__container">
+        <div class="home-block__text-container"><img src="images/content/iso.png" width="150" height="30" alt="картинка iso стандарта">
+          <h1>Поставляем нержавеющие стали</h1>
+          <p>От ведущих мировых производителей</p>
+          <div class="home-block__footer">
+            <button class="home-block__btn" type="button">Перейти в магазин</button><img src="images/content/mini-video.png" width="63" height="63" alt="картинка круглого видео">
+            <p>Видео<span>о нас</span></p>
+          </div>
+        </div>
+        <div class="home-block__img-container">
+          <!--img(src="images/content/bg__home-block.png" alt="картинка круглого видео")-->
+          <div class="home-block__pointer">
+            <p>Трубы г/д</p><span></span>
+          </div>
+        </div>
+      </div>
+      <div class="home-block__nav">
+        <div class="home-block__nav-container">
+          <div class="home-block__nav-list">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+            <p>Лист г/к</p>
+            <p>Трубы г/д</p>
+            <p>Трубы х/д</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="home-adv">
+      <div class="home-adv__container">
+        <h2>Металлопрокат</h2>
+      </div>
+      <div class="home-adv__list">
+        <div class="home-adv__item">
+          <h3>Сортовой прокат</h3>
+          <div class="home-adv__text-block">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+          </div>
+        </div>
+        <div class="home-adv__item">
+          <h3>Сортовой прокат</h3>
+          <div class="home-adv__text-block">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+          </div>
+        </div>
+        <div class="home-adv__item">
+          <h3>Сортовой прокат</h3>
+          <div class="home-adv__text-block">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+          </div>
+        </div>
+        <div class="home-adv__item">
+          <h3>Сортовой прокат</h3>
+          <div class="home-adv__text-block">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+          </div>
+        </div>
+        <div class="home-adv__item">
+          <h3>Сортовой прокат</h3>
+          <div class="home-adv__text-block">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+          </div>
+        </div>
+        <div class="home-adv__item">
+          <h3>Сортовой прокат</h3>
+          <div class="home-adv__text-block">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+          </div>
+        </div>
+        <div class="home-adv__item">
+          <h3>Сортовой прокат</h3>
+          <div class="home-adv__text-block">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+          </div>
+        </div>
+        <div class="home-adv__item">
+          <h3>Сортовой прокат</h3>
+          <div class="home-adv__text-block">
+            <p>Арматура, катанка</p>
+            <p>Балка, швеллер</p>
+            <p>Уголок</p>
+            <p>Круг</p>
+            <p>Полоса, квадрат</p>
+            <p>Лист г/к</p>
+          </div>
+        </div>
+        <div class="home-adv__item">
+          <div class="home-adv__last">
+            <h3>Сортовой прокат</h3>
+          </div>
+          <div class="home-adv__last">
+            <h3>Сортовой прокат</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer"></footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

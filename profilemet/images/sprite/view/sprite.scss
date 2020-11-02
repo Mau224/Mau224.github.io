@@ -1,0 +1,44 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-basket {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-basket-dims {
+	width: 15px;
+	height: 15px;
+}
+
+.svg-phone {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-phone-dims {
+	width: 18px;
+	height: 18px;
+}
+
+.svg-profile {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-profile-dims {
+	width: 12px;
+	height: 15px;
+}
+
+.svg-search {
+	@extend %svg-common;
+	background-position: 63.1578947368421% 94.73684210526316%;
+}
+
+.svg-search-dims {
+	width: 14px;
+	height: 14px;
+}
+
