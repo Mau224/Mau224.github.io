@@ -152,3 +152,17 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.height = "0%";
 }
+
+let spoiler = document.querySelectorAll('.home-adv__open');
+
+for (let i = 0; i < spoiler.length; i++) {
+    spoiler[i].addEventListener('click', function () {
+        this.classList.toggle('active');
+        let content = this.nextElementSibling();
+        if (content.style.display) {
+            content.style.display = 'none';
+        } else {
+            content.style.display = 'block';
+        }
+    })
+}
