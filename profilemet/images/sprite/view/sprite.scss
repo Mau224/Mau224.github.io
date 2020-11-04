@@ -4,12 +4,32 @@
 
 .svg-basket {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 0 58.064516129032256%;
 }
 
 .svg-basket-dims {
 	width: 15px;
 	height: 15px;
+}
+
+.svg-fb {
+	@extend %svg-common;
+	background-position: 36.58536585365854% 58.064516129032256%;
+}
+
+.svg-fb-dims {
+	width: 7px;
+	height: 15px;
+}
+
+.svg-inst {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-inst-dims {
+	width: 14px;
+	height: 14px;
 }
 
 .svg-phone {
@@ -24,7 +44,7 @@
 
 .svg-profile {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 61.111111111111114% 58.064516129032256%;
 }
 
 .svg-profile-dims {
@@ -34,11 +54,41 @@
 
 .svg-search {
 	@extend %svg-common;
-	background-position: 63.1578947368421% 94.73684210526316%;
+	background-position: 100% 43.75%;
 }
 
 .svg-search-dims {
 	width: 14px;
 	height: 14px;
+}
+
+.svg-tg {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-tg-dims {
+	width: 14px;
+	height: 13px;
+}
+
+.svg-vk {
+	@extend %svg-common;
+	background-position: 56.25% 0;
+}
+
+.svg-vk-dims {
+	width: 16px;
+	height: 9px;
+}
+
+.svg-ytube {
+	@extend %svg-common;
+	background-position: 41.1764705882353% 91.66666666666667%;
+}
+
+.svg-ytube-dims {
+	width: 14px;
+	height: 10px;
 }
 
