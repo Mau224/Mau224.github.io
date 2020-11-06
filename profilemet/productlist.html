@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ru-RU" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>ProductList</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="keywords" content="">
+    <meta name="description" content="Описание страницы сайта.">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preload" href="fonts/Qanelas/Qanelas.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/QanelasBold/QanelasBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/QanelasMedium/QanelasMedium.woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__top">
+          <div class="header__wrapper header__wrapper--top">
+            <div class="select header__select" data-da="header__burger-nav--top,last,1023">
+              <div class="select__header"><span class="select__current">г.Москва</span></div>
+              <div class="select__body">
+                <div class="select__item">123</div>
+                <div class="select__item">321</div>
+                <div class="select__item">456</div>
+              </div>
+            </div><a class="header__phone-link" href="#">8 (800) 333-31-24
+              <svg class="svg-sprite-icon icon-phone">
+                <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
+              </svg></a>
+            <div class="select header__select" data-da="header__burger-nav--bottom,first,1023">
+              <div class="select__header"><span class="select__current">zakaz@profilmet.ru</span></div>
+              <div class="select__body">
+                <div class="select__item">123</div>
+                <div class="select__item">321</div>
+                <div class="select__item">456</div>
+              </div>
+            </div><a href="#" data-da="header__burger-nav--top,last,1023">Калькулятор</a><a class="header__price-link header__price-link--first" href="#" data-da="header__burger-footer,last,1023">USD 78.0915</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,1023">EUR 91.5779</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,1023">LME 14 285</a>
+            <div class="header__switch-wrap" data-da="header__burger-nav--top,last,1023">
+              <p>Тема:</p>
+              <label class="header__switch">
+                <input class="switch-theme" type="checkbox"><span class="header__slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__wrapper"><img src="images/common/logo.png" width="203" height="47" alt="логотип"><a class="header__menu" onclick="openNav()">
+              <p>Меню</p><span></span></a>
+            <div class="overlay" id="myNav">
+              <div class="header__burger-nav header__burger-nav--top"></div>
+              <div class="header__burger-nav header__burger-nav--bottom">
+                <div class="header__menu-close" onclick="closeNav()">
+                  <p>Меню</p>
+                </div>
+              </div>
+              <div class="header__burger-content">
+                <div class="header__burger-services">
+                  <h3>Каталог металлопроката</h3>
+                  <ul>
+                    <li data-text="Сортовой прокат">Сортовой прокат</li>
+                    <li data-text="Сортовой прокат">Сортовой прокат</li>
+                    <li data-text="Сортовой прокат">Сортовой прокат</li>
+                    <li data-text="Сортовой прокат">Сортовой прокат</li>
+                  </ul>
+                  <div class="header__title-list">
+                    <h4>О нас</h4>
+                    <h4>Пресс-центр</h4>
+                    <h4>Услуги</h4>
+                    <h4>Производство</h4>
+                    <h4>Доставка</h4>
+                    <h4>ГОСТы и ТУ</h4>
+                    <h4>Калькулятор</h4>
+                    <h4>Статистика</h4>
+                    <h4>Новости рынка</h4>
+                    <h4>Контакты</h4>
+                    <h4>Филиалы</h4>
+                    <h4>Документы</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="header__burger-footer"></div>
+            </div>
+            <div class="header__group-text"><a href="#">Каталог металлопроката</a><a href="#">О компании</a><a href="#">Доставка</a></div>
+            <div class="header__group-logo" data-da="header__wrapper--top,last,1023"><a href="#">Поиск</a>
+              <svg class="svg-sprite-icon icon-search">
+                <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+              </svg><a href="#">Вход</a>
+              <svg class="svg-sprite-icon icon-profile">
+                <use xlink:href="images/sprite/symbol/sprite.svg#profile"></use>
+              </svg>
+              <div class="header__basket-wrap"><a href="#">Корзина</a>
+                <svg class="svg-sprite-icon icon-basket">
+                  <use xlink:href="images/sprite/symbol/sprite.svg#basket"></use>
+                </svg>
+                <div class="header__count-wrap"><a class="header__count" href="#">0</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-nav">
+      <p>Главная /</p>
+      <p>Категории /</p>
+      <p>Сортовой прокат /</p>
+      <p>Арматура гладкая А1</p>
+    </div>
+    <div class="productlist">
+      <div class="productlist__container">
+        <h1>Арматура гладкая А1</h1>
+        <div class="productlist__tablet">
+          <div class="productlist__title-wrap">
+            <div class="productlist__title">
+              <h2>Каталог</h2>
+              <div class="productlist__switch-wrap">
+                <p>только наличие</p>
+                <label class="productlist__switch">
+                  <input class="productlist__btn" type="checkbox"><span class="productlist__slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="productlist__option-wrapper">
+            <div class="productlist__option-list">
+              <div class="productlist__option-filter">
+                <h3>Фильтрация</h3>
+              </div>
+              <div class="productlist__option-item productlist__option-item--first">
+                <div class="select">
+                  <div class="select__header"><span class="select__current">Продукция</span></div>
+                  <div class="select__body">
+                    <h3>Продукция</h3>
+                    <div class="select__body-wrapper">
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">Все размеры</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">6</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">10</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">14</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">18</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">22</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">8</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">10</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">12</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">16</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="productlist__option-item">
+                <div class="select">
+                  <div class="select__header"><span class="select__current">Размер</span></div>
+                  <div class="select__body">
+                    <h3>Размер</h3>
+                    <div class="select__body-wrapper">
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">Все размеры</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">6</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">10</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">14</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">18</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">22</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">8</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">10</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">12</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                      <div class="select__item">
+                        <label class="checkbox"><span class="checkbox__text">16</span>
+                          <input type="checkbox"><span class="checkbox__custom"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="productlist__option-item">
+                <div class="select">
+                  <div class="select__header"><span class="select__current">Марка</span></div>
+                  <div class="select__body">
+                    <div class="select__item">123</div>
+                    <div class="select__item">321</div>
+                    <div class="select__item">456</div>
+                  </div>
+                </div>
+              </div>
+              <div class="productlist__option-item">
+                <div class="select">
+                  <div class="select__header"><span class="select__current">Длина</span></div>
+                  <div class="select__body">
+                    <div class="select__item">123</div>
+                    <div class="select__item">321</div>
+                    <div class="select__item">456</div>
+                  </div>
+                </div>
+              </div>
+              <div class="productlist__option-item">
+                <div class="select">
+                  <div class="select__header"><span class="select__current">Регион</span></div>
+                  <div class="select__body">
+                    <div class="select__item">123</div>
+                    <div class="select__item">321</div>
+                    <div class="select__item">456</div>
+                  </div>
+                </div>
+              </div>
+              <div class="productlist__option-item">
+                <div class="select">
+                  <div class="select__header productlist__select-header"><span class="select__current">Цена</span><small>до 100м</small></div>
+                  <div class="select__body">
+                    <div class="select__item">123</div>
+                    <div class="select__item">321</div>
+                    <div class="select__item">456</div>
+                  </div>
+                </div>
+              </div>
+              <div class="productlist__option-item">
+                <div class="select">
+                  <div class="select__header productlist__select-header"><span class="select__current">Цена</span><small>от 100 до 360м</small></div>
+                  <div class="select__body">
+                    <div class="select__item">123</div>
+                    <div class="select__item">321</div>
+                    <div class="select__item">456</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="productlist__tablet-container">
+            <div class="productlist__item-wrapper">
+              <div class="productlist__item">
+                <p>Арматура 6 А1 мотки</p>
+                <p data-da="productlist-info,1,768">ЛИСТЫ</p>
+                <p data-da="productlist-info,1,768">AISI 201</p>
+                <p data-da="productlist-info,1,768">6000</p>
+                <p data-da="productlist-info,1,768">Пермь</p>
+                <p>44</p>
+                <p>43</p>
+                <p>В корзину</p>
+              </div>
+              <div class="productlist__container-info">
+                <div class="productlist-info"></div>
+              </div>
+              <div class="productlist__price">
+                <p>46 490 ₽</p>
+              </div>
+            </div>
+            <div class="productlist__item-wrapper">
+              <div class="productlist__item">
+                <p>Арматура 6 А1 мотки</p>
+                <p data-da="productlist-info--2,2,768">ЛИСТЫ</p>
+                <p data-da="productlist-info--2,2,768">AISI 201</p>
+                <p data-da="productlist-info--2,2,768">6000</p>
+                <p data-da="productlist-info--2,2,768">Пермь</p>
+                <p>44</p>
+                <p>43</p>
+                <p>В корзину</p>
+              </div>
+              <div class="productlist__container-info">
+                <div class="productlist-info productlist-info--2"></div>
+              </div>
+              <div class="productlist__price">
+                <p>46 490 ₽</p>
+              </div>
+            </div>
+            <div class="productlist__item-wrapper">
+              <div class="productlist__item">
+                <p>Арматура 6 А1 мотки</p>
+                <p data-da="productlist-info--3,last,768">ЛИСТЫ</p>
+                <p data-da="productlist-info--3,last,768">AISI 201</p>
+                <p data-da="productlist-info--3,last,768">6000</p>
+                <p data-da="productlist-info--3,last,768">Пермь</p>
+                <p>44</p>
+                <p>43</p>
+                <p>В корзину</p>
+              </div>
+              <div class="productlist__container-info">
+                <div class="productlist-info productlist-info--3"></div>
+              </div>
+              <div class="productlist__price">
+                <p>46 490 ₽</p>
+              </div>
+            </div>
+            <div class="productlist__item-wrapper">
+              <div class="productlist__item">
+                <p>Арматура 6 А1 мотки</p>
+                <p data-da="productlist-info--4,last,768">ЛИСТЫ</p>
+                <p data-da="productlist-info--4,last,768">AISI 201</p>
+                <p data-da="productlist-info--4,last,768">6000</p>
+                <p data-da="productlist-info--4,last,768">Пермь</p>
+                <p>44</p>
+                <p>43</p>
+                <p>В корзину</p>
+              </div>
+              <div class="productlist__container-info">
+                <div class="productlist-info productlist-info--4"></div>
+              </div>
+              <div class="productlist__price">
+                <p>46 490 ₽</p>
+              </div>
+            </div>
+            <div class="productlist__item-wrapper">
+              <div class="productlist__item">
+                <p>Арматура 6 А1 мотки</p>
+                <p data-da="productlist-info--5,last,768">ЛИСТЫ</p>
+                <p data-da="productlist-info--5,last,768">AISI 201</p>
+                <p data-da="productlist-info--5,last,768">6000</p>
+                <p data-da="productlist-info--5,last,768">Пермь</p>
+                <p>44</p>
+                <p>43</p>
+                <p>В корзину</p>
+              </div>
+              <div class="productlist__container-info">
+                <div class="productlist-info productlist-info--5"></div>
+              </div>
+              <div class="productlist__price">
+                <p>46 490 ₽</p>
+              </div>
+            </div>
+            <div class="productlist__item-wrapper">
+              <div class="productlist__item">
+                <p>Арматура 6 А1 мотки</p>
+                <p data-da="productlist-info--6,last,768">ЛИСТЫ</p>
+                <p data-da="productlist-info--6,last,768">AISI 201</p>
+                <p data-da="productlist-info--6,last,768">6000</p>
+                <p data-da="productlist-info--6,last,768">Пермь</p>
+                <p>44</p>
+                <p>43</p>
+                <p>В корзину</p>
+              </div>
+              <div class="productlist__container-info">
+                <div class="productlist-info productlist-info--6"></div>
+              </div>
+              <div class="productlist__price">
+                <p>46 490 ₽</p>
+              </div>
+            </div>
+            <div class="productlist__item-wrapper">
+              <div class="productlist__item">
+                <p>Арматура 6 А1 мотки</p>
+                <p data-da="productlist-info--7,last,768">ЛИСТЫ</p>
+                <p data-da="productlist-info--7,last,768">AISI 201</p>
+                <p data-da="productlist-info--7,last,768">6000</p>
+                <p data-da="productlist-info--7,last,768">Пермь</p>
+                <p>44</p>
+                <p>43</p>
+                <p>В корзину</p>
+              </div>
+              <div class="productlist__container-info">
+                <div class="productlist-info productlist-info--7"></div>
+              </div>
+              <div class="productlist__price">
+                <p>46 490 ₽</p>
+              </div>
+            </div>
+            <div class="productlist__item-wrapper">
+              <div class="productlist__item">
+                <p>Арматура 6 А1 мотки</p>
+                <p data-da="productlist-info--8,last,768">ЛИСТЫ</p>
+                <p data-da="productlist-info--8,last,768">AISI 201</p>
+                <p data-da="productlist-info--8,last,768">6000</p>
+                <p data-da="productlist-info--8,last,768">Пермь</p>
+                <p>44</p>
+                <p>43</p>
+                <p>В корзину</p>
+              </div>
+              <div class="productlist__container-info">
+                <div class="productlist-info productlist-info--8"></div>
+              </div>
+              <div class="productlist__price">
+                <p>46 490 ₽</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="productlist__paginetion">
+          <div class="productlist__paginetion-item active"><a href="#">1</a></div>
+          <div class="productlist__paginetion-item"><a href="#">2</a></div>
+          <div class="productlist__paginetion-item"><a href="#">3</a></div>
+        </div>
+      </div>
+      <div class="productlist__recomendition">
+        <h3>Смотрите также</h3>
+        <div class="productlist__recomendition-list">
+          <div class="productlist__recomendition-item">
+            <p>37 490 ₽</p>
+            <p>37 490 ₽</p>
+            <p>37 490 ₽</p>
+            <p>37 490 ₽</p>
+          </div>
+          <div class="productlist__recomendition-item">
+            <p>Арматура 10 А1 мотки, А240С</p><span>46 490 ₽</span>
+            <p>Арматура 10 А1 мотки, А240С</p><span>46 490 ₽</span>
+            <p>Арматура 10 А1 мотки, А240С</p><span>46 490 ₽</span>
+            <p>Арматура 10 А1 мотки, А240С</p><span>46 490 ₽</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="form">
+      <div class="form__container">
+        <div class="form__title-block">
+          <h2>Представительства</h2>
+          <button class="form__title-btn" type="button">Перейти в контакты</button>
+        </div>
+        <div class="form__tabs-container">
+          <ul class="tabs-nav form__tabs">
+            <li class="tabs-nav__item tabs-nav__item--active is-active" data-tab-name="tab-1">г.Москва</li>
+            <li class="tabs-nav__item" data-tab-name="tab-2">г.Ростов-на-Дону</li>
+          </ul>
+        </div>
+        <div class="tabs-content">
+          <div class="tabs-content__item tab-1 tabs-content__item--active is-active"><img src="images/content/tabs__map.jpg" width="1200" height="630" alt="картинка круглого видео">
+            <div class="form__block">
+              <div class="form__block-contacts">
+                <h4>Контакты</h4>
+                <div class="form__addr-wrap form__contact-wrap">
+                  <p>Адрес:</p><a href="#">г. Москва, Очаковское шоссе, д.42, стр.16 этаж 1 пом. 2 (каб.3,4,5).</a>
+                </div>
+                <div class="form__mail-wrap form__contact-wrap">
+                  <p>Почта:</p><a href="#">msk@profilmet.ru</a>
+                </div>
+                <div class="form__tell-wrap form__contact-wrap">
+                  <p>Номер телефона:</p><a href="#">8 (800) 333-31-24</a>
+                </div>
+              </div>
+              <form class="form__main" action="" method="post">
+                <h4>Связаться с нами</h4>
+                <input type="text" name="name" id="name" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
+                <input type="email" name="email" id="email" placeholder="E-mail" title="Введите почту" minlength="2" maxlength="30" required>
+                <input type="tel" name="phone" id="phone" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
+                <button class="form__sub-btn" type="submit">Отправить</button>
+                <div class="form__check-wrap">
+                  <label class="checkbox">
+                    <input type="checkbox"><span class="checkbox__custom"></span>
+                  </label>
+                  <p>Согласен на обработку<span><a href="#">персональных данных</a></span></p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tabs-content__item tab-2"><img src="images/content/tabs__map.jpg" width="1200" height="630" alt="картинка круглого видео">
+            <div class="form__block">
+              <div class="form__block-contacts">
+                <h4>Контакты2</h4>
+                <div class="form__addr-wrap form__contact-wrap">
+                  <p>Адрес:</p><a href="#">г. Москва, Очаковское шоссе, д.42, стр.16 этаж 1 пом. 2 (каб.3,4,5).</a>
+                </div>
+                <div class="form__mail-wrap form__contact-wrap">
+                  <p>Почта:</p><a href="#">msk@profilmet.ru</a>
+                </div>
+                <div class="form__tell-wrap form__contact-wrap">
+                  <p>Номер телефона:</p><a href="#">8 (800) 333-31-24</a>
+                </div>
+              </div>
+              <form class="form__main" action="" method="post">
+                <h4>Связаться с нами2</h4>
+                <input type="text" name="name2" id="name2" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
+                <input type="email" name="email2" id="email2" placeholder="E-mail" title="Введите почту" minlength="2" maxlength="30" required>
+                <input type="tel" name="phone2" id="phone2" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="prof-text">
+      <div class="prof-text__container">
+        <h2>Профильмет - гипермаркет металлопроката. Москва</h2>
+        <p>Продажа металлопроката – не единственная услуга нашей компании. Еще мы предлагаем обширный перечень дополнительных услуг: резку, оцинковку металлов и пр.</p>
+        <p>Помимо этого, у нас есть свое производство сетки, профнастила и сэндвич-панелей. Выпускаемая продукция изготавливается по современным технологиям и отвечает самым высоким требованиям. В нашем Торговом Доме купить эти товары и металлопрокат оптом вы сможете на выгодных условиях.</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__col">
+          <h4 class="footer__col-title">Каталог металлопроката</h4>
+          <div class="footer__text-block footer__first-block">
+            <p>Сортовой прокат</p>
+            <p>Трубы</p>
+            <p>Листовой прокат</p>
+            <p>Метизы</p>
+            <p>Качественные стали</p>
+            <p>Цветные металлы</p>
+            <p>Нержавеющая сталь</p>
+            <p>Судовая сталь</p>
+            <p>Сваи винтовые</p>
+            <p>Мостовая сталь</p>
+            <p>Новые поступления</p>
+            <p>Спецпредложения</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-spoiler">О нас</h4>
+          <div class="footer__text-block">
+            <p>Основная деятельность</p>
+            <p>УЭО ФТС РФ</p>
+            <p>История</p>
+            <p>Награды и достижения</p>
+            <p>Наши партнеры и поставщики</p>
+            <p>Вакансии</p>
+            <p>Учебный центр</p>
+            <p>Информация для акционеров</p>
+          </div>
+          <div class="footer__main-links" data-da="footer__text-block--last,first,768"><a class="footer__main-link" href="#">
+              <h4>Услуги</h4></a><a class="footer__main-link" href="#">
+              <h4>Производство</h4></a><a class="footer__main-link" href="#">
+              <h4>Доставка</h4></a></div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-spoiler">Пресс-центр</h4>
+          <div class="footer__text-block">
+            <p>Общественная деятельность</p>
+            <p>Корпоративная ответственность</p>
+            <p>Видеоархив</p>
+          </div>
+          <h4 class="footer__col-spoiler">Личный кабинет</h4>
+          <div class="footer__text-block">
+            <p>История заказов</p>
+            <p>Регистрационные данные</p>
+            <p>Быстрый заказ</p>
+            <p>Обратная связь</p>
+            <p>Подписки</p>
+            <p>Старая версия сайта</p>
+            <p>Карта сайта</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__text-block footer__text-block--last"><a class="footer__col-link" href="#">
+              <h4>ГОСТы и ТУ</h4></a><a class="footer__col-link" href="#">
+              <h4>Калькулятор</h4></a><a class="footer__col-link" href="#">
+              <h4>Статистика</h4></a><a class="footer__col-link" href="#">
+              <h4>Новости рынка</h4></a><a class="footer__col-link" href="#">
+              <h4>Контакты</h4></a><a class="footer__col-link" href="#">
+              <h4>Филиалы</h4></a><a class="footer__col-link" href="#">
+              <h4>Документы</h4></a></div>
+        </div>
+      </div>
+      <div class="footer__regist"><a class="footer__regist-item" href="#"><span>pdf</span>
+          <p>Наша презентация</p></a><a class="footer__regist-item" href="#"><span>DOCX</span>
+          <p>Типовой договор</p></a><a class="footer__regist-item" href="#"><span>xls</span>
+          <p>Свежий прайс лист</p></a>
+        <button class="footer__regist-btn" type="button">Регистрация</button>
+      </div>
+      <div class="footer__social">
+        <p>© ОАО«ПРОФИЛЬМЕТ», 2020 г. Все права защищены.</p><a href="#">109428, Москва, ул.Стахановская , 19 / 8 (495) 925-11-55</a>
+        <div class="footer__social-list"><a class="footer__social-item" href="#">
+            <svg class="svg-sprite-icon icon-vk">
+              <use xlink:href="images/sprite/symbol/sprite.svg#vk"></use>
+            </svg></a><a class="footer__social-item" href="#">
+            <svg class="svg-sprite-icon icon-ytube">
+              <use xlink:href="images/sprite/symbol/sprite.svg#ytube"></use>
+            </svg></a><a class="footer__social-item" href="#">
+            <svg class="svg-sprite-icon icon-fb">
+              <use xlink:href="images/sprite/symbol/sprite.svg#fb"></use>
+            </svg></a><a class="footer__social-item" href="#">
+            <svg class="svg-sprite-icon icon-inst">
+              <use xlink:href="images/sprite/symbol/sprite.svg#inst"></use>
+            </svg></a><a class="footer__social-item" href="#">
+            <svg class="svg-sprite-icon icon-tg">
+              <use xlink:href="images/sprite/symbol/sprite.svg#tg"></use>
+            </svg></a></div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
