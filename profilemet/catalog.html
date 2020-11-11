@@ -46,7 +46,10 @@
           </div>
         </div>
         <div class="header__bottom">
-          <div class="header__wrapper"><img src="images/common/logo.png" width="203" height="47" alt="логотип"><a class="header__menu" onclick="openNav()">
+          <div class="header__wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/common/logo.webp 1x, images/common/logo@2x.webp 2x"><img src="images/common/logo.png" srcset="images/common/logo@2x.png" width="203" height="47" alt="логотип">
+            </picture><a class="header__menu" onclick="openNav()">
               <p>Меню</p><span></span></a>
             <div class="overlay" id="myNav">
               <div class="header__burger-nav header__burger-nav--top"></div>
