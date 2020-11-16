@@ -42,9 +42,29 @@
 	height: 173px;
 }
 
+.svg-arrow-black {
+	@extend %svg-common;
+	background-position: 60.66066066066066% 41.86851211072664%;
+}
+
+.svg-arrow-black-dims {
+	width: 25px;
+	height: 25px;
+}
+
+.svg-arrow-cat {
+	@extend %svg-common;
+	background-position: 58.38150289017341% 53.311258278145694%;
+}
+
+.svg-arrow-cat-dims {
+	width: 12px;
+	height: 12px;
+}
+
 .svg-basket {
 	@extend %svg-common;
-	background-position: 58.89212827988338% 47.15719063545151%;
+	background-position: 58.89212827988338% 48.82943143812709%;
 }
 
 .svg-basket-dims {
@@ -54,7 +74,7 @@
 
 .svg-fb {
 	@extend %svg-common;
-	background-position: 61.82336182336182% 47.15719063545151%;
+	background-position: 61.82336182336182% 48.82943143812709%;
 }
 
 .svg-fb-dims {
@@ -64,7 +84,7 @@
 
 .svg-info {
 	@extend %svg-common;
-	background-position: 59.76331360946745% 41.156462585034014%;
+	background-position: 67.15976331360947% 41.156462585034014%;
 }
 
 .svg-info-dims {
@@ -74,7 +94,7 @@
 
 .svg-inst {
 	@extend %svg-common;
-	background-position: 58.72093023255814% 52%;
+	background-position: 40.69767441860465% 57.666666666666664%;
 }
 
 .svg-inst-dims {
@@ -84,7 +104,7 @@
 
 .svg-phone {
 	@extend %svg-common;
-	background-position: 65.29411764705883% 40.87837837837838%;
+	background-position: 72.6470588235294% 40.87837837837838%;
 }
 
 .svg-phone-dims {
@@ -94,7 +114,7 @@
 
 .svg-profile {
 	@extend %svg-common;
-	background-position: 64.73988439306359% 47.15719063545151%;
+	background-position: 64.73988439306359% 48.82943143812709%;
 }
 
 .svg-profile-dims {
@@ -104,7 +124,7 @@
 
 .svg-question {
 	@extend %svg-common;
-	background-position: 75.2840909090909% 46.38157894736842%;
+	background-position: 75.2840909090909% 48.026315789473685%;
 }
 
 .svg-question-dims {
@@ -114,7 +134,7 @@
 
 .svg-search {
 	@extend %svg-common;
-	background-position: 62.7906976744186% 52%;
+	background-position: 44.76744186046512% 57.666666666666664%;
 }
 
 .svg-search-dims {
@@ -124,7 +144,7 @@
 
 .svg-tg {
 	@extend %svg-common;
-	background-position: 66.86046511627907% 51.82724252491694%;
+	background-position: 48.83720930232558% 57.475083056478404%;
 }
 
 .svg-tg-dims {
@@ -134,7 +154,7 @@
 
 .svg-tw {
 	@extend %svg-common;
-	background-position: 68.80466472303208% 46.688741721854306%;
+	background-position: 68.80466472303208% 48.34437086092715%;
 }
 
 .svg-tw-dims {
@@ -144,7 +164,7 @@
 
 .svg-vk {
 	@extend %svg-common;
-	background-position: 70.17543859649123% 39.67213114754098%;
+	background-position: 77.48538011695906% 39.67213114754098%;
 }
 
 .svg-vk-dims {
@@ -154,7 +174,7 @@
 
 .svg-ytube {
 	@extend %svg-common;
-	background-position: 72.96511627906976% 46.38157894736842%;
+	background-position: 72.96511627906976% 48.026315789473685%;
 }
 
 .svg-ytube-dims {
