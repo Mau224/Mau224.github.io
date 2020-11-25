@@ -160,34 +160,50 @@ let select = function () {
 
 select();
 
-// var checkbox = document.querySelector('.switch-theme');
-//
-// checkbox.addEventListener('change', function (){
-//     if (this.checked) {
-//         document.documentElement.setAttribute('data-theme', 'dark');
-//     } else {
-//         document.documentElement.setAttribute('data-theme', 'light');
-//     }
-// })
+var checkbox = document.querySelector('.switch-theme');
+var text = document.querySelector('.calc__switch-text');
+
+for (let i = 0; i < checkbox.length; i++) {
+    checkbox[i].addEventListener('change', function () {
+        if (text.classList.contains('color')) {
+            text.classList.remove('color');
+        } else {
+            text.classList.add('color');
+        }
+    })
+}
 
 !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
 
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    /* Записываем в переменные массив элементов-кнопок и подложку.
+       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
     var modalButtons = document.querySelectorAll('.js-open-modal'),
         overlay      = document.querySelector('.js-overlay-modal'),
         closeButtons = document.querySelectorAll('.js-modal-close');
 
 
+    /* Перебираем массив кнопок */
     modalButtons.forEach(function(item){
+
+        /* Назначаем каждой кнопке обработчик клика */
         item.addEventListener('click', function(e) {
 
+            /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+               люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+               Нужно подстраховаться. */
             e.preventDefault();
 
+            /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+               и будем искать модальное окно с таким же атрибутом. */
             var modalId = this.getAttribute('data-modal'),
                 modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
 
+
+            /* После того как нашли нужное модальное окно, добавим классы
+               подложке и окну чтобы показать их. */
             modalElem.classList.add('active');
             overlay.classList.add('active');
         }); // end click
@@ -223,12 +239,29 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.remove('active');
     });
 
+
+
+
 }); // end ready
 
 let spoiler = document.querySelectorAll('.faq__item-header');
 
 for (let i = 0; i < spoiler.length; i++) {
     spoiler[i].addEventListener('click', function () {
+        this.classList.toggle('active');
+        let content = this.nextElementSibling();
+        if (content.style.display) {
+            content.style.display = 'none';
+        } else {
+            content.style.display = 'block';
+        }
+    })
+}
+
+let spoiler2 = document.querySelectorAll('.open-spoiler');
+
+for (let i = 0; i < spoiler2.length; i++) {
+    spoiler2[i].addEventListener('click', function () {
         this.classList.toggle('active');
         let content = this.nextElementSibling();
         if (content.style.display) {

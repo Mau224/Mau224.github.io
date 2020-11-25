@@ -122,6 +122,16 @@
 	height: 18px;
 }
 
+.svg-plus {
+	@extend %svg-common;
+	background-position: 23.636363636363637% 98.98989898989899%;
+}
+
+.svg-plus-dims {
+	width: 14px;
+	height: 14px;
+}
+
 .svg-star {
 	@extend %svg-common;
 	background-position: 60.78431372549019% 60.215053763440864%;

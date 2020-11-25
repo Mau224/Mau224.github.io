@@ -85,14 +85,17 @@
             </svg></a></div>
       </div>
     </header>
-    <section class="main-info">
-      <div class="main-info__container"><a class="main-info__location" href="#">работаем в Москве и области
-          <svg class="svg-sprite-icon icon-marker">
-            <use xlink:href="images/sprite/symbol/sprite.svg#marker"></use>
-          </svg></a>
-        <h1>Алюминиевые окна от производителя</h1>
-        <p>У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p><a class="main-info__link-more" href="#">Подробнее</a>
+    <section>
+      <div class="main-info">
+        <div class="main-info__container"><a class="main-info__location" href="#">работаем в Москве и области
+            <svg class="svg-sprite-icon icon-marker">
+              <use xlink:href="images/sprite/symbol/sprite.svg#marker"></use>
+            </svg></a>
+          <h1 data-da="main-info__mob,first,867">Алюминиевые окна от производителя</h1>
+          <p data-da="main-info__mob,first,867">У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p><a class="main-info__link-more" href="#" data-da="main-info__mob,first,867">Подробнее</a>
+        </div>
       </div>
+      <div class="main-info__mob"></div>
     </section>
     <section class="advantages">
       <div class="advantages__container">
@@ -102,6 +105,10 @@
           <button class="advantages__btn" type="button">Бесплатный вызов замерщика</button>
         </div>
         <div class="advantages__block">
+          <div class="advantages__btns">
+            <button class="advantages__left advantages__arrow" type="button"></button>
+            <button class="advantages__right advantages__arrow" type="button"></button>
+          </div>
           <div class="advantages__list">
             <div class="adbantages__item">
               <div class="adbantages__item-title">
@@ -132,7 +139,14 @@
               <p>Мы получаем специальные условия благодаря большому объему закупок комплектующих</p>
             </div>
           </div>
-          <div class="advantages__img"><img src="images/content/window.png" alt="картинка окна"><img class="advantages__bg-img" src="images/content/bg_place-advantages.jpg" alt="картинка за окном"></div>
+          <div class="advantages__img">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/window.webp 1x, images/content/window@2x.webp 2x"><img src="images/content/window.png" srcset="images/content/window@2x.png" alt="картинка окна">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/bg_place-advantages.webp 1x, images/content/bg_place-advantages@2x.webp 2x"><img class="advantages__bg-img" src="images/content/bg_place-advantages.jpg" srcset="images/content/bg_place-advantages@2x.jpg" alt="картинка за окном">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
@@ -142,7 +156,11 @@
         <p>У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p>
         <div class="service__list">
           <div class="service__item">
-            <h3>Окна</h3>
+            <h3 class="open-spoiler">Окна
+              <svg class="svg-sprite-icon icon-plus">
+                <use xlink:href="images/sprite/symbol/sprite.svg#plus"></use>
+              </svg>
+            </h3>
             <div class="service__item-wrap">
               <p>Алюминиевые окна</p>
               <p>Окна ПВХ</p>
@@ -150,7 +168,11 @@
             </div>
           </div>
           <div class="service__item">
-            <h3>Окна</h3>
+            <h3 class="open-spoiler">Окна
+              <svg class="svg-sprite-icon icon-plus">
+                <use xlink:href="images/sprite/symbol/sprite.svg#plus"></use>
+              </svg>
+            </h3>
             <div class="service__item-wrap">
               <p>Алюминиевые окна</p>
               <p>Окна ПВХ</p>
@@ -158,7 +180,11 @@
             </div>
           </div>
           <div class="service__item">
-            <h3>Окна</h3>
+            <h3 class="open-spoiler">Окна
+              <svg class="svg-sprite-icon icon-plus">
+                <use xlink:href="images/sprite/symbol/sprite.svg#plus"></use>
+              </svg>
+            </h3>
             <div class="service__item-wrap">
               <p>Алюминиевые окна</p>
               <p>Окна ПВХ</p>
@@ -166,7 +192,11 @@
             </div>
           </div>
           <div class="service__item">
-            <h3>Корпоративным клиентам</h3>
+            <h3 class="open-spoiler">Корпоративным клиентам
+              <svg class="svg-sprite-icon icon-plus">
+                <use xlink:href="images/sprite/symbol/sprite.svg#plus"></use>
+              </svg>
+            </h3>
             <div class="service__item-wrap">
               <p>Алюминиевые окна</p>
               <p>Окна ПВХ</p>
@@ -175,7 +205,11 @@
             </div>
           </div>
           <div class="service__item">
-            <h3>Окна</h3>
+            <h3 class="open-spoiler">Окна
+              <svg class="svg-sprite-icon icon-plus">
+                <use xlink:href="images/sprite/symbol/sprite.svg#plus"></use>
+              </svg>
+            </h3>
             <div class="service__item-wrap">
               <p>Алюминиевые окна</p>
               <p>Окна ПВХ</p>
@@ -203,7 +237,14 @@
             </div>
           </form>
         </div>
-        <div class="call__img"><img class="call__img-main" src="images/content/call__girl.png" alt="картинка на форме вызова"><img class="call__img-back" src="images/content/call__img.jpg" alt="картинка на форме вызова"></div>
+        <div class="call__img">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/call__girl.webp 1x, images/content/call__girl@2x.webp 2x"><img class="call__img-main" src="images/content/call__girl.png" srcset="images/content/call__girl@2x.png" alt="картинка на форме вызова">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/call__img.webp 1x, images/content/call__img@2x.webp 2x"><img class="call__img-back" src="images/content/call__img.jpg" srcset="images/content/call__img@2x.jpg" alt="картинка на форме вызова">
+          </picture>
+        </div>
       </div>
     </section>
     <section class="works">
@@ -213,31 +254,58 @@
           <p>У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p><a href="#">Все работы</a>
         </div>
         <div class="works__list">
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
-          <div class="works__item"><img src="images/content/works-img1.jpg" alt="картинка работы">
+          <div class="works__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img1.webp 1x, images/content/works-img1@2x.webp 2x"><img src="images/content/works-img1.jpg" srcset="images/content/works-img1@2x.jpg" alt="картинка работы">
+            </picture>
             <p>Остекление фасада магазина</p>
           </div>
         </div>
@@ -245,8 +313,15 @@
       </div>
     </section>
     <section class="action">
-      <div class="action__container"><img src="images/content/action__bg.png" alt="фоноваякартинка сообщений">
-        <div class="action__img"><img src="images/content/action__mobail.png" alt="картинка телефона в акции"></div>
+      <div class="action__container">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/action__bg.webp 1x, images/content/action__bg@2x.webp 2x"><img src="images/content/action__bg.png" srcset="images/content/action__bg@2x.png" alt="фоноваякартинка сообщений">
+        </picture>
+        <div class="action__img">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/action__mobail.webp 1x, images/content/action__mobail@2x.webp 2x"><img src="images/content/action__mobail.png" srcset="images/content/action__mobail@2x.png" alt="картинка телефона в акции">
+          </picture>
+        </div>
         <form class="action__form" action="" method="post">
           <h1>СМС - СКИДКА</h1>
           <p>Получите в ответном SMS уникальный код: Вас ждет скидка до 5000 рублей на покупки*</p>
@@ -263,9 +338,25 @@
       <div class="profile__container">
         <h1>Профили</h1>
         <div class="profile__title">
-          <p>У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p><a href="#">Все профили</a>
+          <p>У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p><a href="#" data-da="profile__container,last,867">Все профили</a>
         </div>
-        <div class="profile__list"><img src="images/content/profile__img1.png" alt="логотип компании партнера"><img src="images/content/profile__img2.png" alt="логотип компании партнера"><img src="images/content/profile__img1.png" alt="логотип компании партнера"><img src="images/content/profile__img1.png" alt="логотип компании партнера"><img src="images/content/profile__img1.png" alt="логотип компании партнера"></div>
+        <div class="profile__list">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/profile__img1.webp 1x, images/content/profile__img1@2x.webp 2x"><img src="images/content/profile__img1.png" srcset="images/content/profile__img1@2x.png" alt="логотип компании партнера">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/profile__img2.webp 1x, images/content/profile__img2@2x.webp 2x"><img src="images/content/profile__img2.png" srcset="images/content/profile__img2@2x.png" alt="логотип компании партнера">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/profile__img1.webp 1x, images/content/profile__img1@2x.webp 2x"><img src="images/content/profile__img1.png" srcset="images/content/profile__img1@2x.png" alt="логотип компании партнера">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/profile__img1.webp 1x, images/content/profile__img1@2x.webp 2x"><img src="images/content/profile__img1.png" srcset="images/content/profile__img1@2x.png" alt="логотип компании партнера">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/profile__img1.webp 1x, images/content/profile__img1@2x.webp 2x"><img src="images/content/profile__img1.png" srcset="images/content/profile__img1@2x.png" alt="логотип компании партнера">
+          </picture>
+        </div>
       </div>
     </section>
     <section class="stages">
@@ -277,7 +368,10 @@
             <div class="stages__item-title">
               <h3>01</h3>
               <h4>Вызов замерщика</h4>
-            </div><img src="images/content/stage__img1.png" alt="картинка в обьекте">
+            </div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/stage__img1.webp 1x, images/content/stage__img1@2x.webp 2x"><img src="images/content/stage__img1.png" srcset="images/content/stage__img1@2x.png" alt="картинка в обьекте">
+            </picture>
             <p>Чаще всего металлопластиковые окна устанавливают потому</p><a href="#">Заказать звонок</a>
           </div>
           <div class="stages__item">
@@ -319,7 +413,10 @@
       </div>
     </section>
     <section class="time">
-      <div class="time__container"><img src="images/content/time__bg.png" alt="фоноваякартинка сообщений">
+      <div class="time__container">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/time__bg.webp 1x, images/content/time__bg@2x.webp 2x"><img src="images/content/time__bg.png" srcset="images/content/time__bg@2x.png" alt="фоноваякартинка сообщений">
+        </picture>
         <h1>УСПЕЙТЕ ЗАКАЗАТЬ ОКНА ВЫГОДНО</h1>
         <p>Внимние! осталось всего</p>
         <div class="time__block">
@@ -354,9 +451,9 @@
             <div class="calc__first-option">
               <p><span>01.</span>Выберите тип профиля</p>
               <div class="calc__first-wrap">
-                <input type="radio" id="tab-1" name="radioname" checked>
+                <input type="radio" id="tab-1" name="radio1" checked>
                 <label for="tab-1">Холодный</label>
-                <input type="radio" id="tab-2" name="radioname" checked>
+                <input type="radio" id="tab-2" name="radio1">
                 <label for="tab-2">Теплый</label>
               </div>
             </div>
@@ -379,23 +476,23 @@
           <div class="calc__first-option calc__second-option">
             <p><span>02.</span>Выберите производителя</p>
             <div class="calc__second-wrap">
-              <input type="radio" id="rad-1" name="radioname" checked>
+              <input type="radio" id="rad-1" name="radio2" checked>
               <label for="rad-1"><img src="images/content/calc__img1.jpg" alt="картинка окна">
                 <p>Одностворчатое</p>
               </label>
-              <input type="radio" id="rad-2" name="radioname" checked>
+              <input type="radio" id="rad-2" name="radio2">
               <label for="rad-2"><img src="images/content/calc__img1.jpg" alt="картинка окна">
                 <p>Одностворчатое</p>
               </label>
-              <input type="radio" id="rad-3" name="radioname" checked>
+              <input type="radio" id="rad-3" name="radio2">
               <label for="rad-3"><img src="images/content/calc__img1.jpg" alt="картинка окна">
                 <p>Одностворчатое</p>
               </label>
-              <input type="radio" id="rad-4" name="radioname" checked>
+              <input type="radio" id="rad-4" name="radio2">
               <label for="rad-4"><img src="images/content/calc__img1.jpg" alt="картинка окна">
                 <p>Одностворчатое</p>
               </label>
-              <input type="radio" id="rad-5" name="radioname" checked>
+              <input type="radio" id="rad-5" name="radio2">
               <label for="rad-5"><img src="images/content/calc__img1.jpg" alt="картинка окна">
                 <p>Одностворчатое</p>
               </label>
@@ -404,13 +501,13 @@
           <div class="calc__first-option calc__third-option">
             <p><span>02.</span>Выберите производителя</p>
             <div class="calc__first-wrap">
-              <input type="radio" id="var-1" name="radioname" checked>
+              <input type="radio" id="var-1" name="radio3" checked>
               <label for="var-1">Однокамерный</label>
-              <input type="radio" id="var-2" name="radioname" checked>
+              <input type="radio" id="var-2" name="radio3">
               <label for="var-2">Двухкамерный</label>
-              <input type="radio" id="var-3" name="radioname" checked>
+              <input type="radio" id="var-3" name="radio3">
               <label for="var-3">Энергосберегающий</label>
-              <input type="radio" id="var-4" name="radioname" checked>
+              <input type="radio" id="var-4" name="radio3">
               <label for="var-4">Звукоизолирующий</label>
             </div>
           </div>
@@ -419,11 +516,11 @@
               <p>Нужен подоконник?</p>
               <div class="calc__first-wrap">
                 <div class="calc__four-switch">
-                  <p>Да</p>
+                  <p class="calc__switch-text1">Да</p>
                   <label class="switch">
-                    <input type="checkbox"><span class="slider round"></span>
+                    <input class="switch-theme" type="checkbox"><span class="slider round"></span>
                   </label>
-                  <p>Нет</p>
+                  <p class="calc__switch-text2 color">Нет</p>
                 </div>
               </div>
             </div>
@@ -431,11 +528,11 @@
               <p>Нужен подоконник?</p>
               <div class="calc__first-wrap">
                 <div class="calc__four-switch">
-                  <p>Да</p>
+                  <p class="calc__switch-text">Да</p>
                   <label class="switch">
-                    <input type="checkbox"><span class="slider round"></span>
+                    <input class="switch-theme" type="checkbox"><span class="slider round"></span>
                   </label>
-                  <p>Нет</p>
+                  <p class="calc__switch-text color">Нет</p>
                 </div>
               </div>
             </div>
@@ -443,11 +540,11 @@
               <p>Нужен подоконник?</p>
               <div class="calc__first-wrap">
                 <div class="calc__four-switch">
-                  <p>Да</p>
+                  <p class="calc__switch-text1">Да</p>
                   <label class="switch">
-                    <input type="checkbox"><span class="slider round"></span>
+                    <input class="switch-theme" type="checkbox"><span class="slider round"></span>
                   </label>
-                  <p>Нет</p>
+                  <p class="calc__switch-text1">Нет</p>
                 </div>
               </div>
             </div>
@@ -507,21 +604,30 @@
       </div>
     </section>
     <section class="form">
-      <form class="form__main" method="post" action="">
-        <h1>Бесплатный вызов замерщика</h1>
-        <p>Отправьте заявку прямо сейчас, и мы вам перезвоним.</p>
-        <div class="form__wrap">
-          <label for="persone"></label>
-          <input type="text" name="name" id="persone" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
-          <label for="phone-num"></label>
-          <input type="tel" name="phone" id="phone-num" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
+      <div class="form__container">
+        <form class="form__main" method="post" action="">
+          <h1>Бесплатный вызов замерщика</h1>
+          <p>Отправьте заявку прямо сейчас, и мы вам перезвоним.</p>
+          <div class="form__wrap">
+            <label for="persone"></label>
+            <input type="text" name="name" id="persone" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
+            <label for="phone-num"></label>
+            <input type="tel" name="phone" id="phone-num" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
+          </div>
+          <div class="form__form-footer">
+            <p>Нажимая на кнопку вы соглашаетесь на обработку<a href="#">персональных данных</a></p>
+            <button class="form__sub-btn" type="submit">Отправить</button>
+          </div>
+        </form>
+        <div class="form__img-wrap">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/form__img-person.webp 1x, images/content/form__img-person@2x.webp 2x"><img class="form__img-pers" src="images/content/form__img-person.png" srcset="images/content/form__img-person@2x.png" alt="картинка формы">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/form__img.webp 1x, images/content/form__img@2x.webp 2x"><img class="form__img-bg" src="images/content/form__img.jpg" srcset="images/content/form__img@2x.jpg" alt="картинка формы">
+          </picture>
         </div>
-        <div class="form__form-footer">
-          <p>Нажимая на кнопку вы соглашаетесь на обработку<a href="#">персональных данных</a></p>
-          <button class="form__sub-btn" type="submit">Отправить</button>
-        </div>
-      </form>
-      <div class="form__img-wrap"><img class="form__img-pers" src="images/content/form__img-person.png" alt="картинка формы"><img src="images/content/form__img.jpg" alt="картинка формы"></div>
+      </div>
     </section>
     <section class="reviews">
       <div class="reviews__container">
@@ -556,7 +662,10 @@
                 <svg class="svg-sprite-icon icon-star">
                   <use xlink:href="images/sprite/symbol/sprite.svg#star"></use>
                 </svg>
-              </div><img src="images/content/reviews__company1.jpg" alt="название копании">
+              </div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/reviews__company1.webp 1x, images/content/reviews__company1@2x.webp 2x"><img src="images/content/reviews__company1.jpg" srcset="images/content/reviews__company1@2x.jpg" alt="название копании">
+              </picture>
             </div>
             <p>Установка окон данной компанией в квартире, Москва (договор ФО8-554334). Не буду оценивать качество, надежность и долговечность, используемых данной организацией профилей Deceuninck и фурнитуры Elementis, при изготовлении пластиковых окон...</p>
             <div class="reviews__item-footer">
@@ -633,6 +742,7 @@
         <h1>Наши контакты</h1>
         <p>У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p>
         <div class="map__block">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287508.12969453563!2d37.56122208241319!3d55.738396483171435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1606249059661!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
           <div class="map__info-block">
             <p>Работаем ежедневно:</p>
             <h3>с 9:00 до 21:00</h3>
@@ -801,8 +911,18 @@
     </footer>
     <!--button(id="btn_modal_window") Open Modal-->
     <div class="modal" data-modal="1">
-      <div class="modal__content"><span class="close_modal_window js-modal-close"></span><img class="modal__bg" src="images/content/modal__bg.png" alt="фоноваякартинка сообщений">
-        <div class="modal__img"><img src="images/content/modal__img.jpg" alt="1"><img class="modal__img-person" src="images/content/modal__person.png" alt="2"></div>
+      <div class="modal__content"><span class="close_modal_window js-modal-close"></span>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal__bg.webp 1x, images/content/modal__bg@2x.webp 2x"><img class="modal__bg" src="images/content/modal__bg.png" srcset="images/content/modal__bg@2x.png" alt="фоноваякартинка сообщений">
+        </picture>
+        <div class="modal__img">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal__img.webp 1x, images/content/modal__img@2x.webp 2x"><img src="images/content/modal__img.jpg" srcset="images/content/modal__img@2x.jpg" alt="1">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal__person.webp 1x, images/content/modal__person@2x.webp 2x"><img class="modal__img-person" src="images/content/modal__person.png" srcset="images/content/modal__person.png" alt="2">
+          </picture>
+        </div>
         <form class="modal__form" method="post" action="">
           <h1>Заказать бесплатный замер</h1>
           <p>Отправьте заявку прямо сейчас, и мы вам перезвоним.</p>
@@ -828,10 +948,16 @@
         </div>
         <div class="modal__reviews-wrapper">
           <div class="modal__reviews-block">
-            <h3>Оставить отзыв в GOOGLE</h3><img src="images/content/modal-logo.png" alt="логотип компании"><a href="#">Оставить отзыв</a>
+            <h3>Оставить отзыв в GOOGLE</h3>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal-logo.webp 1x, images/content/modal-logo@2x.webp 2x"><img src="images/content/modal-logo.png" srcset="images/content/modal-logo@2x.png" alt="логотип компании">
+            </picture><a href="#">Оставить отзыв</a>
           </div>
           <div class="modal__reviews-block">
-            <h3>Оставить отзыв в GOOGLE</h3><img src="images/content/modal-logo.png" alt="логотип компании"><a href="#">Оставить отзыв</a>
+            <h3>Оставить отзыв в GOOGLE</h3>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal-logo.webp 1x, images/content/modal-logo@2x.webp 2x"><img src="images/content/modal-logo.png" srcset="images/content/modal-logo@2x.png" alt="логотип компании">
+            </picture><a href="#">Оставить отзыв</a>
           </div>
         </div>
       </div>
