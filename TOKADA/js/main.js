@@ -160,15 +160,17 @@ let select = function () {
 
 select();
 
+
 var checkbox = document.querySelector('.switch-theme');
-var text = document.querySelector('.calc__switch-text');
+var block = document.querySelectorAll('.calc__four-switch')
 
 for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].addEventListener('change', function () {
-        if (text.classList.contains('color')) {
-            text.classList.remove('color');
+        var content = this.block;
+        if (this.checked) {
+            content.classList.add('active')
         } else {
-            text.classList.add('color');
+            content.classList.remove('active')
         }
     })
 }
