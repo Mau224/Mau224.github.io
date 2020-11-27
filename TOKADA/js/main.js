@@ -161,18 +161,21 @@ let select = function () {
 select();
 
 
-var checkbox = document.querySelector('.switch-theme');
-var block = document.querySelectorAll('.calc__four-switch')
+var button = document.getElementById("mybtn");
+var chkbox = document.getElementsByClassName("chkbox");
 
-for (let i = 0; i < checkbox.length; i++) {
-    checkbox[i].addEventListener('change', function () {
-        var content = this.block;
-        if (this.checked) {
-            content.classList.add('active')
-        } else {
-            content.classList.remove('active')
+function onChangeListener() {
+    button.style.backgroundColor = "gray";
+    for (var i = 0; i < chkbox.length; i++) {
+        if (chkbox[i].checked) {
+            button.style.backgroundColor = "green";
         }
-    })
+    }
+}
+
+for (var i = 0; i < chkbox.length; i++) {
+    var checkbox = chkbox[i];
+    checkbox.addEventListener("change", onChangeListener);
 }
 
 !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
