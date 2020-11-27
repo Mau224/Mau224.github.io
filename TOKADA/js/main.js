@@ -161,22 +161,6 @@ let select = function () {
 select();
 
 
-var button = document.getElementById("mybtn");
-var chkbox = document.getElementsByClassName("chkbox");
-
-function onChangeListener() {
-    button.style.backgroundColor = "gray";
-    for (var i = 0; i < chkbox.length; i++) {
-        if (chkbox[i].checked) {
-            button.style.backgroundColor = "green";
-        }
-    }
-}
-
-for (var i = 0; i < chkbox.length; i++) {
-    var checkbox = chkbox[i];
-    checkbox.addEventListener("change", onChangeListener);
-}
 
 !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
 
@@ -276,3 +260,13 @@ for (let i = 0; i < spoiler2.length; i++) {
         }
     })
 }
+
+var checkbox = document.querySelectorAll('.calc__four-switch');
+
+for (let i = 0; i < checkbox.length; i++) {
+    checkbox[i].addEventListener('change', function () {
+        this.classList.toggle('color');
+        
+    })
+}
+
