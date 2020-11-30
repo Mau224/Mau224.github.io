@@ -233,19 +233,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 }); // end ready
 
-let spoiler = document.querySelectorAll('.faq__item-header');
+// let spoiler = document.querySelectorAll('.faq__item-header');
 
-for (let i = 0; i < spoiler.length; i++) {
-    spoiler[i].addEventListener('click', function () {
-        this.classList.toggle('active');
-        let content = this.nextElementSibling();
-        if (content.style.display) {
-            content.style.display = 'none';
-        } else {
-            content.style.display = 'block';
-        }
-    })
-}
+// for (let i = 0; i < spoiler.length; i++) {
+//     spoiler[i].addEventListener('click', function () {
+//         this.classList.toggle('active');
+//         let content = this.nextElementSibling();
+//         if (content.style.display) {
+//             content.style.display = 'none';
+//         } else {
+//             content.style.display = 'block';
+//         }
+//     })
+// }
 
 let spoiler2 = document.querySelectorAll('.open-spoiler');
 
@@ -261,7 +261,7 @@ for (let i = 0; i < spoiler2.length; i++) {
     })
 }
 
-var checkbox = document.querySelectorAll('.calc__four-switch');
+var checkbox = document.querySelectorAll('.calc__switch-block');
 
 for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].addEventListener('change', function () {
