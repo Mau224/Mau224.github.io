@@ -255,9 +255,11 @@ document.addEventListener('DOMContentLoaded', function() {
 (function () {
     const action = document.querySelector('.header__link-action');
     const headercontainer = document.querySelector('.header__container');
+    const body = document.querySelector('.body');
     action.addEventListener('click', function () {
         action.classList.add('active');
         headercontainer.classList.add('active');
+        body.classList.add('dis');
     });
 }());
 
@@ -265,9 +267,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const action = document.querySelector('.header__link-action');
     const headercontainer = document.querySelector('.header__container');
     const closeaction = document.querySelector('.close__action ');
+    const body = document.querySelector('.body');
     closeaction.addEventListener('click', function () {
         action.classList.remove('active');
         headercontainer.classList.remove('active');
+        body.classList.remove('dis');
     });
 }());
 // let spoiler = document.querySelectorAll('.faq__item-header');
