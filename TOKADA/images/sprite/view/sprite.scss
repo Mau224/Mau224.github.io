@@ -4,7 +4,7 @@
 
 .svg-arrow__rev {
 	@extend %svg-common;
-	background-position: 84.50704225352112% 0;
+	background-position: 0 100%;
 }
 
 .svg-arrow__rev-dims {
@@ -14,7 +14,7 @@
 
 .svg-avatar {
 	@extend %svg-common;
-	background-position: 95.95375722543352% 25.85034013605442%;
+	background-position: 85.71428571428571% 71.19565217391305%;
 }
 
 .svg-avatar-dims {
@@ -24,7 +24,7 @@
 
 .svg-calc__img1 {
 	@extend %svg-common;
-	background-position: 0 0;
+	background-position: 64.03940886699507% 0;
 }
 
 .svg-calc__img1-dims {
@@ -32,9 +32,29 @@
 	height: 80px;
 }
 
+.svg-calc__img2 {
+	@extend %svg-common;
+	background-position: 0 62.295081967213115%;
+}
+
+.svg-calc__img2-dims {
+	width: 115px;
+	height: 80px;
+}
+
+.svg-calc__img4 {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-calc__img4-dims {
+	width: 130px;
+	height: 76px;
+}
+
 .svg-calendar {
 	@extend %svg-common;
-	background-position: 77.01149425287356% 78.1456953642384%;
+	background-position: 45.45454545454545% 67.02127659574468%;
 }
 
 .svg-calendar-dims {
@@ -42,9 +62,19 @@
 	height: 14px;
 }
 
+.svg-car {
+	@extend %svg-common;
+	background-position: 99.57446808510639% 18.75%;
+}
+
+.svg-car-dims {
+	width: 32px;
+	height: 26px;
+}
+
 .svg-circle {
 	@extend %svg-common;
-	background-position: 97.6470588235294% 38.095238095238095%;
+	background-position: 51.80722891566265% 84.78260869565217%;
 }
 
 .svg-circle-dims {
@@ -54,7 +84,7 @@
 
 .svg-cup {
 	@extend %svg-common;
-	background-position: 23.417721518987342% 62.01550387596899%;
+	background-position: 81.85654008438819% 57.2289156626506%;
 }
 
 .svg-cup-dims {
@@ -64,7 +94,7 @@
 
 .svg-door {
 	@extend %svg-common;
-	background-position: 97.6470588235294% 50%;
+	background-position: 59.036144578313255% 84.32432432432432%;
 }
 
 .svg-door-dims {
@@ -72,9 +102,19 @@
 	height: 17px;
 }
 
+.svg-door-menu {
+	@extend %svg-common;
+	background-position: 85.46255506607929% 0;
+}
+
+.svg-door-menu-dims {
+	width: 40px;
+	height: 57px;
+}
+
 .svg-flower {
 	@extend %svg-common;
-	background-position: 81.98757763975155% 59.25925925925926%;
+	background-position: 97.5% 52.325581395348834%;
 }
 
 .svg-flower-dims {
@@ -84,7 +124,7 @@
 
 .svg-inst {
 	@extend %svg-common;
-	background-position: 97.07602339181287% 85.8108108108108%;
+	background-position: 66% 84.32432432432432%;
 }
 
 .svg-inst-dims {
@@ -94,7 +134,7 @@
 
 .svg-key {
 	@extend %svg-common;
-	background-position: 97.6470588235294% 61.904761904761905%;
+	background-position: 18.473895582329316% 100%;
 }
 
 .svg-key-dims {
@@ -104,7 +144,7 @@
 
 .svg-lock {
 	@extend %svg-common;
-	background-position: 0 87.4074074074074%;
+	background-position: 96.29629629629629% 69.76744186046511%;
 }
 
 .svg-lock-dims {
@@ -114,7 +154,7 @@
 
 .svg-mail {
 	@extend %svg-common;
-	background-position: 98.22485207100591% 13.605442176870747%;
+	background-position: 44.354838709677416% 84.78260869565217%;
 }
 
 .svg-mail-dims {
@@ -124,7 +164,7 @@
 
 .svg-many {
 	@extend %svg-common;
-	background-position: 64.1025641025641% 59.701492537313435%;
+	background-position: 99.57446808510639% 34.50292397660819%;
 }
 
 .svg-many-dims {
@@ -134,7 +174,7 @@
 
 .svg-mark {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 45.45454545454545% 50.810810810810814%;
 }
 
 .svg-mark-dims {
@@ -144,7 +184,7 @@
 
 .svg-marker {
 	@extend %svg-common;
-	background-position: 69.31818181818181% 78.66666666666667%;
+	background-position: 45.09803921568628% 59.35828877005348%;
 }
 
 .svg-marker-dims {
@@ -154,7 +194,7 @@
 
 .svg-mastercard {
 	@extend %svg-common;
-	background-position: 83.33333333333333% 33.57664233576642%;
+	background-position: 20.62780269058296% 89.65517241379311%;
 }
 
 .svg-mastercard-dims {
@@ -162,9 +202,19 @@
 	height: 28px;
 }
 
+.svg-mini-win1 {
+	@extend %svg-common;
+	background-position: 36.43724696356275% 85.71428571428571%;
+}
+
+.svg-mini-win1-dims {
+	width: 20px;
+	height: 20px;
+}
+
 .svg-pdf {
 	@extend %svg-common;
-	background-position: 15% 86.13138686131387%;
+	background-position: 97.90794979079497% 86.20689655172414%;
 }
 
 .svg-pdf-dims {
@@ -174,7 +224,7 @@
 
 .svg-pen {
 	@extend %svg-common;
-	background-position: 0 62.99212598425197%;
+	background-position: 84.34782608695652% 34.75609756097561%;
 }
 
 .svg-pen-dims {
@@ -184,7 +234,7 @@
 
 .svg-phone {
 	@extend %svg-common;
-	background-position: 94.31818181818181% 74.14965986394557%;
+	background-position: 45.09803921568628% 41.30434782608695%;
 }
 
 .svg-phone-dims {
@@ -194,7 +244,7 @@
 
 .svg-pint {
 	@extend %svg-common;
-	background-position: 31.325301204819276% 79.19463087248322%;
+	background-position: 95.51020408163265% 95.6989247311828%;
 }
 
 .svg-pint-dims {
@@ -204,7 +254,7 @@
 
 .svg-plus {
 	@extend %svg-common;
-	background-position: 85.05747126436782% 78.1456953642384%;
+	background-position: 45.45454545454545% 74.46808510638297%;
 }
 
 .svg-plus-dims {
@@ -214,7 +264,7 @@
 
 .svg-san {
 	@extend %svg-common;
-	background-position: 43.225806451612904% 60.60606060606061%;
+	background-position: 100% 0;
 }
 
 .svg-san-dims {
@@ -224,7 +274,7 @@
 
 .svg-star {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 79.18367346938776% 71.97802197802197%;
 }
 
 .svg-star-dims {
@@ -234,7 +284,7 @@
 
 .svg-tg {
 	@extend %svg-common;
-	background-position: 8.187134502923977% 100%;
+	background-position: 72.8% 84.32432432432432%;
 }
 
 .svg-tg-dims {
@@ -244,7 +294,7 @@
 
 .svg-time {
 	@extend %svg-common;
-	background-position: 43.02325581395349% 79.19463087248322%;
+	background-position: 86.05577689243027% 83.87096774193549%;
 }
 
 .svg-time-dims {
@@ -254,7 +304,7 @@
 
 .svg-viber {
 	@extend %svg-common;
-	background-position: 18.128654970760234% 100%;
+	background-position: 79.6% 84.32432432432432%;
 }
 
 .svg-viber-dims {
@@ -264,7 +314,7 @@
 
 .svg-whatsapp {
 	@extend %svg-common;
-	background-position: 52.325581395348834% 79.19463087248322%;
+	background-position: 25.49800796812749% 98.9247311827957%;
 }
 
 .svg-whatsapp-dims {
@@ -274,7 +324,7 @@
 
 .svg-window {
 	@extend %svg-common;
-	background-position: 61.627906976744185% 79.19463087248322%;
+	background-position: 31.872509960159363% 98.9247311827957%;
 }
 
 .svg-window-dims {
@@ -284,7 +334,7 @@
 
 .svg-window-calc {
 	@extend %svg-common;
-	background-position: 48.484848484848484% 0;
+	background-position: 61.611374407582936% 62.5%;
 }
 
 .svg-window-calc-dims {

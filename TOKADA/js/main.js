@@ -180,13 +180,8 @@ document.addEventListener('DOMContentLoaded', function() {
         /* Назначаем каждой кнопке обработчик клика */
         item.addEventListener('click', function(e) {
 
-            /* Предотвращаем стандартное действие элемента. Так как кнопку разные
-               люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
-               Нужно подстраховаться. */
             e.preventDefault();
 
-            /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
-               и будем искать модальное окно с таким же атрибутом. */
             var modalId = this.getAttribute('data-modal'),
                 modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
 
@@ -233,6 +228,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
 }); // end ready
 
+
+(function () {
+    const burger = document.querySelector('.header__burger');
+    const body = document.querySelector('.body');
+    const overlay = document.querySelector('.overlay-menu');
+    burger.addEventListener('click', function () {
+        burger.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.classList.toggle('dis');
+    });
+}());
+
+(function () {
+    const burger = document.querySelector('.header__link-call-mob');
+    const body = document.querySelector('.body');
+    const overlay = document.querySelector('.overlay-mob-tel');
+    burger.addEventListener('click', function () {
+        burger.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.classList.toggle('dis');
+    });
+}());
+
+
+(function () {
+    const action = document.querySelector('.header__link-action');
+    const headercontainer = document.querySelector('.header__container');
+    action.addEventListener('click', function () {
+        action.classList.add('active');
+        headercontainer.classList.add('active');
+    });
+}());
+
+(function () {
+    const action = document.querySelector('.header__link-action');
+    const headercontainer = document.querySelector('.header__container');
+    const closeaction = document.querySelector('.close__action ');
+    closeaction.addEventListener('click', function () {
+        action.classList.remove('active');
+        headercontainer.classList.remove('active');
+    });
+}());
 // let spoiler = document.querySelectorAll('.faq__item-header');
 
 // for (let i = 0; i < spoiler.length; i++) {
