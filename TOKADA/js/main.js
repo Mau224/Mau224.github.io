@@ -256,10 +256,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const action = document.querySelector('.header__link-action');
     const headercontainer = document.querySelector('.header__container');
     const body = document.querySelector('.body');
+    const overlay = document.querySelector('.overlay-menu');
+    const burger = document.querySelector('.header__burger');
     action.addEventListener('click', function () {
         action.classList.add('active');
         headercontainer.classList.add('active');
         body.classList.add('dis');
+        overlay.classList.remove('active');
+        burger.classList.remove('active');
     });
 }());
 
@@ -274,19 +278,6 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.remove('dis');
     });
 }());
-// let spoiler = document.querySelectorAll('.faq__item-header');
-
-// for (let i = 0; i < spoiler.length; i++) {
-//     spoiler[i].addEventListener('click', function () {
-//         this.classList.toggle('active');
-//         let content = this.nextElementSibling();
-//         if (content.style.display) {
-//             content.style.display = 'none';
-//         } else {
-//             content.style.display = 'block';
-//         }
-//     })
-// }
 
 let spoiler2 = document.querySelectorAll('.open-spoiler');
 
