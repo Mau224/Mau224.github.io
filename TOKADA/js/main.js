@@ -278,6 +278,19 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.remove('dis');
     });
 }());
+// let spoiler = document.querySelectorAll('.faq__item-header');
+
+// for (let i = 0; i < spoiler.length; i++) {
+//     spoiler[i].addEventListener('click', function () {
+//         this.classList.toggle('active');
+//         let content = this.nextElementSibling();
+//         if (content.style.display) {
+//             content.style.display = 'none';
+//         } else {
+//             content.style.display = 'block';
+//         }
+//     })
+// }
 
 let spoiler2 = document.querySelectorAll('.open-spoiler');
 
