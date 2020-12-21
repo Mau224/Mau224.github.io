@@ -2,7 +2,7 @@
 <html lang="ru-RU" data-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>Advantages</title><!--[if IE]>
+    <title>windowsill</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
@@ -13,19 +13,27 @@
     <link rel="preload" href="fonts/CirceBold/Circe-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/CirceLight/Circe-Light.woff2" as="font" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="body">
     <div class="wrapper">
       <header class="header">
         <div class="header__container">
-          <div class="header__wrap-img"><a class="header__logo" href="/">
+          <div class="header__wrap-img"><a class="header__logo" href="index.html">
               <p><span>окна</span><br>Токаdа</p></a></div>
-          <div class="header__main-nav"><a class="header__link-action" href="#">Акции</a><a class="header__link-reviews" href="#">Отзывы</a><a href="#">Работы</a><a href="#">Калькулятор</a><a href="#">Контакты</a></div>
+          <div class="header__main-nav" data-da="header__mob-main-wrap,last,867"><a class="header__link-action js-open-modal" href="#" data-modal="3">Акции</a><a class="header__link-reviews" href="comment.html">Отзывы</a><a href="#">Работы</a><a class="disabled-on-mob" href="#">Калькулятор</a><a href="contact.html">Контакты</a></div>
           <div class="header__location">
             <div class="header__place">
               <p>Наш адрес:</p><a href="#">Дорожная 29
                 <svg class="svg-sprite-icon icon-mark">
                   <use xlink:href="images/sprite/symbol/sprite.svg#mark"></use>
                 </svg></a>
+              <div class="header__place-block">
+                <div class="header__place-img">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287508.12969453563!2d37.56122208241319!3d55.738396483171435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1606249059661!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="header__place-contact-block">
+                  <p>Москва, ул. Дорожная 29</p><a href="#">Смотреть на карте</a>
+                </div>
+              </div>
             </div>
             <div class="header__time-work header__place">
               <p>Режим работы</p><a href="#">Пн-Вс c 8:00 - 22:00
@@ -34,7 +42,7 @@
                 </svg></a>
             </div>
           </div>
-          <div class="header__socials"><a href="#">
+          <div class="header__socials" data-da="header__mob-info-wrapper,last,867"><a href="#">
               <svg class="svg-sprite-icon icon-inst">
                 <use xlink:href="images/sprite/symbol/sprite.svg#inst"></use>
               </svg></a><a href="#">
@@ -54,30 +62,33 @@
               </svg></a>
           </div>
           <div class="header__mob-wrapper">
-            <div class="header__mob-links"><a class="header__mob-avatar js-open-modal" href="#" data-modal="1">замер
+            <div class="header__mob-links"><a class="header__link-call-mob" href="#">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a><a class="header__mob-avatar js-open-modal" href="#" data-modal="1">замер
                 <svg class="svg-sprite-icon icon-avatar">
                   <use xlink:href="images/sprite/symbol/sprite.svg#avatar"></use>
                 </svg></a></div>
           </div>
         </div>
         <div class="header__list"><a class="header__burger" href="#" data-da="header__mob-wrapper,last,867"><span></span></a>
-          <div class="header__link-list"><a href="#">Окна
+          <div class="header__link-list"><a class="header__sp-link open-spoiler" href="window.html">Окна
               <svg class="svg-sprite-icon icon-window">
                 <use xlink:href="images/sprite/symbol/sprite.svg#window"></use>
-              </svg></a><a href="#">Двери
+              </svg></a><a class="header__sp-link open-spoiler" href="doors.html">Двери
               <svg class="svg-sprite-icon icon-door">
                 <use xlink:href="images/sprite/symbol/sprite.svg#door"></use>
-              </svg></a><a href="#">Фасады
+              </svg></a><a class="header__sp-link open-spoiler" href="facade.html">Фасады
               <svg class="svg-sprite-icon icon-key">
                 <use xlink:href="images/sprite/symbol/sprite.svg#key"></use>
-              </svg></a><a href="#">Комплектующие
+              </svg></a><a class="header__sp-link open-spoiler" href="complete.html">Комплектующие
               <svg class="svg-sprite-icon icon-circle">
                 <use xlink:href="images/sprite/symbol/sprite.svg#circle"></use>
-              </svg></a><a href="#">Корпоративым клиентам
+              </svg></a><a class="header__sp-link open-spoiler" href="clients.html">Корпоративым клиентам
               <svg class="svg-sprite-icon icon-circle">
                 <use xlink:href="images/sprite/symbol/sprite.svg#circle"></use>
               </svg></a></div>
-          <div class="header__main-links"><a class="header__link-call" href="#" data-da="header__mob-links,first,867">Заказать звонок
+          <div class="header__main-links"><a class="header__link-call" href="#">Заказать звонок
               <svg class="svg-sprite-icon icon-phone">
                 <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
               </svg></a><a class="header__link-avatar js-open-modal" href="#" data-modal="1">бесплатный замер
@@ -85,232 +96,294 @@
                 <use xlink:href="images/sprite/symbol/sprite.svg#avatar"></use>
               </svg></a></div>
         </div>
+        <div class="overlay__mega-menu overlay-menu">
+          <div class="header__mega-menu mega-menu">
+            <div class="mega-menu__wrapper" data-da="header__spoiler-list,first,867">
+              <div class="mega-menu__col">
+                <div class="mega-menu__svg-wrapper">
+                  <svg class="svg-sprite-icon icon-door-menu">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#door-menu"></use>
+                  </svg>
+                </div><a class="mega-menu__base-link open-spoiler" href="#">Окна</a>
+                <div class="mega-menu__item-list">
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-win1">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-win1"></use>
+                    </svg><a href="window.html">Алюминиевые окна</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-win2">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-win2"></use>
+                    </svg><a href="window-pvh.html">Пластиковые окна</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-win3">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-win3"></use>
+                    </svg><a href="balcony.html">Балконы и лождии</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mega-menu__col">
+                <div class="mega-menu__svg-wrapper">
+                  <svg class="svg-sprite-icon icon-door-menu2">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#door-menu2"></use>
+                  </svg>
+                </div><a class="mega-menu__base-link open-spoiler" href="#">Двери</a>
+                <div class="mega-menu__item-list">
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-door1">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-door1"></use>
+                    </svg><a href="aluminumdoors.html">Алюминиевые двери</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-door2">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-door2"></use>
+                    </svg><a href="doors.html">Двери ПВХ</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-door3">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-door3"></use>
+                    </svg><a href="Swingdoors.html">Распашные двери</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-door4">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-door4"></use>
+                    </svg><a href="slidingdoors.html">Раздвижные двери</a>
+                  </div>
+                  <!--.mega-menu__col-item-->
+                  <!--	+icon("mini-door5")-->
+                  <!--	a(href="autodoors.html") Автоматические двери-->
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-door6">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-door6"></use>
+                    </svg><a href="officedoors.html">Офисные двери</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-door7">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-door7"></use>
+                    </svg><a href="loftpatitions.html">Лофт перегородки</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mega-menu__col">
+                <div class="mega-menu__svg-wrapper">
+                  <svg class="svg-sprite-icon icon-door-menu3">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#door-menu3"></use>
+                  </svg>
+                </div><a class="mega-menu__base-link open-spoiler" href="#">Фасады</a>
+                <div class="mega-menu__item-list">
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-fac1">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-fac1"></use>
+                    </svg><a href="tent.html">Навесы и козырьки</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-fac2">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-fac2"></use>
+                    </svg><a href="panoramic.html">Панорамное остекление</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-fac3">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-fac3"></use>
+                    </svg><a href="ingroup.html">Входные группы</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-fac4">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-fac4"></use>
+                    </svg><a href="wintergardens.html">Зимние сады</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mega-menu__col">
+                <div class="mega-menu__svg-wrapper">
+                  <svg class="svg-sprite-icon icon-door-menu4">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#door-menu4"></use>
+                  </svg>
+                </div><a class="mega-menu__base-link open-spoiler" href="clients.html">Корпоративным клиентам</a>
+                <div class="mega-menu__item-list">
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-cli1">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-cli1"></use>
+                    </svg><a href="autodoors.html">Автоматические двери</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-cli2">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-cli2"></use>
+                    </svg><a href="stationary.html">Стационарные перегородки</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-cli3">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-cli3"></use>
+                    </svg><a href="slidingpartitions.html">Раздвижные перегородки</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-cli4">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-cli4"></use>
+                    </svg><a href="mobilepartitions.html">Мобильные перегородки</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-cli5">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-cli5"></use>
+                    </svg><a href="#">Торговые павильоны</a>
+                  </div>
+                </div>
+              </div>
+              <div class="mega-menu__col">
+                <div class="mega-menu__svg-wrapper">
+                  <svg class="svg-sprite-icon icon-door-menu5">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#door-menu5"></use>
+                  </svg>
+                </div><a class="mega-menu__base-link open-spoiler" href="complete.html">Комплектующие</a>
+                <div class="mega-menu__item-list">
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-comp1">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-comp1"></use>
+                    </svg><a href="glassunit.html">Стеклопакеты</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-comp2">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-comp2"></use>
+                    </svg><a href="windowsill.html">Подоконники</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-comp3">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-comp3"></use>
+                    </svg><a href="fittings.html">Фурнитура</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-comp4">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-comp4"></use>
+                    </svg><a href="laminate.html">Ламинация</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-comp5">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-comp5"></use>
+                    </svg><a href="#">Москитные сетки</a>
+                  </div>
+                  <div class="mega-menu__col-item">
+                    <svg class="svg-sprite-icon icon-mini-comp6">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#mini-comp6"></use>
+                    </svg><a href="#">Жалюзи</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mega-menu__action" data-da="header__mob-main,last,867">
+              <h2>Окна, двери и раздвижные системы</h2>
+              <p>У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p><a href="#">Узнать цены</a>
+            </div>
+          </div>
+          <div class="header__mob-main">
+            <h2>Меню</h2>
+            <div class="header__mob-main-wrap"></div>
+            <h2>Категории</h2>
+            <div class="header__spoiler-list"></div>
+          </div>
+          <div class="overlay-mob-tel" id="myNav2">
+            <div class="header__mob-info-wrapper">
+              <div class="header__mob-addr header__mob-info">
+                <h2>Адрес</h2><a href="#">Дорожная 29</a>
+              </div>
+              <div class="header__mob-time header__mob-info">
+                <h2>Режим работы</h2><a href="#">Пн-Вс c 8:00 - 22:00</a>
+              </div>
+              <div class="header__mob-tel header__mob-info">
+                <h2>Телефон</h2>
+                <div class="header__mob-wrap"><a href="#">+7 905 7990999</a>
+                  <p>Звонок бесплатный</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
-      <div class="header__nav"><a href="#">Окна</a><span>></span><a href="#">Алюминиевые окна</a></div>
+      <div class="header__nav"><a href="#">Главная</a><span></span><a href="#">Комлектующие</a><span></span><a href="#">Подоконники</a></div>
       <section>
-        <div class="main-info main-info__advantages-page">
+        <div class="main-info main-info__windowsill-page main-info__other-page">
           <div class="main-info__container"><a class="main-info__location" href="#">работаем в Москве и области
               <svg class="svg-sprite-icon icon-marker">
                 <use xlink:href="images/sprite/symbol/sprite.svg#marker"></use>
               </svg></a>
-            <h1 data-da="main-info__mob,first,867">Алюминиевые окна от производителя</h1>
+            <h1 data-da="main-info__mob,first,867">ЗИМНИЕ САДЫ</h1>
             <p data-da="main-info__mob,first,867">У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p><a class="main-info__link-more" href="#" data-da="main-info__mob,first,867">Подробнее</a>
           </div>
         </div>
         <div class="main-info__mob"></div>
       </section>
-      <section class="types">
-        <div class="types__container">
-          <h1>Виды алюминиевых окон</h1>
-          <div class="types__title"> 
-            <p>Если вы хотите иметь качественные, экологичные и максимально долговечные окна, то окна из алюминия - это то, что вам нужно!</p><a href="#">Бесплатный вызов замерщика</a>
-          </div>
-          <div class="types__main">
-            <div class="types__img-block">
+      <section class="type-facade">
+        <div class="type-facade__container">
+          <h1>Виды фасадных остеклений</h1>
+          <p>Стеклянный фасад – это практичное решение для наружного оформления объекта.</p>
+        </div>
+        <div class="type-facade__slider slider swiper-container">
+          <div class="type-facade__list swiper-wrapper">
+            <div class="type-facade__item swiper-slide">
               <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/window-grad.webp 1x, images/content/window-grad@2x.webp 2x"><img class="types__img-window" src="images/content/window-grad.png" srcset="images/content/window-grad@2x.png" alt="картинка окна">
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/type-windowsill-img1.webp 1x, images/content/type-windowsill-img1@2x.webp 2x"><img src="images/content/type-windowsill-img1.jpg" srcset="images/content/type-windowsill-img1@2x.jpg" alt="картинка за окном">
               </picture>
+              <h2>Раздвижные автоматические двери</h2>
+              <p>Рекомендуем заказывать такую конструкцию для широких дверных проемов ТРЦ, кинотеатров и пр.</p>
+            </div>
+            <div class="type-facade__item swiper-slide">
               <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/window-elem.webp 1x, images/content/window-elem@2x.webp 2x"><img class="types__img-elem" src="images/content/window-elem.png" srcset="images/content/window-elem@2x.png" alt="картинка за окном">
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/type-windowsill-img2.webp 1x, images/content/type-windowsill-img2@2x.webp 2x"><img src="images/content/type-windowsill-img2.jpg" srcset="images/content/type-windowsill-img2@2x.jpg" alt="картинка за окном">
               </picture>
+              <h2>Распашные автоматические двери</h2>
+              <p>Распашные дверные системы предпочтительнее для мест, где предполагается односторонний поток людей.</p>
             </div>
-            <div class="types__text-col">
-              <p>Теплый профиль: Alumark, Alumark, Alumark </p>
-              <h2>Теплые окна</h2>
-              <p>Тёплые окна - решение для помещений, где необходима тепло- и звукоизоляция.</p><span class="types__price">От 15 000 р.</span>
-              <div class="types__advantages-list">
-                <div class="types__advantages-item">
-                  <svg class="svg-sprite-icon icon-cup">
-                    <use xlink:href="images/sprite/symbol/sprite.svg#cup"></use>
-                  </svg>
-                  <p>Максимальное тепло</p>
-                </div>
-                <div class="types__advantages-item">
-                  <svg class="svg-sprite-icon icon-lock">
-                    <use xlink:href="images/sprite/symbol/sprite.svg#lock"></use>
-                  </svg>
-                  <p>Максимальное тепло</p>
-                </div>
-                <div class="types__advantages-item">
-                  <svg class="svg-sprite-icon icon-flower">
-                    <use xlink:href="images/sprite/symbol/sprite.svg#flower"></use>
-                  </svg>
-                  <p>Максимальное тепло</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="types__btn-block"><a href="#">Смотреть подробнее</a></div>
-        </div>
-      </section>
-      <section class="types types--second">
-        <div class="types__container">
-          <h1>Виды алюминиевых окон</h1>
-          <div class="types__title"> 
-            <p>Если вы хотите иметь качественные, экологичные и максимально долговечные окна, то окна из алюминия - это то, что вам нужно!</p><a href="#">Бесплатный вызов замерщика</a>
-          </div>
-          <div class="types__main types__main--second">
-            <div class="types__text-col">
-              <p>Теплый профиль: Alumark, Alumark, Alumark </p>
-              <h2>Теплые окна</h2>
-              <p>Тёплые окна - решение для помещений, где необходима тепло- и звукоизоляция.</p><span class="types__price">От 15 000 р.</span>
-              <div class="types__advantages-list">
-                <div class="types__advantages-item types__advantages-item--second">
-                  <svg class="svg-sprite-icon icon-pen">
-                    <use xlink:href="images/sprite/symbol/sprite.svg#pen"></use>
-                  </svg>
-                  <p>Максимальное тепло</p>
-                </div>
-                <div class="types__advantages-item types__advantages-item--second">
-                  <svg class="svg-sprite-icon icon-san">
-                    <use xlink:href="images/sprite/symbol/sprite.svg#san"></use>
-                  </svg>
-                  <p>Максимальное тепло</p>
-                </div>
-                <div class="types__advantages-item types__advantages-item--second">
-                  <svg class="svg-sprite-icon icon-many">
-                    <use xlink:href="images/sprite/symbol/sprite.svg#many"></use>
-                  </svg>
-                  <p>Максимальное тепло</p>
-                </div>
-              </div>
-            </div>
-            <div class="types__img-block">
+            <div class="type-facade__item swiper-slide">
               <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/window-grad.webp 1x, images/content/window-grad@2x.webp 2x"><img class="types__img-window" src="images/content/window-grad.png" srcset="images/content/window-grad@2x.png" alt="картинка окна">
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/type-windowsill-img3.webp 1x, images/content/type-windowsill-img3@2x.webp 2x"><img src="images/content/type-windowsill-img3.jpg" srcset="images/content/type-windowsill-img3@2x.jpg" alt="картинка за окном">
               </picture>
-              <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/window-elem.webp 1x, images/content/window-elem@2x.webp 2x"><img class="types__img-elem-second" src="images/content/window-elem.png" srcset="images/content/window-elem@2x.png" alt="картинка за окном">
-              </picture>
+              <h2>Спайдерное</h2>
+              <p>Спайдерная система остекления позволяет небольшими крепежами стягивать стеклянные полотна большой площади.</p>
             </div>
           </div>
-          <div class="types__btn-block"><a href="#">Смотреть подробнее</a></div>
-        </div>
-      </section>
-      <section class="recomend">
-        <div class="recomend__container">
-          <h1>Для каких ситуаций подходит</h1>
-          <p>Остекление алюминиевым профилем получается долговечным, прочным, стабильным.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum mattis.</p>
-        </div>
-        <div class="recomend__list">
-          <div class="recomend__item recomend__item--first">
-            <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/recomend__img1.webp 1x, images/content/recomend__img1@2x.webp 2x"><img class="types__img-window" src="images/content/recomend__img1.jpg" srcset="images/content/recomend__img1@2x.jpg" alt="картинка окна">
-            </picture>
-            <div class="recomend__item-title">
-              <h2>Остекление коттеджей</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices semper ornare amet scelerisque fermentum sapien natoque sagittis lorem.</p>
-            </div>
-          </div>
-          <div class="recomend__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/recomend__img2.webp 1x, images/content/recomend__img2@2x.webp 2x"><img class="types__img-window" src="images/content/recomend__img2.jpg" srcset="images/content/recomend__img2@2x.jpg" alt="картинка окна">
-            </picture>
-            <div class="recomend__item-title">
-              <h2>Остекление коммерческих объектов</h2>
-            </div>
-          </div>
-          <div class="recomend__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/recomend__img3.webp 1x, images/content/recomend__img3@2x.webp 2x"><img class="types__img-window" src="images/content/recomend__img3.jpg" srcset="images/content/recomend__img3@2x.jpg" alt="картинка окна">
-            </picture>
-            <div class="recomend__item-title">
-              <h2>Остекление витрин</h2>
-            </div>
-          </div>
-        </div>
-        <div class="recomend__btns"><a class="recomend__arrow recomend__left" href="#"></a><a class="recomend__arrow recomend__right active" href="#"></a></div>
-      </section>
-      <section class="plus">
-        <div class="plus__container">
-          <h1>Преимущества остекления алюминием</h1>
-          <p>Алюминиевые конструкции прослужат вам не один десяток лет, радуя эстетичным внешним видом, теплом и своей надежностью.</p>
-        </div>
-        <div class="plus__wrapper">
-          <div class="plus__list">
-            <div class="plus__item">
-              <svg class="svg-sprite-icon icon-pint">
-                <use xlink:href="images/sprite/symbol/sprite.svg#pint"></use>
-              </svg>
-              <p>Элегантный внешний вид</p>
-            </div>
-            <div class="plus__item">
-              <svg class="svg-sprite-icon icon-pint">
-                <use xlink:href="images/sprite/symbol/sprite.svg#pint"></use>
-              </svg>
-              <p>Экономичность — холодный алюминий дешевле пластика</p>
-            </div>
-            <div class="plus__item">
-              <svg class="svg-sprite-icon icon-pint">
-                <use xlink:href="images/sprite/symbol/sprite.svg#pint"></use>
-              </svg>
-              <p>Разнообразные цвета и декор для оформления.</p>
-            </div>
-            <div class="plus__item">
-              <svg class="svg-sprite-icon icon-pint">
-                <use xlink:href="images/sprite/symbol/sprite.svg#pint"></use>
-              </svg>
-              <p>Элегантный внешний вид</p>
-            </div>
-            <div class="plus__item">
-              <svg class="svg-sprite-icon icon-pint">
-                <use xlink:href="images/sprite/symbol/sprite.svg#pint"></use>
-              </svg>
-              <p>Экономичность — холодный алюминий дешевле пластика</p>
-            </div>
-            <div class="plus__item">
-              <svg class="svg-sprite-icon icon-pint">
-                <use xlink:href="images/sprite/symbol/sprite.svg#pint"></use>
-              </svg>
-              <p>Разнообразные цвета и декор для оформления.</p>
-            </div>
-            <div class="plus__item">
-              <svg class="svg-sprite-icon icon-pint">
-                <use xlink:href="images/sprite/symbol/sprite.svg#pint"></use>
-              </svg>
-              <p>Элегантный внешний вид</p>
-            </div>
-            <div class="plus__item">
-              <svg class="svg-sprite-icon icon-pint">
-                <use xlink:href="images/sprite/symbol/sprite.svg#pint"></use>
-              </svg>
-              <p>Элегантный внешний вид</p>
-            </div>
-          </div>
-          <div class="plus__img-block">
-            <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/plus__img.webp 1x, images/content/plus__img@2x.webp 2x"><img class="types__img-window" src="images/content/plus__img.jpg" srcset="images/content/plus__img@2x.jpg" alt="картинка окна">
-            </picture>
+          <div class="type-facade__btns">
+            <button class="type-facade__left type-facade__arrow swiper-button-prev slider__arrows" type="button"></button>
+            <button class="type-facade__right active type-facade__arrow swiper-button-next slider__arrows" type="button"></button>
           </div>
         </div>
       </section>
-      <section class="action">
-        <div class="action__container action__container-advantages">
-          <h1>Не знаете какой профиль выбрать?</h1>
-          <div class="action__wrapper">
-            <div class="action__img action__img-advantages">
-              <div class="action__title action__title--first" data-da="action__form-advantages,first,867">
-                <h3>Вам может помочь:</h3>
-                <p>Калькулятор расчета</p>
-              </div>
-              <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/action__mobail-advantages.webp 1x, images/content/action__mobail-advantages@2x.webp 2x"><img src="images/content/action__mobail-advantages.png" srcset="images/content/action__mobail-advantages@2x.png" alt="картинка телефона в акции">
-              </picture>
+      <!--корректирующие стили для этого блока просто для добавления блока заголовка-->
+      <section class="plus__panoramic-advantages">
+        <h1>Преимущества панорамного остекления</h1>
+        <div class="plus__advantage-list">
+          <div class="plus__advantage-item">
+            <div class="plus__advantage-item-img-block">
+              <svg class="svg-sprite-icon icon-shield">
+                <use xlink:href="images/sprite/symbol/sprite.svg#shield"></use>
+              </svg>
             </div>
-            <form class="action__form action__form-advantages" method="post">
-              <div class="action__title">
-                <h3>Или:</h3>
-                <p>Заполните форму связи и наш специалист свяжется с вами в течении 10 минут!</p>
-              </div>
-              <label for="name"></label>
-              <input type="tel" name="phone" id="name" placeholder="Имя" title="Введите имя" minlength="3" maxlength="30" required>
-              <label for="tel"></label>
-              <input type="tel" name="phone" id="tel" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
-              <div class="action__form-footer action__form-footer-advantages">
-                <p>Нажимая на кнопку вы соглашаетесь на обработку<a href="#">персональных данных</a></p>
-                <button class="action__sub-btn" type="submit">Отправить</button>
-              </div>
-            </form>
+            <h2>Количество камер</h2>
+            <p>Очень прочные, не меняют свою геометрию со временем.</p>
+          </div>
+          <div class="plus__advantage-item">
+            <div class="plus__advantage-item-img-block">
+              <svg class="svg-sprite-icon icon-forest">
+                <use xlink:href="images/sprite/symbol/sprite.svg#forest"></use>
+              </svg>
+            </div>
+            <h2>Экологичность</h2>
+            <p>Не выделяет вредных веществ, опасных для здоровья человека.</p>
+          </div>
+          <div class="plus__advantage-item">
+            <div class="plus__advantage-item-img-block">
+              <svg class="svg-sprite-icon icon-drop">
+                <use xlink:href="images/sprite/symbol/sprite.svg#drop"></use>
+              </svg>
+            </div>
+            <h2>Влагостойкость</h2>
+            <p>Влагостойкие, не восприимчивы к различным химическим составам.</p>
+          </div>
+          <div class="plus__advantage-item">
+            <div class="plus__advantage-item-img-block">
+              <svg class="svg-sprite-icon icon-broom">
+                <use xlink:href="images/sprite/symbol/sprite.svg#broom"></use>
+              </svg>
+            </div>
+            <h2>Простой уход</h2>
+            <p>За ними легко ухаживать с помощью привычных моющих составов.</p>
           </div>
         </div>
       </section>
@@ -384,141 +457,95 @@
               <div class="works__span"><span>Фасады</span></div>
               <p>Остекление фасада магазина</p>
             </div>
+            <div class="works__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img10.webp 1x, images/content/works-img10@2x.webp 2x"><img src="images/content/works-img10.jpg" srcset="images/content/works-img10@2x.jpg" alt="картинка работы">
+              </picture>
+              <div class="works__span"><span>Фасады</span></div>
+              <p>Остекление фасада магазина</p>
+            </div>
+            <div class="works__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img11.webp 1x, images/content/works-img11@2x.webp 2x"><img src="images/content/works-img11.jpg" srcset="images/content/works-img11@2x.jpg" alt="картинка работы">
+              </picture>
+              <div class="works__span"><span>Фасады</span></div>
+              <p>Остекление фасада магазина</p>
+            </div>
+            <div class="works__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img12.webp 1x, images/content/works-img12@2x.webp 2x"><img src="images/content/works-img12.jpg" srcset="images/content/works-img12@2x.jpg" alt="картинка работы">
+              </picture>
+              <div class="works__span"><span>Фасады</span></div>
+              <p>Остекление фасада магазина</p>
+            </div>
+            <div class="works__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img13.webp 1x, images/content/works-img13@2x.webp 2x"><img src="images/content/works-img13.jpg" srcset="images/content/works-img13@2x.jpg" alt="картинка работы">
+              </picture>
+              <div class="works__span"><span>Фасады</span></div>
+              <p>Остекление фасада магазина</p>
+            </div>
+            <div class="works__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img14.webp 1x, images/content/works-img14@2x.webp 2x"><img src="images/content/works-img14.jpg" srcset="images/content/works-img14@2x.jpg" alt="картинка работы">
+              </picture>
+              <div class="works__span"><span>Фасады</span></div>
+              <p>Остекление фасада магазина</p>
+            </div>
+            <div class="works__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img15.webp 1x, images/content/works-img15@2x.webp 2x"><img src="images/content/works-img15.jpg" srcset="images/content/works-img15@2x.jpg" alt="картинка работы">
+              </picture>
+              <div class="works__span"><span>Фасады</span></div>
+              <p>Остекление фасада магазина</p>
+            </div>
           </div>
-          <div class="works__btn"><a class="works__all-link" href="#">Все работы</a></div>
+          <!--.works__btn-->
+          <!--    a(href="#" class="works__all-link") Все работы-->
         </div>
       </section>
-      <section class="calc">
-        <div class="calc__container">
-          <h1>Калькулятор алюминевых окон</h1>
+      <section class="whyus">
+        <div class="whyus__container">
+          <h1>Почему заказчики выбирают нас?</h1>
           <p>У нас вы легко подберете подходящую по конструкции, размеру, типу открывания, оформлению и комплектации модель.</p>
-          <div class="calc__main">
-            <div class="calc__option-row-wrap">
-              <div class="calc__option">
-                <p><span>01.</span>Выберите тип профиля</p>
-                <div class="calc__row-wrap">
-                  <input type="radio" id="tab-1" name="radio1" checked>
-                  <label for="tab-1">Холодный</label>
-                  <input type="radio" id="tab-2" name="radio1">
-                  <label for="tab-2">Теплый</label>
-                </div>
+        </div>
+        <div class="whyus__wrapper slider swiper-container">
+          <div class="whyus__list swiper-wrapper">
+            <div class="whyus__item swiper-slide">
+              <div class="whyus__item-title">
+                <h3>01</h3>
+                <h4>Скидки от поставщиков материалов</h4>
               </div>
-              <div class="calc__option">
-                <p><span>02.</span>Выберите производителя</p>
-                <div class="calc__row-wrap">
-                  <div class="calc__select">
-                    <div class="select">
-                      <div class="select__header"><span class="select__current">Alumil</span></div>
-                      <div class="select__body">
-                        <div class="select__item">123</div>
-                        <div class="select__item">321</div>
-                        <div class="select__item">456</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p>Мы получаем специальные условия благодаря большому объему закупок комплектующих</p>
             </div>
-            <div class="calc__option calc__option-column-wrap">
-              <p><span>02.</span>Выберите производителя</p>
-              <div class="calc__second-wrap">
-                <input type="radio" id="rad-1" name="radio2" checked>
-                <label for="rad-1"><img src="images/content/calc__img1.svg" alt="картинка окна">
-                  <p>Одностворчатое</p>
-                </label>
-                <input type="radio" id="rad-2" name="radio2">
-                <label for="rad-2">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/calc__img2.webp 1x, images/content/calc__img2@2x.webp 2x"><img src="images/content/calc__img2.jpg" srcset="images/content/calc__img2@2x.jpg" alt="картинка окна">
-                  </picture>
-                  <p>Одностворчатое</p>
-                </label>
-                <input type="radio" id="rad-3" name="radio2">
-                <label for="rad-3">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/calc__img3.webp 1x, images/content/calc__img3@2x.webp 2x"><img src="images/content/calc__img3.jpg" srcset="images/content/calc__img3@2x.jpg" alt="картинка окна">
-                  </picture>
-                  <p>Одностворчатое</p>
-                </label>
-                <input type="radio" id="rad-4" name="radio2">
-                <label for="rad-4">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/calc__img4.webp 1x, images/content/calc__img4@2x.webp 2x"><img src="images/content/calc__img4.jpg" srcset="images/content/calc__img4@2x.jpg" alt="картинка окна">
-                  </picture>
-                  <p>Одностворчатое</p>
-                </label>
-                <input type="radio" id="rad-5" name="radio2">
-                <label for="rad-5">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/calc__img5.webp 1x, images/content/calc__img5@2x.webp 2x"><img src="images/content/calc__img5.jpg" srcset="images/content/calc__img5@2x.jpg" alt="картинка окна">
-                  </picture>
-                  <p>Одностворчатое</p>
-                </label>
+            <div class="whyus__item swiper-slide">
+              <div class="whyus__item-title">
+                <h3>02</h3>
+                <h4>Автоматизированное производство</h4>
               </div>
+              <p>Большинство операций по сборке выполняют машины, что ускоряет процесс, улучшает точность сборки и экономит трудозатраты.</p>
             </div>
-            <div class="calc__option calc__option-column-wrap">
-              <p><span>02.</span>Выберите производителя</p>
-              <div class="calc__row-wrap">
-                <input type="radio" id="var-1" name="radio3" checked>
-                <label for="var-1">Однокамерный</label>
-                <input type="radio" id="var-2" name="radio3">
-                <label for="var-2">Двухкамерный</label>
-                <input type="radio" id="var-3" name="radio3">
-                <label for="var-3">Энергосберегающий</label>
-                <input type="radio" id="var-4" name="radio3">
-                <label for="var-4">Звукоизолирующий</label>
+            <div class="whyus__item swiper-slide">
+              <div class="whyus__item-title">
+                <h3>03</h3>
+                <h4>Оптимизация производственных процессов</h4>
               </div>
+              <p>Мы постоянно совершенствуем процессы по технологии бережливого производства, убирая затраты, не приносящие пользу клиенту.</p>
             </div>
-            <div class="calc__option calc__option-last">
-              <div class="calc__column-option">
-                <p>Нужен подоконник?</p>
-                <div class="calc__row-wrap">
-                  <div class="calc__switch-block">
-                    <p>Да</p>
-                    <label class="switch">
-                      <input class="switch-theme swaper" type="checkbox"><span class="slider round"></span>
-                    </label>
-                    <p>Нет</p>
-                  </div>
-                </div>
+            <div class="whyus__item swiper-slide">
+              <div class="whyus__item-title">
+                <h3>04</h3>
+                <h4>Собственный автопарк</h4>
               </div>
-              <div class="calc__column-option">
-                <p>Нужен подоконник?</p>
-                <div class="calc__row-wrap">
-                  <div class="calc__switch-block">
-                    <p class="calc__switch-text mybtn">Да</p>
-                    <label class="switch">
-                      <input class="switch-theme" type="checkbox" name="prim"><span class="slider round" id="swaper"></span>
-                    </label>
-                    <p>Нет</p>
-                  </div>
-                </div>
-              </div>
-              <div class="calc__column-option">
-                <p>Нужен подоконник?</p>
-                <div class="calc__row-wrap">
-                  <div class="calc__switch-block">
-                    <p>Да</p>
-                    <label class="switch">
-                      <input class="switch-theme color chkbox" type="checkbox" id="one" onclick="radioFunCenter(this);" name="prim"><span class="slider round"></span>
-                    </label>
-                    <p>Нет</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="calc__form-wrap">
-              <form class="calc__form" method="post">
-                <input type="text" name="name" id="autor" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
-                <input type="tel" name="phone" id="mobile" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
-                <div class="calc__form-footer">
-                  <button class="calc__sub-btn" type="submit">Отправить</button>
-                  <p>Нажимая на кнопку вы соглашаетесь на обработку<a href="#">персональных данных</a></p>
-                </div>
-              </form>
-              <p>Специалисты Токада помогут вам с выбором, ответят на все вопросы и рассчитают стоимость окон!</p>
+              <p>Собственный транспорт позволяет нам доставлять окна бесплатно в Москве и МО. области</p>
             </div>
           </div>
+          <div class="whyus__img-block">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/whyus__img.webp 1x, images/content/whyus__img@2x.webp 2x"><img src="images/content/whyus__img.jpg" srcset="images/content/whyus__img@2x.jpg" alt="картинка окна">
+            </picture>
+          </div>
+          <div class="whyus__btns"><a class="whyus__arrow whyus__left swiper-button-prev slider__arrows" href="#"></a><a class="whyus__arrow whyus__right swiper-button-next slider__arrows active" href="#"></a></div>
         </div>
       </section>
       <section class="reviews">
@@ -634,17 +661,25 @@
           <h1>УСПЕЙТЕ ЗАКАЗАТЬ ОКНА ВЫГОДНО</h1>
           <p>Внимние! осталось всего</p>
           <div class="time__block">
-            <div class="time__block-day">
-              <div class="time__day-wrap"><span>0</span><span>1</span></div>
-              <p>Часов</p>
-            </div>
-            <div class="time__block-day">
-              <div class="time__day-wrap"><span>0</span><span>1</span></div>
-              <p>МИНУТ</p>
-            </div>
-            <div class="time__block-day">
-              <div class="time__day-wrap"><span>0</span><span>1</span></div>
-              <p>СЕКУНД</p>
+            <div class="time__block-wrapper">
+              <div class="time__block-day time-count__hours">
+                <div class="time__day-wrap">
+                  <div class="time-count__val"></div>
+                </div>
+                <p class="time-count__text">Часов</p>
+              </div>
+              <div class="time__block-day time-count__minutes">
+                <div class="time__day-wrap">
+                  <div class="time-count__val"></div>
+                </div>
+                <p class="time-count__text">МИНУТ</p>
+              </div>
+              <div class="time__block-day time-count__seconds">
+                <div class="time__day-wrap">
+                  <div class="time-count__val"></div>
+                </div>
+                <p class="time-count__text">СЕКУНД</p>
+              </div>
             </div>
           </div>
           <form class="time__form" method="post">
@@ -766,7 +801,7 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__header">
-            <div class="footer__mob-header"></div><a class="footer__logo" href="/" data-da="footer__mob-header,last,867">
+            <div class="footer__mob-header"></div><a class="footer__logo" href="#" data-da="footer__mob-header,last,867">
               <p><span>окна</span><br>Токаdа</p></a>
             <div class="footer__header-wrap"><a class="footer__header-link" href="#">Заказать звонок
                 <svg class="svg-sprite-icon icon-phone">
@@ -865,9 +900,6 @@
             <picture>
               <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal__img.webp 1x, images/content/modal__img@2x.webp 2x"><img src="images/content/modal__img.jpg" srcset="images/content/modal__img@2x.jpg" alt="1">
             </picture>
-            <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal__person.webp 1x, images/content/modal__person@2x.webp 2x"><img class="modal__img-person" src="images/content/modal__person.png" srcset="images/content/modal__person.png" alt="2">
-            </picture>
           </div>
           <form class="modal__form" method="post" action="">
             <h1>Заказать бесплатный замер</h1>
@@ -881,6 +913,32 @@
               <button class="modal__sub-btn" type="submit">Отправить</button>
             </div>
           </form>
+        </div>
+      </div>
+      <div class="modal modal-action" data-modal="3">
+        <div class="modal-action__container">
+          <div class="close_modal_window close__action js-modal-close"></div>
+          <h1>Акции</h1>
+          <div class="modal-action__title">
+            <p>Оставьте заявку на сайте или свяжитесь с нами по телефону, наши менеджеры подробно раскажут обо всех действующих акциях и скидках.</p><a href="#">Все акции</a>
+          </div>
+          <div class="modal-action__list">
+            <div class="modal-action__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal-action__img1.webp 1x, images/content/modal-action__img1@2x.webp 2x"><img src="images/content/modal-action__img1.jpg" srcset="images/content/modal-action__img1@2x.jpg" alt="логотип компании">
+              </picture>
+            </div>
+            <div class="modal-action__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal-action__img1.webp 1x, images/content/modal-action__img1@2x.webp 2x"><img src="images/content/modal-action__img1.jpg" srcset="images/content/modal-action__img1@2x.jpg" alt="логотип компании">
+              </picture>
+            </div>
+            <div class="modal-action__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal-action__img1.webp 1x, images/content/modal-action__img1@2x.webp 2x"><img src="images/content/modal-action__img1.jpg" srcset="images/content/modal-action__img1@2x.jpg" alt="логотип компании">
+              </picture>
+            </div>
+          </div>
         </div>
       </div>
       <!--button(id="btn_modal_window") Open Modal-->
@@ -909,6 +967,7 @@
         </div>
       </div>
       <div class="overlay js-overlay-modal"></div>
+      <script src="js/vendors.js"></script>
       <script src="js/main.js"></script>
     </div>
   </body>
