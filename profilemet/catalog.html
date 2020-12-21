@@ -18,24 +18,33 @@
       <div class="header__container">
         <div class="header__top">
           <div class="header__wrapper header__wrapper--top">
-            <div class="select header__select" data-da="header__burger-nav--top,last,867">
-              <div class="select__header"><span class="select__current">г.Москва</span></div>
-              <div class="select__body">
-                <div class="select__item">123</div>
-                <div class="select__item">321</div>
-                <div class="select__item">456</div>
+            <div class="select header-modal header__select" data-da="header__burger-nav--top,last,867">
+              <div class="select__header"><span class="select__current">г.Москва</span>
+                <div class="header-modal__body select__body">
+                  <h2>Ваш город Москва ?</h2><a class="mini-modal__close" href="#"></a>
+                  <div class="header-modal__btns"><a class="header-city__confirm" href="#">Да</a><a class="header-city__select js-open-modal" href="#" data-modal="1">Выбрать город</a></div>
+                </div>
               </div>
-            </div><a class="header__phone-link" href="#">8 (800) 333-31-24
+            </div><a class="header__phone-link modal-open modal-open__phones" href="#">8 (800) 333-31-24
               <svg class="svg-sprite-icon icon-phone">
                 <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
               </svg></a>
+            <div class="header-modal__phones-body">
+              <div class="header-modal__phones-el"><a href="#">8 (800) 333-31-24</a>
+                <p>Единая справочная по РФ</p>
+              </div>
+              <div class="header-modal__phones-el"><a href="#">8 (800) 333-31-24</a>
+                <p>Бесплатный межгород</p>
+              </div>
+              <div class="header-modal__phones-el"><a href="#">8 (800) 333-31-24</a>
+                <p>Электроугли</p>
+              </div>
+              <div class="header-modal__phones-el"><a href="#">8 (800) 333-31-24</a>
+                <p>Карачарово</p>
+              </div><a class="header-modal__phone-close modal-close" href="#"></a>
+            </div>
             <div class="select header__select" data-da="header__burger-nav--bottom,first,867">
               <div class="select__header"><span class="select__current">zakaz@profilmet.ru</span></div>
-              <div class="select__body">
-                <div class="select__item">123</div>
-                <div class="select__item">321</div>
-                <div class="select__item">456</div>
-              </div>
             </div><a href="#" data-da="header__burger-nav--top,last,867">Калькулятор</a><a class="header__price-link header__price-link--first" href="#" data-da="header__burger-footer,last,867">USD 78.0915</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,867">EUR 91.5779</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,867">LME 14 285</a>
             <div class="header__switch-wrap" data-da="header__burger-nav--top,last,867">
               <p>Тема:</p>
@@ -49,8 +58,8 @@
           <div class="header__wrapper">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)" srcset="images/common/logo.webp 1x, images/common/logo@2x.webp 2x"><img src="images/common/logo.png" srcset="images/common/logo@2x.png" width="203" height="47" alt="логотип">
-            </picture><a class="header__menu" onclick="openNav()">
-              <p>Меню</p><span></span></a>
+            </picture><a class="header__menu open__mega-menu">
+              <p class="text-swap header__menu-main-text">Меню</p><span></span></a>
             <div class="overlay" id="myNav">
               <div class="header__burger-nav header__burger-nav--top"></div>
               <div class="header__burger-nav header__burger-nav--bottom">
@@ -86,29 +95,209 @@
               <div class="header__burger-footer"></div>
             </div>
             <div class="header__group-text"><a href="#">Каталог металлопроката</a><a href="#">О компании</a><a href="#">Доставка</a></div>
-            <div class="header__group-logo" data-da="header__wrapper--top,last,867"><a href="#">Поиск</a>
-              <svg class="svg-sprite-icon icon-search">
-                <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
-              </svg><a href="#">Вход</a>
-              <svg class="svg-sprite-icon icon-profile">
-                <use xlink:href="images/sprite/symbol/sprite.svg#profile"></use>
-              </svg>
-              <div class="header__basket-wrap"><a href="#">Корзина</a>
-                <svg class="svg-sprite-icon icon-basket">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#basket"></use>
-                </svg>
+            <div class="header__group-logo" data-da="header__wrapper--top,last,867"><a class="js-open-modal modal-search__open" href="#" data-modal="2">Поиск
+                <svg class="svg-sprite-icon icon-search">
+                  <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+                </svg></a><a class="js-open-modal" href="#" data-modal="5">Вход
+                <svg class="svg-sprite-icon icon-profile">
+                  <use xlink:href="images/sprite/symbol/sprite.svg#profile"></use>
+                </svg></a>
+              <div class="header__basket-wrap"><a class="js-open-modal" href="#" data-modal="7">Корзина
+                  <svg class="svg-sprite-icon icon-basket">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#basket"></use>
+                  </svg></a>
                 <div class="header__count-wrap"><a class="header__count" href="#">0</a></div>
               </div>
             </div>
           </div>
         </div>
+        <!--button(id="btn_modal_window") Open Modal-->
+        <div class="modal mega-menu">
+          <div class="modal__content mega-menu__content">
+            <form class="form__search mega-menu__search" method="post" action="">
+              <div class="form__search-input">
+                <svg class="svg-sprite-icon icon-search">
+                  <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+                </svg>
+                <input type="search" placeholder="Найти металл">
+              </div>
+              <div class="form__search-input">
+                <svg class="svg-sprite-icon icon-search">
+                  <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+                </svg>
+                <input type="submit" value="Найти">
+              </div>
+            </form>
+            <footer class="footer">
+              <div class="footer__container">
+                <div class="footer__col">
+                  <h4 class="footer__col-title">Каталог металлопроката</h4>
+                  <div class="footer__text-block footer__first-block">
+                    <p>Сортовой прокат</p>
+                    <p>Трубы</p>
+                    <p>Листовой прокат</p>
+                    <p>Метизы</p>
+                    <p>Качественные стали</p>
+                    <p>Цветные металлы</p>
+                    <p>Нержавеющая сталь</p>
+                    <p>Судовая сталь</p>
+                    <p>Сваи винтовые</p>
+                    <p>Мостовая сталь</p>
+                    <p>Новые поступления</p>
+                    <p>Спецпредложения</p>
+                  </div>
+                </div>
+                <div class="footer__col">
+                  <h4 class="footer__col-spoiler">О нас</h4>
+                  <div class="footer__text-block">
+                    <p>Основная деятельность</p>
+                    <p>УЭО ФТС РФ</p>
+                    <p>История</p>
+                    <p>Награды и достижения</p>
+                    <p>Наши партнеры и поставщики</p>
+                    <p>Вакансии</p>
+                    <p>Учебный центр</p>
+                    <p>Информация для акционеров</p>
+                  </div>
+                  <div class="footer__main-links" data-da="footer__text-block--last,first,867"><a class="footer__main-link" href="#">
+                      <h4>Услуги</h4></a><a class="footer__main-link" href="#">
+                      <h4>Производство</h4></a><a class="footer__main-link" href="#">
+                      <h4>Доставка</h4></a></div>
+                </div>
+                <div class="footer__col">
+                  <h4 class="footer__col-spoiler">Пресс-центр</h4>
+                  <div class="footer__text-block">
+                    <p>Общественная деятельность</p>
+                    <p>Корпоративная ответственность</p>
+                    <p>Видеоархив</p>
+                  </div>
+                  <h4 class="footer__col-spoiler">Личный кабинет</h4>
+                  <div class="footer__text-block">
+                    <p>История заказов</p>
+                    <p>Регистрационные данные</p>
+                    <p>Быстрый заказ</p>
+                    <p>Обратная связь</p>
+                    <p>Подписки</p>
+                    <p>Старая версия сайта</p>
+                    <p>Карта сайта</p>
+                  </div>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__text-block footer__text-block--last"><a class="footer__col-link" href="#">
+                      <h4>ГОСТы и ТУ</h4></a><a class="footer__col-link" href="#">
+                      <h4>Калькулятор</h4></a><a class="footer__col-link" href="#">
+                      <h4>Статистика</h4></a><a class="footer__col-link" href="#">
+                      <h4>Новости рынка</h4></a><a class="footer__col-link" href="#">
+                      <h4>Контакты</h4></a><a class="footer__col-link" href="#">
+                      <h4>Филиалы</h4></a><a class="footer__col-link" href="#">
+                      <h4>Документы</h4></a></div>
+                </div>
+              </div>
+              <div class="footer__regist"><a class="footer__regist-item" href="#"><span>pdf</span>
+                  <p>Наша презентация</p></a><a class="footer__regist-item" href="#"><span>DOCX</span>
+                  <p>Типовой договор</p></a><a class="footer__regist-item" href="#"><span>xls</span>
+                  <p>Свежий прайс лист</p></a><a class="disabled-footer-el footer__regist-item" href="#"><span>DOCX</span>
+                  <p>Типовой договор</p></a>
+                <button class="footer__regist-btn" type="button">Регистрация</button>
+              </div>
+              <div class="footer__social">
+                <p>© ОАО«ПРОФИЛЬМЕТ», 2020 г. Все права защищены.</p><a href="#">109428, Москва, ул.Стахановская , 19 / 8 (495) 925-11-55</a>
+                <div class="footer__social-list"><a class="footer__social-item" href="#">
+                    <svg class="svg-sprite-icon icon-vk">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#vk"></use>
+                    </svg></a><a class="footer__social-item" href="#">
+                    <svg class="svg-sprite-icon icon-ytube">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#ytube"></use>
+                    </svg></a><a class="footer__social-item" href="#">
+                    <svg class="svg-sprite-icon icon-fb">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#fb"></use>
+                    </svg></a><a class="footer__social-item" href="#">
+                    <svg class="svg-sprite-icon icon-inst">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#inst"></use>
+                    </svg></a><a class="footer__social-item" href="#">
+                    <svg class="svg-sprite-icon icon-tg">
+                      <use xlink:href="images/sprite/symbol/sprite.svg#tg"></use>
+                    </svg></a></div>
+              </div>
+            </footer>
+            <!--footer.footer-->
+            <!--    .footer__container-->
+            <!--        .footer__col-->
+            <!--            h4.footer__col-title Каталог металлопроката-->
+            <!--    - var megamenu = ['Сортовой прокат','Трубы','Листовой прокат','Метизы','Качественные стали','Цветные металлы','Нержавеющая сталь','Судовая сталь','Сваи винтовые','Мостовая сталь','Новые поступления','Спецпредложения']-->
+            <!--    .footer__text-block.footer__first-block-->
+            <!--        each item in megamenu-->
+            <!--            p!= item-->
+            <!--        .footer__col-->
+            <!--            h4.footer__col-spoiler О нас-->
+            <!--    - var megamenu2 = ['Основная деятельность','УЭО ФТС РФ','История','Награды и достижения','Наши партнеры и поставщики','Вакансии','Учебный центр','Информация для акционеров']-->
+            <!--    .footer__text-block-->
+            <!--      each item in megamenu2-->
+            <!--          p!= item-->
+            <!--    .footer__main-links(data-da="footer__text-block--last,first,867")-->
+            <!--        a(href="#" class="footer__main-link")-->
+            <!--            h4 Услуги-->
+            <!--        a(href="#" class="footer__main-link")-->
+            <!--            h4 Производство-->
+            <!--        a(href="#" class="footer__main-link")-->
+            <!--            h4 Доставка-->
+            <!--    .footer__col-->
+            <!--        h4.footer__col-spoiler Пресс-центр-->
+            <!--    - var megamenu3 = ['Общественная деятельность','Корпоративная ответственность','Видеоархив']-->
+            <!--    .footer__text-block-->
+            <!--      each item in megamenu3-->
+            <!--          p!= item-->
+            <!--    - var megamenu4 = ['История заказов','Регистрационные данные','Быстрый заказ','Обратная связь','Подписки','Старая версия сайта','Карта сайта']-->
+            <!--    h4.footer__col-spoiler Личный кабинет-->
+            <!--    .footer__text-block-->
+            <!--        each item in megamenu4-->
+            <!--            p!= item-->
+            <!--        .footer__col-->
+            <!--            .footer__text-block.footer__text-block--last-->
+            <!--                a(href="#" class="footer__col-link")-->
+            <!--                    h4 ГОСТы и ТУ-->
+            <!--                a(href="#" class="footer__col-link")-->
+            <!--                    h4 Калькулятор-->
+            <!--                a(href="#" class="footer__col-link")-->
+            <!--                    h4 Статистика-->
+            <!--                a(href="#" class="footer__col-link")-->
+            <!--                    h4 Новости рынка-->
+            <!--                a(href="#" class="footer__col-link")-->
+            <!--                    h4 Контакты-->
+            <!--                a(href="#" class="footer__col-link")-->
+            <!--                    h4 Филиалы-->
+            <!--                a(href="#" class="footer__col-link")-->
+            <!--                    h4 Документы-->
+            <!--    .footer__regist-->
+            <!--        a(href="#").footer__regist-item-->
+            <!--            span pdf-->
+            <!--            p Наша презентация-->
+            <!--        a(href="#").footer__regist-item-->
+            <!--            span DOCX-->
+            <!--            p Типовой договор-->
+            <!--        a(href="#").footer__regist-item-->
+            <!--            span xls-->
+            <!--            p Свежий прайс лист-->
+            <!--        button(type="button" class="footer__regist-btn") Регистрация-->
+            <!--    .footer__social-->
+            <!--        p © ОАО«ПРОФИЛЬМЕТ», 2020 г. Все права защищены.-->
+            <!--        a(href="#") 109428, Москва, ул.Стахановская , 19 / 8 (495) 925-11-55-->
+            <!--        .footer__social-list-->
+            <!--            a(href="#" class="footer__social-item")-->
+            <!--                +icon("vk")-->
+            <!--            a(href="#" class="footer__social-item")-->
+            <!--                +icon("ytube")-->
+            <!--            a(href="#" class="footer__social-item")-->
+            <!--                +icon("fb")-->
+            <!--            a(href="#" class="footer__social-item")-->
+            <!--                +icon("inst")-->
+            <!--            a(href="#" class="footer__social-item")-->
+            <!--                +icon("tg")-->
+          </div>
+        </div>
       </div>
     </header>
-    <div class="header-nav">
-      <p>Главная /</p>
-      <p>Категории /</p>
-      <p>Сортовой прокат</p>
-    </div>
+    <div class="header-nav"><a href="#">Главная /</a><a href="#">Категории /</a><a href="#">Сортовой прокат</a></div>
     <section class="catalog">
       <div class="catalog__container">
         <h1>Сортовой прокат</h1>
@@ -327,7 +516,8 @@
       <div class="footer__regist"><a class="footer__regist-item" href="#"><span>pdf</span>
           <p>Наша презентация</p></a><a class="footer__regist-item" href="#"><span>DOCX</span>
           <p>Типовой договор</p></a><a class="footer__regist-item" href="#"><span>xls</span>
-          <p>Свежий прайс лист</p></a>
+          <p>Свежий прайс лист</p></a><a class="disabled-footer-el footer__regist-item" href="#"><span>DOCX</span>
+          <p>Типовой договор</p></a>
         <button class="footer__regist-btn" type="button">Регистрация</button>
       </div>
       <div class="footer__social">

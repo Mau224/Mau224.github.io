@@ -135,6 +135,7 @@
 let select = function () {
     let selectHeader = document.querySelectorAll('.select__header');
     let selectItem = document.querySelectorAll('.select__item');
+    let modalClose = document.getElementsByClassName('.mini-modal__close');
 
     selectHeader.forEach(item => {
         item.addEventListener('click', selectToggle)
@@ -156,9 +157,38 @@ let select = function () {
         currentText.innerText = text;
         select.classList.remove('is-active');
     }
+
+    // modalClose.addEventListener('click', function () {
+    //     select.classList.remove('is-active');
+    // })
 };
 
 select();
+
+
+//функция на мобильные телефоны
+
+(function () {
+    const overlayModal = document.querySelector('.overlay-modal');
+    const modalPhone = document.querySelector('.modal-open');
+    const headerTop = document.querySelector('.header__top');
+    const modalClose = document.querySelector('.modal-close')
+    modalPhone.addEventListener('click', function () {
+        modalPhone.classList.toggle('active');
+        overlayModal.classList.toggle('active');
+        if (window.innerWidth < 867) {
+            headerTop.classList.toggle('active');
+        }
+    })
+
+    modalClose.addEventListener('click', function () {
+        modalPhone.classList.remove('active');
+        overlayModal.classList.remove('active');
+        if (window.innerWidth < 867) {
+            headerTop.classList.remove('active');
+        }
+    })
+}());
 
 var checkbox = document.querySelector('.switch-theme');
 
@@ -169,16 +199,6 @@ checkbox.addEventListener('change', function (){
         document.documentElement.setAttribute('data-theme', 'light');
     }
 })
-
-/* Open */
-function openNav() {
-    document.getElementById("myNav").style.height = "100%";
-}
-
-/* Close */
-function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-}
 
 let spoiler = document.querySelectorAll('.home-adv__open');
 
@@ -287,3 +307,177 @@ const tab3 = function () {
 };
 
 tab3();
+
+let body = document.querySelector('body');
+
+!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    /* Записываем в переменные массив элементов-кнопок и подложку.
+       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+    var modalButtons = document.querySelectorAll('.js-open-modal'),
+        overlay      = document.querySelector('.js-overlay-modal'),
+        closeButtons = document.querySelectorAll('.js-modal-close');
+
+
+    /* Перебираем массив кнопок */
+    modalButtons.forEach(function(item){
+
+        /* Назначаем каждой кнопке обработчик клика */
+        item.addEventListener('click', function(e) {
+
+            e.preventDefault();
+
+            var modalId = this.getAttribute('data-modal'),
+                modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+
+            /* После того как нашли нужное модальное окно, добавим классы
+               подложке и окну чтобы показать их. */
+            modalElem.classList.add('active');
+            overlay.classList.add('active');
+            body.classList.add('dis');
+        }); // end click
+
+    }); // end foreach
+
+
+    closeButtons.forEach(function(item){
+
+        item.addEventListener('click', function(e) {
+            var parentModal = this.closest('.modal');
+
+            parentModal.classList.remove('active');
+            overlay.classList.remove('active');
+            body.classList.remove('dis');
+        });
+
+    }); // end foreach
+
+
+    document.body.addEventListener('keyup', function (e) {
+        var key = e.keyCode;
+
+        if (key == 27) {
+
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        };
+    }, false);
+
+
+    overlay.addEventListener('click', function() {
+        document.querySelector('.modal.active').classList.remove('active');
+        this.classList.remove('active');
+        body.classList.remove('dis');
+    });
+
+
+
+
+}); // end ready
+
+
+//корректировка стилей для окна поиска
+let searchOpen = document.querySelector('.modal-search__open');
+let header = document.querySelector('.header');
+
+searchOpen.addEventListener('click', function (){
+    header.classList.add('active');
+})
+
+
+let searchClose = document.querySelector('.modal-search__close');
+
+searchClose.addEventListener('click', function (){
+    header.classList.remove('active');
+})
+
+let openPhone = document.querySelector('.modal-open__phones');
+
+openPhone.addEventListener('click', function (){
+    header.classList.toggle('index');
+})
+
+// (function () {
+//     let closerService = document.querySelector('.cart__service-modal-close');
+//     let openerService = document.querySelector('.cart__open-service');
+//     let cartServiceModal = document.querySelector('.cart__service-modal');
+//
+//     openerService.addEventListener('click', function (){
+//         cartServiceModal.classList.add('active');
+//         openerService.classList.add('change-color');
+//         openerService.textContent = '- УДАЛИТЬ УСЛУГУ';
+//     })
+//
+//
+//     closerService.addEventListener('click', function (){
+//         cartServiceModal.classList.remove('active');
+//         openerService.classList.remove('change-color');
+//         openerService.textContent = '+ ДОБАВИТЬ УСЛУГУ';
+//     })
+// }());
+
+// (function () {
+//     let closeRigionModal = document.querySelector('.slect__body-footer');
+//     let selectReg = document.querySelector('.select-reg');
+//
+//     closeRigionModal.addEventListener('click', function (){
+//         selectReg.classList.remove('is-active');
+//     })
+// }());
+
+/* Open */
+function openNav() {
+    let openNav = document.getElementById("myNav");
+    let menuBtn = document.querySelector('.header__menu');
+    let mainText = document.querySelector('.header__menu-main-text');
+    menuBtn.addEventListener('click', function () {
+        openNav.style.height = "100%";
+        body.classList.add('dis');
+    })
+
+    if (window.innerWidth < 870) {
+        menuBtn.classList.remove('open__mega-menu');
+        menuBtn.classList.add('open-menu');
+        mainText.classList.remove('text-swap');
+    } else  {
+        menuBtn.classList.add('open__mega-menu');
+        menuBtn.classList.remove('open-menu');
+        mainText.classList.add('text-swap')
+    }
+}
+openNav();
+
+window.addEventListener('resize', () => {
+    openNav();
+});
+
+/* Close */
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+    body.classList.remove('dis');
+}
+
+let openMega = document.querySelector('.open__mega-menu');
+let textSwap = document.querySelector('.text-swap');
+let overlay = document.querySelector('.overlay-modal');
+let megaMenu = document.querySelector('.mega-menu');
+
+openMega.addEventListener('click', function () {
+    if(this.classList.contains('active')) {
+        textSwap.textContent = 'Mеню';
+        body.classList.remove('dis');
+        // overlay.classList.remove('active');
+    } else  {
+        textSwap.textContent = 'Закрыть меню';
+        body.classList.add('dis');
+    }
+    megaMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    openMega.classList.toggle('active');
+    header.classList.toggle('index-max');
+})
+
