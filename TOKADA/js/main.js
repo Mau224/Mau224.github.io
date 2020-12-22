@@ -341,6 +341,36 @@ window.addEventListener('resize', () => {
 	mobileSlider();
 });
 
+// const slider = document.querySelector('.whyus__wrapper');
+const sliderMini = document.querySelectorAll('.slider-mini');
+
+function mobileSliderMini() {
+    sliderMini.forEach((el) => {
+        let swiperMobMini = new Swiper(el, {
+            slidesPerView: 1.5,
+            spaceBetween: 22,
+            navigation: {
+                nextEl: el.querySelector('.swiper-button-next'),
+                prevEl: el.querySelector('.swiper-button-prev'),
+            },
+        });
+
+
+        if (window.innerWidth > 867) {
+            el.dataset.mobile = 'false';
+            if (el.classList.contains('swiper-container-initialized')) {
+                swiperMobMini.destroy();
+            }
+        }
+    });
+}
+
+mobileSliderMini()
+
+window.addEventListener('resize', () => {
+    mobileSliderMini();
+});
+
 
 // let spoiler = document.querySelectorAll('.faq__item-header');
 

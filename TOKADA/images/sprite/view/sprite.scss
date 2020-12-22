@@ -24,12 +24,22 @@
 
 .svg-bas {
 	@extend %svg-common;
-	background-position: 17.59259259259259% 81.49882903981265%;
+	background-position: 26.62037037037037% 81.49882903981265%;
 }
 
 .svg-bas-dims {
 	width: 32px;
 	height: 26px;
+}
+
+.svg-book {
+	@extend %svg-common;
+	background-position: 9.411764705882353% 82.6603325415677%;
+}
+
+.svg-book-dims {
+	width: 39px;
+	height: 32px;
 }
 
 .svg-broom {
@@ -104,7 +114,7 @@
 
 .svg-car {
 	@extend %svg-common;
-	background-position: 25% 81.49882903981265%;
+	background-position: 34.02777777777778% 81.49882903981265%;
 }
 
 .svg-car-dims {
@@ -144,7 +154,7 @@
 
 .svg-cubes {
 	@extend %svg-common;
-	background-position: 9.345794392523365% 82.6603325415677%;
+	background-position: 18.457943925233646% 82.6603325415677%;
 }
 
 .svg-cubes-dims {
@@ -614,7 +624,7 @@
 
 .svg-mini-fac2 {
 	@extend %svg-common;
-	background-position: 63.513513513513516% 50.34642032332564%;
+	background-position: 29.504504504504503% 73.90300230946882%;
 }
 
 .svg-mini-fac2-dims {
@@ -624,7 +634,7 @@
 
 .svg-mini-fac3 {
 	@extend %svg-common;
-	background-position: 24.54954954954955% 73.90300230946882%;
+	background-position: 34.009009009009006% 73.90300230946882%;
 }
 
 .svg-mini-fac3-dims {
@@ -634,7 +644,7 @@
 
 .svg-mini-fac4 {
 	@extend %svg-common;
-	background-position: 29.054054054054053% 73.90300230946882%;
+	background-position: 38.513513513513516% 73.90300230946882%;
 }
 
 .svg-mini-fac4-dims {
@@ -644,7 +654,7 @@
 
 .svg-mini-win1 {
 	@extend %svg-common;
-	background-position: 33.55855855855856% 73.90300230946882%;
+	background-position: 43.01801801801802% 73.90300230946882%;
 }
 
 .svg-mini-win1-dims {
@@ -654,7 +664,7 @@
 
 .svg-mini-win2 {
 	@extend %svg-common;
-	background-position: 38.06306306306306% 73.90300230946882%;
+	background-position: 47.52252252252252% 73.90300230946882%;
 }
 
 .svg-mini-win2-dims {
@@ -664,7 +674,7 @@
 
 .svg-mini-win3 {
 	@extend %svg-common;
-	background-position: 42.567567567567565% 73.90300230946882%;
+	background-position: 52.027027027027025% 73.90300230946882%;
 }
 
 .svg-mini-win3-dims {
@@ -724,7 +734,7 @@
 
 .svg-pint {
 	@extend %svg-common;
-	background-position: 83.9366515837104% 49.88558352402746%;
+	background-position: 58.8235294117647% 49.88558352402746%;
 }
 
 .svg-pint-dims {
@@ -804,7 +814,7 @@
 
 .svg-star {
 	@extend %svg-common;
-	background-position: 58.8235294117647% 50.34642032332564%;
+	background-position: 24.660633484162897% 73.90300230946882%;
 }
 
 .svg-star-dims {
@@ -880,6 +890,16 @@
 .svg-voice-dims {
 	width: 30px;
 	height: 28px;
+}
+
+.svg-wall-torg {
+	@extend %svg-common;
+	background-position: 87.08920187793427% 50.34642032332564%;
+}
+
+.svg-wall-torg-dims {
+	width: 38px;
+	height: 20px;
 }
 
 .svg-walls {
