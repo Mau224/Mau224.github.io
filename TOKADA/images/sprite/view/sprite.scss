@@ -152,6 +152,16 @@
 	height: 18px;
 }
 
+.svg-client {
+	@extend %svg-common;
+	background-position: 56.10619469026549% 44.20600858369099%;
+}
+
+.svg-client-dims {
+	width: 20px;
+	height: 20px;
+}
+
 .svg-clock {
 	@extend %svg-common;
 	background-position: 22.16216216216216% 92.54385964912281%;
@@ -434,7 +444,7 @@
 
 .svg-mini-cli1 {
 	@extend %svg-common;
-	background-position: 56.10619469026549% 44.20600858369099%;
+	background-position: 59.64601769911504% 44.20600858369099%;
 }
 
 .svg-mini-cli1-dims {
@@ -444,7 +454,7 @@
 
 .svg-mini-cli2 {
 	@extend %svg-common;
-	background-position: 59.64601769911504% 44.20600858369099%;
+	background-position: 63.1858407079646% 44.20600858369099%;
 }
 
 .svg-mini-cli2-dims {
@@ -454,7 +464,7 @@
 
 .svg-mini-cli3 {
 	@extend %svg-common;
-	background-position: 63.1858407079646% 44.20600858369099%;
+	background-position: 66.72566371681415% 44.20600858369099%;
 }
 
 .svg-mini-cli3-dims {
@@ -464,7 +474,7 @@
 
 .svg-mini-cli4 {
 	@extend %svg-common;
-	background-position: 66.72566371681415% 44.20600858369099%;
+	background-position: 70.26548672566372% 44.20600858369099%;
 }
 
 .svg-mini-cli4-dims {
@@ -474,7 +484,7 @@
 
 .svg-mini-cli5 {
 	@extend %svg-common;
-	background-position: 70.26548672566372% 44.20600858369099%;
+	background-position: 73.80530973451327% 44.20600858369099%;
 }
 
 .svg-mini-cli5-dims {
@@ -484,7 +494,7 @@
 
 .svg-mini-comp {
 	@extend %svg-common;
-	background-position: 73.80530973451327% 44.20600858369099%;
+	background-position: 77.34513274336283% 44.20600858369099%;
 }
 
 .svg-mini-comp-dims {
@@ -494,7 +504,7 @@
 
 .svg-mini-comp1 {
 	@extend %svg-common;
-	background-position: 77.34513274336283% 44.20600858369099%;
+	background-position: 69.20353982300885% 49.35622317596567%;
 }
 
 .svg-mini-comp1-dims {
@@ -504,7 +514,7 @@
 
 .svg-mini-comp2 {
 	@extend %svg-common;
-	background-position: 69.20353982300885% 49.35622317596567%;
+	background-position: 72.7433628318584% 49.35622317596567%;
 }
 
 .svg-mini-comp2-dims {
@@ -514,7 +524,7 @@
 
 .svg-mini-comp3 {
 	@extend %svg-common;
-	background-position: 72.7433628318584% 49.35622317596567%;
+	background-position: 76.28318584070796% 49.35622317596567%;
 }
 
 .svg-mini-comp3-dims {
@@ -524,7 +534,7 @@
 
 .svg-mini-comp4 {
 	@extend %svg-common;
-	background-position: 76.28318584070796% 49.35622317596567%;
+	background-position: 15.398230088495575% 83.2618025751073%;
 }
 
 .svg-mini-comp4-dims {
@@ -544,7 +554,7 @@
 
 .svg-mini-comp6 {
 	@extend %svg-common;
-	background-position: 15.398230088495575% 83.2618025751073%;
+	background-position: 18.938053097345133% 83.2618025751073%;
 }
 
 .svg-mini-comp6-dims {
@@ -554,7 +564,7 @@
 
 .svg-mini-door1 {
 	@extend %svg-common;
-	background-position: 18.938053097345133% 83.2618025751073%;
+	background-position: 22.47787610619469% 83.2618025751073%;
 }
 
 .svg-mini-door1-dims {
@@ -564,7 +574,7 @@
 
 .svg-mini-door2 {
 	@extend %svg-common;
-	background-position: 22.47787610619469% 83.2618025751073%;
+	background-position: 26.01769911504425% 83.2618025751073%;
 }
 
 .svg-mini-door2-dims {
@@ -574,7 +584,7 @@
 
 .svg-mini-door3 {
 	@extend %svg-common;
-	background-position: 26.01769911504425% 83.2618025751073%;
+	background-position: 29.557522123893804% 83.2618025751073%;
 }
 
 .svg-mini-door3-dims {
@@ -584,7 +594,7 @@
 
 .svg-mini-door4 {
 	@extend %svg-common;
-	background-position: 29.557522123893804% 83.2618025751073%;
+	background-position: 33.097345132743364% 83.2618025751073%;
 }
 
 .svg-mini-door4-dims {
@@ -594,7 +604,7 @@
 
 .svg-mini-door5 {
 	@extend %svg-common;
-	background-position: 33.097345132743364% 83.2618025751073%;
+	background-position: 36.63716814159292% 83.2618025751073%;
 }
 
 .svg-mini-door5-dims {
@@ -604,7 +614,7 @@
 
 .svg-mini-door6 {
 	@extend %svg-common;
-	background-position: 36.63716814159292% 83.2618025751073%;
+	background-position: 40.176991150442475% 83.2618025751073%;
 }
 
 .svg-mini-door6-dims {
@@ -614,7 +624,7 @@
 
 .svg-mini-door7 {
 	@extend %svg-common;
-	background-position: 40.176991150442475% 83.2618025751073%;
+	background-position: 43.716814159292035% 83.2618025751073%;
 }
 
 .svg-mini-door7-dims {
@@ -624,7 +634,7 @@
 
 .svg-mini-fac1 {
 	@extend %svg-common;
-	background-position: 43.716814159292035% 83.2618025751073%;
+	background-position: 47.256637168141594% 83.2618025751073%;
 }
 
 .svg-mini-fac1-dims {
@@ -634,7 +644,7 @@
 
 .svg-mini-fac2 {
 	@extend %svg-common;
-	background-position: 47.256637168141594% 83.2618025751073%;
+	background-position: 50.796460176991154% 83.2618025751073%;
 }
 
 .svg-mini-fac2-dims {
@@ -644,7 +654,7 @@
 
 .svg-mini-fac3 {
 	@extend %svg-common;
-	background-position: 50.796460176991154% 83.2618025751073%;
+	background-position: 54.336283185840706% 83.2618025751073%;
 }
 
 .svg-mini-fac3-dims {
@@ -654,7 +664,7 @@
 
 .svg-mini-fac4 {
 	@extend %svg-common;
-	background-position: 54.336283185840706% 83.2618025751073%;
+	background-position: 57.876106194690266% 83.2618025751073%;
 }
 
 .svg-mini-fac4-dims {
@@ -664,7 +674,7 @@
 
 .svg-mini-win1 {
 	@extend %svg-common;
-	background-position: 57.876106194690266% 83.2618025751073%;
+	background-position: 61.415929203539825% 83.2618025751073%;
 }
 
 .svg-mini-win1-dims {
@@ -674,7 +684,7 @@
 
 .svg-mini-win2 {
 	@extend %svg-common;
-	background-position: 61.415929203539825% 83.2618025751073%;
+	background-position: 64.95575221238938% 83.2618025751073%;
 }
 
 .svg-mini-win2-dims {
@@ -684,7 +694,7 @@
 
 .svg-mini-win3 {
 	@extend %svg-common;
-	background-position: 64.95575221238938% 83.2618025751073%;
+	background-position: 68.49557522123894% 83.2618025751073%;
 }
 
 .svg-mini-win3-dims {

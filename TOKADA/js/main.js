@@ -278,6 +278,19 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.remove('dis');
     });
 }());
+
+//метрика
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(70714834, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+});
+
 const swiper = new Swiper('.recomend__slider', {
     // Navigation arrows
     navigation: {
