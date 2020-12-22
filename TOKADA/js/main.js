@@ -145,7 +145,7 @@ let select = function () {
     });
 
     function selectToggle() {
-        this.parentElement.classList.toggle('is-active');
+        this.parentElement.classList.toggle('is-open');
     }
 
 
@@ -154,7 +154,7 @@ let select = function () {
             select = this.closest('.select'),
             currentText = select.querySelector('.select__current');
         currentText.innerText = text;
-        select.classList.remove('is-active');
+        select.classList.remove('is-open');
     }
 };
 
