@@ -102,7 +102,7 @@
                 <svg class="svg-sprite-icon icon-profile">
                   <use xlink:href="images/sprite/symbol/sprite.svg#profile"></use>
                 </svg></a>
-              <div class="header__basket-wrap"><a class="js-open-modal" href="#" data-modal="7">Корзина
+              <div class="header__basket-wrap"><a class="js-open-modal" href="#" data-modal="4">Корзина
                   <svg class="svg-sprite-icon icon-basket">
                     <use xlink:href="images/sprite/symbol/sprite.svg#basket"></use>
                   </svg></a>
@@ -554,6 +554,206 @@
             </svg></a></div>
       </div>
     </footer>
+    <!--button(id="btn_modal_window") Open Modal-->
+    <div class="modal modal-search" data-modal="2">
+      <div class="modal__content">
+        <h1>Поиск по сайту</h1>
+        <form class="form__search" method="post" action="">
+          <div class="form__search-input">
+            <svg class="svg-sprite-icon icon-search">
+              <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+            </svg>
+            <input type="search" placeholder="Найти металл">
+          </div>
+          <div class="form__search-input">
+            <svg class="svg-sprite-icon icon-search">
+              <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+            </svg>
+            <input type="submit" value="Найти">
+          </div>
+        </form>
+        <div class="modal-search__popular">
+          <h2>популярные запросы:</h2>
+          <div class="modal-search__popular-list"><a href="#">Сортовой прокат</a><a href="#">Трубы</a><a href="#">Листовой прокат</a><a href="#">Арматура 6 А3</a><a href="#">Арматура 8 А3 мотки</a><a href="#">Качественные стали</a><a href="#">Цветные металлы</a><a href="#">Арматура 8 А3 мотки, А500С</a><a href="#">Арматура 10 А3, длина 11,7 м, А500С</a></div>
+        </div>
+      </div><a class="modal-search__close js-modal-close modal-header__close" href="#"></a>
+    </div>
+    <!--button(id="btn_modal_window") Open Modal-->
+    <div class="modal modal-log" data-modal="3">
+      <div class="modal__content modal__content-log">
+        <h1>Вход в личный кабинет</h1><a class="js-modal-close modal-log__close modal-header__close" href="#"></a>
+        <div class="modal-log__form">
+          <h2>Введите данные аккунта для входа</h2>
+          <div class="modal-log__from-input">
+            <input type="text" name="log" id="log" placeholder="Введите логин" title="Заполните логин" minlength="2" maxlength="30" required>
+            <input type="password" name="pass" id="pass" placeholder="Введите пароль" title="Введите пароль" minlength="6" maxlength="30" required><a href="#">Забыли пароль?</a>
+            <button type="submit">Войти</button>
+          </div>
+        </div>
+        <div class="modal-ref__redistration-block">
+          <h2>Еще не зарегистрированы?</h2><a href="#">Регистрация</a>
+        </div>
+      </div>
+    </div>
+    <!--button(id="btn_modal_window") Open Modal-->
+    <div class="modal modal-log modal-reg" data-modal="5">
+      <div class="modal__content modal__content-log">
+        <h1>Регистрация</h1><a class="js-modal-close modal-log__close modal-header__close" href="#"></a>
+        <form class="modal-log__form modal-reg__form" method="" action="">
+          <div class="modal-log__from-input modal-reg__from-input">
+            <input type="text" name="user-name" id="username" placeholder="Контактное лицо (ФИО)" title="Контактное лицо (ФИО)" minlength="2" maxlength="30" required>
+            <input type="email" name="email" id="email" placeholder="E-mail" title="E-mail" minlength="6" maxlength="30" required>
+            <input type="email" name="email2" id="email2" placeholder="Подтверждение E-mail" title="Подтверждение E-mail" minlength="6" maxlength="30" required>
+            <input type="text" name="org" id="org" placeholder="Полное наименование организации" title="Полное наименование организации" minlength="2" maxlength="30" required>
+            <input type="text" name="name-company" id="name-company" placeholder="ИНН" title="Введите название компании" minlength="2" maxlength="30" required>
+            <input type="text" name="name-leader" id="name-leader" placeholder="КПП" title="Введите имя руководителя" minlength="2" maxlength="30" required>
+            <input type="tel" name="tel" id="tel" placeholder="ОГРН" title="Введите телефон" minlength="2" maxlength="30" required>
+            <input type="text" name="uraddr" id="uraddr" placeholder="Юридический адрес" title="Полное наименование организации" minlength="2" maxlength="30" required>
+            <div class="modal-reg__options"><a href="#">Уже есть аккаунт</a>
+              <button type="submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+              <div class="form__check-wrap form-reg__check-wrap">
+                <label class="checkbox">
+                  <input type="checkbox"><span class="checkbox__custom"></span>
+                </label>
+                <p>Согласен на обработку<span><a href="#">персональных данных</a></span></p>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="modal-ref__redistration-block modal-reg__redistration-block">
+          <h2>Регистрация через соц. сети</h2>
+          <div class="modal-reg__registration-list">
+            <div class="modal-reg__registration-el">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/reg-google.webp 1x, images/content/reg-google@2x.webp 2x"><img src="images/content/reg-google.jpg" srcset="images/content/reg-google@2x.jpg" alt="иконка вк">
+              </picture>
+            </div>
+            <div class="modal-reg__registration-el">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/reg-fb.webp 1x, images/content/reg-fb@2x.webp 2x"><img src="images/content/reg-fb.jpg" srcset="images/content/reg-fb@2x.jpg" alt="иконка вк">
+              </picture>
+            </div>
+            <div class="modal-reg__registration-el">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/reg-vk.webp 1x, images/content/reg-vk@2x.webp 2x"><img src="images/content/reg-vk.jpg" srcset="images/content/reg-vk@2x.jpg" alt="иконка вк">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--button(id="btn_modal_window") Open Modal-->
+    <div class="modal modal-cart" data-modal="4">
+      <div class="modal__content modal-cart__content">
+        <h1>Ваша корзина</h1><a class="js-modal-close modal-cart__close modal-header__close" href="#"></a>
+        <div class="modal-cart__wrapper">
+          <div class="modal-cart__block">
+            <div class="modal-cart__item">
+              <h2>Уголок 50x5 оцинк Ст3 6000</h2>
+              <div class="modal-cart__item-el">
+                <p>Количество</p>
+                <input type="number" placeholder="1">
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Количество</p>
+                <div class="modal-cart__item-select">
+                  <div class="select">
+                    <div class="select__header"><span class="select__current">М</span></div>
+                    <div class="select__body">
+                      <div class="select__item">123</div>
+                      <div class="select__item">321</div>
+                      <div class="select__item">456</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Количество</p><span>84 990</span>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Количество</p><span>84 990</span>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Металлобаза</p><span>Балашиха</span>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Примечание</p><a class="modal-cart__item-link" href="#">
+                  <svg class="svg-sprite-icon icon-comment">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#comment"></use>
+                  </svg></a>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Удалить</p><a class="modal-cart__item-link modal-cart__item-link--cart" href="#">
+                  <svg class="svg-sprite-icon icon-cart">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#cart"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="modal-cart__item">
+              <h2>Уголок 50x5 оцинк Ст3 6000</h2>
+              <div class="modal-cart__item-el">
+                <p>Количество</p>
+                <input type="number" placeholder="1">
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Количество</p>
+                <div class="modal-cart__item-select">
+                  <div class="select">
+                    <div class="select__header"><span class="select__current">М</span></div>
+                    <div class="select__body">
+                      <div class="select__item">123</div>
+                      <div class="select__item">321</div>
+                      <div class="select__item">456</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Количество</p><span>84 990</span>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Количество</p><span>84 990</span>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Металлобаза</p><span>Балашиха</span>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Примечание</p><a class="modal-cart__item-link" href="#">
+                  <svg class="svg-sprite-icon icon-comment">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#comment"></use>
+                  </svg></a>
+              </div>
+              <div class="modal-cart__item-el">
+                <p>Удалить</p><a class="modal-cart__item-link modal-cart__item-link--cart" href="#">
+                  <svg class="svg-sprite-icon icon-cart">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#cart"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-cart__price-block">
+            <div class="modal-cart__price-title">
+              <h2>+ ДОБАВИТЬ УСЛУГУ</h2>
+              <div class="modal-cart__price-product">
+                <p>ИТОГО:<span>195 879 ₽</span></p>
+                <p>В том числе НДС:<span>32 647 ₽</span></p>
+              </div>
+            </div>
+            <div class="modal-cart__price-btns"><a class="modal-cart__go-cart-link" href="#">Перейти в корзину</a><a class="modal-cart__check" href="#">Выписать счет</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--include ../modules/mega-menu-->
+    <!--button(id="btn_modal_window") Open Modal-->
+    <div class="modal" data-modal="1">
+      <div class="modal__content">
+        <div class="modal__link-wrap"><a class="modal-close-btn js-modal-close" href="#">Вернуться назад</a></div>
+        <h1>Выберите город</h1>
+        <div class="modal__city-list"><a href="#">Москва</a><a href="#">Люберцы</a><a href="#">Самара</a><a href="#">Санкт-Петербург</a><a href="#">Домодедово</a><a href="#">Екатеринбург</a><a href="#">Мытищи</a><a href="#">Нижний Новгород</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
+      </div>
+    </div>
+    <div class="overlay-modal js-overlay-modal"></div>
     <script src="js/main.js"></script>
   </body>
 </html>

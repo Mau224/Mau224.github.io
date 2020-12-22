@@ -401,34 +401,6 @@ openPhone.addEventListener('click', function (){
     header.classList.toggle('index');
 })
 
-// (function () {
-//     let closerService = document.querySelector('.cart__service-modal-close');
-//     let openerService = document.querySelector('.cart__open-service');
-//     let cartServiceModal = document.querySelector('.cart__service-modal');
-//
-//     openerService.addEventListener('click', function (){
-//         cartServiceModal.classList.add('active');
-//         openerService.classList.add('change-color');
-//         openerService.textContent = '- УДАЛИТЬ УСЛУГУ';
-//     })
-//
-//
-//     closerService.addEventListener('click', function (){
-//         cartServiceModal.classList.remove('active');
-//         openerService.classList.remove('change-color');
-//         openerService.textContent = '+ ДОБАВИТЬ УСЛУГУ';
-//     })
-// }());
-
-// (function () {
-//     let closeRigionModal = document.querySelector('.slect__body-footer');
-//     let selectReg = document.querySelector('.select-reg');
-//
-//     closeRigionModal.addEventListener('click', function (){
-//         selectReg.classList.remove('is-active');
-//     })
-// }());
-
 /* Open */
 function openNav() {
     let openNav = document.getElementById("myNav");
@@ -480,4 +452,32 @@ openMega.addEventListener('click', function () {
     openMega.classList.toggle('active');
     header.classList.toggle('index-max');
 })
+
+
+let closerService = document.querySelector('.cart__service-modal-close');
+let openerService = document.querySelector('.cart__open-service');
+let cartServiceModal = document.querySelector('.cart__service-modal');
+
+openerService.addEventListener('click', function (){
+    cartServiceModal.classList.add('active');
+    openerService.classList.add('change-color');
+    openerService.textContent = '- УДАЛИТЬ УСЛУГУ';
+})
+
+
+closerService.addEventListener('click', function (){
+    cartServiceModal.classList.remove('active');
+    openerService.classList.remove('change-color');
+    openerService.textContent = '+ ДОБАВИТЬ УСЛУГУ';
+})
+
+// (function () {
+//     let closeRigionModal = document.querySelector('.slect__body-footer');
+//     let selectReg = document.querySelector('.select-reg');
+//
+//     closeRigionModal.addEventListener('click', function (){
+//         selectReg.classList.remove('is-active');
+//     })
+// }());
+
 

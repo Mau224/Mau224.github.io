@@ -102,7 +102,7 @@
                 <svg class="svg-sprite-icon icon-profile">
                   <use xlink:href="images/sprite/symbol/sprite.svg#profile"></use>
                 </svg></a>
-              <div class="header__basket-wrap"><a class="js-open-modal" href="#" data-modal="7">Корзина
+              <div class="header__basket-wrap"><a class="js-open-modal" href="#" data-modal="4">Корзина
                   <svg class="svg-sprite-icon icon-basket">
                     <use xlink:href="images/sprite/symbol/sprite.svg#basket"></use>
                   </svg></a>
@@ -621,6 +621,11 @@
             <input type="text" name="user-name" id="username" placeholder="Контактное лицо (ФИО)" title="Контактное лицо (ФИО)" minlength="2" maxlength="30" required>
             <input type="email" name="email" id="email" placeholder="E-mail" title="E-mail" minlength="6" maxlength="30" required>
             <input type="email" name="email2" id="email2" placeholder="Подтверждение E-mail" title="Подтверждение E-mail" minlength="6" maxlength="30" required>
+            <input type="text" name="org" id="org" placeholder="Полное наименование организации" title="Полное наименование организации" minlength="2" maxlength="30" required>
+            <input type="text" name="name-company" id="name-company" placeholder="ИНН" title="Введите название компании" minlength="2" maxlength="30" required>
+            <input type="text" name="name-leader" id="name-leader" placeholder="КПП" title="Введите имя руководителя" minlength="2" maxlength="30" required>
+            <input type="tel" name="tel" id="tel" placeholder="ОГРН" title="Введите телефон" minlength="2" maxlength="30" required>
+            <input type="text" name="uraddr" id="uraddr" placeholder="Юридический адрес" title="Полное наименование организации" minlength="2" maxlength="30" required>
             <div class="modal-reg__options"><a href="#">Уже есть аккаунт</a>
               <button type="submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
               <div class="form__check-wrap form-reg__check-wrap">
@@ -635,9 +640,21 @@
         <div class="modal-ref__redistration-block modal-reg__redistration-block">
           <h2>Регистрация через соц. сети</h2>
           <div class="modal-reg__registration-list">
-            <div class="modal-reg__registration-el"><img src="images/content/reg-vk.jpg" alt="иконка вк"></div>
-            <div class="modal-reg__registration-el"><img src="images/content/reg-vk.jpg" alt="иконка вк"></div>
-            <div class="modal-reg__registration-el"><img src="images/content/reg-vk.jpg" alt="иконка вк"></div>
+            <div class="modal-reg__registration-el">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/reg-google.webp 1x, images/content/reg-google@2x.webp 2x"><img src="images/content/reg-google.jpg" srcset="images/content/reg-google@2x.jpg" alt="иконка вк">
+              </picture>
+            </div>
+            <div class="modal-reg__registration-el">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/reg-fb.webp 1x, images/content/reg-fb@2x.webp 2x"><img src="images/content/reg-fb.jpg" srcset="images/content/reg-fb@2x.jpg" alt="иконка вк">
+              </picture>
+            </div>
+            <div class="modal-reg__registration-el">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/reg-vk.webp 1x, images/content/reg-vk@2x.webp 2x"><img src="images/content/reg-vk.jpg" srcset="images/content/reg-vk@2x.jpg" alt="иконка вк">
+              </picture>
+            </div>
           </div>
         </div>
       </div>
