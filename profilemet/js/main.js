@@ -453,6 +453,18 @@ openMega.addEventListener('click', function () {
     header.classList.toggle('index-max');
 })
 
+let openLogin = document.querySelector('.header__login');
+let loginBlock = document.querySelector('.header__log-block');
+let closeLogin = document.querySelector('.log__closer');
+openLogin.addEventListener('click', function (){
+    loginBlock.style.display = "flex";
+})
+
+closeLogin.addEventListener('click', function () {
+    loginBlock.style.display = "none";
+})
+
+
 
 let closerService = document.querySelector('.cart__service-modal-close');
 let openerService = document.querySelector('.cart__open-service');

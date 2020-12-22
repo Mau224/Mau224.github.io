@@ -54,7 +54,7 @@
 
 .svg-arrow-cat {
 	@extend %svg-common;
-	background-position: 70.23121387283237% 68.54304635761589%;
+	background-position: 81.79190751445087% 69.20529801324503%;
 }
 
 .svg-arrow-cat-dims {
@@ -82,6 +82,16 @@
 	height: 18px;
 }
 
+.svg-cart-log {
+	@extend %svg-common;
+	background-position: 96.7930029154519% 57.85953177257525%;
+}
+
+.svg-cart-log-dims {
+	width: 15px;
+	height: 15px;
+}
+
 .svg-cart-null {
 	@extend %svg-common;
 	background-position: 47.138047138047135% 69.47791164658635%;
@@ -94,7 +104,7 @@
 
 .svg-close-white {
 	@extend %svg-common;
-	background-position: 100% 57.666666666666664%;
+	background-position: 61.91860465116279% 69.66666666666667%;
 }
 
 .svg-close-white-dims {
@@ -144,10 +154,20 @@
 
 .svg-inst {
 	@extend %svg-common;
-	background-position: 58.43023255813954% 69%;
+	background-position: 65.98837209302326% 69.66666666666667%;
 }
 
 .svg-inst-dims {
+	width: 14px;
+	height: 14px;
+}
+
+.svg-lk {
+	@extend %svg-common;
+	background-position: 70.05813953488372% 69.66666666666667%;
+}
+
+.svg-lk-dims {
 	width: 14px;
 	height: 14px;
 }
@@ -160,6 +180,16 @@
 .svg-modal-check-big-dims {
 	width: 81px;
 	height: 45px;
+}
+
+.svg-out {
+	@extend %svg-common;
+	background-position: 58.60058309037901% 65%;
+}
+
+.svg-out-dims {
+	width: 15px;
+	height: 14px;
 }
 
 .svg-phone {
@@ -184,7 +214,7 @@
 
 .svg-profile {
 	@extend %svg-common;
-	background-position: 95.95375722543352% 57.85953177257525%;
+	background-position: 58.092485549132945% 69.89966555183946%;
 }
 
 .svg-profile-dims {
@@ -204,7 +234,7 @@
 
 .svg-search {
 	@extend %svg-common;
-	background-position: 62.5% 69%;
+	background-position: 74.12790697674419% 69.66666666666667%;
 }
 
 .svg-search-dims {
@@ -224,7 +254,7 @@
 
 .svg-tg {
 	@extend %svg-common;
-	background-position: 66.56976744186046% 68.77076411960132%;
+	background-position: 78.19767441860465% 69.43521594684385%;
 }
 
 .svg-tg-dims {
@@ -234,7 +264,7 @@
 
 .svg-tw {
 	@extend %svg-common;
-	background-position: 58.60058309037901% 64.56953642384106%;
+	background-position: 62.97376093294461% 64.56953642384106%;
 }
 
 .svg-tw-dims {
@@ -254,7 +284,7 @@
 
 .svg-ytube {
 	@extend %svg-common;
-	background-position: 62.7906976744186% 64.14473684210526%;
+	background-position: 67.15116279069767% 64.14473684210526%;
 }
 
 .svg-ytube-dims {
