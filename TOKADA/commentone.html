@@ -299,7 +299,7 @@
           </div>
         </div>
       </header>
-      <div class="header__nav header__nav--comment"><a href="#">Главная</a><span></span><a href="#">Отзывы</a><span></span><a href="#">Отзыв от 14.11.2020, автор: Антон</a></div>
+      <div class="header__nav header__nav--comment"><a href="index.html">Главная</a><span></span><a href="comment.html">Отзывы</a><span></span><a href="commentone.html">Отзыв от 14.11.2020, автор: Антон</a></div>
       <section class="commentone">
         <div class="commentone__container">
           <h1>Отзыв от 14.11.2020</h1>
@@ -453,7 +453,7 @@
           <div class="footer__header">
             <div class="footer__mob-header"></div><a class="footer__logo" href="index.html" data-da="footer__mob-header,last,867">
               <p><span>окна</span><br>Токаdа</p></a>
-            <div class="footer__header-wrap"><a class="footer__header-link" href="#">Заказать звонок
+            <div class="footer__header-wrap"><a class="footer__header-link js-open-modal" href="#" data-modal="10">Заказать звонок
                 <svg class="svg-sprite-icon icon-phone">
                   <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
                 </svg></a><a class="footer__header-link footer__header-link-mail" href="#">zakaz@tokada.ru
@@ -510,7 +510,7 @@
               <div class="footer__info-item-text"><a href="#">Сезонное предложение. Скидка на пластиковые и алюминиевые окна - 30 процентов.</a><a href="#">Рассрочка от 3 до 12 месяцев - 0%предоплата, без переплаты,</a><a href="#">Зимний монтаж</a></div>
             </div>
             <div class="footer__contact-item footer__contact-item--location">
-              <h3 class="open-spoiler active">О нас</h3>
+              <h3 class="open-spoiler active">Контакты</h3>
               <div class="footer__info-item-text footer__info-item-text--location">
                 <p>Наш адрес:</p><a class="footer__loction-link" href="#">Дорожная 29
                   <svg class="svg-sprite-icon icon-mark">
@@ -631,9 +631,12 @@
           <div class="close_modal_window close__reviews js-modal-close"><span></span>
             <p>Закрыть</p>
           </div>
-          <div class="modal__img">
+          <div class="modal__img modal-call__img">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/modal-call.webp 1x, images/content/modal-call@2x.webp 2x"><img src="images/content/modal-call.jpg" srcset="images/content/modal-call@2x.jpg" alt="1">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/call__girl.webp 1x, images/content/call__girl@2x.webp 2x"><img class="modal-call__img-person" src="images/content/call__girl.png" srcset="images/content/call__girl@2x.png" alt="картинка на форме вызова">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/call__img.webp 1x, images/content/call__img@2x.webp 2x"><img src="images/content/call__img.jpg" srcset="images/content/call__img@2x.jpg" alt="1">
             </picture>
           </div>
           <form class="modal__form" method="post" action="">
