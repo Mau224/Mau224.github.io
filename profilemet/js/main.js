@@ -458,10 +458,12 @@ let loginBlock = document.querySelector('.header__log-block');
 let closeLogin = document.querySelector('.log__closer');
 openLogin.addEventListener('click', function (){
     loginBlock.style.display = "flex";
+    overlay.classList.add('active');
 })
 
 closeLogin.addEventListener('click', function () {
     loginBlock.style.display = "none";
+    overlay.classList.remove('active');
 })
 
 
