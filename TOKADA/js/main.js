@@ -175,6 +175,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+let removeBtn = document.querySelector('.header__link-action');
+if (window.innerWidth < 870) {
+    removeBtn.classList.remove('js-open-modal');
+} else  {
+    removeBtn.classList.add('js-open-modal');
+}
+
 // // const container = document.querySelector('.container');
 //
 // inputs.forEach(el => {
@@ -264,9 +271,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelector('.header__burger');
     const body = document.querySelector('.body');
     const overlay = document.querySelector('.overlay-menu');
+    const menuText = document.querySelector('.header__mega-menu-block-text');
+    const mainList = document.querySelector('.header__main-list-hover-links');
+    const megaList = document.querySelector('.header__mega-menu-block');
     burger.addEventListener('click', function () {
         burger.classList.toggle('active');
         overlay.classList.toggle('active');
+        menuText.classList.toggle('active');
+        mainList.classList.toggle('active');
+        megaList.classList.toggle('active');
         body.classList.toggle('dis');
     });
 }());
