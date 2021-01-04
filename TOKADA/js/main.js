@@ -161,6 +161,37 @@ let select = function () {
 select();
 
 
+const inputs = document.querySelectorAll('.swaper');
+
+document.addEventListener('DOMContentLoaded', function() {
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('click', function () {
+            if (inputs[i].checked) {
+                inputs[i].setAttribute('value', 'да');
+            } else {
+                inputs[i].setAttribute('value', 'нет');
+            }
+        })
+    }
+});
+
+// // const container = document.querySelector('.container');
+//
+// inputs.forEach(el => {
+//     el.addEventListener('click', () => {
+//         // container.textContent = '';
+//         let inputCh = document.querySelectorAll('.swaper:checked');
+//
+//         inputCh.forEach(el_checked => {
+//             if (this.checked) {
+//                 inputCh.setAttribute('value', 'lf');
+//             }
+//         });
+//     });
+// });
+
+
+
 
 !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
 
@@ -330,12 +361,25 @@ const sliders = document.querySelectorAll('.slider');
 function mobileSlider() {
     sliders.forEach((el) => {
         let swiperMob = new Swiper(el, {
-            slidesPerView: 1.24,
+            slidesPerView: 'auto',
+            // loop: true,
+            slidesOffsetBefore: 20,
+            slidesOffsetAfter: 110,
             spaceBetween: 22,
             navigation: {
                 nextEl: el.querySelector('.swiper-button-next'),
                 prevEl: el.querySelector('.swiper-button-prev'),
             },
+
+            breakpoints: {
+                500: {
+                    slidesOffsetAfter: 450,
+                },
+
+                700: {
+                    slidesOffsetAfter: 550,
+                }
+            }
     });
 
 
@@ -354,7 +398,6 @@ window.addEventListener('resize', () => {
 	mobileSlider();
 });
 
-// const slider = document.querySelector('.whyus__wrapper');
 const sliderMini = document.querySelectorAll('.slider-mini');
 
 function mobileSliderMini() {
@@ -382,6 +425,54 @@ mobileSliderMini()
 
 window.addEventListener('resize', () => {
     mobileSliderMini();
+});
+
+
+const sliderWhyus = document.querySelectorAll('.sliderWhyus');
+
+function SliderWhyus() {
+    sliderWhyus.forEach((el) => {
+        let swiperWhyus = new Swiper(el, {
+            slidesPerView: 1.34,
+            // loop: true,
+            slidesOffsetBefore: 20,
+            slidesOffsetAfter: 90,
+            spaceBetween: 22,
+            navigation: {
+                nextEl: el.querySelector('.swiper-button-next'),
+                prevEl: el.querySelector('.swiper-button-prev'),
+            },
+
+            breakpoints: {
+                500: {
+                    slidesOffsetAfter: 400,
+                    slidesPerView: 'auto'
+                },
+
+                700: {
+                    slidesOffsetAfter: 400,
+                    slidesPerView: 'auto'
+                }
+            }
+
+        });
+
+
+        if (window.innerWidth > 867) {
+            el.dataset.mobile = 'false';
+            if (el.classList.contains('swiper-container-initialized')) {
+                swiperWhyus.destroy();
+            }
+        }
+    });
+}
+
+
+
+SliderWhyus()
+
+window.addEventListener('resize', () => {
+    SliderWhyus();
 });
 
 
@@ -525,4 +616,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	timeCount();
 	setInterval(timeCount, 1000);
+});
+
+let selector = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(selector);
+
+let selector2 = document.querySelector('input[type="tel"]');
+
+selector2.addEventListener('input', function(){
+  console.log(selector2.value)
+
+
+  const re = /^\d*(\.\d+)?$/
+
+  console.log(selector2.value.match(/[0-9]/g).length)
+
+
+  console.log(selector2.value.replace(/[0-9]/g, "0"));
+
 });

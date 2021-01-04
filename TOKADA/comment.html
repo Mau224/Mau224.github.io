@@ -2,12 +2,12 @@
 <html lang="ru-RU" data-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>comment</title><!--[if IE]>
+    <title>Отзывы</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
     <meta name="keywords" content="">
-    <meta name="description" content="Главная страница сайта">
+    <meta name="description" content="Отзывы о компании">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="preload" href="fonts/Circe/Circe-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/CirceBold/Circe-Bold.woff2" as="font" crossorigin="anonymous">
@@ -87,8 +87,8 @@
               <svg class="svg-sprite-icon icon-circle">
                 <use xlink:href="images/sprite/symbol/sprite.svg#circle"></use>
               </svg></a><a class="header__sp-link open-spoiler" href="clients.html">Корпоративым клиентам
-              <svg class="svg-sprite-icon icon-client">
-                <use xlink:href="images/sprite/symbol/sprite.svg#client"></use>
+              <svg class="svg-sprite-icon icon-user">
+                <use xlink:href="images/sprite/symbol/sprite.svg#user"></use>
               </svg></a></div>
           <div class="header__main-links">
             <!--a(href="#" class="header__link-call") Заказать звонок-->
@@ -553,7 +553,7 @@
             </div>
             <div class="footer__info-item">
               <h3 class="open-spoiler active">Комплектующие</h3>
-              <div class="footer__info-item-text"><a href="glassunit.html">Стеклопакеты</a><a href="windowsill.html">Подоконники</a><a href="fittings.html">Фурнитура</a><a href="laminate.html">Ломинация</a><a href="mosquito.html">Москитные сетки</a><a href="jalousie.html">Жалюзи</a></div>
+              <div class="footer__info-item-text"><a href="glassunit.html">Стеклопакеты</a><a href="windowsill.html">Подоконники</a><a href="fittings.html">Фурнитура</a><a href="laminate.html">Ламинация</a><a href="mosquito.html">Москитные сетки</a><a href="jalousie.html">Жалюзи</a></div>
             </div>
           </div>
           <div class="footer__contacts">
@@ -563,7 +563,7 @@
             </div>
             <div class="footer__contact-item footer__contact-item--actions">
               <h3 class="open-spoiler active">Акции</h3>
-              <div class="footer__info-item-text"><a href="#">Сезонное предложение. Скидка на пластиковые и алюминиевые окна - 30 процентов.</a><a href="#">Рассрочка от 3 до 12 месяцев - 0%предоплата, без переплаты,</a><a href="#">Зимний монтаж</a></div>
+              <div class="footer__info-item-text"><a href="#">Скидка на пластиковые и алюминиевые окна - 30 процентов!</a><a href="#">Рассрочка от 3 до 12 месяцев - 0%предоплата, без переплаты</a><a href="#">Зимний монтаж</a></div>
             </div>
             <div class="footer__contact-item footer__contact-item--location">
               <h3 class="open-spoiler active">Контакты</h3>
@@ -695,13 +695,13 @@
               <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/call__img.webp 1x, images/content/call__img@2x.webp 2x"><img src="images/content/call__img.jpg" srcset="images/content/call__img@2x.jpg" alt="1">
             </picture>
           </div>
-          <form class="modal__form" method="post" action="">
+          <form class="modal__form" id="modalcallform" method="post" action="">
             <h1>Заказать звонок</h1>
             <p>Оставьте заявку и мы вам перезвоним прямо сейчас</p>
-            <label for="name-modal"></label>
-            <input type="text" name="name" id="name-modal" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
-            <label for="phone-modal"></label>
-            <input type="tel" name="phone" id="phone-modal" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
+            <label for="name-modal-call"></label>
+            <input type="text" name="name" id="name-modal-call" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
+            <label for="phone-modal-call"></label>
+            <input type="tel" name="phone" id="phone-modal-call" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
             <div class="modal__form-footer">
               <p>Нажимая на кнопку вы соглашаетесь на обработку<a href="#">персональных данных</a></p>
               <button class="modal__sub-btn" type="submit">Отправить</button>
