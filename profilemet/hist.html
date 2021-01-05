@@ -493,9 +493,43 @@
         </div>
       </div>
     </div>
+    <!--button(id="btn_modal_window") Open Modal-->
+    <div class="modal modal-cart" data-modal="7">
+      <div class="modal__content modal-cart__content modal-cart-null__content">
+        <h1>Ваша корзина</h1><a class="js-modal-close modal-cart__close modal-header__close" href="#"></a>
+        <div class="modal-cart-null__wrapper">
+          <div class="modal-cart-null__cart-wrap">
+            <svg class="svg-sprite-icon icon-cart-null">
+              <use xlink:href="images/sprite/symbol/sprite.svg#cart-null"></use>
+            </svg>
+            <p>В вашей корзине пока нет товаров.</p>
+          </div>
+          <div class="modal-cart-null__go-product"><a href="#">За покупками</a></div>
+        </div>
+      </div>
+    </div>
+    <!--button(id="btn_modal_window") Open Modal-->
+    <div class="modal modal-check" data-modal="6">
+      <div class="modal__content modal-check__content">
+        <h1>Заказ<span>№ 765 344</span>успешно оформлен</h1>
+        <div class="modal-check__block">
+          <svg class="svg-sprite-icon icon-modal-check-big">
+            <use xlink:href="images/sprite/symbol/sprite.svg#modal-check-big"></use>
+          </svg>
+          <p>Спасибо мы заметили ваш заказ.<br>Номер заказа<span>№ 765 344</span></p><a href="#">Мои заказы</a><a href="#">Cкачать содержимое заказа в PDF</a>
+        </div>
+        <div class="modal-check__footer">
+          <p>Ваш личный менеджер</p><a class="modal-check__speaker" href="#">
+            <svg class="svg-sprite-icon icon-speaker">
+              <use xlink:href="images/sprite/symbol/sprite.svg#speaker"></use>
+            </svg>
+            <p><span>Анастасия Иванова</span>(доп. номер<span>299</span>)</p></a>
+        </div>
+      </div>
+    </div>
     <!--include ../modules/mega-menu-->
     <!--button(id="btn_modal_window") Open Modal-->
-    <div class="modal" data-modal="1">
+    <div class="modal modal-city" data-modal="1">
       <div class="modal__content">
         <div class="modal__link-wrap"><a class="modal-close-btn js-modal-close" href="#">Вернуться назад</a></div>
         <h1>Выберите город</h1>
@@ -503,6 +537,7 @@
       </div>
     </div>
     <div class="overlay-modal js-overlay-modal"></div>
+    <script src="js/vendors.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

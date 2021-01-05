@@ -22,7 +22,7 @@
               <div class="select__header"><span class="select__current">г.Москва</span>
                 <div class="header-modal__body select__body">
                   <h2>Ваш город Москва ?</h2><a class="mini-modal__close" href="#"></a>
-                  <div class="header-modal__btns"><a class="header-city__confirm" href="#">Да</a><a class="header-city__select js-open-modal" href="#" data-modal="1">Выбрать город</a></div>
+                  <div class="header-modal__btns"><a class="header-city__confirm" href="#">Да</a><a class="header-city__select modal-open js-open-modal" href="#" data-modal="1">Выбрать город</a></div>
                 </div>
               </div>
             </div><a class="header__phone-link modal-open modal-open__phones" href="#">8 (800) 333-31-24
@@ -762,7 +762,7 @@
     </div>
     <!--include ../modules/mega-menu-->
     <!--button(id="btn_modal_window") Open Modal-->
-    <div class="modal" data-modal="1">
+    <div class="modal modal-city" data-modal="1">
       <div class="modal__content">
         <div class="modal__link-wrap"><a class="modal-close-btn js-modal-close" href="#">Вернуться назад</a></div>
         <h1>Выберите город</h1>
@@ -770,6 +770,7 @@
       </div>
     </div>
     <div class="overlay-modal js-overlay-modal"></div>
+    <script src="js/vendors.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

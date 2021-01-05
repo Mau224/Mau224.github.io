@@ -165,7 +165,6 @@ let select = function () {
 
 select();
 
-
 //функция на мобильные телефоны
 
 (function () {
@@ -189,6 +188,7 @@ select();
         }
     })
 }());
+
 
 var checkbox = document.querySelector('.switch-theme');
 
@@ -308,6 +308,31 @@ const tab3 = function () {
 
 tab3();
 
+//cкрипт создающий тень при появлении окна городов и корректирующий его работу
+
+let cityBtn = document.querySelector('.header-city__select');
+let myNav =  document.getElementById("myNav");
+const headerTop = document.querySelector('.header__top');
+const headerBottom = document.querySelector('.header__menu');
+const modalCity = document.querySelector('.modal-city');
+var overlayCity = document.querySelector('.js-overlay-modal');
+
+if (window.innerWidth < 870) {
+    cityBtn.addEventListener('click', function() {
+        myNav.style.height = "0%";
+        headerTop.classList.add('index5k');
+        overlayCity.classList.add('index5k');
+    })
+
+    headerBottom.addEventListener('click', function() {
+        headerTop.classList.remove('index5k');
+        overlayCity.classList.remove('index5k');
+        modalCity.classList.remove('active');
+        overlayCity.classList.remove('active');
+    })
+}
+
+//тут скрипт модальных окон которые появляются через обращение к data-modal чаще всего это независимые окна ,которые поялвяются поверх всего
 let body = document.querySelector('body');
 
 !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
@@ -380,16 +405,15 @@ document.addEventListener('DOMContentLoaded', function() {
 }); // end ready
 
 
+
 //корректировка стилей для окна поиска
 let searchOpen = document.querySelector('.modal-search__open');
+let searchClose = document.querySelector('.modal-header__close');
 let header = document.querySelector('.header');
 
 searchOpen.addEventListener('click', function (){
     header.classList.add('active');
 })
-
-
-let searchClose = document.querySelector('.modal-search__close');
 
 searchClose.addEventListener('click', function (){
     header.classList.remove('active');
@@ -423,6 +447,8 @@ function openNav() {
 }
 openNav();
 
+
+
 window.addEventListener('resize', () => {
     openNav();
 });
@@ -432,6 +458,8 @@ function closeNav() {
     document.getElementById("myNav").style.height = "0%";
     body.classList.remove('dis');
 }
+
+//окно мега меню
 
 let openMega = document.querySelector('.open__mega-menu');
 let textSwap = document.querySelector('.text-swap');
@@ -447,11 +475,17 @@ openMega.addEventListener('click', function () {
         textSwap.textContent = 'Закрыть меню';
         body.classList.add('dis');
     }
+
+    if(headerTop.classList.contains('index5k')) {
+        headerTop.classList.remove('index5k');
+    }
     megaMenu.classList.toggle('active');
     overlay.classList.toggle('active');
     openMega.classList.toggle('active');
     header.classList.toggle('index-max');
 })
+
+//окно входа (маленькое)
 
 let openLogin = document.querySelector('.header__login');
 let loginBlock = document.querySelector('.header__log-block');
@@ -467,24 +501,6 @@ closeLogin.addEventListener('click', function () {
 })
 
 
-
-let closerService = document.querySelector('.cart__service-modal-close');
-let openerService = document.querySelector('.cart__open-service');
-let cartServiceModal = document.querySelector('.cart__service-modal');
-
-openerService.addEventListener('click', function (){
-    cartServiceModal.classList.add('active');
-    openerService.classList.add('change-color');
-    openerService.textContent = '- УДАЛИТЬ УСЛУГУ';
-})
-
-
-closerService.addEventListener('click', function (){
-    cartServiceModal.classList.remove('active');
-    openerService.classList.remove('change-color');
-    openerService.textContent = '+ ДОБАВИТЬ УСЛУГУ';
-})
-
 // (function () {
 //     let closeRigionModal = document.querySelector('.slect__body-footer');
 //     let selectReg = document.querySelector('.select-reg');
@@ -494,4 +510,74 @@ closerService.addEventListener('click', function (){
 //     })
 // }());
 
+
+
+let selector = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(selector);
+
+let selector2 = document.querySelector('input[type="tel"]');
+
+selector2.addEventListener('input', function(){
+  console.log(selector2.value)
+
+
+  const re = /^\d*(\.\d+)?$/
+
+  console.log(selector2.value.match(/[0-9]/g).length)
+
+
+  console.log(selector2.value.replace(/[0-9]/g, "0"));
+
+});
+
+
+let validEmail = document.querySelectorAll('input[type="email"]');
+
+let im2 = new Inputmask("*{3,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{3,20}[.*{2,6}][.*{1,2}].*{2,20}[.*{2,6}][.*{1,2}]");
+im2.mask(validEmail);
+
+let validEmail2 = document.querySelector('input[type="email"]');
+
+validEmail2.addEventListener('input', function(){
+  console.log(selector2.value)
+
+
+  const re2 = /^\d*(\.\d+)?$/
+
+  console.log(validEmail2.value.match(/[0-9]/g).length)
+
+
+  console.log(validEmail2.value.replace(/[0-9]/g, "0"));
+});
+
+
+
+//оставил в самом конце тк,выдается ошибка на других страницах не придумал как сделать
+//модальное услуг на странице cart.html ("появляется по клику на 'Добавить услугу'")
+function modalCart() {
+  let closerService = document.querySelector('.cart__service-modal-close');
+  let openerService = document.querySelector('.cart__open-service');
+  let cartServiceModal = document.querySelector('.cart__service-modal');
+
+  if (window.innerWidth > 870) {
+    openerService.addEventListener('click', function () {
+      cartServiceModal.classList.add('active');
+      openerService.classList.add('change-color');
+      openerService.textContent = '- УДАЛИТЬ УСЛУГУ';
+    })
+
+
+    closerService.addEventListener('click', function () {
+      cartServiceModal.classList.remove('active');
+      openerService.classList.remove('change-color');
+      openerService.textContent = '+ ДОБАВИТЬ УСЛУГУ';
+    })
+  }
+}
+modalCart();
+
+window.addEventListener('resize', () => {
+  modalCart();
+});
 
