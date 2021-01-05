@@ -649,3 +649,24 @@ selector2.addEventListener('input', function(){
   console.log(selector2.value.replace(/[0-9]/g, "0"));
 
 });
+
+
+let validEmail = document.querySelectorAll('input[type="email"]');
+
+let im2 = new Inputmask("*{3,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{3,20}[.*{2,6}][.*{1,2}].*{2,20}[.*{2,6}][.*{1,2}]");
+im2.mask(validEmail);
+
+let validEmail2 = document.querySelector('input[type="email"]');
+
+validEmail2.addEventListener('input', function(){
+  console.log(selector2.value)
+
+
+  const re2 = /^\d*(\.\d+)?$/
+
+  console.log(validEmail2.value.match(/[0-9]/g).length)
+
+
+  console.log(validEmail2.value.replace(/[0-9]/g, "0"));
+});
+

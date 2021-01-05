@@ -1066,7 +1066,7 @@
             <div class="footer__contact-item footer__contact-item--pay">
               <div class="footer__dir-col footer__contact-item">
                 <h3 class="open-spoiler">Дополнительно</h3>
-                <div class="footer__info-item-text footer__dir-info"><a href="#">Связаться с директором</a><a href="#">Вакансии</a></div>
+                <div class="footer__info-item-text footer__dir-info"><a class="js-open-modal" href="#" data-modal="14">Связаться с директором</a><a href="vacancies.html">Вакансии</a></div>
               </div>
               <p>Принимаем к оплате:</p>
               <div class="footer__card-wrap"><img src="images/content/master.png" alt="логотип платежной системы"><img src="images/content/visa.png" alt="логотип платежной системы"><img src="images/content/mir.png" alt="логотип платежной системы"></div>
@@ -1133,6 +1133,23 @@
         </div>
       </div>
       <!--button(id="btn_modal_window") Open Modal-->
+      <div class="modal" data-modal="11">
+        <div class="modal__content">
+          <div class="close_modal_window close__reviews js-modal-close"><span></span>
+            <p>Закрыть</p>
+          </div>
+          <div class="modal-check">
+            <div class="modal-check__img">
+              <svg class="svg-sprite-icon icon-check-img">
+                <use xlink:href="images/sprite/symbol/sprite.svg#check-img"></use>
+              </svg>
+            </div>
+            <h1>Спасибо, ваш запрос принят!</h1>
+            <p>Наш менеджер свяжется с Вами в ближайшее время</p><a href="index.html">Вернуться на главную</a>
+          </div>
+        </div>
+      </div>
+      <!--button(id="btn_modal_window") Open Modal-->
       <div class="modal modal-rev" data-modal="2">
         <div class="modal__reviews-container">
           <div class="close_modal_window close__reviews js-modal-close"><span></span>
@@ -1184,6 +1201,37 @@
               <button class="modal__sub-btn" type="submit">Отправить</button>
             </div>
           </form>
+        </div>
+      </div>
+      <!--button(id="btn_modal_window") Open Modal-->
+      <div class="modal modal-vacancies" data-modal="14">
+        <div class="modal__vacancies-container">
+          <div class="close_modal_window close__reviews close__vacancies js-modal-close"><span></span>
+            <p>Закрыть</p>
+          </div>
+          <!--стили с модалки вакансий, тк они практически одинаковые-->
+          <div class="modal-vacancies__modal">
+            <h2>Связь с директором</h2>
+            <p>Оставьте сообщение и его получит директор компании “TOKADA”</p>
+            <form class="modal__form" id="modaldirform" method="post" action="">
+              <div class="modal-vacancies__inputs">
+                <label for="name-modal-dir"></label>
+                <input type="text" name="name" id="name-modal-dir" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
+                <label for="email-dir"></label>
+                <input type="email" name="email" id="email-dir" placeholder="E-mail" title="Введите E-mail" minlength="3" required>
+              </div>
+              <textarea placeholder="Сообщение для директора"></textarea>
+              <div class="modal-vacies__check-block">
+                <div class="modal__req"><span>*</span>
+                  <p>- обязательные поля</p>
+                </div>
+                <div class="call__form-footer">
+                  <p>Нажимая на кнопку вы соглашаетесь на обработку<a href="#">персональных данных</a></p>
+                  <button class="call__sub-btn" type="submit">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <script src="js/vendors.js"></script>
