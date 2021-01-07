@@ -308,6 +308,18 @@ const tab3 = function () {
 
 tab3();
 
+let mapLink = document.querySelectorAll('.svg-item');
+let mapBlock = document.querySelector('.home-map__info');
+    mapLink.forEach(el => {
+        el.addEventListener('mouseenter', (e) => {
+            mapBlock.style.display = 'block';
+        });
+
+            el.addEventListener('mouseleave', (e) => {
+                mapBlock.style.display = 'none';
+        });
+    });
+
 //cкрипт создающий тень при появлении окна городов и корректирующий его работу
 
 let cityBtn = document.querySelector('.header-city__select');
