@@ -25,21 +25,21 @@
                   <div class="header-modal__btns"><a class="header-city__confirm" href="#">Да</a><a class="header-city__select modal-open js-open-modal" href="#" data-modal="1">Выбрать город</a></div>
                 </div>
               </div>
-            </div><a class="header__phone-link modal-open modal-open__phones" href="#">8 (800) 333-31-24
+            </div><a class="header__phone-link modal-open__phones" href="tel:88003333124">8 (800) 333-31-24
               <svg class="svg-sprite-icon icon-phone">
                 <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
               </svg></a>
             <div class="header-modal__phones-body">
-              <div class="header-modal__phones-el"><a href="#">8 (800) 333-31-24</a>
+              <div class="header-modal__phones-el"><a href="tel:88003333124">8 (800) 333-31-24</a>
                 <p>Единая справочная по РФ</p>
               </div>
-              <div class="header-modal__phones-el"><a href="#">8 (800) 333-31-24</a>
+              <div class="header-modal__phones-el"><a href="tel:88003333124">8 (800) 333-31-24</a>
                 <p>Бесплатный межгород</p>
               </div>
-              <div class="header-modal__phones-el"><a href="#">8 (800) 333-31-24</a>
+              <div class="header-modal__phones-el"><a href="tel:88003333124">8 (800) 333-31-24</a>
                 <p>Электроугли</p>
               </div>
-              <div class="header-modal__phones-el"><a href="#">8 (800) 333-31-24</a>
+              <div class="header-modal__phones-el"><a href="tel:88003333124">8 (800) 333-31-24</a>
                 <p>Карачарово</p>
               </div><a class="header-modal__phone-close modal-close" href="#"></a>
             </div><a href="#" data-da="header__burger-nav--bottom,first,867">zakaz@profilmet.ru</a><a href="#" data-da="header__burger-nav--top,last,867">Калькулятор</a><a class="header__price-link header__price-link--first" href="#" data-da="header__burger-footer,last,867">USD 78.0915</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,867">EUR 91.5779</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,867">LME 14 285</a>
@@ -56,7 +56,7 @@
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="images/common/logo.webp 1x, images/common/logo@2x.webp 2x"><img src="images/common/logo.png" srcset="images/common/logo@2x.png" width="203" height="47" alt="логотип">
               </picture></a>
-            <div class="header__menu open__mega-menu"><span></span>
+            <div class="header__menu open__mega-menu js-open-modal"><span></span>
               <p class="text-swap header__menu-main-text">Меню</p>
             </div>
             <div class="overlay" id="myNav">
@@ -132,20 +132,22 @@
         <!--button(id="btn_modal_window") Open Modal-->
         <div class="modal mega-menu">
           <div class="modal__content mega-menu__content">
-            <form class="form__search mega-menu__search" method="post" action="">
-              <div class="form__search-input">
-                <svg class="svg-sprite-icon icon-search">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
-                </svg>
-                <input type="search" placeholder="Найти металл">
-              </div>
-              <div class="form__search-input">
-                <svg class="svg-sprite-icon icon-search">
-                  <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
-                </svg>
-                <input type="submit" value="Найти">
-              </div>
-            </form>
+            <div class="form__search-wrap">
+              <form class="form__search mega-menu__search" method="post" action="">
+                <div class="form__search-input">
+                  <svg class="svg-sprite-icon icon-search">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+                  </svg>
+                  <input type="search" placeholder="Найти металл">
+                </div>
+                <div class="form__search-input">
+                  <svg class="svg-sprite-icon icon-search">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
+                  </svg>
+                  <input type="submit" value="Найти">
+                </div>
+              </form>
+            </div>
             <footer class="footer">
               <div class="footer__container">
                 <div class="footer__col">
@@ -305,10 +307,10 @@
                 <h3>Фильтрация</h3>
               </div>
               <div class="productlist__option-item productlist__option-item--first">
-                <div class="select">
+                <div class="select select__product">
                   <div class="select__header"><span class="select__current">Продукция</span></div>
                   <div class="select__body">
-                    <h3>Продукция</h3>
+                    <h3 class="close_productlist-product">Продукция</h3>
                     <div class="select__body-wrapper">
                       <div class="select__item">
                         <label class="checkbox"><span class="checkbox__text">Все размеры</span>
@@ -365,10 +367,10 @@
                 </div>
               </div>
               <div class="productlist__option-item">
-                <div class="select">
+                <div class="select select__body-size">
                   <div class="select__header"><span class="select__current">Размер</span></div>
                   <div class="select__body">
-                    <h3>Размер</h3>
+                    <h3 class="close_body-size js-open-modal">Размер</h3>
                     <div class="select__body-wrapper">
                       <div class="select__item">
                         <label class="checkbox"><span class="checkbox__text">Все размеры</span>
@@ -425,31 +427,21 @@
                 </div>
               </div>
               <div class="productlist__option-item">
-                <div class="select">
+                <div class="select-non">
                   <div class="select__header"><span class="select__current">Марка</span></div>
-                  <div class="select__body">
-                    <div class="select__item">123</div>
-                    <div class="select__item">321</div>
-                    <div class="select__item">456</div>
-                  </div>
                 </div>
               </div>
               <div class="productlist__option-item">
-                <div class="select">
+                <div class="select-non">
                   <div class="select__header"><span class="select__current">Длина</span></div>
-                  <div class="select__body">
-                    <div class="select__item">123</div>
-                    <div class="select__item">321</div>
-                    <div class="select__item">456</div>
-                  </div>
                 </div>
               </div>
               <div class="productlist__option-item productlist__option-item--region">
-                <div class="select select-reg">
+                <div class="select-non select-reg">
                   <div class="select__header"><span class="select__current">Регион</span></div>
                   <div class="select__body">
                     <div class="select__body-region">
-                      <h2>Регион</h2>
+                      <h2 class="close_reg-modal">Регион</h2>
                       <p>Все регионы</p>
                     </div>
                     <div class="select__body-container">
@@ -460,7 +452,7 @@
                         <p>Москва</p>
                         <p>Москва</p>
                         <p>Москва</p>
-                        <div class="slect__body-footer"><a class="select__body-confirm" href="#">Применить</a></div>
+                        <div class="slect__body-footer"><a class="select__body-confirm close_reg-modal" href="#">Применить</a></div>
                       </div>
                       <div class="select__body-city-check">
                         <label class="checkbox"><span class="checkbox__text">Москва</span>
@@ -487,23 +479,13 @@
                 </div>
               </div>
               <div class="productlist__option-item">
-                <div class="select">
+                <div class="select-non">
                   <div class="select__header productlist__select-header"><span class="select__current">Цена</span><small>до 100м</small></div>
-                  <div class="select__body">
-                    <div class="select__item">123</div>
-                    <div class="select__item">321</div>
-                    <div class="select__item">456</div>
-                  </div>
                 </div>
               </div>
               <div class="productlist__option-item">
-                <div class="select">
+                <div class="select-non">
                   <div class="select__header productlist__select-header"><span class="select__current">Цена</span><small>от 100 до 360м</small></div>
-                  <div class="select__body">
-                    <div class="select__item">123</div>
-                    <div class="select__item">321</div>
-                    <div class="select__item">456</div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -517,8 +499,8 @@
                 <p data-da="productlist-info,1,867">6000</p>
                 <p data-da="productlist-info,1,867">Пермь</p>
                 <p>44</p>
-                <p>43</p>
-                <p>В корзину</p>
+                <p>43</p><a href="#">
+                  <p>В корзину</p></a>
               </div>
               <div class="productlist__container-info">
                 <div class="productlist-info"></div>
@@ -535,8 +517,8 @@
                 <p data-da="productlist-info--2,2,867">6000</p>
                 <p data-da="productlist-info--2,2,867">Пермь</p>
                 <p>44</p>
-                <p>43</p>
-                <p>В корзину</p>
+                <p>43</p><a href="#">
+                  <p>В корзину</p></a>
               </div>
               <div class="productlist__container-info">
                 <div class="productlist-info productlist-info--2"></div>
@@ -553,8 +535,8 @@
                 <p data-da="productlist-info--3,last,867">6000</p>
                 <p data-da="productlist-info--3,last,867">Пермь</p>
                 <p>44</p>
-                <p>43</p>
-                <p>В корзину</p>
+                <p>43</p><a href="#">
+                  <p>В корзину</p></a>
               </div>
               <div class="productlist__container-info">
                 <div class="productlist-info productlist-info--3"></div>
@@ -571,8 +553,8 @@
                 <p data-da="productlist-info--4,last,867">6000</p>
                 <p data-da="productlist-info--4,last,867">Пермь</p>
                 <p>44</p>
-                <p>43</p>
-                <p>В корзину</p>
+                <p>43</p><a href="#">
+                  <p>В корзину</p></a>
               </div>
               <div class="productlist__container-info">
                 <div class="productlist-info productlist-info--4"></div>
@@ -589,8 +571,8 @@
                 <p data-da="productlist-info--5,last,867">6000</p>
                 <p data-da="productlist-info--5,last,867">Пермь</p>
                 <p>44</p>
-                <p>43</p>
-                <p>В корзину</p>
+                <p>43</p><a href="#">
+                  <p>В корзину</p></a>
               </div>
               <div class="productlist__container-info">
                 <div class="productlist-info productlist-info--5"></div>
@@ -607,8 +589,8 @@
                 <p data-da="productlist-info--6,last,867">6000</p>
                 <p data-da="productlist-info--6,last,867">Пермь</p>
                 <p>44</p>
-                <p>43</p>
-                <p>В корзину</p>
+                <p>43</p><a href="#">
+                  <p>В корзину</p></a>
               </div>
               <div class="productlist__container-info">
                 <div class="productlist-info productlist-info--6"></div>
@@ -625,8 +607,8 @@
                 <p data-da="productlist-info--7,last,867">6000</p>
                 <p data-da="productlist-info--7,last,867">Пермь</p>
                 <p>44</p>
-                <p>43</p>
-                <p>В корзину</p>
+                <p>43</p><a href="#">
+                  <p>В корзину</p></a>
               </div>
               <div class="productlist__container-info">
                 <div class="productlist-info productlist-info--7"></div>
@@ -643,8 +625,8 @@
                 <p data-da="productlist-info--8,last,867">6000</p>
                 <p data-da="productlist-info--8,last,867">Пермь</p>
                 <p>44</p>
-                <p>43</p>
-                <p>В корзину</p>
+                <p>43</p><a href="#">
+                  <p>В корзину</p></a>
               </div>
               <div class="productlist__container-info">
                 <div class="productlist-info productlist-info--8"></div>
@@ -699,10 +681,10 @@
                   <p>Адрес:</p><a href="#">г. Москва, Очаковское шоссе, д.42, стр.16 этаж 1 пом. 2 (каб.3,4,5).</a>
                 </div>
                 <div class="form__mail-wrap form__contact-wrap">
-                  <p>Почта:</p><a href="#">msk@profilmet.ru</a>
+                  <p>Почта:</p><a href="mailto:msk@profilmet.ru">msk@profilmet.ru</a>
                 </div>
                 <div class="form__tell-wrap form__contact-wrap">
-                  <p>Номер телефона:</p><a href="#">8 (800) 333-31-24</a>
+                  <p>Номер телефона:</p><a href="tel:88003333124">8 (800) 333-31-24</a>
                 </div>
               </div>
               <form class="form__main" action="" method="post">
@@ -723,19 +705,19 @@
           <div class="tabs-content__item tab-2"><img src="images/content/tabs__map.jpg" width="1200" height="630" alt="картинка круглого видео">
             <div class="form__block">
               <div class="form__block-contacts">
-                <h4>Контакты2</h4>
+                <h4>Контакты</h4>
                 <div class="form__addr-wrap form__contact-wrap">
-                  <p>Адрес:</p><a href="#">г. Москва, Очаковское шоссе, д.42, стр.16 этаж 1 пом. 2 (каб.3,4,5).</a>
+                  <p>Адрес:</p><a href="#">г. Ростов-на-Дону, Ул. Мечникова 112г, офис 201</a>
                 </div>
                 <div class="form__mail-wrap form__contact-wrap">
-                  <p>Почта:</p><a href="#">msk@profilmet.ru</a>
+                  <p>Почта:</p><a href="mailto:msk@profilmet.ru">msk@profilmet.ru</a>
                 </div>
                 <div class="form__tell-wrap form__contact-wrap">
-                  <p>Номер телефона:</p><a href="#">8 (800) 333-31-24</a>
+                  <p>Номер телефона:</p><a href="tel:+78632078488">+7 (863) 207-84-88</a>
                 </div>
               </div>
               <form class="form__main" action="" method="post">
-                <h4>Связаться с нами2</h4>
+                <h4>Связаться с нами</h4>
                 <input type="text" name="name2" id="name2" placeholder="Имя" title="Введите имя" minlength="2" maxlength="30" required>
                 <input type="email" name="email2" id="email2" placeholder="E-mail" title="Введите почту" minlength="2" maxlength="30" required>
                 <input type="tel" name="phone2" id="phone2" placeholder="Номер телефона" title="Введите телефон" minlength="3" maxlength="30" required>
@@ -828,7 +810,7 @@
             <svg class="svg-sprite-icon icon-search">
               <use xlink:href="images/sprite/symbol/sprite.svg#search"></use>
             </svg>
-            <input type="search" placeholder="Найти металл">
+            <input type="search" placeholder="Поиск">
           </div>
           <div class="form__search-input">
             <svg class="svg-sprite-icon icon-search">
