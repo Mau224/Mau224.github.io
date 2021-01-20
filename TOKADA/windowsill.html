@@ -12,6 +12,9 @@
     <link rel="preload" href="fonts/Circe/Circe-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/CirceBold/Circe-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/CirceLight/Circe-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/common/favicon.ico" type="image/png">
+    <link type="image/png" sizes="16x16" rel="icon" href="images/common/favicon-16x16.png">
+    <link type="image/png" sizes="16x16" rel="icon" href="images/common/favicon-32x32.png">
   </head>
   <body class="body">
     <div class="wrapper">
@@ -83,12 +86,12 @@
                 <div class="header__mega-block-link">
                   <svg class="svg-sprite-icon icon-mounted">
                     <use xlink:href="images/sprite/symbol/sprite.svg#mounted"></use>
-                  </svg><a href="#">Скачать презентацию (b2c)</a>
+                  </svg><a href="images/common/B2С.pdf">Презентация для клиентов (b2c)</a>
                 </div>
                 <div class="header__mega-block-link">
                   <svg class="svg-sprite-icon icon-mounted">
                     <use xlink:href="images/sprite/symbol/sprite.svg#mounted"></use>
-                  </svg><a href="#">Скачать презентацию (b2c)</a>
+                  </svg><a href="images/common/B2B.pdf">Презентация для партнеров (b2с)</a>
                 </div>
               </div>
               <div class="header__place">
@@ -761,15 +764,19 @@
       <section class="reviews">
         <div class="reviews__container">
           <div class="reviews__wrapper">
-            <h1>Отзывы о работе компании</h1><a class="js-open-modal" href="#" data-modal="2" data-da="reviews__footer,first,867">Оставить отзыв</a>
+            <h1>Отзывы о работе компании</h1>
+            <!--a(href="#" class="js-open-modal" data-modal="2" data-da="reviews__footer,first,867") Оставить отзыв-->
           </div>
           <div class="reviews__options">
-            <input type="radio" id="rev-1" name="radio-rev" checked>
-            <label for="rev-1">Все отзывы</label>
-            <input type="radio" id="rev-2" name="radio-rev">
-            <label for="rev-2">Отзывы в Yandex</label>
-            <input type="radio" id="rev-3" name="radio-rev">
-            <label for="rev-3">Отзывы в Google</label>
+            <div class="reviews__options-wrap">
+              <input type="radio" id="rev-1" name="radio-rev" checked>
+              <label for="rev-1">Все отзывы</label>
+              <input type="radio" id="rev-2" name="radio-rev">
+              <label for="rev-2">Отзывы в Yandex</label>
+              <input type="radio" id="rev-3" name="radio-rev">
+              <label for="rev-3">Отзывы в Google</label>
+            </div>
+            <div class="reviews__main-btn"><a class="js-open-modal" href="#" data-modal="2" data-da="reviews__footer,first,867">Оставить отзыв</a></div>
           </div>
           <div class="reviews__list">
             <div class="reviews__item">
