@@ -12,6 +12,12 @@
     <link rel="preload" href="fonts/Circe/Circe-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/CirceBold/Circe-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/CirceLight/Circe-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/common/favicon.ico" type="image/png">
+    <link type="image/png" sizes="16x16" rel="icon" href="images/common/favicon-16x16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="images/common/favicon-32x32.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="images/common/android-chrome-192x192.png">
+    <link type="image/png" sizes="512x512" rel="icon" href="images/common/android-chrome-512x512.png">
+    <link type="image/png" sizes="150x150" rel="apple-touch-icon" href="images/common/mstile-150x150.png">
   </head>
   <body class="body">
     <div class="wrapper">
@@ -83,12 +89,12 @@
                 <div class="header__mega-block-link">
                   <svg class="svg-sprite-icon icon-mounted">
                     <use xlink:href="images/sprite/symbol/sprite.svg#mounted"></use>
-                  </svg><a href="#">Скачать презентацию (b2c)</a>
+                  </svg><a href="images/common/B2С.pdf">Презентация для клиентов (b2c)</a>
                 </div>
                 <div class="header__mega-block-link">
                   <svg class="svg-sprite-icon icon-mounted">
                     <use xlink:href="images/sprite/symbol/sprite.svg#mounted"></use>
-                  </svg><a href="#">Скачать презентацию (b2c)</a>
+                  </svg><a href="images/common/B2B.pdf">Презентация для партнеров (b2с)</a>
                 </div>
               </div>
               <div class="header__place">
@@ -99,13 +105,13 @@
               </div>
             </div>
             <div class="header__main-list-hover-links">
-              <div class="header__main-link-hover"><a class="header__sp-link open-spoiler" href="window.html">Окна
+              <div class="header__main-link-hover"><a class="header__sp-link open-spoiler" href="windowmain.html">Окна
                   <svg class="svg-sprite-icon icon-window">
                     <use xlink:href="images/sprite/symbol/sprite.svg#window"></use>
                   </svg></a>
                 <div class="header__hover-block">
                   <div class="mega-menu__item-list">
-                    <div class="mega-menu__hov-link-wrap"><a class="header__sp-link" href="window.html">Окна</a>
+                    <div class="mega-menu__hov-link-wrap"><a class="header__sp-link" href="windowmain.html">Окна</a>
                       <svg class="svg-sprite-icon icon-window">
                         <use xlink:href="images/sprite/symbol/sprite.svg#window"></use>
                       </svg>
@@ -147,7 +153,7 @@
                     <div class="mega-menu__col-item">
                       <svg class="svg-sprite-icon icon-mini-door2">
                         <use xlink:href="images/sprite/symbol/sprite.svg#mini-door2"></use>
-                      </svg><a href="doors.html">Двери ПВХ</a>
+                      </svg><a href="doorspvh.html">Двери ПВХ</a>
                     </div>
                     <div class="mega-menu__col-item">
                       <svg class="svg-sprite-icon icon-mini-door3">
@@ -344,7 +350,7 @@
                   <div class="mega-menu__col-item">
                     <svg class="svg-sprite-icon icon-mini-door2">
                       <use xlink:href="images/sprite/symbol/sprite.svg#mini-door2"></use>
-                    </svg><a href="doors.html">Двери ПВХ</a>
+                    </svg><a href="doorspvh.html">Двери ПВХ</a>
                   </div>
                   <div class="mega-menu__col-item">
                     <svg class="svg-sprite-icon icon-mini-door3">
@@ -528,11 +534,11 @@
             <h2>Холодный профиль</h2>
             <p>Холодные двери изготавливаются из неизолированного алюминиевого профиля. Заполняются однокамерными стеклопакетами или стеклами.</p>
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/slidedoors__item-img1.webp 1x, images/content/slidedoors__item-img1@2x.webp 2x"><img src="images/content/slidedoors__item-img1.jpg" srcset="images/content/slidedoors__item-img1@2x.jpg" alt="картинка окна">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="../images/content/slidedoors__item-img1.webp 1x, images/content/slidedoors__item-img1@2x.webp 2x"><img src="images/content/slidedoors__item-img1.jpg" srcset="../images/content/slidedoors__item-img1@2x.jpg" alt="картинка окна">
             </picture>
             <div class="types-profile__advantages-list types-profile__slidingdoors-list">
               <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/slididoors-adv-item.webp 1x, images/content/slididoors-adv-item@2x.webp 2x"><img src="images/content/slididoors-adv-item.png" srcset="images/content/slididoors-adv-item@2x.png" alt="картинка окна">
+                <source type="image/webp" media="(min-width: 1024px)" srcset="../images/content/slididoors-adv-item.webp 1x, ../images/content/slididoors-adv-item@2x.webp 2x"><img src="../images/content/slididoors-adv-item.png" srcset="../images/content/slididoors-adv-item@2x.png" alt="картинка окна">
               </picture>
               <div class="type-profile__slididoors-adv-block">
                 <h2>Применяется:</h2>
@@ -836,15 +842,19 @@
       <section class="reviews">
         <div class="reviews__container">
           <div class="reviews__wrapper">
-            <h1>Отзывы о работе компании</h1><a class="js-open-modal" href="#" data-modal="2" data-da="reviews__footer,first,867">Оставить отзыв</a>
+            <h1>Отзывы о работе компании</h1>
+            <!--a(href="#" class="js-open-modal" data-modal="2" data-da="reviews__footer,first,867") Оставить отзыв-->
           </div>
           <div class="reviews__options">
-            <input type="radio" id="rev-1" name="radio-rev" checked>
-            <label for="rev-1">Все отзывы</label>
-            <input type="radio" id="rev-2" name="radio-rev">
-            <label for="rev-2">Отзывы в Yandex</label>
-            <input type="radio" id="rev-3" name="radio-rev">
-            <label for="rev-3">Отзывы в Google</label>
+            <div class="reviews__options-wrap">
+              <input type="radio" id="rev-1" name="radio-rev" checked>
+              <label for="rev-1">Все отзывы</label>
+              <input type="radio" id="rev-2" name="radio-rev">
+              <label for="rev-2">Отзывы в Yandex</label>
+              <input type="radio" id="rev-3" name="radio-rev">
+              <label for="rev-3">Отзывы в Google</label>
+            </div>
+            <div class="reviews__main-btn"><a class="js-open-modal" href="#" data-modal="2" data-da="reviews__footer,first,867">Оставить отзыв</a></div>
           </div>
           <div class="reviews__list">
             <div class="reviews__item">
@@ -1062,7 +1072,7 @@
             </div>
             <div class="footer__contact-item footer__contact-item--actions">
               <h3 class="open-spoiler">Акции</h3>
-              <div class="footer__info-item-text"><a href="#">Скидка на пластиковые и алюминиевые окна - 30 процентов!</a><a href="#">Рассрочка от 3 до 12 месяцев - 0%предоплата, без переплаты</a><a href="#">Зимний монтаж</a></div>
+              <div class="footer__info-item-text"><a href="#">Скидка на пластиковые и алюминиевые окна - 30 процентов!</a><a href="#">Окна в рассрочку - 0% переплат!</a><a href="#">Скидка при от 3 или более окон на продкцию и монтаж</a></div>
             </div>
             <div class="footer__contact-item footer__contact-item--location">
               <h3 class="open-spoiler">Контакты</h3>
@@ -1174,7 +1184,7 @@
       <!--button(id="btn_modal_window") Open Modal-->
       <div class="modal modal-rev" data-modal="2">
         <div class="modal__reviews-container">
-          <div class="close_modal_window close__reviews js-modal-close"><span></span>
+          <div class="close__reviews js-modal-close"><span></span>
             <p>Закрыть</p>
           </div>
           <div class="modal__reviews-header">

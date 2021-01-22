@@ -14,7 +14,10 @@
     <link rel="preload" href="fonts/CirceLight/Circe-Light.woff2" as="font" crossorigin="anonymous">
     <link rel="shortcut icon" href="images/common/favicon.ico" type="image/png">
     <link type="image/png" sizes="16x16" rel="icon" href="images/common/favicon-16x16.png">
-    <link type="image/png" sizes="16x16" rel="icon" href="images/common/favicon-32x32.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="images/common/favicon-32x32.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="images/common/android-chrome-192x192.png">
+    <link type="image/png" sizes="512x512" rel="icon" href="images/common/android-chrome-512x512.png">
+    <link type="image/png" sizes="150x150" rel="apple-touch-icon" href="images/common/mstile-150x150.png">
   </head>
   <body class="body">
     <div class="wrapper">
@@ -102,13 +105,13 @@
               </div>
             </div>
             <div class="header__main-list-hover-links">
-              <div class="header__main-link-hover"><a class="header__sp-link open-spoiler" href="window.html">Окна
+              <div class="header__main-link-hover"><a class="header__sp-link open-spoiler" href="windowmain.html">Окна
                   <svg class="svg-sprite-icon icon-window">
                     <use xlink:href="images/sprite/symbol/sprite.svg#window"></use>
                   </svg></a>
                 <div class="header__hover-block">
                   <div class="mega-menu__item-list">
-                    <div class="mega-menu__hov-link-wrap"><a class="header__sp-link" href="window.html">Окна</a>
+                    <div class="mega-menu__hov-link-wrap"><a class="header__sp-link" href="windowmain.html">Окна</a>
                       <svg class="svg-sprite-icon icon-window">
                         <use xlink:href="images/sprite/symbol/sprite.svg#window"></use>
                       </svg>
@@ -150,7 +153,7 @@
                     <div class="mega-menu__col-item">
                       <svg class="svg-sprite-icon icon-mini-door2">
                         <use xlink:href="images/sprite/symbol/sprite.svg#mini-door2"></use>
-                      </svg><a href="doors.html">Двери ПВХ</a>
+                      </svg><a href="doorspvh.html">Двери ПВХ</a>
                     </div>
                     <div class="mega-menu__col-item">
                       <svg class="svg-sprite-icon icon-mini-door3">
@@ -347,7 +350,7 @@
                   <div class="mega-menu__col-item">
                     <svg class="svg-sprite-icon icon-mini-door2">
                       <use xlink:href="images/sprite/symbol/sprite.svg#mini-door2"></use>
-                    </svg><a href="doors.html">Двери ПВХ</a>
+                    </svg><a href="doorspvh.html">Двери ПВХ</a>
                   </div>
                   <div class="mega-menu__col-item">
                     <svg class="svg-sprite-icon icon-mini-door3">
@@ -520,9 +523,11 @@
       </section>
       <section class="advantages">
         <div class="advantages__container">
-          <h1>Преимущества</h1>
           <div class="advantages__title">
-            <p>Почему мы?</p><a class="advantages__btn js-open-modal" href="#" data-modal="10">Получить скидку 30% на остекление</a>
+            <div class="advantages__wrap-title">
+              <h1>Преимущества работы с нами</h1>
+              <p>Почему мы?</p>
+            </div><a class="advantages__btn js-open-modal" href="#" data-modal="10">Получить скидку 30% на остекление</a>
           </div>
           <div class="advantages__block swiper-container sliderWhyus">
             <div class="advantages__list swiper-wrapper">
@@ -545,7 +550,7 @@
                   <h3>03</h3>
                   <h4>Пожизненная гарантия</h4>
                 </div>
-                <p>Мы даем пожизненную гарантию на наши стеклопакеты. Кроме этого, на все наши окна действует гарантия 5 лет.</p>
+                <p>На все наши окна действует гарантия - 5 лет.</p>
               </div>
               <div class="advantages__item swiper-slide">
                 <div class="advantages__item-title">
@@ -837,7 +842,7 @@
                 <h4>Замер строений окон</h4>
               </div>
               <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/stage__img2.webp 1x, images/content/stage__img2@2x.webp 2x"><img src="images/content/stage__img2.png" srcset="images/content/stage__img2@2x.png" alt="картинка в обьекте">
+                <source type="image/webp" media="(min-width: 1024px)" srcset="../images/content/stage__img2.webp 1x, ../images/content/stage__img2@2x.webp 2x"><img src="../images/content/stage__img2.png" srcset="../images/content/stage__img2@2x.png" alt="картинка в обьекте">
               </picture>
               <p>Мы составим полную смету по изготовлению и установке ваших будущих изделий.</p>
             </div>
@@ -847,7 +852,7 @@
                 <h4>Изготовление окон по заказу</h4>
               </div>
               <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/stage__img3.webp 1x, images/content/stage__img3@2x.webp 2x"><img src="images/content/stage__img3.png" srcset="images/content/stage__img3@2x.png" alt="картинка в обьекте">
+                <source type="image/webp" media="(min-width: 1024px)" srcset="../images/content/stage__img3.webp 1x, ../images/content/stage__img3@2x.webp 2x"><img src="../images/content/stage__img3.png" srcset="../images/content/stage__img3@2x.png" alt="картинка в обьекте">
               </picture>
               <p>Наши технические специалисты вносят в производственную программу ваши изделия для изготовления.</p>
             </div>
@@ -1404,7 +1409,7 @@
             </div>
             <div class="footer__contact-item footer__contact-item--actions">
               <h3 class="open-spoiler">Акции</h3>
-              <div class="footer__info-item-text"><a href="#">Скидка на пластиковые и алюминиевые окна - 30 процентов!</a><a href="#">Рассрочка от 3 до 12 месяцев - 0%предоплата, без переплаты</a><a href="#">Зимний монтаж</a></div>
+              <div class="footer__info-item-text"><a href="#">Скидка на пластиковые и алюминиевые окна - 30 процентов!</a><a href="#">Окна в рассрочку - 0% переплат!</a><a href="#">Скидка при от 3 или более окон на продкцию и монтаж</a></div>
             </div>
             <div class="footer__contact-item footer__contact-item--location">
               <h3 class="open-spoiler">Контакты</h3>
@@ -1516,7 +1521,7 @@
       <!--button(id="btn_modal_window") Open Modal-->
       <div class="modal modal-rev" data-modal="2">
         <div class="modal__reviews-container">
-          <div class="close_modal_window close__reviews js-modal-close"><span></span>
+          <div class="close__reviews js-modal-close"><span></span>
             <p>Закрыть</p>
           </div>
           <div class="modal__reviews-header">

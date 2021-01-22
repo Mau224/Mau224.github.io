@@ -269,6 +269,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 (function () {
     const burger = document.querySelector('.header__burger');
+    const burgerWrap = document.querySelector('.header__burger-mega-block');
+    const tabDis = document.querySelector('.header__link-call-mob');
     const body = document.querySelector('.body');
     const overlay = document.querySelector('.overlay-menu');
     const menuText = document.querySelector('.header__mega-menu-block-text');
@@ -280,18 +282,40 @@ document.addEventListener('DOMContentLoaded', function() {
         menuText.classList.toggle('active');
         mainList.classList.toggle('active');
         megaList.classList.toggle('active');
+        burgerWrap.classList.toggle('active');
         body.classList.toggle('dis');
+
+        if (burger.classList.contains('active')) {
+            body.style.overflow = 'hidden';
+            tabDis.addEventListener('click', function (){
+                burger.classList.remove('active');
+                overlay.classList.remove('active');
+            })
+        } else {
+            body.style.overflow = 'auto';
+        }
     });
 }());
 
 (function () {
     const burger = document.querySelector('.header__link-call-mob');
+    const tabDis = document.querySelector('.header__burger');
     const body = document.querySelector('.body');
     const overlay = document.querySelector('.overlay-mob-tel');
     burger.addEventListener('click', function () {
         burger.classList.toggle('active');
         overlay.classList.toggle('active');
         body.classList.toggle('dis');
+
+        if (burger.classList.contains('active')) {
+            body.style.overflow = 'hidden';
+            tabDis.addEventListener('click', function (){
+                burger.classList.remove('active');
+                overlay.classList.remove('active');
+            })
+        } else {
+            body.style.overflow = 'auto'
+        }
     });
 }());
 
