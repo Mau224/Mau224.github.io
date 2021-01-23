@@ -546,9 +546,18 @@ var checkbox = document.querySelectorAll('.calc__switch-block');
 for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].addEventListener('change', function () {
         this.classList.toggle('color');
-        
+
     })
 }
+
+//корректировки для спойлера в услугах
+
+let plusService = document.querySelector('.service__plus-open');
+let linkServie = document.querySelector('.service__item-lin-title');
+plusService.addEventListener('click', function () {
+    linkServie.classList.toggle('active');
+})
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
