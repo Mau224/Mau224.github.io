@@ -319,7 +319,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 }());
 
-
 (function () {
     const action = document.querySelector('.header__link-action');
     const headercontainer = document.querySelector('.header__container');
@@ -513,19 +512,8 @@ window.addEventListener('resize', () => {
 });
 
 
-// let spoiler = document.querySelectorAll('.faq__item-header');
 
-// for (let i = 0; i < spoiler.length; i++) {
-//     spoiler[i].addEventListener('click', function () {
-//         this.classList.toggle('active');
-//         let content = this.nextElementSibling();
-//         if (content.style.display) {
-//             content.style.display = 'none';
-//         } else {
-//             content.style.display = 'block';
-//         }
-//     })
-// }
+
 
 let spoiler2 = document.querySelectorAll('.open-spoiler');
 
@@ -549,14 +537,6 @@ for (let i = 0; i < checkbox.length; i++) {
 
     })
 }
-
-//корректировки для спойлера в услугах
-
-let plusService = document.querySelector('.service__plus-open');
-let linkServie = document.querySelector('.service__item-lin-title');
-plusService.addEventListener('click', function () {
-    linkServie.classList.toggle('active');
-})
 
 
 
@@ -702,4 +682,16 @@ validEmail2.addEventListener('input', function(){
 
   console.log(validEmail2.value.replace(/[0-9]/g, "0"));
 });
+
+
+(function (){
+
+//корректировки для спойлера в услугах
+
+  let plusService = document.querySelector('.service__plus-open');
+  let linkServie = document.querySelector('.service__item-lin-title');
+  plusService.addEventListener('click', function () {
+    linkServie.classList.toggle('active');
+  })
+})
 
