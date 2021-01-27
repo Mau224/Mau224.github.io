@@ -221,7 +221,7 @@ if(wWidth >= 867){
     ease: "none",
     scrollTrigger: {
       trigger: ".horizontal-trigger",
-      start: "center center",
+      start: "center-=100 center",
       end: "1500px",
       scrub: 1,
       pin: true,
@@ -256,7 +256,7 @@ $('.home-adv__item-first, .home-adv__last').on('mouseleave', function(){
 
 // появление оранжевых регионов на карте РФ
 
-  var regQueryArray = [8,7,5,0,1,15,12,14,10,2,13,4,11,3,11,6];
+  var regQueryArray = [5,0,1,12,10,2,13,4,9,8,11,3,7,6];
 
   var regArray = [];
   var logoArray = [];
@@ -339,26 +339,21 @@ $('.home-adv__item-first, .home-adv__last').on('mouseleave', function(){
     start: "top center",
     onEnter: function(){
       if(wWidth >= 867){
-        gsap.to($('.russia-item'), {delay: 1, fillOpacity: '0.5'});
-        gsap.to($('.russia-name'), {delay: 1, opacity: '1'});
-        gsap.to($('.europe-item'), {delay: 1.5, fillOpacity: '0.5'});
-        gsap.to($('.europe-name'), {delay: 1.5, opacity: '1'});
-        gsap.to($('.china-item'), {delay: 2, fillOpacity: '0.5'});
-        gsap.to($('.china-name'), {delay: 2, opacity: '1'});
-        gsap.to($('.korea-item'), {delay: 2.5, fillOpacity: '0.5'});
-        gsap.to($('.korea-name'), {delay: 2.5, opacity: '1'});
-        gsap.to($('.india-item'), {delay: 3, fillOpacity: '0.5'});
-        gsap.to($('.india-name'), {delay: 3, opacity: '1'});
-        gsap.to($('.thaiwan-item'), {delay: 3.5, fillOpacity: '0.5'});
-        gsap.to($('.thaiwan-name'), {delay: 3.5, opacity: '1'});
-        gsap.to($('.africa-item'), {delay: 4, fillOpacity: '0.5'});
-        gsap.to($('.africa-name'), {delay: 4, opacity: '1'});
-        // setTimeout(
-        //   function(){
-        //     $('.russia-item, .europe-item, .india-item, .thaiwan-item, .china-item, .africa-item, .korea-item').css('fill-opacity', '0.5');
-        //     $('.russia-name, .europe-name, .india-name, .thaiwan-name, .africa-name, .china-name, .korea-name').addClass('showing');
-        //   }, 1000
-        // )
+        gsap.to($('.russia-item'), {delay: 0.2, fillOpacity: '0.5'});
+        gsap.to($('.russia-name'), {delay: 0.2, opacity: '1'});
+        gsap.to($('.europe-item'), {delay: 0.5, fillOpacity: '0.5'});
+        gsap.to($('.europe-name'), {delay: 0.5, opacity: '1'});
+        gsap.to($('.china-item'), {delay: 0.8, fillOpacity: '0.5'});
+        gsap.to($('.china-name'), {delay: 0.8, opacity: '1'});
+        gsap.to($('.korea-item'), {delay: 1.1, fillOpacity: '0.5'});
+        gsap.to($('.korea-name'), {delay: 1.1, opacity: '1'});
+        gsap.to($('.india-item'), {delay: 1.4, fillOpacity: '0.5'});
+        gsap.to($('.india-name'), {delay: 1.4, opacity: '1'});
+        gsap.to($('.thaiwan-item'), {delay: 1.7, fillOpacity: '0.5'});
+        gsap.to($('.thaiwan-name'), {delay: 1.7, opacity: '1'});
+        gsap.to($('.africa-item'), {delay: 2, fillOpacity: '0.5'});
+        gsap.to($('.africa-name'), {delay: 2, opacity: '1'});
+        
       }
         
         
