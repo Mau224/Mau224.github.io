@@ -24,8 +24,11 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__container">
-          <div class="header__wrap-img"><a class="header__logo" href="index.html">
-              <p><span>окна</span><br>Токаdа</p></a></div>
+          <div class="header__wrap-img"><a class="header__logo" href="index.html"><img src="images/content/logotokada.svg" alt="logo">
+              <!--p-->
+              <!--	span окна-->
+              <!--	br-->
+              <!--	| Токаdа--></a></div>
           <div class="header__main-nav" data-da="header__mob-main-wrap,last,867"><a class="header__link-action js-open-modal" href="action.html" data-modal="3">Акции</a><a class="header__link-reviews" href="comment.html">Отзывы</a><a href="works.html">Работы</a><a class="disabled-on-mob" href="calc.html">Калькулятор</a><a href="contact.html">Контакты</a></div>
           <div class="header__location">
             <!--.header__place-->
@@ -90,12 +93,12 @@
                 <div class="header__mega-block-link">
                   <svg class="svg-sprite-icon icon-mounted">
                     <use xlink:href="images/sprite/symbol/sprite.svg#mounted"></use>
-                  </svg><a href="images/common/B2С.pdf">Презентация для клиентов (b2c)</a>
+                  </svg><a href="images/pdfs/B2C.pdf">Презентация для клиентов (b2c)</a>
                 </div>
                 <div class="header__mega-block-link">
                   <svg class="svg-sprite-icon icon-mounted">
                     <use xlink:href="images/sprite/symbol/sprite.svg#mounted"></use>
-                  </svg><a href="images/common/B2B.pdf">Презентация для партнеров (b2b)</a>
+                  </svg><a href="images/pdfs/B2B.pdf">Презентация для партнеров (b2b)</a>
                 </div>
               </div>
               <div class="header__place">
@@ -776,15 +779,12 @@
         <div class="action__container action__container-window">
           <h1>Не знаете какой профиль выбрать?</h1>
           <div class="action__wrapper">
-            <div class="action__img action__img-window">
-              <div class="action__title action__title--first" data-da="action__form-window,first,867">
-                <h3>Вам поможет:</h3>
-                <p>Калькулятор расчета</p>
-              </div>
-              <picture>
-                <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/action-other__mobail-window.webp 1x, images/content/action-other__mobail-window@2x.webp 2x"><img src="images/content/action-other__mobail-window.png" srcset="images/content/action-other__mobail-window@2x.png" alt="картинка телефона в акции">
-              </picture>
-            </div>
+            <div class="action__img action__img-window"><a class="action__title action__title--first" href="calc.html" data-da="action__form-window,first,867">
+                <h3>Воспользуйтесь калькулятором для расчета стоимости!</h3><a class="calc__link" href="calc.html">
+                  <p>Калькулятор расчета</p></a></a><a href="calc.html">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/action-other__mobail-window.webp 1x, images/content/action-other__mobail-window@2x.webp 2x"><img src="images/content/action-other__mobail-window.png" srcset="images/content/action-other__mobail-window@2x.png" alt="картинка телефона в акции">
+                </picture></a></div>
             <form class="action__form action__form-window" id="windowform" method="post">
               <div class="action__title">
                 <h3>Или:</h3>
@@ -864,7 +864,7 @@
                 <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/works-img8.webp 1x, images/content/works-img8@2x.webp 2x"><img src="images/content/works-img8.jpg" srcset="images/content/works-img8@2x.jpg" alt="картинка работы">
               </picture>
               <div class="works__span"><span>Фасады</span></div>
-              <p>Остекление крышы офиса компании “Adidas”</p>
+              <p>Остекление крыши офиса компании “Adidas”</p>
             </div>
             <div class="works__item">
               <picture>
@@ -1010,11 +1010,11 @@
                 <p>Нужен подоконник?</p>
                 <div class="calc__row-wrap">
                   <div class="calc__switch-block">
-                    <p>Да</p>
+                    <p>Нет</p>
                     <label class="switch" for="ch1">
                       <input class="switch-theme swaper" type="checkbox" id="ch1" name="option1" value="нет"><span class="slider round"></span>
                     </label>
-                    <p>Нет</p>
+                    <p>Да</p>
                   </div>
                 </div>
               </div>
@@ -1022,11 +1022,11 @@
                 <p>Нужны цветные окна?</p>
                 <div class="calc__row-wrap">
                   <div class="calc__switch-block">
-                    <p class="calc__switch-text mybtn">Да</p>
+                    <p class="calc__switch-text mybtn">Нет</p>
                     <label class="switch" for="ch2">
                       <input class="switch-theme swaper" type="checkbox" id="ch2" name="option2" value="нет"><span class="slider round" id="swaper"></span>
                     </label>
-                    <p>Нет</p>
+                    <p>Да</p>
                   </div>
                 </div>
               </div>
@@ -1034,11 +1034,11 @@
                 <p>Нужен монтаж окон?</p>
                 <div class="calc__row-wrap">
                   <div class="calc__switch-block">
-                    <p>Да</p>
+                    <p>Нет</p>
                     <label class="switch" for="ch3">
                       <input class="swaper swaper1" type="checkbox" id="ch3" name="option3" value="нет"><span class="slider round"></span>
                     </label>
-                    <p>Нет</p>
+                    <p>Да</p>
                   </div>
                 </div>
               </div>
@@ -1303,12 +1303,15 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__header">
-            <div class="footer__mob-header"></div><a class="footer__logo" href="index.html" data-da="footer__mob-header,last,867">
-              <p><span>окна</span><br>Токаdа</p></a>
+            <div class="footer__mob-header"></div><a class="footer__logo" href="index.html" data-da="footer__mob-header,last,867"><img src="images/content/logotokadafooter.svg" alt="logo">
+              <!--p-->
+              <!--    span окна-->
+              <!--    br-->
+              <!--    | Токаdа--></a>
             <div class="footer__header-wrap"><a class="footer__header-link js-open-modal" href="#" data-modal="10">Заказать звонок
                 <svg class="svg-sprite-icon icon-phone">
                   <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
-                </svg></a><a class="footer__header-link footer__header-link-mail" href="#">zakaz@tokada.ru
+                </svg></a><a class="footer__header-link footer__header-link-mail" href="mailto:zakaz@okna-tokada.ru">zakaz@okna-tokada.ru
                 <svg class="svg-sprite-icon icon-mail">
                   <use xlink:href="images/sprite/symbol/sprite.svg#mail"></use>
                 </svg></a><a class="footer__header-link" href="tel:+79057990999">+7 905 799 09 99
@@ -1376,7 +1379,7 @@
                   <svg class="svg-sprite-icon icon-whatsapp">
                     <use xlink:href="images/sprite/symbol/sprite.svg#whatsapp"></use>
                   </svg></a>
-                <p>Почта:</p><a class="footer__loction-link" href="#">zakaz@tokada.ru
+                <p>Почта:</p><a class="footer__loction-link" href="#">akaz@okna-tokada.ru
                   <svg class="svg-sprite-icon icon-mail">
                     <use xlink:href="images/sprite/symbol/sprite.svg#mail"></use>
                   </svg></a>
@@ -1488,7 +1491,7 @@
               <h3>Оставить отзыв в YANDEX</h3>
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="images/content/yandex.webp 1x, images/content/yandex@2x.webp 2x"><img src="images/content/yandex.jpg" srcset="images/content/yandex@2x.jpg" alt="логотип компании">
-              </picture><a href="#">Оставить отзыв</a>
+              </picture><a href="https://yandex.ru/profile/80750382670?intent=reviews&amp;utm_source=qr&amp;utm_medium=qr_image&amp;utm_campaign=v1">Оставить отзыв</a>
             </div>
           </div>
         </div>
