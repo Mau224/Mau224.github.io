@@ -175,12 +175,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-let removeBtn = document.querySelector('.header__link-action');
-if (window.innerWidth < 870) {
-    removeBtn.classList.remove('js-open-modal');
-} else  {
-    removeBtn.classList.add('js-open-modal');
-}
+// let removeBtn = document.querySelector('.header__link-action');
+// if (window.innerWidth < 870) {
+//     removeBtn.classList.remove('js-open-modal');
+// } else  {
+//     removeBtn.classList.add('js-open-modal');
+// }
 
 // // const container = document.querySelector('.container');
 //
@@ -345,6 +345,15 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.remove('dis');
     });
 }());
+
+//блок окна акций на мобильном
+let actionLink = document.querySelector('.header__link-action');
+
+if (window.innerWidth < 870) {
+    actionLink.classList.remove('js-open-modal');
+} else {
+    actionLink.classList.add('js-open-modal');
+}
 
 //метрика
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
