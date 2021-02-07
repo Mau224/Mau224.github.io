@@ -441,10 +441,12 @@ $('.home-adv__item-first, .home-adv__last').on('mouseleave', function(){
     }
   )
 'use strict';
+
 let select = function () {
     let selectHeader = document.querySelectorAll('.select__header');
     let selectItem = document.querySelectorAll('.select__item');
     let modalClose = document.querySelector('.close_reg-modal');
+
 
     selectHeader.forEach(item => {
         item.addEventListener('click', selectToggle)
@@ -469,12 +471,23 @@ let select = function () {
     }
 
 
-    // let closeProductSel = document.querySelector('.select__body-region');
-    // closeProductSel.addEventListener('click', function () {
-    //     select.classList.remove('is-active');
-    //     closeProductSel.classList.add('text')
-    // });
+    document.body.addEventListener('keyup', function (e) {
+        var key = e.keyCode;
 
+        if (key == 27) {
+            document.querySelector('.select-reg').classList.remove('is-active');
+            document.querySelector('.select__body-size').classList.remove('is-active');
+            document.querySelector('.select__product').classList.remove('is-active');
+        };
+    }, false);
+
+    let overlayCity = document.querySelector('.overlay-modal');
+    overlayCity.addEventListener('click', function() {
+        document.querySelector('.select-reg').classList.remove('is-active');
+        document.querySelector('.select__body-size').classList.remove('is-active');
+        document.querySelector('.select__product').classList.remove('is-active');
+        headerSelect.classList.remove('is-active');
+    });
 };
 
 select();
@@ -601,12 +614,31 @@ tab3();
 
 //cкрипт создающий тень при появлении окна городов и корректирующий его работу
 
-let cityBtn = document.querySelector('.header-city__select');
+let cityBtn = document.querySelector('.header__select-city');
 let myNav =  document.getElementById("myNav");
-const headerTop = document.querySelector('.header__top');
+const headerTop = document.querySelector('.header__container');
 const headerBottom = document.querySelector('.header__menu');
 const modalCity = document.querySelector('.modal-city');
 var overlayCity = document.querySelector('.js-overlay-modal');
+let headerSelect = document.querySelector('.header__select');
+
+var cityItem = document.querySelectorAll('.city-item');
+var selectCity = document.querySelector('.header-modal__body');
+var reserCity = document.querySelector('.reset-city-display');
+
+reserCity.addEventListener('mouseenter', function (){
+    headerSelect.classList.remove('disabled');
+})
+
+
+for (let i = 0; i < cityItem.length; i++) {
+    cityItem[i].addEventListener('click',function () {
+        overlayCity.classList.remove('active');
+        modalCity.classList.remove('active');
+        headerSelect.classList.add('disabled');
+        body.classList.remove('dis');
+    })
+}
 
 if (window.innerWidth < 870) {
     cityBtn.addEventListener('click', function() {
@@ -622,20 +654,6 @@ if (window.innerWidth < 870) {
         overlayCity.classList.remove('active');
     })
 }
-
-
-//корректировка стилей для окна поиска
-let searchOpen = document.querySelector('.modal-search__open');
-let searchClose = document.querySelector('.modal-header__close');
-let header = document.querySelector('.header');
-
-searchOpen.addEventListener('click', function (){
-    header.classList.add('active');
-})
-
-searchClose.addEventListener('click', function (){
-    header.classList.remove('active');
-})
 
 // let openPhone = document.querySelector('.modal-open__phones');
 //
@@ -659,6 +677,14 @@ document.addEventListener('DOMContentLoaded', function() {
       overlay      = document.querySelector('.js-overlay-modal'),
       closeButtons = document.querySelectorAll('.js-modal-close');
 
+    modalButtons.forEach(function(item){
+        item.addEventListener('click', function (){
+            var parentModal = document.querySelectorAll('.modal');
+
+            parentModal.classList.remove('active');
+            overlay.classList.remove('active');
+        })
+    }); // end foreach
 
     /* Перебираем массив кнопок */
     modalButtons.forEach(function(item){
@@ -666,11 +692,19 @@ document.addEventListener('DOMContentLoaded', function() {
         /* Назначаем каждой кнопке обработчик клика */
         item.addEventListener('click', function(e) {
 
+
+            // let headerMenu = document.querySelector('.header__container');
+            // headerMenu.classList.remove('index-max');
+
             e.preventDefault();
 
-            var modalId = this.getAttribute('data-modal'),
-              modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+            var modalId = this.getAttribute('data-modal');
+            var modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
 
+
+            if (!modalId) {
+                modalElem.classList.remove('active');
+            }
 
             /* После того как нашли нужное модальное окно, добавим классы
                подложке и окну чтобы показать их. */
@@ -704,9 +738,11 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.modal.active').classList.remove('active');
             document.querySelector('.overlay-modal').classList.remove('active');
             document.querySelector('.open__mega-menu').classList.remove('active');
-            document.querySelector('.header').classList.remove('index-max');
-            document.querySelector('.header').classList.remove('active');
+            document.querySelector('.header__container').classList.remove('index-max');
+            document.querySelector('.overlay-modal').classList.remove('lowindex');
+            document.querySelector('.header__container').classList.remove('active');
             document.querySelector('.text-swap').textContent = 'Mеню';
+            headerSelect.classList.add('disabled');
             body.classList.remove('dis');
         };
     }, false);
@@ -716,9 +752,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.modal.active').classList.remove('active');
         this.classList.remove('active');
         document.querySelector('.open__mega-menu').classList.remove('active');
-        document.querySelector('.header').classList.remove('index-max');
-        document.querySelector('.header').classList.remove('active');
+        document.querySelector('.header__container').classList.remove('index-max');
+        document.querySelector('.overlay-modal').classList.remove('lowindex');
+        document.querySelector('.header__container').classList.remove('active');
         document.querySelector('.text-swap').textContent = 'Mеню';
+        headerSelect.classList.add('disabled');
         body.classList.remove('dis');
     });
 
@@ -769,6 +807,7 @@ let overlay = document.querySelector('.overlay-modal');
 let megaMenu = document.querySelector('.mega-menu');
 
 openMega.addEventListener('click', function () {
+
     if(this.classList.contains('active')) {
         textSwap.textContent = 'Mеню';
         body.classList.remove('dis');
@@ -778,13 +817,62 @@ openMega.addEventListener('click', function () {
         body.classList.add('dis');
     }
 
-    if(headerTop.classList.contains('index5k')) {
-        headerTop.classList.remove('index5k');
+    header.classList.add('index-max');
+
+    if (headerTop.classList.contains('index-max')) {
+        overlay.classList.add('lowindex');
+    } else {
+        overlay.classList.remove('lowindex');
     }
+
+    // if(headerTop.classList.contains('index5k')) {
+    //     headerTop.classList.remove('index5k');
+    // }
     megaMenu.classList.toggle('active');
-    overlay.classList.toggle('active');
+    overlay.classList.add('active');
     openMega.classList.toggle('active');
-    header.classList.toggle('index-max');
+    //закрывают все другие модальные окна
+    let searchModal = document.querySelector('.modal-search');
+    searchModal.classList.remove('active');
+})
+
+//корректировка стилей для окна поиска
+let searchOpen = document.querySelector('.modal-search__open');
+let searchClose = document.querySelector('.modal-header__close');
+let header = document.querySelector('.header__container');
+
+searchOpen.addEventListener('click', function (){
+    //закрывают все другие модальные окна
+    header.classList.add('index-max');
+    megaMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    openMega.classList.remove('active');
+    textSwap.textContent = 'Mеню';
+
+    if (header.classList.contains('index-max')) {
+        overlay.classList.add('lowindex');
+    } else {
+        overlay.classList.remove('lowindex');
+    }
+})
+
+searchClose.addEventListener('click', function (){
+    header.classList.remove('index-max');
+    overlay.classList.remove('lowindex');
+})
+
+let openCart = document.querySelector('.modal-cart-open');
+openCart.addEventListener('click', function (){
+
+    //закрывают все другие модальные окна
+    header.classList.remove('index-max');
+    megaMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    overlay.classList.remove('lowindex');
+    openMega.classList.remove('active');
+    textSwap.textContent = 'Mеню';
+    let searchModal = document.querySelector('.modal-search');
+    searchModal.classList.remove('active');
 })
 
 
@@ -830,66 +918,6 @@ closeLogin.addEventListener('click', function () {
       })
   }());
 
-
-
-
-let slectProductlist = document.querySelector('.select-reg');
-let modalCloseSize = document.querySelector('.close_body-size');
-let slectProductlistSize = document.querySelector('.select__body-size');
-let modalCloseProduct = document.querySelector('.close_productlist-product');
-let slectProductlistProduct = document.querySelector('.select__product');
-
-modalClose.addEventListener('click', function () {
-  slectProductlist.classList.remove('is-active');
-})
-
-document.body.addEventListener('keyup', function (e) {
-  var key = e.keyCode;
-
-  if (key == 27) {
-    document.querySelector('.select-reg').classList.remove('is-active');
-    document.querySelector('.select__body-size').classList.remove('is-active');
-    document.querySelector('.select__product').classList.remove('is-active');
-  };
-}, false);
-
-
-modalCloseProduct.addEventListener('click', function () {
-  slectProductlistProduct.classList.remove('is-active');
-})
-
-modalCloseSize.addEventListener('click', function () {
-  slectProductlistSize.classList.remove('is-active');
-})
-
-
-//оставил в самом конце тк,выдается ошибка на других страницах не придумал как сделать
-//модальное услуг на странице cart.html ("появляется по клику на 'Добавить услугу'")
-function modalCart() {
-  let closerService = document.querySelector('.cart__service-modal-close');
-  let openerService = document.querySelector('.cart__open-service');
-  let cartServiceModal = document.querySelector('.cart__service-modal');
-
-  if (window.innerWidth > 870) {
-    openerService.addEventListener('click', function () {
-      cartServiceModal.classList.add('active');
-      openerService.classList.add('change-color');
-      openerService.textContent = '- УДАЛИТЬ УСЛУГУ';
-    })
-
-
-    closerService.addEventListener('click', function () {
-      cartServiceModal.classList.remove('active');
-      openerService.classList.remove('change-color');
-      openerService.textContent = '+ ДОБАВИТЬ УСЛУГУ';
-    })
-  }
-}
-modalCart();
-
-window.addEventListener('resize', () => {
-  modalCart();
-});
 
 
 
@@ -3729,87 +3757,3 @@ validEmail2.addEventListener('input', function(){
         delete e.default
     }
 });
-
-// //тут скрипт модальных окон которые появляются через обращение к data-modal чаще всего это независимые окна ,которые поялвяются поверх всего
-// let body = document.querySelector('body');
-//
-// !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
-//
-//
-// document.addEventListener('DOMContentLoaded', function() {
-//
-//     /* Записываем в переменные массив элементов-кнопок и подложку.
-//        Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
-//     var modalButtons = document.querySelectorAll('.js-open-modal'),
-//       overlay      = document.querySelector('.js-overlay-modal'),
-//       closeButtons = document.querySelectorAll('.js-modal-close');
-//
-//
-//     /* Перебираем массив кнопок */
-//     modalButtons.forEach(function(item){
-//
-//         /* Назначаем каждой кнопке обработчик клика */
-//         item.addEventListener('click', function(e) {
-//
-//             e.preventDefault();
-//
-//             var modalId = this.getAttribute('data-modal'),
-//               modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
-//
-//
-//             /* После того как нашли нужное модальное окно, добавим классы
-//                подложке и окну чтобы показать их. */
-//             modalElem.classList.add('active');
-//             overlay.classList.add('active');
-//             body.classList.add('dis');
-//         }); // end click
-//
-//     }); // end foreach
-//
-//
-//     closeButtons.forEach(function(item){
-//
-//         item.addEventListener('click', function(e) {
-//             var parentModal = this.closest('.modal');
-//
-//             parentModal.classList.remove('active');
-//             overlay.classList.remove('active');
-//             document.querySelector('.open__mega-menu').classList.remove('active');
-//             body.classList.remove('dis');
-//         });
-//
-//     }); // end foreach
-//
-//
-//     document.body.addEventListener('keyup', function (e) {
-//         var key = e.keyCode;
-//
-//         if (key == 27) {
-//
-//             document.querySelector('.modal.active').classList.remove('active');
-//             document.querySelector('.overlay-modal').classList.remove('active');
-//             document.querySelector('.open__mega-menu').classList.remove('active');
-//             document.querySelector('.header').classList.remove('index-max');
-//             document.querySelector('.header').classList.remove('active');
-//             document.querySelector('.text-swap').textContent = 'Mеню';
-//             body.classList.remove('dis');
-//         };
-//     }, false);
-//
-//
-//     overlay.addEventListener('click', function() {
-//         document.querySelector('.modal.active').classList.remove('active');
-//         this.classList.remove('active');
-//         document.querySelector('.open__mega-menu').classList.remove('active');
-//         document.querySelector('.header').classList.remove('index-max');
-//         document.querySelector('.header').classList.remove('active');
-//         document.querySelector('.text-swap').textContent = 'Mеню';
-//         body.classList.remove('dis');
-//     });
-//
-//
-//
-//
-// }); // end ready
-//
-// //

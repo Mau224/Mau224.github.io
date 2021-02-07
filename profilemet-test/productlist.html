@@ -19,13 +19,22 @@
         <div class="header__top">
           <div class="header__wrapper header__wrapper--top">
             <div class="select header-modal header__select" data-da="header__burger-nav--top,last,867">
-              <div class="select__header"><span class="select__current">г.Москва</span>
-                <div class="header-modal__body select__body">
+              <div class="select__header"><span class="select__current reset-city-display">г.Москва</span>
+                <!--button(id="btn_modal_window") Open Modal-->
+                <div class="modal modal-city" data-modal="1">
+                  <div class="modal__content">
+                    <div class="modal__link-wrap"><a class="modal-close-btn js-modal-close modal-city-link" href="#">Вернуться назад</a></div>
+                    <h1>Выберите город</h1>
+                    <div class="modal__city-list select__body"><a class="select__item city-item" href="#">Москва</a><a class="select__item city-item" href="#">Люберцы</a><a class="select__item city-item" href="#">Самара</a><a class="select__item city-item" href="#">Санкт-Петербург</a><a class="select__item city-item" href="#">Домодедово</a><a class="select__item city-item" href="#">Екатеринбург</a><a class="select__item city-item" href="#">Мытищи</a><a class="select__item city-item" href="#">Нижний Новгород</a></div>
+                  </div>
+                </div>
+                <div class="overlay-modal js-overlay-modal"></div>
+                <div class="header-modal__body">
                   <h2>Ваш город Москва ?</h2><a class="mini-modal__close" href="#"></a>
                   <div class="header-modal__btns"><a class="header-city__confirm" href="#">Да</a><a class="header-city__select modal-open js-open-modal" href="#" data-modal="1">Выбрать город</a></div>
                 </div>
               </div>
-            </div><a class="header__phone-link modal-open__phones" href="#">8 (800) 333-31-24
+            </div><a class="header__phone-link modal-open__phones select__current" href="#">8 (800) 333-31-24
               <svg class="svg-sprite-icon icon-phone">
                 <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
               </svg></a>
@@ -42,7 +51,7 @@
               <div class="header-modal__phones-el"><a href="tel:88003333124">8 (800) 333-31-24</a>
                 <p>Карачарово</p>
               </div><a class="header-modal__phone-close modal-close" href="#"></a>
-            </div><a href="#" data-da="header__burger-nav--bottom,first,867">zakaz@profilmet.ru</a><a href="#" data-da="header__burger-nav--top,last,867">Калькулятор</a><a class="header__price-link header__price-link--first" href="#" data-da="header__burger-footer,last,867">USD 78.0915</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,867">EUR 91.5779</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,867">LME 14 285</a>
+            </div><a class="select__current" href="#" data-da="header__burger-nav--bottom,first,867">zakaz@profilmet.ru</a><a href="#" data-da="header__burger-nav--top,last,867">Калькулятор</a><a class="header__price-link header__price-link--first" href="#" data-da="header__burger-footer,last,867">USD 78.0915</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,867">EUR 91.5779</a><a class="header__price-link" href="#" data-da="header__burger-footer,last,867">LME 14 285</a>
             <div class="header__switch-wrap" data-da="header__burger-nav--top,last,867">
               <p>Тема:</p>
               <label class="header__switch">
@@ -120,7 +129,7 @@
                     </svg>
                     <p>Выйти из аккаунта</p></a>
                 </div></a>
-              <div class="header__basket-wrap"><a class="js-open-modal" href="#" data-modal="4">Корзина
+              <div class="header__basket-wrap"><a class="js-open-modal modal-cart-open" href="#" data-modal="4">Корзина
                   <svg class="svg-sprite-icon icon-basket">
                     <use xlink:href="images/sprite/symbol/sprite.svg#basket"></use>
                   </svg></a>
@@ -307,61 +316,59 @@
                 <h3>Фильтрация</h3>
               </div>
               <div class="productlist__option-item productlist__option-item--first">
-                <div class="select select__product">
-                  <div class="select__header"><span class="select__current">Продукция</span></div>
-                  <div class="select__body">
-                    <h3 class="close_productlist-product">Продукция</h3>
-                    <div class="select__body-wrapper">
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">Все размеры</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">6</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">10</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">14</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">18</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">22</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">8</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">10</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">12</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
-                      <div class="select__item">
-                        <label class="checkbox"><span class="checkbox__text">16</span>
-                          <input type="checkbox"><span class="checkbox__custom"></span>
-                        </label>
-                      </div>
+                <div class="select-non select__product"><span class="select__current">Продукция</span></div>
+                <div class="select__body">
+                  <h3 class="close_productlist-product select__item">Продукция</h3>
+                  <div class="select__body-wrapper">
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">Все размеры</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">6</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">10</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">14</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">18</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">22</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">8</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">10</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">12</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
+                    </div>
+                    <div class="select__item">
+                      <label class="checkbox"><span class="checkbox__text">16</span>
+                        <input type="checkbox"><span class="checkbox__custom"></span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -370,7 +377,7 @@
                 <div class="select select__body-size">
                   <div class="select__header"><span class="select__current">Размер</span></div>
                   <div class="select__body">
-                    <h3 class="close_body-size js-open-modal">Размер</h3>
+                    <h3 class="close_body-size js-close-modal select__item">Размер</h3>
                     <div class="select__body-wrapper">
                       <div class="select__item">
                         <label class="checkbox"><span class="checkbox__text">Все размеры</span>
@@ -492,8 +499,8 @@
           </div>
           <div class="productlist__tablet-container">
             <div class="productlist__item-wrapper">
-              <div class="productlist__item">
-                <p class="js-open-modal" data-modal="8">Арматура 6 А1 мотки</p>
+              <div class="productlist__item js-open-modal" data-modal="8">
+                <p>Арматура 6 А1 мотки</p>
                 <p data-da="productlist-info,1,867">ЛИСТЫ</p>
                 <p data-da="productlist-info,1,867">AISI 201</p>
                 <p data-da="productlist-info,1,867">6000</p>
@@ -510,8 +517,8 @@
               </div>
             </div>
             <div class="productlist__item-wrapper">
-              <div class="productlist__item">
-                <p class="js-open-modal" data-modal="8">Арматура 6 А1 мотки</p>
+              <div class="productlist__item js-open-modal" data-modal="8">
+                <p>Арматура 6 А1 мотки</p>
                 <p data-da="productlist-info--2,2,867">ЛИСТЫ</p>
                 <p data-da="productlist-info--2,2,867">AISI 201</p>
                 <p data-da="productlist-info--2,2,867">6000</p>
@@ -528,7 +535,7 @@
               </div>
             </div>
             <div class="productlist__item-wrapper">
-              <div class="productlist__item">
+              <div class="productlist__item js-open-modal" data-modal="8">
                 <p>Арматура 6 А1 мотки</p>
                 <p data-da="productlist-info--3,last,867">ЛИСТЫ</p>
                 <p data-da="productlist-info--3,last,867">AISI 201</p>
@@ -546,7 +553,7 @@
               </div>
             </div>
             <div class="productlist__item-wrapper">
-              <div class="productlist__item">
+              <div class="productlist__item js-open-modal" data-modal="8">
                 <p>Арматура 6 А1 мотки</p>
                 <p data-da="productlist-info--4,last,867">ЛИСТЫ</p>
                 <p data-da="productlist-info--4,last,867">AISI 201</p>
@@ -564,7 +571,7 @@
               </div>
             </div>
             <div class="productlist__item-wrapper">
-              <div class="productlist__item">
+              <div class="productlist__item js-open-modal" data-modal="8">
                 <p>Арматура 6 А1 мотки</p>
                 <p data-da="productlist-info--5,last,867">ЛИСТЫ</p>
                 <p data-da="productlist-info--5,last,867">AISI 201</p>
@@ -582,7 +589,7 @@
               </div>
             </div>
             <div class="productlist__item-wrapper">
-              <div class="productlist__item">
+              <div class="productlist__item js-open-modal" data-modal="8">
                 <p>Арматура 6 А1 мотки</p>
                 <p data-da="productlist-info--6,last,867">ЛИСТЫ</p>
                 <p data-da="productlist-info--6,last,867">AISI 201</p>
@@ -600,7 +607,7 @@
               </div>
             </div>
             <div class="productlist__item-wrapper">
-              <div class="productlist__item">
+              <div class="productlist__item js-open-modal" data-modal="8">
                 <p>Арматура 6 А1 мотки</p>
                 <p data-da="productlist-info--7,last,867">ЛИСТЫ</p>
                 <p data-da="productlist-info--7,last,867">AISI 201</p>
@@ -618,7 +625,7 @@
               </div>
             </div>
             <div class="productlist__item-wrapper">
-              <div class="productlist__item">
+              <div class="productlist__item js-open-modal" data-modal="8">
                 <p>Арматура 6 А1 мотки</p>
                 <p data-da="productlist-info--8,last,867">ЛИСТЫ</p>
                 <p data-da="productlist-info--8,last,867">AISI 201</p>
@@ -1049,22 +1056,16 @@
         </div>
       </div>
     </div>
-    <div class="modal modal-search" data-modal="9">
+    <div class="modal modal-video" data-modal="9">
       <div class="modal__content modal__content-video">
-        <iframe src="https://www.youtube.com/embed/HJA92LQrsvw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+        <iframe src="https://www.youtube.com/embed/tVUAmKflSeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div><a class="modal-search__close js-modal-close modal-header__close" href="#"></a>
     </div>
     <!--include ../modules/mega-menu-->
-    <!--button(id="btn_modal_window") Open Modal-->
-    <div class="modal modal-city" data-modal="1">
-      <div class="modal__content">
-        <div class="modal__link-wrap"><a class="modal-close-btn js-modal-close" href="#">Вернуться назад</a></div>
-        <h1>Выберите город</h1>
-        <div class="modal__city-list"><a href="#">Москва</a><a href="#">Люберцы</a><a href="#">Самара</a><a href="#">Санкт-Петербург</a><a href="#">Домодедово</a><a href="#">Екатеринбург</a><a href="#">Мытищи</a><a href="#">Нижний Новгород</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
-      </div>
-    </div>
-    <div class="overlay-modal js-overlay-modal"></div>
+    <!--include ../modules/modal-->
     <script src="js/vendors.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+      <script src="js/js-productlist/SPjs-productlist.js"></script>
+    </script>
   </body>
 </html>
