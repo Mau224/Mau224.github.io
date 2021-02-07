@@ -817,19 +817,25 @@ openMega.addEventListener('click', function () {
         body.classList.add('dis');
     }
 
-    header.classList.add('index-max');
+    header.classList.toggle('index-max');
+    overlay.classList.add('lowindex');
 
-    if (headerTop.classList.contains('index-max')) {
-        overlay.classList.add('lowindex');
-    } else {
-        overlay.classList.remove('lowindex');
-    }
+    // if (headerTop.classList.contains('index-max')) {
+    //     overlay.classList.add('lowindex');
+    // } else {
+    //     overlay.classList.remove('lowindex');
+    // }
 
     // if(headerTop.classList.contains('index5k')) {
     //     headerTop.classList.remove('index5k');
     // }
     megaMenu.classList.toggle('active');
-    overlay.classList.add('active');
+
+    if(megaMenu.classList.contains('active')) {
+        overlay.classList.add('active');
+    } else {
+        overlay.classList.remove('active');
+    }
     openMega.classList.toggle('active');
     //закрывают все другие модальные окна
     let searchModal = document.querySelector('.modal-search');
