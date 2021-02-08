@@ -671,7 +671,7 @@ const sliders = document.querySelectorAll('.slider');
 function mobileSlider() {
     sliders.forEach((el) => {
         let swiperMob = new Swiper(el, {
-            slidesPerView: 'auto',
+            slidesPerView: 1.34,
             // loop: true,
             slidesOffsetBefore: 20,
             slidesOffsetAfter: 110,
