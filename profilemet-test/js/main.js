@@ -180,16 +180,15 @@ var popularHeight = $('.home-best').innerHeight();
 if(wWidth >= 867){
   gsap.to(".home-best__list", {
     // translateX: -bestListWidth + wWidth/1.33,
-    translateX: bestListWidthVal,
-    x: innerWidth,
+    x: bestListWidthVal,
     ease: "none",
     scrollTrigger: {
       trigger: ".horizontal-trigger",
       start: "top top",
-      end: "1500",
+      end: "+=1500",
       scrub: 1,
       pin: true,
-      pinSpacing: true
+      
     }
   });
 };
@@ -216,17 +215,14 @@ if (wWidth <= 567) {
 
 if(wWidth >= 867){
   gsap.from(".home-special__list", {
-    translateX: specialListVal,
-    x: innerWidth,
+    x: specialListVal,
     ease: "none",
     scrollTrigger: {
       trigger: ".horizontal-trigger",
       start: "center-=100 center",
-      end: "1500px",
+      end: "+=1500",
       scrub: 1,
       pin: true,
-      pinSpacing: true,
-      
     }
   });
 };
@@ -248,13 +244,23 @@ function nextSlide() {
 // показ-скрытие железяк в Металлопрокате
 
 $('.home-adv__item-first, .home-adv__last').on('mouseenter', function(){
-    $(this).find('.contur-fill').addClass('showing')
+    $(this).find('.contur-fill').addClass('showing');
+    $(this).find('.contur').addClass('hide');
+
 });
 $('.home-adv__item-first, .home-adv__last').on('mouseleave', function(){
-    $(this).find('.contur-fill').removeClass('showing')
+    $(this).find('.contur-fill').removeClass('showing');
+    $(this).find('.contur').removeClass('hide');
 });
 
 // появление оранжевых регионов на карте РФ
+
+  $(window).on('resize', function(){
+    $('.map-text-block').css({'width': '21.1vw', 'height': '7vw', 'font-size' : 'medium'});
+  });
+  $(screen).on('resize', function(){
+    $('.map-text-block').css({'width': '21.1vw', 'height': '7vw', 'font-size' : 'medium'});
+  })
 
   var regQueryArray = [5,0,1,12,10,2,13,4,9,8,11,3,7,6];
 
@@ -440,6 +446,70 @@ $('.home-adv__item-first, .home-adv__last').on('mouseleave', function(){
       $('.korea-name').css('color', '#000000')
     }
   )
+
+// КОмпания в цифрах
+
+ScrollTrigger.create({
+  trigger: ".home-num__container",
+  start: "top center",
+  once: true,
+  onEnter: function(){
+    // $('.benefits__number').addClass('showing');
+    $('.benefits__number').spincrement({
+      from: 0,
+      thousandSeparator: " ",
+      duration: 1200
+  });
+  },
+});
+
+// слайдер новостей
+
+if (wWidth >= 867) {
+  jQuery(".news__list").slick({
+    slidesToShow: 2.5,
+    slidesToScroll: 1,
+    centerMode: false,
+    initialSlide:0,
+    infinite: false,
+    variableWidth: true,
+    // centerPadding: '10vw',
+    prevArrow: jQuery('.news__left'),
+    nextArrow: jQuery('.news__right'),
+    // responsive: [
+    //     {
+    //         breakpoint: 2600,
+    //         settings: {
+    //             slidesToShow: 3,
+    //             centerMode: true,
+    //             // centerPadding: '8%',
+    //         }
+    //     },
+    //     {
+    //         breakpoint: 1600,
+    //         settings: {
+    //             slidesToShow: 2,
+    //             centerMode: true,
+    //         }
+    //     },
+    //     {
+    //         breakpoint: 1100,
+    //         settings: {
+    //             slidesToShow: 2,
+    //             centerMode: true,
+    //         }
+    //     },
+    //     {
+    //         breakpoint: 991,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             centerMode: true,
+    //         }
+    //     }
+    // ]
+  });
+}
+!function(t){t.extend(t.easing,{spincrementEasing:function(t,a,e,n,r){return a===r?e+n:n*(-Math.pow(2,-10*a/r)+1)+e}}),t.fn.spincrement=function(a){function e(t,a){if(t=t.toFixed(a),a>0&&"."!==r.decimalPoint&&(t=t.replace(".",r.decimalPoint)),r.thousandSeparator)for(;o.test(t);)t=t.replace(o,"$1"+r.thousandSeparator+"$2");return t}var n={from:0,to:null,decimalPlaces:null,decimalPoint:".",thousandSeparator:",",duration:1e3,leeway:50,easing:"spincrementEasing",fade:!0,complete:null},r=t.extend(n,a),o=new RegExp(/^(-?[0-9]+)([0-9]{3})/);return this.each(function(){var a=t(this),n=r.from;a.attr("data-from")&&(n=parseFloat(a.attr("data-from")));var o;if(a.attr("data-to"))o=parseFloat(a.attr("data-to"));else if(null!==r.to)o=r.to;else{var i=t.inArray(r.thousandSeparator,["\\","^","$","*","+","?","."])>-1?"\\"+r.thousandSeparator:r.thousandSeparator,l=new RegExp(i,"g");o=parseFloat(a.text().replace(l,""))}var c=r.duration;r.leeway&&(c+=Math.round(r.duration*(2*Math.random()-1)*r.leeway/100));var s;if(a.attr("data-dp"))s=parseInt(a.attr("data-dp"),10);else if(null!==r.decimalPlaces)s=r.decimalPlaces;else{var d=a.text().indexOf(r.decimalPoint);s=d>-1?a.text().length-(d+1):0}a.css("counter",n),r.fade&&a.css("opacity",0),a.animate({counter:o,opacity:1},{easing:r.easing,duration:c,step:function(t){a.html(e(t*o,s))},complete:function(){a.css("counter",null),a.html(e(o,s)),r.complete&&r.complete(a)}})})}}(jQuery);
 'use strict';
 
 let select = function () {
@@ -611,6 +681,12 @@ const tab3 = function () {
 tab3();
 
 
+let closeVideo = document.getElementById('pauseYoutube');
+let video = document.querySelector('.mini-video');
+
+closeVideo.addEventListener('click', function (){
+    video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+});
 
 //cкрипт создающий тень при появлении окна городов и корректирующий его работу
 
@@ -640,20 +716,20 @@ for (let i = 0; i < cityItem.length; i++) {
     })
 }
 
-if (window.innerWidth < 870) {
-    cityBtn.addEventListener('click', function() {
-        myNav.style.height = "0%";
-        headerTop.classList.add('index5k');
-        overlayCity.classList.add('index5k');
-    })
-
-    headerBottom.addEventListener('click', function() {
-        headerTop.classList.remove('index5k');
-        overlayCity.classList.remove('index5k');
-        modalCity.classList.remove('active');
-        overlayCity.classList.remove('active');
-    })
-}
+// if (window.innerWidth < 870) {
+//     cityBtn.addEventListener('click', function() {
+//         myNav.style.height = "0%";
+//         headerTop.classList.add('index5k');
+//         overlayCity.classList.add('index5k');
+//     })
+//
+//     headerBottom.addEventListener('click', function() {
+//         headerTop.classList.remove('index5k');
+//         overlayCity.classList.remove('index5k');
+//         modalCity.classList.remove('active');
+//         overlayCity.classList.remove('active');
+//     })
+// }
 
 // let openPhone = document.querySelector('.modal-open__phones');
 //
@@ -742,6 +818,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.overlay-modal').classList.remove('lowindex');
             document.querySelector('.header__container').classList.remove('active');
             document.querySelector('.text-swap').textContent = 'Mеню';
+            document.querySelector('.header__phone-link').classList.remove('active');
             headerSelect.classList.add('disabled');
             body.classList.remove('dis');
         };
@@ -756,6 +833,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.overlay-modal').classList.remove('lowindex');
         document.querySelector('.header__container').classList.remove('active');
         document.querySelector('.text-swap').textContent = 'Mеню';
+        document.querySelector('.header__phone-link').classList.remove('active');
         headerSelect.classList.add('disabled');
         body.classList.remove('dis');
     });
@@ -799,48 +877,51 @@ function closeNav() {
     body.classList.remove('dis');
 }
 
-//окно мега меню
-
 let openMega = document.querySelector('.open__mega-menu');
 let textSwap = document.querySelector('.text-swap');
 let overlay = document.querySelector('.overlay-modal');
 let megaMenu = document.querySelector('.mega-menu');
 
-openMega.addEventListener('click', function () {
 
-    if(this.classList.contains('active')) {
-        textSwap.textContent = 'Mеню';
-        body.classList.remove('dis');
-        // overlay.classList.remove('active');
-    } else  {
-        textSwap.textContent = 'Закрыть меню';
-        body.classList.add('dis');
-    }
+if(innerWidth > 870) {
+//окно мега меню
 
-    header.classList.toggle('index-max');
-    overlay.classList.add('lowindex');
+    openMega.addEventListener('click', function () {
 
-    // if (headerTop.classList.contains('index-max')) {
-    //     overlay.classList.add('lowindex');
-    // } else {
-    //     overlay.classList.remove('lowindex');
-    // }
+        if (this.classList.contains('active')) {
+            textSwap.textContent = 'Mеню';
+            body.classList.remove('dis');
+            // overlay.classList.remove('active');
+        } else {
+            textSwap.textContent = 'Закрыть меню';
+            body.classList.add('dis');
+        }
 
-    // if(headerTop.classList.contains('index5k')) {
-    //     headerTop.classList.remove('index5k');
-    // }
-    megaMenu.classList.toggle('active');
+        header.classList.toggle('index-max');
+        overlay.classList.add('lowindex');
 
-    if(megaMenu.classList.contains('active')) {
-        overlay.classList.add('active');
-    } else {
-        overlay.classList.remove('active');
-    }
-    openMega.classList.toggle('active');
-    //закрывают все другие модальные окна
-    let searchModal = document.querySelector('.modal-search');
-    searchModal.classList.remove('active');
-})
+        // if (headerTop.classList.contains('index-max')) {
+        //     overlay.classList.add('lowindex');
+        // } else {
+        //     overlay.classList.remove('lowindex');
+        // }
+
+        // if(headerTop.classList.contains('index5k')) {
+        //     headerTop.classList.remove('index5k');
+        // }
+        megaMenu.classList.toggle('active');
+
+        if (megaMenu.classList.contains('active')) {
+            overlay.classList.add('active');
+        } else {
+            overlay.classList.remove('active');
+        }
+        openMega.classList.toggle('active');
+        //закрывают все другие модальные окна
+        let searchModal = document.querySelector('.modal-search');
+        searchModal.classList.remove('active');
+    })
+}
 
 //корректировка стилей для окна поиска
 let searchOpen = document.querySelector('.modal-search__open');
@@ -897,32 +978,77 @@ closeLogin.addEventListener('click', function () {
     overlay.classList.remove('active');
 })
 
+
   //функция на мобильные телефоны
+const overlayModal = document.querySelector('.overlay-modal');
+const modalPhone = document.querySelectorAll('.modal-open__phones');
+const phoneBlock = document.querySelectorAll('.header-modal__phones-body');
+// const headerTop = document.querySelector('.header__top');
+const headerMail = document.querySelector('.header__top');
+const modalClose = document.querySelectorAll('.modal-close');
+const modalEmail = document.querySelector('.modal-open__email');
+const modalPhonesLink = document.querySelector('.header__phone-link');
+const modalEmailBody = document.querySelector('.header-modal__email-body');
+const modalCloseEmail = document.querySelector('.modal-close__email');
 
-  (function () {
-      const overlayModal = document.querySelector('.overlay-modal');
-      const modalPhone = document.querySelector('.modal-open__phones');
-      const phoneBlock = document.querySelector('.header-modal__phones-body');
-      const headerTop = document.querySelector('.header__top');
-      const modalClose = document.querySelector('.modal-close')
-      modalPhone.addEventListener('click', function () {
-          modalPhone.classList.toggle('active');
-          overlayModal.classList.toggle('active');
-          header.classList.toggle('index');
-          phoneBlock.classList.toggle('active');
-          if (window.innerWidth < 867) {
-              headerTop.classList.toggle('active');
-          }
-      })
+if(modalEmail.classList.contains('active')) {
+    modalEmail.textContent = 'Список адресов:';
+}
 
-      modalClose.addEventListener('click', function () {
-          modalPhone.classList.remove('active');
-          overlayModal.classList.remove('active');
-          if (window.innerWidth < 867) {
-              headerTop.classList.remove('active');
-          }
-      })
-  }());
+modalEmail.addEventListener('click', function (){
+    if(modalEmail.classList.contains('active')) {
+        modalEmail.textContent = 'zakaz@profilmet.ru';
+    } else {
+        modalEmail.textContent = 'Список адресов:';
+    }
+})
+
+if(window.innerWidth < 870) {
+    modalEmail.addEventListener('click', function (){
+        modalEmailBody.classList.add('active');
+        myNav.style.height = '0';
+
+        modalPhonesLink.innerHTML = 'Список адресов:';
+        modalPhonesLink.classList.add('change-email');
+    })
+
+    modalCloseEmail.addEventListener('click', function (){
+        modalEmailBody.classList.remove('active');
+        modalPhonesLink.innerHTML = '8 (800) 333-31-24' + '<svg class="svg-sprite-icon icon-phone">\n' +
+          '                <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>\n' +
+          '              </svg>';
+        modalPhonesLink.classList.remove('change-email');
+    })
+}
+
+
+
+modalPhone.forEach(function(item){
+    item.addEventListener('click', function (){
+        item.classList.toggle('active');
+        overlayModal.classList.toggle('active');
+
+        if (window.innerWidth < 867) {
+            headerMail.classList.toggle('index');
+            overlayModal.style.top = '59px';
+        }
+        // phoneBlock.classList.toggle('active');
+    })
+})
+
+
+modalClose.forEach(function(item){
+  item.addEventListener('click', function () {
+      modalPhonesLink.classList.remove('active');
+      overlayModal.classList.remove('active');
+      if (window.innerWidth < 867) {
+          console.log('1');
+          // headerTop.classList.remove('active');
+          overlayModal.style.top = '0';
+      }
+  })
+})
+
 
 
 
