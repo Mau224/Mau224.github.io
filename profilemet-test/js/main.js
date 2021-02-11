@@ -572,7 +572,7 @@ checkbox.addEventListener('change', function (){
     }
 })
 
-let spoiler = document.querySelectorAll('.home-adv__open');
+let spoiler = document.querySelectorAll('.spoiler-open');
 
 for (let i = 0; i < spoiler.length; i++) {
     spoiler[i].addEventListener('click', function () {
