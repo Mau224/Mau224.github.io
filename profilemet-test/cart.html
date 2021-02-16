@@ -354,10 +354,14 @@
               <p>Балашиха</p>
             </div>
             <div class="cart__item-el cart__item-el--icon">
-              <p class="cart__mob-text">Примечание</p><a href="#">
+              <p class="cart__mob-text">Примечание</p><a class="comment-hover" href="#">
                 <svg class="svg-sprite-icon icon-com">
                   <use xlink:href="images/sprite/symbol/sprite.svg#com"></use>
                 </svg></a>
+              <div class="cart__comment-img">
+                <textarea name="text-comment" placeholder="Введите текст комментраия"></textarea>
+                <div class="cart__comment-footer"><a class="close-comment-modal" href="#">Отменить</a><a class="close-comment-modal" href="#">Сохранить</a></div>
+              </div>
             </div>
             <div class="cart__item-el cart__item-el--icon">
               <p class="cart__mob-text">Удалить</p><a href="#">
@@ -388,8 +392,17 @@
           </div>
         </div>
       </div>
+      <div class="cart__delivery">
+        <h2>Доставка:</h2>
+        <textarea name="delivery-text"></textarea><a href="#">Рассчитать</a>
+        <div class="cart__delivery-block">
+          <h3>Стоимость доставки:<span>29 200 ₽</span></h3>
+          <h4>Тип автомобиля:<span>20т/13.8</span></h4>
+          <p>Детали уточняйте по телефону<a href="#">8 (495) 727-10-99</a></p>
+        </div>
+      </div>
       <div class="cart__service-list">
-        <div class="cart__service-wrap" data-da="cart__footer-price,last,867"><a href="#">+ ДОБАВИТЬ ДОСТАВКУ</a><a class="cart__open-service" href="#">+ ДОБАВИТЬ УСЛУГУ</a>
+        <div class="cart__service-wrap" data-da="cart__footer-price,last,867"><a class="open-de" href="#">+ ДОБАВИТЬ ДОСТАВКУ</a><a class="cart__open-service" href="#">+ ДОБАВИТЬ УСЛУГУ</a>
           <div class="cart__service-modal">
             <h2>Выберите количество резов<a class="cart__service-modal-close" href="#"></a></h2>
             <div class="cart__service-modal-block">
@@ -404,7 +417,14 @@
               <p>Резка газом осуществляется с целью погрузки в транспортное средство. Точные размеры не гарантируются.</p>
               <div class="cart__service-modal-save"><a href="#">ОТМЕНА</a><a href="#">СОХРАНИТЬ</a></div>
             </div>
-          </div><a href="#">+ КОММЕНТАРИЙ</a><a href="#" data-da="cart__service-mob,first,867">Очистить</a><a href="#" data-da="cart__service-mob,first,867">Пересчитать</a>
+          </div><a class="hover-comment" href="#">+ КОММЕНТАРИЙ</a>
+          <div class="cart__hover-comment">
+            <p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.</p>
+          </div>
+          <div class="cart__comment">
+            <textarea name="text-comment" placeholder="Введите текст комментраия"></textarea>
+            <div class="cart__comment-footer"><a class="close-comment-modal" href="#">Отменить</a><a class="close-comment-modal" href="#">Сохранить</a></div>
+          </div><a href="#" data-da="cart__service-mob,first,867">Очистить</a><a href="#" data-da="cart__service-mob,first,867">Пересчитать</a>
           <div class="cart__service-mob"></div>
         </div>
         <div class="cart__btn-wrap"><a class="js-open-modal" href="#" data-modal="6">Выписать счет</a></div>
@@ -808,6 +828,7 @@
     <!--include ../modules/mega-menu-->
     <!--include ../modules/modal-->
     <script src="js/vendors.js"></script>
+    <script src="js/js-cart/SPjs-cart.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

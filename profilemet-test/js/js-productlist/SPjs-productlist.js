@@ -1,13 +1,14 @@
-let closeProductSel = document.querySelector('.select__body-region');
+let closeProductSel = document.querySelector('.select-reg');
 closeProductSel.addEventListener('click', function () {
   select.classList.remove('is-active');
-  closeProductSel.classList.add('text')
+  closeProductSel.classList.add('text');
 });
 
-let slectProductlist = document.querySelector('.select-reg');
+let slectProductlist = document.querySelector('.select__body-size');
 
 let slectCloser = document.querySelector('.close_reg-modal');
 
 slectCloser.addEventListener('click', function () {
+  console.log('1');
   slectProductlist.classList.remove('is-active');
 })
