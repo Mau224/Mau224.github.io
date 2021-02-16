@@ -691,6 +691,13 @@ closeVideo.addEventListener('click', function (){
     video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 });
 
+let advLink = document.querySelector('.home-adv__hov-link');
+let advBlock = document.querySelector('.home-adv__text-body');
+
+advLink.addEventListener('mouseenter', function (){
+    advBlock.style.display = 'flex';
+})
+
 //cкрипт создающий тень при появлении окна городов и корректирующий его работу
 
 let cityBtn = document.querySelector('.header-select__city');
@@ -816,6 +823,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.text-swap').textContent = 'Mеню';
             document.querySelector('.header__phone-link').classList.remove('active');
             document.querySelector('.modal-open__phones').classList.remove('active');
+            document.querySelector('.mini-video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
             headerSelect.classList.add('disabled');
             body.classList.remove('dis');
         };
@@ -832,6 +840,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.text-swap').textContent = 'Mеню';
         document.querySelector('.header__phone-link').classList.remove('active');
         document.querySelector('.modal-open__phones').classList.remove('active');
+        document.querySelector('.mini-video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
         headerSelect.classList.add('disabled');
         body.classList.remove('dis');
     });
