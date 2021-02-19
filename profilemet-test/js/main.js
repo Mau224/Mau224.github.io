@@ -957,6 +957,7 @@ let overlaySearch = document.querySelector('.overlay-modal');
 
 searchOpen.addEventListener('click', function (){
     //закрывают все другие модальные окна
+    header.classList.add('index-max');
     overlaySearch.classList.add('index-max');
     megaMenu.classList.remove('active');
     overlay.classList.remove('search-over');
@@ -972,6 +973,7 @@ searchOpen.addEventListener('click', function (){
 })
 
 searchClose.addEventListener('click', function (){
+    header.classList.remove('index-max');
     overlay.classList.remove('lowindex');
     overlaySearch.classList.remove('index-max');
 })
