@@ -1086,6 +1086,7 @@ modalClose.forEach(function(item){
   item.addEventListener('click', function () {
       modalPhonesLink.classList.remove('active');
       overlayModal.classList.remove('active');
+      body.classList.remove('active');
       if (window.innerWidth < 867) {
           // headerTop.classList.remove('active');
           overlayModal.style.top = '0';
