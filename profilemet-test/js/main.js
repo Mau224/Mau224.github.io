@@ -952,18 +952,18 @@ if(innerWidth > 870) {
 let searchOpen = document.querySelector('.modal-search__open');
 let searchClose = document.querySelector('.modal-header__close');
 let header = document.querySelector('.header__container');
+let overlaySearch = document.querySelector('.overlay-modal');
+
 
 searchOpen.addEventListener('click', function (){
     //закрывают все другие модальные окна
     header.classList.add('index-max');
+    overlaySearch.classList.add('index-max');
     megaMenu.classList.remove('active');
     overlay.classList.remove('search-over');
     openMega.classList.remove('active');
     textSwap.textContent = 'Mеню';
 
-    if(window.innerWidth < 870) {
-        overlay.classList.add('123');
-    }
 
     if (header.classList.contains('index-max')) {
         overlay.classList.add('lowindex');
@@ -975,6 +975,7 @@ searchOpen.addEventListener('click', function (){
 searchClose.addEventListener('click', function (){
     header.classList.remove('index-max');
     overlay.classList.remove('lowindex');
+    overlaySearch.classList.remove('index-max');
 })
 
 let openCart = document.querySelector('.modal-cart-open');
