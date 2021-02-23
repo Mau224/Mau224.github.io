@@ -962,6 +962,12 @@ modalEmail.addEventListener('click', function (){
         megaMenu.classList.remove('active');
         openMega.classList.remove('active');
         textSwap.textContent = 'Mеню';
+
+        if(modalEmail.classList.contains('active')) {
+            modalEmail.textContent = 'zakaz@profilmet.ru';
+        } else {
+            modalEmail.textContent = 'Список адресов:';
+        }
     }
 
 

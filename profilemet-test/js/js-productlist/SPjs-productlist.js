@@ -12,3 +12,11 @@ slectCloser.addEventListener('click', function () {
   console.log('1');
   slectProductlist.classList.remove('is-active');
 })
+
+let btnRegion = document.querySelector('.select__body-reg');
+// let blockReg = document.querySelector('.select__body-reg');
+let bodySize = document.querySelector('.select__body-size-main');
+
+btnRegion.addEventListener('click', function (){
+  bodySize.classList.remove('is-active');
+})

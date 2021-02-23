@@ -42,10 +42,11 @@ function modalCart() {
   })
 
   openComment.addEventListener('click',function (){
-    console.log('1');
-    let modalCommet = document.querySelector('.cart__comment');
-    modalCommet.classList.add('active');
-    openComment.classList.toggle('active');
+    if(window.innerWidth > 870) {
+      let modalCommet = document.querySelector('.cart__comment');
+      modalCommet.classList.add('active');
+      openComment.classList.toggle('active');
+    }
 
     if (openComment.classList.contains('active')) {
       openComment.textContent = 'ИЗМЕНИТЬ КОММЕНТАРИЙ';
