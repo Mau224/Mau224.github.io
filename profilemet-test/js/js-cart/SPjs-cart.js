@@ -42,7 +42,9 @@ function modalCart() {
   })
 
   openComment.addEventListener('click',function (){
-    blockComment.classList.toggle('active');
+    console.log('1');
+    let modalCommet = document.querySelector('.cart__comment');
+    modalCommet.classList.add('active');
     openComment.classList.toggle('active');
 
     if (openComment.classList.contains('active')) {
