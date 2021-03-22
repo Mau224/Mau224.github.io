@@ -1,0 +1,974 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-arrow__rev {
+	@extend %svg-common;
+	background-position: 82.3340471092077% 65.46941489361703%;
+}
+
+.svg-arrow__rev-dims {
+	width: 46px;
+	height: 46px;
+}
+
+.svg-avatar {
+	@extend %svg-common;
+	background-position: 60.62176165803109% 80.25641025641026%;
+}
+
+.svg-avatar-dims {
+	width: 15px;
+	height: 18px;
+}
+
+.svg-bas {
+	@extend %svg-common;
+	background-position: 89.76793248945148% 73.57512953367876%;
+}
+
+.svg-bas-dims {
+	width: 32px;
+	height: 26px;
+}
+
+.svg-bg-action-adv {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-bg-action-adv-dims {
+	width: 295px;
+	height: 230px;
+}
+
+.svg-broom {
+	@extend %svg-common;
+	background-position: 98.74739039665971% 84.55497382198953%;
+}
+
+.svg-broom-dims {
+	width: 22px;
+	height: 34px;
+}
+
+.svg-calc__img1 {
+	@extend %svg-common;
+	background-position: 99.45414847161572% 57.42757660167131%;
+}
+
+.svg-calc__img1-dims {
+	width: 64px;
+	height: 80px;
+}
+
+.svg-calc__img2 {
+	@extend %svg-common;
+	background-position: 64.38515081206496% 89.97214484679665%;
+}
+
+.svg-calc__img2-dims {
+	width: 118px;
+	height: 80px;
+}
+
+.svg-calc__img3 {
+	@extend %svg-common;
+	background-position: 70.17326732673267% 57.42757660167131%;
+}
+
+.svg-calc__img3-dims {
+	width: 172px;
+	height: 80px;
+}
+
+.svg-calc__img4 {
+	@extend %svg-common;
+	background-position: 34.9112426035503% 78.88888888888889%;
+}
+
+.svg-calc__img4-dims {
+	width: 135px;
+	height: 78px;
+}
+
+.svg-calc__img5 {
+	@extend %svg-common;
+	background-position: 34.705882352941174% 89.97214484679665%;
+}
+
+.svg-calc__img5-dims {
+	width: 130px;
+	height: 80px;
+}
+
+.svg-calendar {
+	@extend %svg-common;
+	background-position: 94.51345755693582% 66.49617346938774%;
+}
+
+.svg-calendar-dims {
+	width: 14px;
+	height: 14px;
+}
+
+.svg-car {
+	@extend %svg-common;
+	background-position: 93.14345991561181% 73.57512953367876%;
+}
+
+.svg-car-dims {
+	width: 32px;
+	height: 26px;
+}
+
+.svg-carbon {
+	@extend %svg-common;
+	background-position: 37.9746835443038% 94.7780678851175%;
+}
+
+.svg-carbon-dims {
+	width: 32px;
+	height: 32px;
+}
+
+.svg-check-img {
+	@extend %svg-common;
+	background-position: 76.78767876787678% 66.17338709677419%;
+}
+
+.svg-check-img-dims {
+	width: 71px;
+	height: 54px;
+}
+
+.svg-circle {
+	@extend %svg-common;
+	background-position: 62.37006237006237% 80.25641025641026%;
+}
+
+.svg-circle-dims {
+	width: 18px;
+	height: 18px;
+}
+
+.svg-client {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-client-dims {
+	width: 567px;
+	height: 568px;
+}
+
+.svg-clock {
+	@extend %svg-common;
+	background-position: 49.578947368421055% 94.53125%;
+}
+
+.svg-clock-dims {
+	width: 30px;
+	height: 30px;
+}
+
+.svg-cubes {
+	@extend %svg-common;
+	background-position: 86.33474576271186% 74.1514360313316%;
+}
+
+.svg-cubes-dims {
+	width: 36px;
+	height: 32px;
+}
+
+.svg-cup {
+	@extend %svg-common;
+	background-position: 93.89473684210526% 84.7769028871391%;
+}
+
+.svg-cup-dims {
+	width: 30px;
+	height: 36px;
+}
+
+.svg-door {
+	@extend %svg-common;
+	background-position: 64.24116424116424% 80.15364916773368%;
+}
+
+.svg-door-dims {
+	width: 18px;
+	height: 17px;
+}
+
+.svg-door-menu {
+	@extend %svg-common;
+	background-position: 73.82978723404256% 76.6531713900135%;
+}
+
+.svg-door-menu-dims {
+	width: 40px;
+	height: 57px;
+}
+
+.svg-door-menu2 {
+	@extend %svg-common;
+	background-position: 78.16826411075613% 76.6531713900135%;
+}
+
+.svg-door-menu2-dims {
+	width: 41px;
+	height: 57px;
+}
+
+.svg-door-menu3 {
+	@extend %svg-common;
+	background-position: 60.49250535331906% 76.75675675675676%;
+}
+
+.svg-door-menu3-dims {
+	width: 46px;
+	height: 58px;
+}
+
+.svg-door-menu4 {
+	@extend %svg-common;
+	background-position: 65.0692225772098% 76.75675675675676%;
+}
+
+.svg-door-menu4-dims {
+	width: 41px;
+	height: 58px;
+}
+
+.svg-door-menu5 {
+	@extend %svg-common;
+	background-position: 69.50959488272922% 76.75675675675676%;
+}
+
+.svg-door-menu5-dims {
+	width: 42px;
+	height: 58px;
+}
+
+.svg-drop {
+	@extend %svg-common;
+	background-position: 52.40585774058577% 94.53125%;
+}
+
+.svg-drop-dims {
+	width: 24px;
+	height: 30px;
+}
+
+.svg-flower {
+	@extend %svg-common;
+	background-position: 55.08919202518363% 94.53125%;
+}
+
+.svg-flower-dims {
+	width: 27px;
+	height: 30px;
+}
+
+.svg-forest {
+	@extend %svg-common;
+	background-position: 41.26315789473684% 94.7780678851175%;
+}
+
+.svg-forest-dims {
+	width: 30px;
+	height: 32px;
+}
+
+.svg-hammer {
+	@extend %svg-common;
+	background-position: 58.10526315789474% 94.53125%;
+}
+
+.svg-hammer-dims {
+	width: 30px;
+	height: 30px;
+}
+
+.svg-icon-calc__img1 {
+	@extend %svg-common;
+	background-position: 86.353711790393% 89.97214484679665%;
+}
+
+.svg-icon-calc__img1-dims {
+	width: 64px;
+	height: 80px;
+}
+
+.svg-icon-calc__img2 {
+	@extend %svg-common;
+	background-position: 78.07424593967518% 89.97214484679665%;
+}
+
+.svg-icon-calc__img2-dims {
+	width: 118px;
+	height: 80px;
+}
+
+.svg-icon-calc__img3 {
+	@extend %svg-common;
+	background-position: 91.46039603960396% 57.42757660167131%;
+}
+
+.svg-icon-calc__img3-dims {
+	width: 172px;
+	height: 80px;
+}
+
+.svg-icon-calc__img4 {
+	@extend %svg-common;
+	background-position: 50.887573964497044% 78.88888888888889%;
+}
+
+.svg-icon-calc__img4-dims {
+	width: 135px;
+	height: 78px;
+}
+
+.svg-icon-calc__img5 {
+	@extend %svg-common;
+	background-position: 50% 89.97214484679665%;
+}
+
+.svg-icon-calc__img5-dims {
+	width: 130px;
+	height: 80px;
+}
+
+.svg-inst {
+	@extend %svg-common;
+	background-position: 66.04361370716511% 80.15364916773368%;
+}
+
+.svg-inst-dims {
+	width: 17px;
+	height: 17px;
+}
+
+.svg-key {
+	@extend %svg-common;
+	background-position: 72.14137214137214% 93.07692307692308%;
+}
+
+.svg-key-dims {
+	width: 18px;
+	height: 18px;
+}
+
+.svg-lamp {
+	@extend %svg-common;
+	background-position: 44.37434279705573% 94.7780678851175%;
+}
+
+.svg-lamp-dims {
+	width: 29px;
+	height: 32px;
+}
+
+.svg-lightning {
+	@extend %svg-common;
+	background-position: 96.44351464435147% 84.7769028871391%;
+}
+
+.svg-lightning-dims {
+	width: 24px;
+	height: 36px;
+}
+
+.svg-lock {
+	@extend %svg-common;
+	background-position: 60.87866108786611% 94.53125%;
+}
+
+.svg-lock-dims {
+	width: 24px;
+	height: 30px;
+}
+
+.svg-mail {
+	@extend %svg-common;
+	background-position: 99.89594172736733% 70.04230769230769%;
+}
+
+.svg-mail-dims {
+	width: 19px;
+	height: 18px;
+}
+
+.svg-many {
+	@extend %svg-common;
+	background-position: 31.11814345991561% 94.90196078431373%;
+}
+
+.svg-many-dims {
+	width: 32px;
+	height: 33px;
+}
+
+.svg-mark {
+	@extend %svg-common;
+	background-position: 67.59834368530021% 80.15364916773368%;
+}
+
+.svg-mark-dims {
+	width: 14px;
+	height: 17px;
+}
+
+.svg-marker {
+	@extend %svg-common;
+	background-position: 93.07851239669421% 66.58109833971902%;
+}
+
+.svg-marker-dims {
+	width: 12px;
+	height: 15px;
+}
+
+.svg-mastercard {
+	@extend %svg-common;
+	background-position: 91.88034188034187% 63.93896103896104%;
+}
+
+.svg-mastercard-dims {
+	width: 44px;
+	height: 28px;
+}
+
+.svg-mini-cli1 {
+	@extend %svg-common;
+	background-position: 75% 70.2223650385604%;
+}
+
+.svg-mini-cli1-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-cli2 {
+	@extend %svg-common;
+	background-position: 77.08333333333333% 70.2223650385604%;
+}
+
+.svg-mini-cli2-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-cli3 {
+	@extend %svg-common;
+	background-position: 79.16666666666667% 70.2223650385604%;
+}
+
+.svg-mini-cli3-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-cli4 {
+	@extend %svg-common;
+	background-position: 81.25% 70.2223650385604%;
+}
+
+.svg-mini-cli4-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-cli5 {
+	@extend %svg-common;
+	background-position: 83.33333333333333% 70.2223650385604%;
+}
+
+.svg-mini-cli5-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-comp {
+	@extend %svg-common;
+	background-position: 85.41666666666667% 70.2223650385604%;
+}
+
+.svg-mini-comp-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-comp1 {
+	@extend %svg-common;
+	background-position: 87.5% 70.2223650385604%;
+}
+
+.svg-mini-comp1-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-comp2 {
+	@extend %svg-common;
+	background-position: 89.58333333333333% 70.2223650385604%;
+}
+
+.svg-mini-comp2-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-comp3 {
+	@extend %svg-common;
+	background-position: 91.66666666666667% 70.2223650385604%;
+}
+
+.svg-mini-comp3-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-comp4 {
+	@extend %svg-common;
+	background-position: 93.75% 70.2223650385604%;
+}
+
+.svg-mini-comp4-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-comp5 {
+	@extend %svg-common;
+	background-position: 86.82572614107883% 66.66624040920715%;
+}
+
+.svg-mini-comp5-dims {
+	width: 16px;
+	height: 16px;
+}
+
+.svg-mini-comp6 {
+	@extend %svg-common;
+	background-position: 95.83333333333333% 70.2223650385604%;
+}
+
+.svg-mini-comp6-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-door1 {
+	@extend %svg-common;
+	background-position: 97.91666666666667% 70.2223650385604%;
+}
+
+.svg-mini-door1-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-door2 {
+	@extend %svg-common;
+	background-position: 97.8125% 73.00771208226222%;
+}
+
+.svg-mini-door2-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-door3 {
+	@extend %svg-common;
+	background-position: 99.89583333333333% 73.00771208226222%;
+}
+
+.svg-mini-door3-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-door4 {
+	@extend %svg-common;
+	background-position: 80.72916666666667% 77.76349614395887%;
+}
+
+.svg-mini-door4-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-door5 {
+	@extend %svg-common;
+	background-position: 82.8125% 77.76349614395887%;
+}
+
+.svg-mini-door5-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-door6 {
+	@extend %svg-common;
+	background-position: 84.89583333333333% 77.76349614395887%;
+}
+
+.svg-mini-door6-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-door7 {
+	@extend %svg-common;
+	background-position: 86.97916666666667% 77.76349614395887%;
+}
+
+.svg-mini-door7-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-fac1 {
+	@extend %svg-common;
+	background-position: 89.0625% 77.76349614395887%;
+}
+
+.svg-mini-fac1-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-fac2 {
+	@extend %svg-common;
+	background-position: 91.14583333333333% 77.76349614395887%;
+}
+
+.svg-mini-fac2-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-fac3 {
+	@extend %svg-common;
+	background-position: 93.22916666666667% 77.76349614395887%;
+}
+
+.svg-mini-fac3-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-fac4 {
+	@extend %svg-common;
+	background-position: 95.3125% 77.76349614395887%;
+}
+
+.svg-mini-fac4-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-win1 {
+	@extend %svg-common;
+	background-position: 97.39583333333333% 77.76349614395887%;
+}
+
+.svg-mini-win1-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-win2 {
+	@extend %svg-common;
+	background-position: 99.47916666666667% 77.76349614395887%;
+}
+
+.svg-mini-win2-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mini-win3 {
+	@extend %svg-common;
+	background-position: 58.854166666666664% 80.46272493573265%;
+}
+
+.svg-mini-win3-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-mounted {
+	@extend %svg-common;
+	background-position: 95.7112970711297% 73.1016731016731%;
+}
+
+.svg-mounted-dims {
+	width: 24px;
+	height: 21px;
+}
+
+.svg-pdf {
+	@extend %svg-common;
+	background-position: 69.95798319327731% 94.28571428571429%;
+}
+
+.svg-pdf-dims {
+	width: 28px;
+	height: 28px;
+}
+
+.svg-pen {
+	@extend %svg-common;
+	background-position: 90.66808059384941% 85%;
+}
+
+.svg-pen-dims {
+	width: 37px;
+	height: 38px;
+}
+
+.svg-pen-line {
+	@extend %svg-common;
+	background-position: 90.57203389830508% 89.76377952755905%;
+}
+
+.svg-pen-line-dims {
+	width: 36px;
+	height: 36px;
+}
+
+.svg-people {
+	@extend %svg-common;
+	background-position: 87.16577540106952% 64.0221066319896%;
+}
+
+.svg-people-dims {
+	width: 45px;
+	height: 29px;
+}
+
+.svg-phone {
+	@extend %svg-common;
+	background-position: 73.55371900826447% 93.07692307692308%;
+}
+
+.svg-phone-dims {
+	width: 12px;
+	height: 18px;
+}
+
+.svg-pint {
+	@extend %svg-common;
+	background-position: 85.07306889352819% 66.66624040920715%;
+}
+
+.svg-pint-dims {
+	width: 22px;
+	height: 16px;
+}
+
+.svg-plus {
+	@extend %svg-common;
+	background-position: 95.96273291925466% 66.49617346938774%;
+}
+
+.svg-plus-dims {
+	width: 14px;
+	height: 14px;
+}
+
+.svg-power {
+	@extend %svg-common;
+	background-position: 98.84816753926701% 63.690815006468306%;
+}
+
+.svg-power-dims {
+	width: 25px;
+	height: 25px;
+}
+
+.svg-san {
+	@extend %svg-common;
+	background-position: 34.53009503695882% 94.90196078431373%;
+}
+
+.svg-san-dims {
+	width: 33px;
+	height: 33px;
+}
+
+.svg-shield {
+	@extend %svg-common;
+	background-position: 94.18604651162791% 89.76377952755905%;
+}
+
+.svg-shield-dims {
+	width: 34px;
+	height: 36px;
+}
+
+.svg-silence {
+	@extend %svg-common;
+	background-position: 62.651933701657455% 68.0954356846473%;
+}
+
+.svg-silence-dims {
+	width: 75px;
+	height: 75px;
+}
+
+.svg-slidingdoors-arrow {
+	@extend %svg-common;
+	background-position: 96.17021276595744% 63.690815006468306%;
+}
+
+.svg-slidingdoors-arrow-dims {
+	width: 40px;
+	height: 25px;
+}
+
+.svg-slidingdoors-arrow-2 {
+	@extend %svg-common;
+	background-position: 82.44680851063829% 74.63863337713535%;
+}
+
+.svg-slidingdoors-arrow-2-dims {
+	width: 40px;
+	height: 37px;
+}
+
+.svg-star {
+	@extend %svg-common;
+	background-position: 72.86012526096033% 70.2223650385604%;
+}
+
+.svg-star-dims {
+	width: 22px;
+	height: 20px;
+}
+
+.svg-temp {
+	@extend %svg-common;
+	background-position: 99.89594172736733% 89.29503916449086%;
+}
+
+.svg-temp-dims {
+	width: 19px;
+	height: 32px;
+}
+
+.svg-tg {
+	@extend %svg-common;
+	background-position: 69.26272066458982% 80.15364916773368%;
+}
+
+.svg-tg-dims {
+	width: 17px;
+	height: 17px;
+}
+
+.svg-time {
+	@extend %svg-common;
+	background-position: 88.48547717842324% 66.66624040920715%;
+}
+
+.svg-time-dims {
+	width: 16px;
+	height: 16px;
+}
+
+.svg-tool {
+	@extend %svg-common;
+	background-position: 63.78947368421053% 94.53125%;
+}
+
+.svg-tool-dims {
+	width: 30px;
+	height: 30px;
+}
+
+.svg-umbrella {
+	@extend %svg-common;
+	background-position: 97.88359788359789% 89.64613368283094%;
+}
+
+.svg-umbrella-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-user {
+	@extend %svg-common;
+	background-position: 99.88197368189263% 0;
+}
+
+.svg-user-dims {
+	width: 412.33px;
+	height: 412.33px;
+}
+
+.svg-viber {
+	@extend %svg-common;
+	background-position: 71.02803738317758% 80.15364916773368%;
+}
+
+.svg-viber-dims {
+	width: 17px;
+	height: 17px;
+}
+
+.svg-voice {
+	@extend %svg-common;
+	background-position: 66.94736842105263% 94.28571428571429%;
+}
+
+.svg-voice-dims {
+	width: 30px;
+	height: 28px;
+}
+
+.svg-walls {
+	@extend %svg-common;
+	background-position: 46.979166666666664% 94.7780678851175%;
+}
+
+.svg-walls-dims {
+	width: 20px;
+	height: 32px;
+}
+
+.svg-whatsapp {
+	@extend %svg-common;
+	background-position: 90.14522821576763% 66.66624040920715%;
+}
+
+.svg-whatsapp-dims {
+	width: 16px;
+	height: 16px;
+}
+
+.svg-window {
+	@extend %svg-common;
+	background-position: 91.80497925311204% 66.66624040920715%;
+}
+
+.svg-window-dims {
+	width: 16px;
+	height: 16px;
+}
+
+.svg-window-calc {
+	@extend %svg-common;
+	background-position: 69.48051948051948% 68.0013812154696%;
+}
+
+.svg-window-calc-dims {
+	width: 56px;
+	height: 74px;
+}
+
