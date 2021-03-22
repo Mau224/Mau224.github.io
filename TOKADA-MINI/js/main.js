@@ -908,13 +908,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		if (hours < 10) {
 			hoursVal.textContent = '0' + hours;
-			hoursVal.style.letterSpacing = '7.5vw';
+			hoursVal.style.letterSpacing = '7vw';
 		} else if (hours < 20) {
 			hoursVal.textContent = hours;
 			hoursVal.style.letterSpacing = '8.7vw';
 		} else {
 			hoursVal.textContent = hours;
-			hoursVal.style.letterSpacing = '7.5vw';
+			hoursVal.style.letterSpacing = '7vw';
 		}
 
 		if (minutes < 10) {
