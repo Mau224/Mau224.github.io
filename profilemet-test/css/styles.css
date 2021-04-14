@@ -488,8 +488,7 @@ template {
   width: 100%; }
   .header__wrapper img {
     width: 11.7vw;
-    height: 2.7vw;
-    background-color: black; }
+    height: 2.7vw;}
 
 .header__group-text {
   display: -webkit-box;
