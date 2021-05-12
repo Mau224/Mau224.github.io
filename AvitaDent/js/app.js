@@ -136,8 +136,9 @@ window.addEventListener('resize', () => {
 let slider_about = new Swiper('.slider-pc', {
 	slidesPerView: 1.5,
 	centeredSlides: true,
-	spaceBetween: 100,
+	spaceBetween: 40,
 	speed: 800,
+	loop: true,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
@@ -162,7 +163,7 @@ let slider_about = new Swiper('.slider-pc', {
 		767: {
 			slidesPerView: 1.5,
 			centeredSlides: true,
-			spaceBetween: 100,
+			spaceBetween: 40,
 		},
 	},
 });
