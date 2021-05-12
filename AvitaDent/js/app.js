@@ -105,7 +105,6 @@ function mobileSlider2() {
 		let swiperMob = new Swiper(el, {
 			slidesPerView: 1,
 			spaceBetween: 22,
-			autoHeight: true,
 			speed: 800,
 			pagination: {
 			el: '.slider-dots2',
@@ -138,7 +137,6 @@ let slider_about = new Swiper('.slider-pc', {
 	slidesPerView: 1.5,
 	centeredSlides: true,
 	spaceBetween: 100,
-	autoHeight: true,
 	speed: 800,
 	//touchRatio: 0,
 	//simulateTouch: false,

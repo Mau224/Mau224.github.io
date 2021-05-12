@@ -63,7 +63,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "Ekibastuz";
+  font-family: "Ekibastuz", "Arial", sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -72,7 +72,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Ekibastuz";
+  font-family: "Ekibastuz", "Arial", sans-serif;
 }
 
 input::-ms-clear {
@@ -902,6 +902,7 @@ body.ie ._ibg img {
 
 .header {
   background-size: cover !important;
+  background-position: center center !important;
   height: 100%;
   min-width: 100%;
   width: -webkit-max-content;
@@ -1008,7 +1009,7 @@ body.ie ._ibg img {
 
 .header__info {
   max-width: 339px;
-  margin-left: 200px;
+  margin-left: 12.8vw;
   min-height: 800px;
   padding-top: 192px;
   position: relative;
@@ -1697,13 +1698,18 @@ footer {
   margin-bottom: 75px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1220px;
+  max-width: 76vw;
   padding-right: 12px;
   padding-left: 12px;
 }
 
 .description__img-block img {
   margin-bottom: 0;
+  width: 100%;
+}
+
+.decription__img-block-item {
+  width: 24%;
 }
 
 .advantages {
@@ -1719,7 +1725,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1200px;
+  max-width: 74vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1749,7 +1755,7 @@ footer {
 }
 
 .advantages__item--last {
-  width: 49.6%;
+  width: 49.7%;
 }
 
 .advantages__item--last p {
@@ -2005,7 +2011,7 @@ footer {
 }
 
 .person__item {
-  width: 100%;
+  width: 33%;
   min-height: 600px;
   max-width: 387px;
   margin-bottom: 60px;
@@ -2759,16 +2765,6 @@ footer {
   }
 }
 
-@media (max-width: 1200px) {
-  .description__img-block {
-    max-width: 1100px;
-  }
-
-  .description__img-block img {
-    max-width: 250px;
-  }
-}
-
 @media (max-width: 1193px) {
   .person__container .swiper-wrapper {
     max-width: 801px;
@@ -2815,34 +2811,6 @@ footer {
 
   .footer__burger-col a {
     font-size: 14px;
-  }
-
-  .description__img-block {
-    max-width: 778px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .description__img-block .description__img--one {
-    max-height: 320px;
-    margin-right: 20px;
-  }
-
-  .description__img-block .description__img--two {
-    max-height: 403px;
-    margin-bottom: 10px;
-  }
-
-  .description__img-block .description__img--tree {
-    max-height: 320px;
-  }
-
-  .description__img-block .description__img--four {
-    min-height: 396px;
-    margin-right: 20px;
-    position: relative;
-    top: -30px;
   }
 
   .advantages__item {
@@ -3248,38 +3216,47 @@ footer {
     margin-bottom: 11px;
   }
 
+  .decription__img-block-item {
+    width: 49%;
+  }
+
   .description__img-block {
     margin-bottom: 0;
     max-width: 545px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
   }
 
   .description__img-block img {
-    max-width: 161px;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
-  .description__img-block .description__img--one {
-    max-height: 181px;
-    margin-right: 20px;
-    margin-bottom: -20px;
-  }
-
-  .description__img-block .description__img--two {
-    max-height: 227px;
-    margin-bottom: 20px;
-  }
-
-  .description__img-block .description__img--tree {
-    min-height: 223px;
+  .description__img-block .description__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .description__img-block .description__img--four {
-    min-height: 270px;
-    margin-right: 20px;
-    position: relative;
-    top: -28px;
-    margin-top: -20px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    display: none;
+  }
+
+  .description__img-block .description__img--tree img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-height: 47.5%;
+  }
+
+  .description__img-block .description__img--two {
+    display: none;
   }
 
   .description__info-link {
@@ -3591,6 +3568,7 @@ footer {
         -ms-flex-pack: start;
             justify-content: flex-start;
     position: absolute;
+    left: 12px;
   }
 
   .sert__tabs-block-item {
