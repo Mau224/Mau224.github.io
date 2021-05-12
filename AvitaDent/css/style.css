@@ -969,8 +969,6 @@ body.ie ._ibg img {
 .header__logo img {
   margin-right: 10px;
   mix-blend-mode: luminosity;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
 }
 
 .header__menu {
