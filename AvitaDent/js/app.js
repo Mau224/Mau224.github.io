@@ -72,8 +72,7 @@ function mobileSlider() {
 			slidesPerView: 'auto',
 			// loop: true,
 			slidesOffsetBefore: 20,
-			slidesOffsetAfter: 90,
-			spaceBetween: 22,
+			spaceBetween: 25,
 			navigation: {
 				nextEl: el.querySelector('.swiper-button-next'),
 				prevEl: el.querySelector('.swiper-button-prev'),
@@ -114,6 +113,10 @@ function mobileSlider2() {
 				nextEl: '.rev-button-next',
 				prevEl: '.rev-button-prev',
 			},
+
+			767: {
+				spaceBetween: 0,
+			},
 		});
 
 
@@ -134,11 +137,13 @@ window.addEventListener('resize', () => {
 
 
 let slider_about = new Swiper('.slider-pc', {
-	slidesPerView: 1.5,
+	slidesPerView: 1,
 	centeredSlides: true,
-	spaceBetween: 40,
+	spaceBetween: 0,
 	speed: 800,
-	loop: true,
+	// loop: true,
+	slideToClickedSlide: true,
+	initialSlide: 1,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
@@ -159,11 +164,12 @@ let slider_about = new Swiper('.slider-pc', {
 			slidesPerView: 'auto',
 			spaceBetween: 22,
 			centeredSlides: false,
+			loop: false,
 		},
 		767: {
-			slidesPerView: 1.5,
+			slidesPerView: 'auto',
 			centeredSlides: true,
-			spaceBetween: 40,
+			spaceBetween: 0,
 		},
 	},
 });
