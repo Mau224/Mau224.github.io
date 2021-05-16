@@ -47,6 +47,7 @@ if (sliderScrollItems.length > 0) {
 			observeParents: true,
 			direction: 'vertical',
 			slidesPerView: 'auto',
+
 			freeMode: true,
 			scrollbar: {
 				el: sliderScrollBar,
@@ -72,6 +73,8 @@ function mobileSlider() {
 			slidesPerView: 'auto',
 			// loop: true,
 			slidesOffsetBefore: 20,
+			slideToClickedSlide: true,
+			slidesOffsetAfter: 0,
 			spaceBetween: 25,
 			navigation: {
 				nextEl: el.querySelector('.swiper-button-next'),
@@ -104,6 +107,7 @@ function mobileSlider2() {
 		let swiperMob = new Swiper(el, {
 			slidesPerView: 1,
 			spaceBetween: 22,
+			slidesOffsetAfter: 0,
 			speed: 800,
 			pagination: {
 			el: '.slider-dots2',
@@ -136,9 +140,42 @@ window.addEventListener('resize', () => {
 });
 
 
+const sliderScroll = document.querySelectorAll('.slider-scroll');
+
+function mobileSlider3() {
+	sliderScroll.forEach((el) => {
+		let swiperMob = new Swiper(el, {
+			slidesPerView: 1.35,
+			// loop: true,
+			slidesOffsetBefore: 20,
+			slidesOffsetAfter: 0,
+			spaceBetween: 25,
+			slideToClickedSlide: true,
+		});
+
+
+		if (window.innerWidth > 767) {
+			el.dataset.mobile = 'false';
+			if (el.classList.contains('swiper-container-initialized')) {
+				swiperMob.destroy();
+			}
+		}
+	});
+}
+
+mobileSlider3()
+
+window.addEventListener('resize', () => {
+	mobileSlider3();
+});
+
+
+
+
 let slider_about = new Swiper('.slider-pc', {
 	slidesPerView: 1,
 	centeredSlides: true,
+	slidesOffsetAfter: 0,
 	spaceBetween: 0,
 	speed: 800,
 	// loop: true,
@@ -165,11 +202,13 @@ let slider_about = new Swiper('.slider-pc', {
 			spaceBetween: 22,
 			centeredSlides: false,
 			loop: false,
+			initialSlide: 0,
 		},
 		767: {
 			slidesPerView: 'auto',
 			centeredSlides: true,
 			spaceBetween: 0,
+			initialSlide: 1,
 		},
 	},
 });
@@ -180,6 +219,7 @@ let slider_sert = new Swiper('.slider-sert', {
 	slidesPerView: 4,
 	observer: true,
 	observeParents: true,
+	slidesOffsetAfter: 0,
 	speed: 800,
 	navigation: {
 		nextEl: '.sert__item_next',
@@ -189,13 +229,23 @@ let slider_sert = new Swiper('.slider-sert', {
 	breakpoints: {
 		320: {
 			slidesPerView: 2,
+			spaceBetween: 20,
+			slidesOffsetBefore: 0,
 		},
-		1024: {
+		767: {
+			slidesOffsetBefore: 0,
 			slidesPerView: 3,
+			spaceBetween: 20,
 		},
 
-		1400: {
+		850: {
+			slidesOffsetBefore: 0,
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1200: {
 			slidesPerView: 4,
+			spaceBetween: 20,
 		},
 	},
 });
@@ -205,22 +255,33 @@ let slider_sert_second = new Swiper('.slider-sert-second', {
 	slidesPerView: 4,
 	observer: true,
 	observeParents: true,
+	slidesOffsetAfter: 0,
 	speed: 800,
 	navigation: {
-		nextEl: '.sert__item_second-next',
-		prevEl: '.sert__item_second-prev',
+		nextEl: '.sert__item_next',
+		prevEl: '.sert__item_prev',
 	},
 
 	breakpoints: {
 		320: {
 			slidesPerView: 2,
+			spaceBetween: 20,
+			slidesOffsetBefore: 40,
 		},
-		1024: {
+		767: {
+			slidesOffsetBefore: 0,
 			slidesPerView: 3,
+			spaceBetween: 20,
 		},
 
-		1400: {
+		850: {
+			slidesOffsetBefore: 0,
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1200: {
 			slidesPerView: 4,
+			spaceBetween: 20,
 		},
 	},
 });
