@@ -3418,7 +3418,7 @@ footer {
   .description__img-block .description__img--tree img {
     -o-object-fit: cover;
        object-fit: cover;
-    min-height: 47.5%;
+    height: 47.85%;
   }
 
   .description__img-block .description__img--two {

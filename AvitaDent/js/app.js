@@ -258,15 +258,15 @@ let slider_sert_second = new Swiper('.slider-sert-second', {
 	slidesOffsetAfter: 0,
 	speed: 800,
 	navigation: {
-		nextEl: '.sert__item_next',
-		prevEl: '.sert__item_prev',
+		nextEl: '.sert__item_second-next',
+		prevEl: '.sert__item_second-prev',
 	},
 
 	breakpoints: {
 		320: {
 			slidesPerView: 2,
 			spaceBetween: 20,
-			slidesOffsetBefore: 40,
+			slidesOffsetBefore: 0,
 		},
 		767: {
 			slidesOffsetBefore: 0,
