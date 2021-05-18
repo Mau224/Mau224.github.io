@@ -148,7 +148,7 @@ function mobileSlider3() {
 			slidesPerView: 1.35,
 			// loop: true,
 			slidesOffsetBefore: 20,
-			slidesOffsetAfter: 0,
+			slidesOffsetAfter: 20,
 			spaceBetween: 25,
 			slideToClickedSlide: true,
 		});
@@ -192,8 +192,8 @@ let slider_about = new Swiper('.slider-pc', {
 		clickable: true,
 	},
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.swiperpc-button-next',
+		prevEl: '.swiperpc-button-prev',
 	},
 
 	breakpoints: {
