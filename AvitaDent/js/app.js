@@ -147,7 +147,7 @@ function mobileSlider3() {
 		let swiperMob = new Swiper(el, {
 			slidesPerView: 1.35,
 			// loop: true,
-			slidesOffsetBefore: 20,
+			slidesOffsetBefore: 0,
 			slidesOffsetAfter: 20,
 			spaceBetween: 25,
 			slideToClickedSlide: true,
@@ -167,6 +167,36 @@ mobileSlider3()
 
 window.addEventListener('resize', () => {
 	mobileSlider3();
+});
+
+
+const sliderScrollgoal = document.querySelectorAll('.slider-scroll-goal');
+
+function mobileSlider4() {
+	sliderScrollgoal.forEach((el) => {
+		let swiperMob = new Swiper(el, {
+			slidesPerView: 1.1,
+			// loop: true,
+			slidesOffsetBefore: 0,
+			slidesOffsetAfter: 20,
+			spaceBetween: 11,
+			slideToClickedSlide: true,
+		});
+
+
+		if (window.innerWidth > 767) {
+			el.dataset.mobile = 'false';
+			if (el.classList.contains('swiper-container-initialized')) {
+				swiperMob.destroy();
+			}
+		}
+	});
+}
+
+mobileSlider4()
+
+window.addEventListener('resize', () => {
+	mobileSlider4();
 });
 
 
@@ -286,6 +316,88 @@ let slider_sert_second = new Swiper('.slider-sert-second', {
 	},
 });
 
+let slider_about3 = new Swiper('.slider-service-people', {
+	slidesPerView: 1,
+	centeredSlides: true,
+	slidesOffsetAfter: 0,
+	spaceBetween: 0,
+	speed: 800,
+	loop: true,
+	slideToClickedSlide: true,
+	initialSlide: 0,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	navigation: {
+		nextEl: '.offer-service__item_next',
+		prevEl: '.offer-service__item_prev',
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 'auto',
+			spaceBetween: 21,
+			initialSlide: 0,
+			slidesOffsetBefore: 110,
+			centeredSlides: true,
+			loop: true,
+		},
+		767: {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			spaceBetween: 0,
+			initialSlide: 1,
+			slidesOffsetBefore: 0,
+			pagination: {
+				el: '.offer-service-dots',
+				clickable: true,
+			},
+		},
+	},
+});
+
+let slider_about5 = new Swiper('.photos__slider', {
+	slidesPerView: 2,
+	centeredSlides: true,
+	slidesOffsetAfter: 0,
+	spaceBetween: 0,
+	speed: 800,
+	loop: true,
+	slideToClickedSlide: true,
+	initialSlide: 0,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	pagination: {
+		el: '.photos-service-dots',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.photos__item_next',
+		prevEl: '.photos__item_prev',
+	},
+
+	breakpoints: {
+		320: {
+			slidesPerView: 'auto',
+			spaceBetween: 50,
+			centeredSlides: true,
+			loop: true,
+			initialSlide: 0,
+		},
+		767: {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			spaceBetween: 0,
+			initialSlide: 1,
+		},
+	},
+});
 
 const burger = document.querySelector('.header__burger');
 const burgerCloser = document.querySelectorAll('.close-menu');
@@ -1505,7 +1617,7 @@ function inputs_init(inputs) {
 					//'+38(999) 999 9999'
 					//'+375(99)999-99-99'
 					input.classList.add('_mask');
-					Inputmask("+375 (99) 9999999", {
+					Inputmask("+7(999) 999 9999", {
 						//"placeholder": '',
 						clearIncomplete: true,
 						clearMaskOnLostFocus: true,
@@ -1642,6 +1754,7 @@ if (priceSlider) {
 		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 	}
 }
+
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
 let scr_items = document.querySelectorAll('._scr-item');
