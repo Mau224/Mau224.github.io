@@ -10,6 +10,7 @@ let slider_serv_main_block = new Swiper('.slider-serv-main-block', {
     slidesOffsetAfter: 0,
     spaceBetween: 0,
     speed: 800,
+    initialSlide:0,
     on: {
         slideNextTransitionStart() {
             swiperCount.textContent = +swiperCount.textContent === slides.length ? 1 : +swiperCount.textContent + 1;
@@ -26,14 +27,16 @@ let slider_serv_main_block = new Swiper('.slider-serv-main-block', {
         nextEl: '.offer-serv-main__arrow-next',
         prevEl: '.offer-serv-main__arrow-prev',
     },
-    hashNavigation: {
-        watchState: true,
-    }
+    // hashNavigation: {
+    //     watchState: true,
+    // }
+
 });
 
-
-
-
+$('.service__link').on('mouseover',function(){
+    var idx = $('.service__link').index(this);
+    slider_serv_main_block.slideTo(idx);
+});
 
 // Wrap every word in a span
 $('.ml16').each(function() {

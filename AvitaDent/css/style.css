@@ -7498,6 +7498,10 @@ footer {
     left: 12px;
   }
 
+  .action__info-link {
+    margin-right: 50px;
+  }
+
   .sert__tabs-block-item {
     width: 162px;
     max-width: 162px;
