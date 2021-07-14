@@ -8420,6 +8420,32 @@ footer {
     margin-bottom: 40px;
   }
 
+  .sert-page__tabs {
+    margin: 0 auto;
+  }
+
+  .sert-page__tabs .offers__tabs-body {
+    margin-top: 10px;
+  }
+
+  .sert-page__tabs .offers__tabs-nav-wrap {
+    margin-bottom: 10px;
+  }
+
+  .sert-page__tabs .sert__tabs-block-wrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .sert-page__tabs .sert__tabs-block-wrap .sert__tabs-block-item {
+    width: 49%;
+    margin-right: 0;
+  }
+
   .main-block .art {
     margin-bottom: 10px;
   }
