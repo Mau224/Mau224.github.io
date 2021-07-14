@@ -399,79 +399,22 @@ let slider_about5 = new Swiper('.photos__slider', {
 	},
 });
 
-const burger = document.querySelector('.header__burger');
-const burgerCloser = document.querySelectorAll('.close-menu');
-const burgerMain = document.querySelector('.header__menu-burger');
 
-burger.addEventListener('click', function () {
-    burgerMain.classList.add('open');
-    burger.classList.toggle('active');
-})
 
-for (let i = 0; i < burgerCloser.length; i++) {
-    burgerCloser[i].addEventListener('click', function () {
-        burgerMain.classList.remove('open');
-    })
-}
 
-function showLinkImage(id) {
-    document.getElementById(id).style.display = "block";
-}
 
-function hideLinkImage(id) {
-    document.getElementById(id).style.display = "none";
-}
 
-function showSpanCount1(id) {
-    document.getElementById(id).innerHTML = '01';
-}
-
-function showSpanCount2(id) {
-    document.getElementById(id).innerHTML = '02';
-}
-
-function hideSpanCount(id) {
-    document.getElementById(id).innerHTML = '01';
-}
-
-function showSpanCount3(id) {
-    document.getElementById(id).innerHTML = '03';
-}
-
-function showSpanCount4(id) {
-    document.getElementById(id).innerHTML = '04';
-}
-
-function showSpanCount5(id) {
-    document.getElementById(id).innerHTML = '05';
-}
-
-function showSpanCount6(id) {
-    document.getElementById(id).innerHTML = '06';
-}
-function showSpanCount7(id) {
-    document.getElementById(id).innerHTML = '07';
-}
-
-function showSpanCount8(id) {
-    document.getElementById(id).innerHTML = '08';
-}
-
-function showSpanCount9(id) {
-    document.getElementById(id).innerHTML = '09';
-}
-
-function showSpanCount10(id) {
-    document.getElementById(id).innerHTML = '10';
-}
-
-function showSpanCount11(id) {
-    document.getElementById(id).innerHTML = '11';
-}
-
-function showSpanCount12(id) {
-    document.getElementById(id).innerHTML = '12';
-}
+// const div = document.querySelector('.str');
+// a = 0;
+// div.innerHTML = div.innerText.split('').reduce( (res, char) => `${res}<span class="char${a+=1} main-char">${char}</span>`, '')
+//
+// // Более развернутый и понятный вариант:
+// const div2 = document.querySelector('.str2');
+// let str = div2.innerText;
+// let chars = str.split('');
+// let chars_in_span = chars.map(char => `<span>${char}</span>`);
+// let new_html = chars_in_span.join('');
+// div2.innerHTML = new_html;
 
 let slider = document.querySelectorAll('.slider-only-mob');
 let arrows = document.querySelectorAll('.swiper-arrows');
