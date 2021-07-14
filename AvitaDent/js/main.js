@@ -41,6 +41,15 @@ slider_serv_main_block.on('slideChange', function () {
     swiperCounter.innerHTML = '<h3>0</h3>' + (slider_serv_main_block.activeIndex+1)+ '<p>/</p>' + '<p>0</p>' + '<p>' +(slider_serv_main_block.slides.length) + '</p>';
 });
 
+
+$(document).ready(function () {
+    $('.adresslink').on('mouseover',function(e){
+        e.preventDefault();
+        var adress = $(this).data('adress');
+        $('.infoblock h3').text(adress).append('<img src="img/arrow-serv.svg" alt="картинка стрелочки">');
+    });
+})
+
 $('.service__link').on('mouseover',function(){
     var idx = $('.service__link').index(this);
     slider_serv_main_block.slideTo(idx);
