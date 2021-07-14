@@ -1,24 +1,24 @@
 const slides = document.querySelectorAll('.service__img-hover');
 
-const swiperMax = document.querySelector('#swiper-max');
-swiperMax.textContent = slides.length;
-
-const swiperCount = document.querySelector('#swiper-count');
-
+// const swiperMax = document.querySelector('#swiper-max');
+// swiperMax.textContent = slides.length;
+//
+// const swiperCount = document.querySelector('#swiper-count');
+var swiperCounter = document.getElementById('swiper-counter');
 let slider_serv_main_block = new Swiper('.slider-serv-main-block', {
     slidesPerView: 1,
     slidesOffsetAfter: 0,
     spaceBetween: 0,
     speed: 800,
     initialSlide:0,
-    on: {
-        slideNextTransitionStart() {
-            swiperCount.textContent = +swiperCount.textContent === slides.length ? 1 : +swiperCount.textContent + 1;
-        },
-        slidePrevTransitionStart() {
-            swiperCount.textContent = +swiperCount.textContent === 1 ? slides.length : +swiperCount.textContent - 1
-        }
-    },
+    // on: {
+    //     slideNextTransitionStart() {
+    //         swiperCount.textContent = +swiperCount.textContent === slides.length ? 1 : +swiperCount.textContent + 1;
+    //     },
+    //     slidePrevTransitionStart() {
+    //         swiperCount.textContent = +swiperCount.textContent === 1 ? slides.length : +swiperCount.textContent - 1
+    //     }
+    // },
     pagination: {
         el: '.serv-main__dots',
         clickable: true,
@@ -30,12 +30,22 @@ let slider_serv_main_block = new Swiper('.slider-serv-main-block', {
     // hashNavigation: {
     //     watchState: true,
     // }
+    on: {
+        init: function () {
+            swiperCounter.innerHTML = '<h3>0</h3>' + '1' + '<p>/</p>' + '<p>0</p>' + '<p>' +this.slides.length + '</p>';
+        },
+    }
+});
 
+slider_serv_main_block.on('slideChange', function () {
+    swiperCounter.innerHTML = '<h3>0</h3>' + (slider_serv_main_block.activeIndex+1)+ '<p>/</p>' + '<p>0</p>' + '<p>' +(slider_serv_main_block.slides.length) + '</p>';
 });
 
 $('.service__link').on('mouseover',function(){
     var idx = $('.service__link').index(this);
     slider_serv_main_block.slideTo(idx);
+    $(".service__link").removeClass('active');
+    $(this).addClass('active');
 });
 
 // Wrap every word in a span
@@ -69,10 +79,10 @@ anime.timeline({
             return 30 * i;
         }
     }).add({
-    targets: '.ml16',
-    opacity: 1,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
+    // targets: '.ml16',
+    // opacity: 1,
+    // duration: 1000,
+    // easing: "easeOutExpo",
+    // delay: 1000
 });
 
