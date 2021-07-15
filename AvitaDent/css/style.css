@@ -2953,9 +2953,16 @@ footer {
           align-items: center;
 }
 
+.footer__socials a {
+  margin-right: 80px;
+}
+
+.footer__socials a:last-child {
+  margin-right: 0;
+}
+
 .footer__socials img {
   margin-bottom: 0 !important;
-  margin-right: 80px;
 }
 
 .footer__socials picture {
@@ -5460,6 +5467,10 @@ footer {
   border-bottom: 1px solid #4D545D;
 }
 
+.contacts__footer-form button .header__info-img {
+  right: 90px;
+}
+
 .contacts__info-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6867,6 +6878,9 @@ footer {
     padding-top: 30px;
     border-bottom: 1px solid rgba(77, 84, 93, 0.1);
     min-width: 339px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .footer__socials img {
