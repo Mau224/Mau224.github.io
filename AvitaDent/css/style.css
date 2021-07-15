@@ -2308,7 +2308,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .header__info h1 {
   font-style: normal;
   font-weight: 300;
-  font-size: 60px;
+  font-size: 56px;
 }
 
 .header__info a {
@@ -3387,20 +3387,11 @@ footer {
           justify-content: center;
 }
 
-.infoblock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
 .service__main {
   margin-top: 40px;
   width: 100%;
   margin-right: 4vw;
+  margin-bottom: 121px;
 }
 
 .service__main h3 {
@@ -3408,19 +3399,18 @@ footer {
   font-weight: normal;
   font-size: 48px;
   line-height: 120%;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
   color: #fff;
-  height: 120px;
   position: relative;
-  max-width: 470px;
+  height: 100px;
 }
 
 .service__main h3 img {
   opacity: 0.4;
   margin-bottom: 0 !important;
   position: relative;
-  margin-top: 33px;
-  margin-left: 20px;
+  right: -52px;
+  top: 32px;
 }
 
 .service__imgs {
@@ -3550,7 +3540,7 @@ footer {
 
 .swiper-counter {
   margin-bottom: 55px;
-  top: 200px;
+  top: 170px;
   position: absolute;
 }
 
@@ -3656,6 +3646,7 @@ footer {
   width: 83px;
   position: relative;
   z-index: 10000;
+  display: none;
 }
 
 .serv-main__slider-arrows .offer-serv-main__arrow-prev {
@@ -3664,15 +3655,14 @@ footer {
   width: 46px !important;
   position: relative;
   z-index: 10000;
+  display: none;
 }
 
 .serv-main__slider-arrows .serv-main-block__arrows {
   osition: absolute;
   width: 80px;
   height: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3722,11 +3712,21 @@ footer {
   border-radius: 50%;
 }
 
+.service__img-hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .service__img-hover img {
   width: 100%;
   height: 100%;
   max-width: 48vw;
-  max-height: 600px;
+  min-width: 48vw;
+  max-height: 453px;
   margin-bottom: 0 !important;
 }
 
@@ -4385,7 +4385,7 @@ footer {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-left: 60px;
+  padding-left: 40px;
 }
 
 .offers__tabs-block-item--reverce .offers__block-item-text p {
@@ -4413,7 +4413,7 @@ footer {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-right: 60px;
+  padding-right: 40px;
 }
 
 .offers__block-item-text p {
@@ -4422,7 +4422,7 @@ footer {
   font-size: 38px;
   line-height: 120%;
   /* or 46px */
-  max-width: 428px;
+  max-width: 470px;
   text-align: right;
 }
 
@@ -5587,9 +5587,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 22px;
-  padding-top: 12px;
-  padding-bottom: 12px;
   background: #C3A99C;
   position: relative;
   -webkit-box-pack: justify;
@@ -5616,6 +5613,8 @@ footer {
   position: relative;
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  right: 56px;
   background: #4D545D;
 }
 
@@ -5637,6 +5636,17 @@ footer {
   color: #fff;
   letter-spacing: 0.004em;
   text-transform: uppercase;
+  padding: 22px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  min-width: 300px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-link:hover {
@@ -5651,9 +5661,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 22px;
-  padding-top: 12px;
-  padding-bottom: 12px;
   background: #4D545D;
   position: relative;
   -webkit-box-pack: justify;
@@ -5663,7 +5670,7 @@ footer {
           box-shadow: 0 -3px #394049 inset;
   cursor: pointer;
   width: 100%;
-  max-width: 300px;
+  max-width: 343px;
   border-radius: 2px;
 }
 
@@ -5680,6 +5687,8 @@ footer {
   position: relative;
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  right: 56px;
   background: #C3A99C;
 }
 
@@ -5701,6 +5710,17 @@ footer {
   color: #fff;
   letter-spacing: 0.004em;
   text-transform: uppercase;
+  padding: 22px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  min-width: 343px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-link-reverce:hover {
@@ -5715,9 +5735,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 22px;
-  padding-top: 12px;
-  padding-bottom: 12px;
   background: #C3A99C;
   position: relative;
   -webkit-box-pack: justify;
@@ -5744,6 +5761,8 @@ footer {
   position: relative;
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  right: 56px;
   background: #4D545D;
 }
 
@@ -5765,6 +5784,17 @@ footer {
   color: #fff;
   letter-spacing: 0.004em;
   text-transform: uppercase;
+  padding: 22px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  min-width: 300px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-link-stat:hover {
@@ -6622,6 +6652,12 @@ footer {
 
   .header__info-link {
     margin-right: 16px;
+    width: 333px;
+  }
+
+  .header__info-link a {
+    min-width: 320px;
+    width: 320px;
   }
 
   .header__menu-burger {
@@ -6672,6 +6708,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-bottom: 12px;
   }
 
   .header__burger-col a img {
@@ -6681,12 +6718,17 @@ footer {
     margin-right: 16px;
   }
 
+  .header__burger-col a img:last-child {
+    margin-right: 0;
+  }
+
   .header__burger-col a p {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 16px;
     max-width: 190px;
+    margin-left: 16px;
   }
 
   .header__burger-col .header__burger-link {
@@ -6768,12 +6810,16 @@ footer {
   .header__burger-footer .main-link-stat {
     font-weight: bold;
     width: 223px;
-    padding: 7px;
-    padding-left: 12px;
+    padding: 0;
+  }
+
+  .header__burger-footer .main-link-stat .header__info-img {
+    right: 120px;
   }
 
   .header__burger-footer .main-link-stat a {
     font-size: 14px;
+    padding-left: 12px;
   }
 
   .header__burger-footer-img img {
@@ -7169,6 +7215,7 @@ footer {
     margin-top: 0;
     width: 100%;
     max-width: 343px;
+    margin-bottom: 0;
     margin-top: 45px;
   }
 
@@ -7240,7 +7287,7 @@ footer {
        object-fit: contain;
     min-height: 258px;
     max-width: 369px;
-    margin-left: 14px;
+    margin-left: 24px;
   }
 
   .service__img-hover h3 {
@@ -7354,6 +7401,12 @@ footer {
 
   ._webp .service__block-img {
     background: none !important;
+  }
+
+  .serv-main-block__arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .serv-main__slider-arrows {
@@ -8167,6 +8220,14 @@ footer {
     font-size: 16px;
   }
 
+  .offers__info-link.main-link-reverce {
+    max-width: 300px !important;
+  }
+
+  .offers__info-link.main-link-reverce .header__info-img {
+    right: 101px !important;
+  }
+
   .photos {
     margin-right: 16px;
     margin-left: 16px;
@@ -8524,7 +8585,7 @@ footer {
     font-size: 14px;
     -webkit-box-shadow: 0 -3px #394049 inset;
             box-shadow: 0 -3px #394049 inset;
-    max-width: none;
+    max-width: 350px;
   }
 
   .main-link:hover {
@@ -8532,10 +8593,16 @@ footer {
             box-shadow: 0 -3px #4D545D inset;
   }
 
+  .main-link a {
+    min-width: 343px;
+  }
+
   .main-link .header__info-img {
     background: #C3A99C;
     width: 36px;
+    min-width: 36px;
     height: 36px;
+    right: 70px;
   }
 
   .main-link-reverce {
@@ -8543,6 +8610,10 @@ footer {
     background: #4D545D;
     -webkit-box-shadow: 0 -3px #394049 inset;
             box-shadow: 0 -3px #394049 inset;
+  }
+
+  .main-link-reverce a {
+    min-width: 343px;
   }
 
   .main-link-reverce:hover {
@@ -8554,6 +8625,13 @@ footer {
     background: #C3A99C;
     width: 36px;
     height: 36px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 375px) {
+  .header__main {
+    max-width: 355px;
   }
 }
 
