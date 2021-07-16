@@ -3938,6 +3938,11 @@ footer {
   padding-bottom: 45px;
 }
 
+.sert h2 {
+  max-width: 557px;
+  text-align: center;
+}
+
 .sert__tabs-nav {
   display: -webkit-box;
   display: -ms-flexbox;
