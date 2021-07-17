@@ -8,7 +8,7 @@ var swiperCounter = document.getElementById('swiper-counter');
 let slider_serv_main_block = new Swiper('.slider-serv-main-block', {
     slidesPerView: 1,
     slidesOffsetAfter: 0,
-    spaceBetween: 0,
+    spaceBetween: 140,
     speed: 800,
     initialSlide:0,
     // on: {
@@ -92,10 +92,10 @@ $(document).ready(function () {
 //
 // });
 
-$('.service__link').on('mouseover',function(){
-    var idx = $('.service__link').index(this);
+$('.adresslink').on('mouseover',function(){
+    var idx = $('.adresslink').index(this);
     slider_serv_main_block.slideTo(idx);
-    $(".service__link").removeClass('active');
+    $(".adresslink").removeClass('active');
     $(this).addClass('active');
 });
 

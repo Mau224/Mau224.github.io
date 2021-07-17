@@ -75,7 +75,7 @@ function mobileSlider() {
 			slidesOffsetBefore: 20,
 			slideToClickedSlide: true,
 			slidesOffsetAfter: 0,
-			spaceBetween: 25,
+			spaceBetween: 21,
 			navigation: {
 				nextEl: el.querySelector('.swiper-button-next'),
 				prevEl: el.querySelector('.swiper-button-prev'),
@@ -201,49 +201,34 @@ window.addEventListener('resize', () => {
 
 
 
-
-let slider_about = new Swiper('.slider-pc', {
-	slidesPerView: 1,
-	centeredSlides: true,
-	slidesOffsetAfter: 0,
-	spaceBetween: 0,
-	speed: 800,
-	// loop: true,
-	slideToClickedSlide: true,
-	initialSlide: 1,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
-	pagination: {
-		el: '.slider-dots',
-		clickable: true,
-	},
-	navigation: {
-		nextEl: '.swiperpc-button-next',
-		prevEl: '.swiperpc-button-prev',
-	},
-
-	breakpoints: {
-		320: {
-			slidesPerView: 'auto',
-			spaceBetween: 22,
-			centeredSlides: false,
-			loop: false,
-			initialSlide: 0,
-		},
-		767: {
-			slidesPerView: 'auto',
-			centeredSlides: true,
-			spaceBetween: 0,
-			initialSlide: 1,
-		},
-	},
-});
-
-
+// const sliderScrollActions = document.querySelectorAll('.slider-pc');
+//
+// function mobileSlider5() {
+// 	sliderScrollActions.forEach((el) => {
+// 		let swiperMob = new Swiper(el, {
+// 			slidesPerView: 'auto',
+// 			centeredSlides: true,
+// 			slidesOffsetAfter: 0,
+// 			spaceBetween: 0,
+// 			speed: 800,
+// 			initialSlide: 1,
+// 			slideToClickedSlide: true,
+// 			pagination: {
+// 				el: '.slider-dots',
+// 			},
+// 			navigation: {
+// 				nextEl: '.swiperpc-button-next',
+// 				prevEl: '.swiperpc-button-prev',
+// 			},
+// 		});
+// 	});
+// }
+//
+// mobileSlider5()
+//
+// window.addEventListener('resize', () => {
+// 	mobileSlider5();
+// });
 
 let slider_sert = new Swiper('.slider-sert', {
 	slidesPerView: 4,
@@ -402,6 +387,44 @@ let slider_about5 = new Swiper('.photos__slider', {
 
 
 
+let slider_actions = new Swiper('.slider-pc', {
+	slidesPerView: 1,
+	centeredSlides: true,
+	slidesOffsetAfter: 0,
+	spaceBetween: 0,
+	speed: 800,
+	navigation: {
+		nextEl: '.slider-pc__next',
+		prevEl: '.slider-pc__prev',
+	},
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			centeredSlides: true,
+			loop: false,
+			initialSlide: 1,
+			slideToClickedSlide: false,
+			pagination: {
+				el: '.slider-dots',
+				clickable: false
+			},
+		},
+		767: {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			spaceBetween: 0,
+			initialSlide: 1,
+			slideToClickedSlide: true,
+			slidesOffsetBefore: 0,
+			pagination: {
+				el: '.slider-dots',
+				clickable: true,
+			},
+		},
+	},
+});
 
 
 // const div = document.querySelector('.str');
