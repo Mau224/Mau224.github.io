@@ -387,12 +387,14 @@ let slider_about5 = new Swiper('.photos__slider', {
 
 
 
-let slider_actions = new Swiper('.slider-pc', {
+let slider_actions = new Swiper('.slider-action', {
 	slidesPerView: 1,
 	centeredSlides: true,
+	observer: true,
+	observeParents: true,
 	slidesOffsetAfter: 0,
 	spaceBetween: 0,
-	speed: 800,
+	speed: 0,
 	navigation: {
 		nextEl: '.slider-pc__next',
 		prevEl: '.slider-pc__prev',

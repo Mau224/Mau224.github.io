@@ -7679,10 +7679,10 @@ footer {
   }
 
   .action__slider-arrows {
-    top: -215px;
+    top: 150px !important;
     z-index: 100;
-    position: relative;
-    right: 0;
+    position: absolute;
+    right: 30px;
   }
 
   .action__dots {
