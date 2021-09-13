@@ -2011,6 +2011,7 @@ body.ie ._ibg img {
   font-size: 20px;
   line-height: 150%;
   max-width: 770px;
+  width: 100%;
 }
 
 .design__items {
@@ -3072,6 +3073,17 @@ body.ie ._ibg img {
   }
 }
 
+@media (max-width: 1250px) and (max-width: 767px) {
+  .design-ecup .design-ecup__container .design__text-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .design-ecup .design-ecup__container .design__text-block .design__text-item {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .project-realization__block {
     max-width: 450px;
@@ -3578,6 +3590,10 @@ body.ie ._ibg img {
     margin-left: 0;
   }
 
+  .about-project--aust .about-project__block:last-child {
+    margin-left: 0;
+  }
+
   .about-project--aust .about-project__block img {
     width: 100%;
     -o-object-fit: cover;
@@ -3859,6 +3875,7 @@ body.ie ._ibg img {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 40px;
+    margin-left: 0 !important;
   }
 
   .design__text button {
@@ -4056,6 +4073,19 @@ body.ie ._ibg img {
     margin-bottom: 60px;
   }
 
+  .project-realization--ecup .project-realization__block span {
+    margin-left: 0;
+  }
+
+  .project-realization--ecup .project-realization__block:first-child {
+    margin-bottom: 20px;
+  }
+
+  .project-realization__block-item--second {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
   .project-realization__block h2 {
     font-style: normal;
     font-weight: normal;
@@ -4195,11 +4225,17 @@ body.ie ._ibg img {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   }
 
   .design-ecup .design-ecup__container .design__text {
     margin-top: 50px;
     position: relative;
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   .design-ecup .design-ecup__container .design__text h3 {
@@ -4379,6 +4415,17 @@ body.ie ._ibg img {
 
   .preview-site-blocks__wrap {
     margin-right: 20px;
+  }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+  .design__text-item p {
+    max-width: 350px;
+  }
+
+  .design-ecup .design-ecup__container .design__text .design__text-block {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
