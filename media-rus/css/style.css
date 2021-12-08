@@ -3701,6 +3701,7 @@ body.ie ._ibg img {
     font-size: 28px;
     line-height: 130%;
     margin-bottom: 40px;
+    max-width: 335px;
   }
 
   .about-project--aust .about-project__block-container {
