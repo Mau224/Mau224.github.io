@@ -4457,6 +4457,7 @@ body.ie ._ibg img {
   .design-ecup .design-ecup__container .design__colors {
     position: relative;
     padding-top: 84px;
+    width: 100%;
   }
 
   .design-ecup .design-ecup__container .design__colors::before {
