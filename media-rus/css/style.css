@@ -2257,8 +2257,8 @@ body.ie ._ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 80px;
+  margin-left: 80px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2486,8 +2486,8 @@ body.ie ._ibg img {
 
 .preview__container-aust {
   margin: 0 auto;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .project-realization__block-item-footer {
@@ -2799,8 +2799,6 @@ body.ie ._ibg img {
 
 .preview-aust {
   margin-top: 0;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 150px;
   background: var(--preview-aust);
 }
