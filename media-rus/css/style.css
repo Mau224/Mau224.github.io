@@ -4392,6 +4392,10 @@ body.ie ._ibg img {
             align-items: flex-start;
   }
 
+  .design-aust .disign__text-footer-aust span {
+    margin-left: 0;
+  }
+
   .design-aust .disign__text-footer-aust a {
     margin-bottom: 30px;
     width: -webkit-max-content;
@@ -4517,11 +4521,6 @@ body.ie ._ibg img {
     height: 50px;
     top: 6px;
     left: 8px;
-  }
-
-  .preview-aust .preview__container {
-    margin-right: 0;
-    margin-left: 0;
   }
 
   .preview-aust .preview__column-first picture {
