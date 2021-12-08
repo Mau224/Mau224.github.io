@@ -2015,15 +2015,15 @@ body.ie ._ibg img {
 }
 
 .design__colors {
-  width: 50%;
+  width: 46%;
 }
 
 .design__text-block {
-  padding-right: 30px;
+  padding-right: 8vw;
 }
 
 .design__text {
-  width: 50%;
+  width: 54%;
 }
 
 .design__text h3 {
@@ -2619,9 +2619,9 @@ body.ie ._ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-top: 86px;
   max-width: 660px;
   -webkit-box-align: center;
@@ -2663,6 +2663,7 @@ body.ie ._ibg img {
   font-size: 16px;
   line-height: 170%;
   color: var(--main-color);
+  margin-left: 150px;
   opacity: .4;
   max-width: 283px;
 }
@@ -2686,6 +2687,18 @@ body.ie ._ibg img {
           justify-content: center;
 }
 
+.design-ecup .design__colors {
+  width: 46%;
+}
+
+.design-ecup .design__text {
+  width: 54%;
+}
+
+.design-ecup .design__text-block {
+  padding-right: 30px;
+}
+
 .design-ecup .design-ecup__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2694,8 +2707,8 @@ body.ie ._ibg img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 100px;
-  margin-right: 80px;
-  margin-left: 80px;
+  margin-right: 90px;
+  margin-left: 90px;
 }
 
 .design-ecup .design-ecup__container .design__colors h3 {
@@ -2752,6 +2765,9 @@ body.ie ._ibg img {
 
 .design-ecup .disign__text-footer-aust {
   max-width: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .design-ecup .disign__text-footer-aust a {
@@ -2777,7 +2793,7 @@ body.ie ._ibg img {
 }
 
 .design-ecup .disign__text-footer-aust span {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .preview-aust {
