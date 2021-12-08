@@ -1424,7 +1424,7 @@ body.ie ._ibg img {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: var(--main-color);
   opacity: .2;
 }
 
@@ -1578,14 +1578,26 @@ body.ie ._ibg img {
 
 .about-project__text-link a {
   font-size: 16px;
+  position: relative;
   line-height: 22px;
-  border-bottom: 1px solid #ebedf0;
+  border-bottom: 1px solid transparent;
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
   background-image: -o-linear-gradient(left, red, #f0f);
   background-image: -webkit-gradient(linear, left top, right top, from(red), to(#f0f));
   background-image: linear-gradient(to right, red, #f0f);
+}
+
+.about-project__text-link a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(red), to(#f0f));
+  background: -o-linear-gradient(left, red, #f0f);
+  background: linear-gradient(to right, red, #f0f);
 }
 
 .about-project__text-link {
@@ -1704,7 +1716,6 @@ body.ie ._ibg img {
   left: 0;
   width: 589px;
   height: 589px;
-  background: url("../img/bg-circle-tokada.svg") no-repeat;
   padding: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1854,8 +1865,8 @@ body.ie ._ibg img {
   padding-bottom: 252px;
   width: 100%;
   max-width: 1235px;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .device__block {
@@ -1968,6 +1979,19 @@ body.ie ._ibg img {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.design__img picture {
+  z-index: 1000;
+  position: relative;
+}
+
+.design__img img {
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .design__img::before {
@@ -2090,7 +2114,8 @@ body.ie ._ibg img {
 }
 
 .design__item .design__item-color {
-  background: url("../img/bg__item-design.svg") no-repeat;
+  background: url("../img/bg__item-design.png") no-repeat;
+  background-size: cover;
   width: 100px;
   height: 100px;
   display: -webkit-box;
@@ -2232,8 +2257,8 @@ body.ie ._ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 80px;
-  margin-left: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2371,7 +2396,7 @@ body.ie ._ibg img {
 }
 
 .project-realization--ecup .project-realization__block span {
-  margin-left: 20px;
+  margin-bottom: 0;
 }
 
 .project-realization--ecup .project-realization__block h2 {
@@ -2460,9 +2485,9 @@ body.ie ._ibg img {
 }
 
 .preview__container-aust {
-  max-width: 1440px;
   margin: 0 auto;
-  margin-left: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .project-realization__block-item-footer {
@@ -2479,6 +2504,7 @@ body.ie ._ibg img {
 .project-realization__block-item-footer a {
   font-style: normal;
   font-weight: normal;
+  position: relative;
   font-size: 16px;
   line-height: 20px;
   color: transparent;
@@ -2487,6 +2513,17 @@ body.ie ._ibg img {
   background-image: -o-linear-gradient(left, red, #f0f);
   background-image: -webkit-gradient(linear, left top, right top, from(red), to(#f0f));
   background-image: linear-gradient(to right, red, #f0f);
+}
+
+.project-realization__block-item-footer a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(red), to(#f0f));
+  background: -o-linear-gradient(left, red, #f0f);
+  background: linear-gradient(to right, red, #f0f);
 }
 
 .project-realization__block-item-footer span {
@@ -2782,6 +2819,8 @@ body.ie ._ibg img {
   border-radius: 10px;
   padding: 40px 110px;
   margin: 0 auto;
+  margin-right: 20px;
+  margin-left: 20px;
   margin-top: 60px;
   margin-bottom: 60px;
   display: -webkit-box;
@@ -3126,11 +3165,52 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 1200px) {
+  .real--tokada .real__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .real--tokada .real__container .real__block {
+    width: 100%;
+  }
+
+  .real--tokada .real__container .real__block--second {
+    background-size: contain;
+  }
+
+  .real--tokada .real__container {
+    max-height: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
   .real--tokada .real__block--second {
     width: 540px;
     height: 540px;
     top: 0;
     margin-top: 40px;
+  }
+
+  .real--tokada .real__block--second::after {
+    display: none;
+  }
+
+  .real--tokada .real__wrap h2 {
+    position: relative;
+  }
+
+  .real--tokada .real__wrap h2::after {
+    content: "";
+    position: absolute;
+    bottom: -26px;
+    right: 0;
+    background: url(../img/real-pip-tokada.svg) no-repeat;
+    background-size: cover;
+    width: 140.62px;
+    height: 140.62px;
   }
 
   .project-realization__block {
@@ -3237,13 +3317,6 @@ body.ie ._ibg img {
     width: 100%;
   }
 
-  .real--tokada .real__container {
-    max-height: none;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
   .real--tokada .real__wrap h2:after {
     background: url("../img/real-pip-tokada.svg") no-repeat;
     background-size: cover;
@@ -3253,16 +3326,6 @@ body.ie ._ibg img {
     margin-bottom: 0;
     position: relative;
     font-size: 70px;
-  }
-
-  .real h2::after {
-    content: "";
-    position: absolute;
-    bottom: -26px;
-    right: 0;
-    background: url("../img/real-pip.svg") no-repeat;
-    width: 140.62px;
-    height: 140.62px;
   }
 
   .real__container {
@@ -3409,6 +3472,7 @@ body.ie ._ibg img {
 
   .project-realization__block .project-realization__block-item {
     margin-top: 20px;
+    margin-left: 0;
   }
 
   .design-ecup .design__item-aust:nth-child(2) {
@@ -3740,8 +3804,16 @@ body.ie ._ibg img {
     font-size: 16px;
   }
 
+  .real--tokada {
+    padding: 0 !important;
+  }
+
   .real--tokada .real__container {
     max-height: none;
+  }
+
+  .real--tokada .real__wrap h2 {
+    margin-left: 20px;
   }
 
   .real--tokada .real__block--second {
@@ -3750,6 +3822,9 @@ body.ie ._ibg img {
     height: 425px;
     margin-top: 40px;
     background: none;
+    background: url("../img/bg-circle-tokada.svg") no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   .real--tokada .real__block--second p {
@@ -3772,8 +3847,19 @@ body.ie ._ibg img {
     width: 426px;
     height: 425px;
     background-size: cover;
-    left: -50px;
+    left: -12vw;
     display: block;
+    display: none;
+  }
+
+  .real--tokada .real__block h3 {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .real--tokada .real__block p {
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   .real__wrap {
@@ -3785,7 +3871,7 @@ body.ie ._ibg img {
     margin-top: 60px;
   }
 
-  .real h2 {
+  .real .real__wrap h2 {
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -3796,7 +3882,7 @@ body.ie ._ibg img {
     margin-bottom: 40px;
   }
 
-  .real h2:after {
+  .real .real__wrap h2:after {
     width: 90px;
     height: 90px;
     background-size: cover;
@@ -3806,7 +3892,6 @@ body.ie ._ibg img {
 
   .real__block--second {
     padding: 20px;
-    padding-right: 8px;
   }
 
   .real__block--second h3 {
@@ -3828,6 +3913,7 @@ body.ie ._ibg img {
     font-weight: bold;
     font-size: 18px;
     line-height: 150%;
+    margin-bottom: 10px;
   }
 
   .real__block--second p {
@@ -3869,6 +3955,12 @@ body.ie ._ibg img {
     margin-right: 20px;
     margin-left: 20px;
     width: 100%;
+  }
+
+  .device__block:last-child {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .device__block img {
@@ -3967,6 +4059,7 @@ body.ie ._ibg img {
     font-weight: 600;
     font-size: 24px;
     line-height: 100%;
+    margin-bottom: 7px;
   }
 
   .design__text-item p {
@@ -3997,7 +4090,12 @@ body.ie ._ibg img {
   }
 
   .design__img:after {
-    display: none;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    bottom: -45px;
+    right: 7px;
   }
 
   .design__img::before {
@@ -4005,7 +4103,7 @@ body.ie ._ibg img {
     width: 149.81px;
     height: 99.11px;
     top: -21px;
-    left: 40vw;
+    left: 47vw;
   }
 
   .design__colors {
@@ -4133,6 +4231,10 @@ body.ie ._ibg img {
     margin-right: 150px;
   }
 
+  .project-realization::before {
+    top: -61px;
+  }
+
   .project-realization {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -4164,7 +4266,7 @@ body.ie ._ibg img {
     font-weight: normal;
     font-size: 24px;
     line-height: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 
   .project-realization__block h4 {
