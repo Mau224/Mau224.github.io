@@ -2153,7 +2153,6 @@ body.ie ._ibg img {
 .preview {
   padding-top: 143px;
   padding-bottom: 143px;
-  margin-top: 110px;
   background: var(--preview);
 }
 
@@ -4306,6 +4305,10 @@ body.ie ._ibg img {
   .big-img-aust {
     padding-top: 75px;
     padding-bottom: 75px;
+  }
+
+  .big-img-ecup {
+    padding: 0;
   }
 
   .design {
