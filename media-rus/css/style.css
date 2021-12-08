@@ -2828,6 +2828,22 @@ body.ie ._ibg img {
           box-shadow: 0px 0px 50px rgba(0,0,0,.08);
 }
 
+.preview-mob-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .preview-mob {
   border: 1px solid rgba(211,166,107,.3);
   -webkit-box-sizing: border-box;
@@ -2835,8 +2851,8 @@ body.ie ._ibg img {
   border-radius: 10px;
   padding: 40px 110px;
   margin: 0 auto;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 80px;
+  margin-left: 80px;
   margin-top: 60px;
   margin-bottom: 60px;
   display: -webkit-box;
