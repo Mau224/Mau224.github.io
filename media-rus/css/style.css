@@ -1641,6 +1641,12 @@ body.ie ._ibg img {
 .real {
   margin-top: 113px;
   margin-bottom: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .real h2 {
@@ -2777,7 +2783,7 @@ body.ie ._ibg img {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  padding: 21px 45px;
+  padding: 21px 20px;
   background: #eb5757;
   border-radius: 31px;
   white-space: nowrap;
@@ -4371,7 +4377,7 @@ body.ie ._ibg img {
   }
 
   .design-aust .design__items {
-    margin-top: 75px;
+    margin-top: 20px;
     position: relative;
     left: -100px;
     -webkit-box-pack: start;
@@ -4462,6 +4468,7 @@ body.ie ._ibg img {
     position: relative;
     padding-top: 84px;
     width: 100%;
+    margin-left: 0;
   }
 
   .design-ecup .design-ecup__container .design__colors::before {
