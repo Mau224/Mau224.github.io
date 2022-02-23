@@ -215,7 +215,7 @@ h1 {
   line-height: 0.9205776173;
   /* identical to box height, or 92% */
   letter-spacing: -0.005em;
-  text-align: justify;
+  text-align: center;
   text-transform: uppercase;
 }
 @media (min-width: 120em) {
@@ -346,6 +346,11 @@ h1 {
 @media (max-width: 61.99875em) {
   .blog-main-item {
     padding: 0.6875rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .blog-main-item {
+    min-height: auto;
   }
 }
 
@@ -1153,6 +1158,11 @@ h1 {
   letter-spacing: 0.625rem;
 }
 @media (max-width: 47.99875em) {
+  .footer__main-text h1 {
+    letter-spacing: -0.005em;
+  }
+}
+@media (max-width: 47.99875em) {
   .footer__main-text {
     padding-top: 0.6875rem;
   }
@@ -1751,7 +1761,7 @@ h1 {
 }
 @media (max-width: 47.99875em) {
   .case-tab__body-wrap-item {
-    min-height: 20.125rem;
+    height: auto;
   }
 }
 .case-tab__body-wrap-text {
@@ -2035,6 +2045,7 @@ h1 {
     width: 2.5rem;
     height: 2.5rem;
     right: -3.5rem;
+    z-index: 100;
   }
 }
 .case-show__more::before {
