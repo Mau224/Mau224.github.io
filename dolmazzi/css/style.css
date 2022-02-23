@@ -212,11 +212,10 @@ h6 {
 h1 {
   font-family: "SuisseIntlCondensedThin";
   font-weight: 300;
-  display: inline-flex;
   line-height: 0.9205776173;
   /* identical to box height, or 92% */
   letter-spacing: -0.005em;
-  text-align: center;
+  text-align: justify;
   text-transform: uppercase;
 }
 @media (min-width: 120em) {
@@ -1149,9 +1148,9 @@ h1 {
 }
 .footer__main-text {
   display: flex;
-  width: 100%;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
+}
+.footer__main-text h1 {
+  letter-spacing: 0.625rem;
 }
 @media (max-width: 47.99875em) {
   .footer__main-text {
@@ -1159,10 +1158,14 @@ h1 {
   }
 }
 
+.preview__container {
+  padding-top: 1.875rem;
+}
 @media (max-width: 47.99875em) {
   .preview__container {
     padding-right: 0.6875rem;
     padding-left: 0.6875rem;
+    padding-top: 0.6875rem;
   }
 }
 .preview__text {
