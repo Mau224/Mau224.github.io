@@ -2048,6 +2048,11 @@ h1 {
     z-index: 100;
   }
 }
+@media (max-width: 47.99875em) {
+  .case-show__more::after {
+    border: 1px solid #202B54;
+  }
+}
 .case-show__more::before {
   content: "";
   position: absolute;
