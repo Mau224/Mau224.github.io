@@ -209,6 +209,10 @@ h6 {
   object-fit: contain;
 }
 
+input {
+  border-radius: 0;
+}
+
 h1 {
   font-family: "SuisseIntlCondensedThin";
   font-weight: 300;
@@ -351,6 +355,11 @@ h1 {
 @media (max-width: 47.99875em) {
   .blog-main-item {
     max-height: 37.8125rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .blog-main-item {
+    height: 21.25rem;
   }
 }
 
@@ -1764,6 +1773,10 @@ h1 {
 }
 .case-tab__body img {
   max-width: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media (max-width: 47.99875em) {
   .case-tab__body img {
