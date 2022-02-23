@@ -504,6 +504,16 @@ h1 {
   grid-template-rows: 1fr 1fr;
   height: 100%;
 }
+.blog-item-circle__img {
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.blog-item-circle__img img {
+  max-height: 22.3125rem;
+}
 .blog-item-circle__text-wrap {
   border: 2px solid #202B54;
   border-radius: 50%;
@@ -1741,7 +1751,7 @@ h1 {
 }
 @media (max-width: 47.99875em) {
   .case-tab__body img {
-    max-height: 100%;
+    max-height: 18.625rem;
   }
 }
 .case-tab__body-wrap {
