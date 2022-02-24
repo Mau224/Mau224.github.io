@@ -514,7 +514,6 @@ h1 {
   text-align: right;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
 }
 .blog-item-circle__img img {
   max-height: 22.3125rem;
