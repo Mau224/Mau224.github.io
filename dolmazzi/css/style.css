@@ -1172,6 +1172,11 @@ h1 {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 47.99875em) {
+  .footer__main-text {
+    padding-top: 0.625rem;
+  }
+}
 @media (min-width: 120em) {
   .footer__main-text h1 {
     letter-spacing: 0.5rem;
@@ -1830,6 +1835,11 @@ h1 {
     max-height: 37.8125rem;
   }
 }
+@media (any-hover: hover) {
+  .case-tab__body-wrap-item:hover .case-tab__body-wrap-text {
+    opacity: 1;
+  }
+}
 .case-tab__body-wrap-text {
   position: absolute;
   top: 0;
@@ -1928,8 +1938,19 @@ h1 {
     padding-left: 0.625rem;
   }
 }
+@media (max-width: 47.99875em) and (hover: none) and (pointer: coarse) {
+  .case-tab__body-wrap-text:hover {
+    opacity: 1;
+  }
+  .case-tab__body-wrap-text:active {
+    opacity: 1;
+  }
+}
 @media (any-hover: hover) {
   .case-tab__body-wrap-text:hover {
+    opacity: 1;
+  }
+  .case-tab__body-wrap-text:active {
     opacity: 1;
   }
 }
