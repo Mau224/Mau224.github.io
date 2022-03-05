@@ -254,6 +254,11 @@ h1 {
     }
   }
 }
+@media (min-width: 116.8125em) {
+  h1 {
+    font-size: 15.625rem;
+  }
+}
 @media (max-width: 61.99875em) and (min-width: 22.5em) and (max-width: 61.9375em) {
   @supports (font-size: clamp( 5.5rem , 3.645800317rem  +  8.2408874802vw , 8.75rem )) {
     h1 {
@@ -1967,6 +1972,9 @@ h2 {
     grid-template-columns: 1fr;
     gap: 0.625rem;
   }
+}
+.case-tab__body-wrap-stud {
+  grid-template-columns: 1fr 1fr;
 }
 .case-tab__body-wrap-item {
   position: relative;
@@ -4025,6 +4033,11 @@ h2 {
 .manifesto__item--01 .manifesto__img::before {
   right: 15%;
   top: 1.25rem;
+}
+@media (min-width: 116.8125em) {
+  .manifesto__item--01 .manifesto__img::before {
+    right: 20%;
+  }
 }
 @media (max-width: 61.99875em) {
   .manifesto__item--01 .manifesto__img::before {
