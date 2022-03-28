@@ -8236,12 +8236,18 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
-        var btns = document.getElementsByClassName("manifesto__item");
-        for (var i = 0; i < btns.length; i++) btns[i].addEventListener("mouseenter", (function() {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", " active");
-            this.className += " active";
-        }));
+        document.getElementById("btn").onclick = function() {
+            document.getElementById("map").classList.add("active");
+        };
+        let Wrapper = document.querySelector(".wrapper");
+        window.onload = function() {
+            document.body.classList.add("loaded_hiding");
+            window.setTimeout((function() {
+                document.body.classList.add("loaded");
+                document.body.classList.remove("loaded_hiding");
+                Wrapper.classList.add("preview");
+            }), 3e3);
+        };
         function mapAdd() {
             let tag = document.createElement("script");
             tag.src = "https://maps.google.com/maps/api/js?sensor=false&amp;key=&callback=mapInit";
