@@ -6903,7 +6903,7 @@
         function initSliders() {
             if (document.querySelector(".swiper")) new core(".swiper", {
                 modules: [ Navigation, EffectCoverflow ],
-                slidesPerView: 1,
+                slidesPerView: "auto",
                 spaceBetween: 0,
                 speed: 800,
                 observer: true,
@@ -6918,6 +6918,17 @@
                 navigation: {
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next"
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: "auto",
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
+                    992: {
+                        slidesPerView: "auto",
+                        spaceBetween: 20
+                    }
                 },
                 on: {}
             });

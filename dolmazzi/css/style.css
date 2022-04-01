@@ -1303,6 +1303,7 @@ h2 {
   position: relative;
   perspective: 1000px;
   background-color: #fff;
+  overflow: hidden;
 }
 .blog-main-item.blog-item-circle:hover .blog-item-circle__back {
   transform: rotateY(360deg);
@@ -4440,6 +4441,11 @@ h2 {
     }
   }
 }
+@media (max-width: 47.99875em) {
+  .form__title-other p {
+    line-height: 15px;
+  }
+}
 @media (max-width: 47.99875em) and (min-width: 22.5em) and (max-width: 47.9375em) {
   @supports (font-size: clamp( 0.875rem , 0.6538697789rem  +  0.9828009828vw , 1.125rem )) {
     .form__title-other p {
@@ -4586,6 +4592,13 @@ h2 {
   .slider__body {
     padding-top: 1.875rem;
   }
+}
+.slider__slide-img {
+  max-width: 100%;
+  height: 100%;
+}
+.slider__slide-img img {
+  max-width: 100%;
 }
 .slider__slide {
   width: 100%;
@@ -5179,10 +5192,12 @@ h2 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   position: relative;
-  border-top: 0.125rem solid #202B54;
-  border-bottom: 0.125rem solid #202B54;
-  border-right: 0.125rem solid #202B54;
-  border-left: 0.125rem solid #202B54;
+  border: 0.125rem solid #202B54;
+}
+@media (max-width: 47.99875em) {
+  .team__body {
+    border: 0.0625rem solid #202B54;
+  }
 }
 .team__body::before {
   content: "";
@@ -5658,8 +5673,8 @@ h2 {
 @media (max-width: 47.99875em) {
   .manifesto__item--01 .manifesto__img {
     width: 100%;
-    border-top: 1px solid #202B54;
-    border-bottom: 1px solid #202B54;
+    border-top: 0.125rem solid #202B54;
+    border-bottom: 0.125rem solid #202B54;
   }
 }
 .manifesto__item--01 .manifesto__img::before {
@@ -5679,6 +5694,11 @@ h2 {
 .manifesto__item--01 .manifesto__img svg {
   height: 100%;
   position: relative;
+}
+@media (max-width: 47.99875em) {
+  .manifesto__item--01 .manifesto__img svg {
+    width: 100%;
+  }
 }
 @media (min-width: 120em) {
   .manifesto__item--01 img {
@@ -5739,6 +5759,11 @@ h2 {
 .manifesto__item--02 .manifesto__img--02 {
   border-right: 0.125rem solid #202B54;
   border-left: 0.125rem solid #202B54;
+}
+@media (max-width: 47.99875em) {
+  .manifesto__item--02 .manifesto__img--02 {
+    border: 0.125rem solid #202B54;
+  }
 }
 .manifesto__item--02 .manifesto__img--02 .manifesto__img-elem {
   position: relative;
@@ -5815,8 +5840,9 @@ h2 {
 @media (max-width: 47.99875em) {
   .manifesto__item--03 .manifesto__img {
     width: 100%;
-    border-top: 1px solid #202B54;
-    border-bottom: 1px solid #202B54;
+    border-top: 0.125rem solid #202B54;
+    border-bottom: 0.125rem solid #202B54;
+    overflow: hidden;
   }
 }
 .manifesto__item--03 .manifesto__img::before {
@@ -5838,6 +5864,7 @@ h2 {
 }
 .manifesto__item--03 .manifesto__img .manifesto__elem-circle {
   width: 100%;
+  height: 100%;
 }
 .manifesto__item--03 .manifesto__img .manifesto__elem-circle .line {
   fill: none;
@@ -5850,6 +5877,12 @@ h2 {
   fill: #fff;
   position: relative;
 }
+@media (max-width: 47.99875em) {
+  .manifesto__item--03 .manifesto__img .manifesto__elem-circle svg {
+    min-height: 100%;
+    max-height: 100%;
+  }
+}
 .manifesto__item--03 .manifesto__img .manifesto__elem-circle::before {
   content: "";
   position: absolute;
@@ -5859,6 +5892,11 @@ h2 {
   transform: rotate(90deg);
   top: 50%;
   z-index: 1000;
+}
+@media (max-width: 47.99875em) {
+  .manifesto__item--03 .manifesto__img .manifesto__elem-circle::before {
+    left: 0;
+  }
 }
 @media (min-width: 120em) {
   .manifesto__item--03 .manifesto__img img {
@@ -5942,6 +5980,15 @@ h2 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+}
+@media (max-width: 47.99875em) {
+  .manifesto__item--04 .manifesto__img {
+    border-top: 0.125rem solid #202B54;
+    border-bottom: 0.125rem solid #202B54;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: 0.125rem;
+  }
 }
 .manifesto__item--04 .manifesto__img .zip-anemate {
   opacity: 0;
