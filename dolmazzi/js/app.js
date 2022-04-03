@@ -6829,92 +6829,157 @@
             });
             return $slideEl;
         }
-        function EffectCoverflow(_ref) {
+        function effect_virtual_transition_end_effectVirtualTransitionEnd(_ref) {
+            let {swiper, duration, transformEl, allSlides} = _ref;
+            const {slides, activeIndex, $wrapperEl} = swiper;
+            if (swiper.params.virtualTranslate && 0 !== duration) {
+                let eventTriggered = false;
+                let $transitionEndTarget;
+                if (allSlides) $transitionEndTarget = transformEl ? slides.find(transformEl) : slides; else $transitionEndTarget = transformEl ? slides.eq(activeIndex).find(transformEl) : slides.eq(activeIndex);
+                $transitionEndTarget.transitionEnd((() => {
+                    if (eventTriggered) return;
+                    if (!swiper || swiper.destroyed) return;
+                    eventTriggered = true;
+                    swiper.animating = false;
+                    const triggerEvents = [ "webkitTransitionEnd", "transitionend" ];
+                    for (let i = 0; i < triggerEvents.length; i += 1) $wrapperEl.trigger(triggerEvents[i]);
+                }));
+            }
+        }
+        function EffectCreative(_ref) {
             let {swiper, extendParams, on} = _ref;
             extendParams({
-                coverflowEffect: {
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    scale: 1,
-                    modifier: 1,
-                    slideShadows: true,
-                    transformEl: null
+                creativeEffect: {
+                    transformEl: null,
+                    limitProgress: 1,
+                    shadowPerProgress: false,
+                    progressMultiplier: 1,
+                    perspective: true,
+                    prev: {
+                        translate: [ 0, 0, 0 ],
+                        rotate: [ 0, 0, 0 ],
+                        opacity: 1,
+                        scale: 1
+                    },
+                    next: {
+                        translate: [ 0, 0, 0 ],
+                        rotate: [ 0, 0, 0 ],
+                        opacity: 1,
+                        scale: 1
+                    }
                 }
             });
+            const getTranslateValue = value => {
+                if ("string" === typeof value) return value;
+                return `${value}px`;
+            };
             const setTranslate = () => {
-                const {width: swiperWidth, height: swiperHeight, slides, slidesSizesGrid} = swiper;
-                const params = swiper.params.coverflowEffect;
-                const isHorizontal = swiper.isHorizontal();
-                const transform = swiper.translate;
-                const center = isHorizontal ? -transform + swiperWidth / 2 : -transform + swiperHeight / 2;
-                const rotate = isHorizontal ? params.rotate : -params.rotate;
-                const translate = params.depth;
-                for (let i = 0, length = slides.length; i < length; i += 1) {
+                const {slides, $wrapperEl, slidesSizesGrid} = swiper;
+                const params = swiper.params.creativeEffect;
+                const {progressMultiplier: multiplier} = params;
+                const isCenteredSlides = swiper.params.centeredSlides;
+                if (isCenteredSlides) {
+                    const margin = slidesSizesGrid[0] / 2 - swiper.params.slidesOffsetBefore || 0;
+                    $wrapperEl.transform(`translateX(calc(50% - ${margin}px))`);
+                }
+                for (let i = 0; i < slides.length; i += 1) {
                     const $slideEl = slides.eq(i);
-                    const slideSize = slidesSizesGrid[i];
-                    const slideOffset = $slideEl[0].swiperSlideOffset;
-                    const offsetMultiplier = (center - slideOffset - slideSize / 2) / slideSize * params.modifier;
-                    let rotateY = isHorizontal ? rotate * offsetMultiplier : 0;
-                    let rotateX = isHorizontal ? 0 : rotate * offsetMultiplier;
-                    let translateZ = -translate * Math.abs(offsetMultiplier);
-                    let stretch = params.stretch;
-                    if ("string" === typeof stretch && -1 !== stretch.indexOf("%")) stretch = parseFloat(params.stretch) / 100 * slideSize;
-                    let translateY = isHorizontal ? 0 : stretch * offsetMultiplier;
-                    let translateX = isHorizontal ? stretch * offsetMultiplier : 0;
-                    let scale = 1 - (1 - params.scale) * Math.abs(offsetMultiplier);
-                    if (Math.abs(translateX) < .001) translateX = 0;
-                    if (Math.abs(translateY) < .001) translateY = 0;
-                    if (Math.abs(translateZ) < .001) translateZ = 0;
-                    if (Math.abs(rotateY) < .001) rotateY = 0;
-                    if (Math.abs(rotateX) < .001) rotateX = 0;
-                    if (Math.abs(scale) < .001) scale = 0;
-                    const slideTransform = `translate3d(${translateX}px,${translateY}px,${translateZ}px)  rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
-                    const $targetEl = effect_target_effectTarget(params, $slideEl);
-                    $targetEl.transform(slideTransform);
-                    $slideEl[0].style.zIndex = -Math.abs(Math.round(offsetMultiplier)) + 1;
-                    if (params.slideShadows) {
-                        let $shadowBeforeEl = isHorizontal ? $slideEl.find(".swiper-slide-shadow-left") : $slideEl.find(".swiper-slide-shadow-top");
-                        let $shadowAfterEl = isHorizontal ? $slideEl.find(".swiper-slide-shadow-right") : $slideEl.find(".swiper-slide-shadow-bottom");
-                        if (0 === $shadowBeforeEl.length) $shadowBeforeEl = create_shadow_createShadow(params, $slideEl, isHorizontal ? "left" : "top");
-                        if (0 === $shadowAfterEl.length) $shadowAfterEl = create_shadow_createShadow(params, $slideEl, isHorizontal ? "right" : "bottom");
-                        if ($shadowBeforeEl.length) $shadowBeforeEl[0].style.opacity = offsetMultiplier > 0 ? offsetMultiplier : 0;
-                        if ($shadowAfterEl.length) $shadowAfterEl[0].style.opacity = -offsetMultiplier > 0 ? -offsetMultiplier : 0;
+                    const slideProgress = $slideEl[0].progress;
+                    const progress = Math.min(Math.max($slideEl[0].progress, -params.limitProgress), params.limitProgress);
+                    let originalProgress = progress;
+                    if (!isCenteredSlides) originalProgress = Math.min(Math.max($slideEl[0].originalProgress, -params.limitProgress), params.limitProgress);
+                    const offset = $slideEl[0].swiperSlideOffset;
+                    const t = [ swiper.params.cssMode ? -offset - swiper.translate : -offset, 0, 0 ];
+                    const r = [ 0, 0, 0 ];
+                    let custom = false;
+                    if (!swiper.isHorizontal()) {
+                        t[1] = t[0];
+                        t[0] = 0;
                     }
+                    let data = {
+                        translate: [ 0, 0, 0 ],
+                        rotate: [ 0, 0, 0 ],
+                        scale: 1,
+                        opacity: 1
+                    };
+                    if (progress < 0) {
+                        data = params.next;
+                        custom = true;
+                    } else if (progress > 0) {
+                        data = params.prev;
+                        custom = true;
+                    }
+                    t.forEach(((value, index) => {
+                        t[index] = `calc(${value}px + (${getTranslateValue(data.translate[index])} * ${Math.abs(progress * multiplier)}))`;
+                    }));
+                    r.forEach(((value, index) => {
+                        r[index] = data.rotate[index] * Math.abs(progress * multiplier);
+                    }));
+                    $slideEl[0].style.zIndex = -Math.abs(Math.round(slideProgress)) + slides.length;
+                    const translateString = t.join(", ");
+                    const rotateString = `rotateX(${r[0]}deg) rotateY(${r[1]}deg) rotateZ(${r[2]}deg)`;
+                    const scaleString = originalProgress < 0 ? `scale(${1 + (1 - data.scale) * originalProgress * multiplier})` : `scale(${1 - (1 - data.scale) * originalProgress * multiplier})`;
+                    const opacityString = originalProgress < 0 ? 1 + (1 - data.opacity) * originalProgress * multiplier : 1 - (1 - data.opacity) * originalProgress * multiplier;
+                    const transform = `translate3d(${translateString}) ${rotateString} ${scaleString}`;
+                    if (custom && data.shadow || !custom) {
+                        let $shadowEl = $slideEl.children(".swiper-slide-shadow");
+                        if (0 === $shadowEl.length && data.shadow) $shadowEl = create_shadow_createShadow(params, $slideEl);
+                        if ($shadowEl.length) {
+                            const shadowOpacity = params.shadowPerProgress ? progress * (1 / params.limitProgress) : progress;
+                            $shadowEl[0].style.opacity = Math.min(Math.max(Math.abs(shadowOpacity), 0), 1);
+                        }
+                    }
+                    const $targetEl = effect_target_effectTarget(params, $slideEl);
+                    $targetEl.transform(transform).css({
+                        opacity: opacityString
+                    });
+                    if (data.origin) $targetEl.css("transform-origin", data.origin);
                 }
             };
             const setTransition = duration => {
-                const {transformEl} = swiper.params.coverflowEffect;
+                const {transformEl} = swiper.params.creativeEffect;
                 const $transitionElements = transformEl ? swiper.slides.find(transformEl) : swiper.slides;
-                $transitionElements.transition(duration).find(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").transition(duration);
+                $transitionElements.transition(duration).find(".swiper-slide-shadow").transition(duration);
+                effect_virtual_transition_end_effectVirtualTransitionEnd({
+                    swiper,
+                    duration,
+                    transformEl,
+                    allSlides: true
+                });
             };
             effect_init_effectInit({
-                effect: "coverflow",
+                effect: "creative",
                 swiper,
                 on,
                 setTranslate,
                 setTransition,
-                perspective: () => true,
+                perspective: () => swiper.params.creativeEffect.perspective,
                 overwriteParams: () => ({
-                    watchSlidesProgress: true
+                    watchSlidesProgress: true,
+                    virtualTranslate: !swiper.params.cssMode
                 })
             });
         }
         function initSliders() {
             if (document.querySelector(".swiper")) new core(".swiper", {
-                modules: [ Navigation, EffectCoverflow ],
+                modules: [ Navigation, EffectCreative ],
                 slidesPerView: "auto",
                 spaceBetween: 0,
                 speed: 800,
                 observer: true,
                 watchOverflow: true,
                 observeParents: true,
-                effect: "coverflow",
-                coverflowEffect: {
-                    rotate: 230,
-                    slideShadows: true
-                },
                 grabCursor: true,
+                parallax: true,
+                effect: "creative",
+                creativeEffect: {
+                    prev: {
+                        translate: [ 0, 0, -400 ]
+                    },
+                    next: {
+                        translate: [ "100%", 0, 0 ]
+                    }
+                },
                 navigation: {
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next"
