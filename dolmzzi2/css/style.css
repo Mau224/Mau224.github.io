@@ -607,6 +607,7 @@ h2 {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  background-color: #E5E5E5;
 }
 @media (max-width: 61.99875em) and (min-width: 47.9375em) and (max-width: 61.9375em) {
   @supports (height: clamp( 21.25rem , 8.4095982143rem  +  26.7857142857vw , 25rem )) {
@@ -890,7 +891,6 @@ h2 {
   -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 120em) {
   .blog-item__front {
@@ -3151,6 +3151,20 @@ h2 {
 .footer__column-list a {
   margin-bottom: 0.4375rem;
   max-width: 15.3125rem;
+  position: relative;
+  width: min-content;
+}
+.footer__column-list a:hover::before {
+  width: 100%;
+}
+.footer__column-list a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.125rem;
+  background-color: #202B54;
+  bottom: 0;
+  transition: 0.7s width;
 }
 .footer__main-text {
   display: flex;
