@@ -549,11 +549,6 @@ h2 {
   background-color: transparent;
   width: 100%;
 }
-@media (max-width: 61.99875em) {
-  .blog-item-one {
-    padding: 0.6875rem;
-  }
-}
 @media (max-width: 61.99875em) and (min-width: 47.9375em) and (max-width: 61.9375em) {
   @supports (height: clamp( 21.25rem , 8.4095982143rem  +  26.7857142857vw , 25rem )) {
     .blog-item-one {
@@ -1099,7 +1094,10 @@ h2 {
 }
 @media (max-width: 61.99875em) {
   .blog-item-zip__img {
-    height: 18.75rem;
+    height: 16.875rem;
+  }
+  .blog-item-zip__img img {
+    width: auto !important;
   }
 }
 @media (max-width: 47.99875em) {
@@ -2379,7 +2377,7 @@ h2 {
 .blog-item-cof-2 .blog-item__wrap {
   background: url(../img/z.svg) no-repeat;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
 }
 @media (max-width: 61.99875em) {
   .blog-item-cof-2 .blog-item__wrap {
