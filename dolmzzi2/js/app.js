@@ -6793,6 +6793,85 @@
                 destroy
             });
         }
+        function Parallax(_ref) {
+            let {swiper, extendParams, on} = _ref;
+            extendParams({
+                parallax: {
+                    enabled: false
+                }
+            });
+            const setTransform = (el, progress) => {
+                const {rtl} = swiper;
+                const $el = dom(el);
+                const rtlFactor = rtl ? -1 : 1;
+                const p = $el.attr("data-swiper-parallax") || "0";
+                let x = $el.attr("data-swiper-parallax-x");
+                let y = $el.attr("data-swiper-parallax-y");
+                const scale = $el.attr("data-swiper-parallax-scale");
+                const opacity = $el.attr("data-swiper-parallax-opacity");
+                if (x || y) {
+                    x = x || "0";
+                    y = y || "0";
+                } else if (swiper.isHorizontal()) {
+                    x = p;
+                    y = "0";
+                } else {
+                    y = p;
+                    x = "0";
+                }
+                if (x.indexOf("%") >= 0) x = `${parseInt(x, 10) * progress * rtlFactor}%`; else x = `${x * progress * rtlFactor}px`;
+                if (y.indexOf("%") >= 0) y = `${parseInt(y, 10) * progress}%`; else y = `${y * progress}px`;
+                if ("undefined" !== typeof opacity && null !== opacity) {
+                    const currentOpacity = opacity - (opacity - 1) * (1 - Math.abs(progress));
+                    $el[0].style.opacity = currentOpacity;
+                }
+                if ("undefined" === typeof scale || null === scale) $el.transform(`translate3d(${x}, ${y}, 0px)`); else {
+                    const currentScale = scale - (scale - 1) * (1 - Math.abs(progress));
+                    $el.transform(`translate3d(${x}, ${y}, 0px) scale(${currentScale})`);
+                }
+            };
+            const setTranslate = () => {
+                const {$el, slides, progress, snapGrid} = swiper;
+                $el.children("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").each((el => {
+                    setTransform(el, progress);
+                }));
+                slides.each(((slideEl, slideIndex) => {
+                    let slideProgress = slideEl.progress;
+                    if (swiper.params.slidesPerGroup > 1 && "auto" !== swiper.params.slidesPerView) slideProgress += Math.ceil(slideIndex / 2) - progress * (snapGrid.length - 1);
+                    slideProgress = Math.min(Math.max(slideProgress, -1), 1);
+                    dom(slideEl).find("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").each((el => {
+                        setTransform(el, slideProgress);
+                    }));
+                }));
+            };
+            const setTransition = function(duration) {
+                if (void 0 === duration) duration = swiper.params.speed;
+                const {$el} = swiper;
+                $el.find("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").each((parallaxEl => {
+                    const $parallaxEl = dom(parallaxEl);
+                    let parallaxDuration = parseInt($parallaxEl.attr("data-swiper-parallax-duration"), 10) || duration;
+                    if (0 === duration) parallaxDuration = 0;
+                    $parallaxEl.transition(parallaxDuration);
+                }));
+            };
+            on("beforeInit", (() => {
+                if (!swiper.params.parallax.enabled) return;
+                swiper.params.watchSlidesProgress = true;
+                swiper.originalParams.watchSlidesProgress = true;
+            }));
+            on("init", (() => {
+                if (!swiper.params.parallax.enabled) return;
+                setTranslate();
+            }));
+            on("setTranslate", (() => {
+                if (!swiper.params.parallax.enabled) return;
+                setTranslate();
+            }));
+            on("setTransition", ((_swiper, duration) => {
+                if (!swiper.params.parallax.enabled) return;
+                setTransition(duration);
+            }));
+        }
         function create_shadow_createShadow(params, $slideEl, side) {
             const shadowClass = `swiper-slide-shadow${side ? `-${side}` : ""}`;
             const $shadowContainer = params.transformEl ? $slideEl.find(params.transformEl) : $slideEl;
@@ -6960,15 +7039,18 @@
                 })
             });
         }
+        var interleaveOffset = .5;
         function initSliders() {
             if (document.querySelector(".swiper")) new core(".swiper", {
-                modules: [ Navigation, EffectCreative ],
+                modules: [ Navigation, EffectCreative, Parallax ],
                 slidesPerView: "auto",
                 spaceBetween: 0,
-                speed: 800,
+                speed: 1e3,
+                mousewheelControl: true,
                 observer: true,
                 watchOverflow: true,
                 observeParents: true,
+                watchSlidesProgress: true,
                 grabCursor: true,
                 parallax: true,
                 effect: "creative",
@@ -6995,7 +7077,28 @@
                         spaceBetween: 20
                     }
                 },
-                on: {}
+                on: {
+                    progress: function() {
+                        var swiper = this;
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            var slideProgress = swiper.slides[i].progress;
+                            var innerOffset = swiper.width * interleaveOffset;
+                            var innerTranslate = slideProgress * innerOffset;
+                            swiper.slides[i].querySelector(".slide-inner").style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+                        }
+                    },
+                    touchStart: function() {
+                        var swiper = this;
+                        for (var i = 0; i < swiper.slides.length; i++) swiper.slides[i].style.transition = "";
+                    },
+                    setTransition: function(speed) {
+                        var swiper = this;
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            swiper.slides[i].style.transition = speed + "ms";
+                            swiper.slides[i].querySelector(".slide-inner").style.transition = speed + "ms";
+                        }
+                    }
+                }
             });
         }
         window.addEventListener("load", (function(e) {
@@ -13095,68 +13198,62 @@
         };
         ScrollTrigger_getGSAP() && ScrollTrigger_gsap.registerPlugin(ScrollTrigger_ScrollTrigger);
         gsapWithCSS.registerPlugin(ScrollTrigger_ScrollTrigger);
+        let scrolledPreview = false;
         document.addEventListener("DOMContentLoaded", (function(event) {
             window.onload = function() {
                 window.requestAnimationFrame((function() {
-                    const loaderTimeline = gsapWithCSS.timeline();
-                    loaderTimeline.to(".wrapper-preview", {
-                        delay: .1
-                    }).to(".wrapper-preview", {
-                        y: "100%",
-                        zIndex: 1002,
-                        background: "#fff"
-                    }).to(".wrapper-preview", {
-                        y: "0%",
-                        delay: 2,
-                        duration: 1
-                    }).to(".preloader", {
-                        display: "none",
-                        delay: 1
-                    }).to(".wrapper-preview", {
-                        zIndex: 1,
-                        delay: 1
-                    });
-                    const tl = gsapWithCSS.timeline({
-                        defaults: {
-                            ease: "none"
+                    window.addEventListener("scroll", (() => {
+                        if (pageYOffset > 1 && !scrolledPreview) {
+                            scrolledPreview = true;
+                            const tl = gsapWithCSS.timeline();
+                            tl.to(".wrapper-preview", {
+                                y: 0,
+                                duration: .5
+                            }).to(".preloader", {
+                                display: "none",
+                                delay: .5
+                            });
+                            setTimeout((() => {
+                                const prevBlockOffset = document.querySelector(".prev__blok > p").getBoundingClientRect().top;
+                                const prevImgOffset = document.querySelector(".prev__img-wrapper").getBoundingClientRect().top;
+                                const translateImage = prevImgOffset - prevBlockOffset;
+                                const tl = gsapWithCSS.timeline({
+                                    scrollTrigger: {
+                                        scrub: true,
+                                        pin: true,
+                                        pinSpacing: true,
+                                        pinReparent: true,
+                                        trigger: ".wrapper-preview"
+                                    }
+                                });
+                                tl.to(".prev__img", {
+                                    y: -translateImage
+                                }).to(".prev__blok p", {
+                                    opacity: 0
+                                }).to(".prev__img-block h2", {
+                                    opacity: 1,
+                                    display: "flex"
+                                }).add("image-downscale").to(".prev__img-wrapper", {
+                                    scale: .6
+                                }, "image-downscale").to(".prev__main-title", {
+                                    opacity: 0,
+                                    display: "none"
+                                }, "image-downscale").to(".prev__text-block", {
+                                    display: "block",
+                                    opacity: 1
+                                }, "image-downscale");
+                            }), 500);
                         }
-                    });
-                    const imageAnimation = tl.to(".prev__img", {
-                        y: -350,
-                        duration: .5
-                    }).to(".prev__blok p", {
-                        opacity: 0
-                    }).to(".prev__img-block h2", {
-                        opacity: 1,
-                        display: "flex"
-                    }).add("image-upscale").to(".prev__img-wrapper", {
-                        scale: 1.2,
-                        duration: 1
-                    }, "image-scale").to(".prev__img-block img", {
-                        scale: .83,
-                        duration: 1
-                    }, "image-scale").add("image-downscale").to(".prev__img-wrapper", {
-                        scale: .6,
-                        duration: 1
-                    }, "image-downscale").to(".prev__main-title", {
-                        opacity: 0,
-                        display: "none"
-                    }, "image-downscale").to(".prev__text-block", {
-                        display: "block",
-                        opacity: 1
-                    }, "image-downscale");
-                    ScrollTrigger_ScrollTrigger.create({
-                        animation: imageAnimation,
-                        trigger: ".prev__blok",
-                        scroller: ".prev__container",
-                        start: "top top",
-                        end: "bottom center+=200px"
-                    });
+                    }));
                 }));
             };
         }));
         document.addEventListener("DOMContentLoaded", (function(event) {
-            document.querySelector(".btn-map").addEventListener("click", (() => {
+            document.querySelector(".btn-map").addEventListener("click", (e => {
+                e.preventDefault();
+                gsapWithCSS.to("body", {
+                    overflow: "hidden"
+                });
                 document.querySelector(".prev__map").classList.add("active");
             }));
         }));
