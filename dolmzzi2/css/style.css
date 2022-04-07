@@ -2697,7 +2697,7 @@ h2 {
   content: "";
   position: absolute;
   width: 0;
-  height: 0.125rem;
+  height: 0.0625rem;
   background-color: #202B54;
   bottom: 0;
   transition: 0.7s width;
@@ -6728,6 +6728,53 @@ h2 {
   position: relative;
   overflow: hidden;
 }
+.prev__back-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 5.625rem;
+}
+.prev__back-btn a {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3888888889;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  position: relative;
+}
+@media (min-width: 116.8125em) {
+  .prev__back-btn a {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 116.8125em) {
+  @supports (font-size: clamp( 1rem , 0.9741768883rem  +  0.1291155584vw , 1.125rem )) {
+    .prev__back-btn a {
+      font-size: clamp( 1rem , 0.9741768883rem  +  0.1291155584vw , 1.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 1rem , 0.9741768883rem  +  0.1291155584vw , 1.125rem )) {
+    .prev__back-btn a {
+      font-size: calc(1rem + 0.125 * (100vw - 20rem) / 96.8125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .prev__back-btn a {
+    font-size: 1rem;
+  }
+}
+.prev__back-btn a:hover::before {
+  width: 100%;
+}
+.prev__back-btn a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.0625rem;
+  background-color: #202B54;
+  bottom: 0;
+  transition: 0.7s width;
+}
 .prev__map {
   position: absolute;
   width: 50%;
@@ -6905,6 +6952,7 @@ h2 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: #fff;
 }
 .prev__text h1 {
@@ -6970,12 +7018,12 @@ h2 {
   opacity: 0;
   height: 100%;
   background: #fff;
-  padding-left: 1.25rem;
   padding-top: 1.25rem;
 }
 .prev__text .prev__text-block p {
   line-height: 1.1;
   padding-right: 1.25rem;
+  padding-left: 1.25rem;
 }
 @media (min-width: 116.8125em) {
   .prev__text .prev__text-block p {
@@ -7104,20 +7152,19 @@ h2 {
   }
 }
 @media (min-width: 61.9375em) and (max-width: 120em) {
-  @supports (font-size: clamp( 4.375rem , -0.4253229279rem  +  7.7502691066vw , 8.875rem )) {
+  @supports (font-size: clamp( 3.125rem , -3.0087459634rem  +  9.9031216362vw , 8.875rem )) {
     .prev__img-wrap .prev__img-block h2 {
-      font-size: clamp( 4.375rem , -0.4253229279rem  +  7.7502691066vw , 8.875rem );
+      font-size: clamp( 3.125rem , -3.0087459634rem  +  9.9031216362vw , 8.875rem );
     }
   }
-  @supports not (font-size: clamp( 4.375rem , -0.4253229279rem  +  7.7502691066vw , 8.875rem )) {
+  @supports not (font-size: clamp( 3.125rem , -3.0087459634rem  +  9.9031216362vw , 8.875rem )) {
     .prev__img-wrap .prev__img-block h2 {
-      font-size: calc(4.375rem + 4.5 * (100vw - 61.9375rem) / 58.0625);
+      font-size: calc(3.125rem + 5.75 * (100vw - 61.9375rem) / 58.0625);
     }
   }
 }
 .prev__img-wrap .prev__img-block h2:last-child {
   position: relative;
-  top: 1.875rem;
 }
 @media (min-width: 116.8125em) {
   .prev__img-wrap .prev__img-block h2:last-child {
@@ -7146,6 +7193,7 @@ h2 {
   background: #E5E5E5;
   /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
   z-index: 1001;
+  padding-bottom: 1.25rem;
 }
 
 .preloader__text {
@@ -7157,6 +7205,7 @@ h2 {
   line-height: 13px;
   text-transform: uppercase;
   text-align: left;
+  margin-left: 1.25rem;
 }
 @media (min-width: 120em) {
   .preloader__text p {
@@ -7226,7 +7275,6 @@ h2 {
   white-space: nowrap;
   animation: 10s linear 0s normal none infinite running left;
   position: relative;
-  height: 20%;
 }
 
 .preloader__item:last-child {
