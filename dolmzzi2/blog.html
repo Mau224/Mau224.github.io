@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220407230202">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220501130245">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,15 +78,15 @@
 													</div>
 												</div>
 												<div class="blog-item__back">
-													<picture><source srcset="img/prev-video.webp" type="image/webp"><img src="img/prev-video.jpg" alt=""></picture>
+													<video id="video" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" poster="img/prev-video.jpg"></video>
 													<div class="blog-item__video">
 														<div class="blog-item__video-player">
-															<div class="blog-item__video-player-btn"></div>
-															<p>10:40</p>
+															<div id="video-play-icon" class="blog-item__video-player-btn"></div>
+															<p id="video-current-time">00:00</p>
 															<div class="blog-item__player-progress-bar">
-																<div class="blog-item__player-progress"></div>
+																<div id="video-seek-slider" class="blog-item__player-progress"></div>
 															</div>
-															<p>10:40</p>
+															<p id="video-duration">00:00</p>
 														</div>
 														<h4>LEGO x Adidas Originals
 															Superstar Set</h4>
@@ -106,25 +106,36 @@
 															Superstar Set</h4>
 													</div>
 												</div>
-												<div class="blog-item-zip__back">
-													<h4>CGI Recreation
-														of the iconic Lancia Stratos HF Zero</h4>
+												<div id="audio-player-container" class="blog-item-zip__back">
+													<audio id="audio" preload="metadata"></audio>
+													<script>
+														window.tracks = [{
+																name: 'CGI Recreation\nof the iconic Lancia Stratos HF Zero',
+																src: 'https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3',
+															},
+															{
+																name: 'Test',
+																src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+															},
+														];
+													</script>
+													<h4 id="audio-title"></h4>
 													<div class="blog-item__player">
 														<div class="blog-item__player-progress-bar">
-															<div class="blog-item__player-progress"></div>
+															<div id="seek-slider" class="blog-item__player-progress"></div>
 														</div>
 														<div class="blog-item__player-timer">
-															<p>10:40</p>
-															<p>10:40</p>
+															<p id="current-time">0:00</p>
+															<p id="duration">0:00</p>
 														</div>
 
 														<div class="blog-item__player-btns">
-															<div class="blog-item__player-btns-left">
+															<div id="previous-icon" class="blog-item__player-btns-left">
 																<p>10</p>
 																<img src="img/audio-arrow.svg" alt="">
 															</div>
-															<div class="blog-item__player-btns-center"></div>
-															<div class="blog-item__player-btns-right">
+															<div id="play-icon" class="blog-item__player-btns-center"></div>
+															<div id="next-icon" class="blog-item__player-btns-right">
 																<img src="img/audio-arrow.svg" alt="">
 																<p>10</p>
 															</div>
@@ -414,7 +425,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220407230202"></script>
-	<script src="https://cdn.plyr.io/3.6.3/plyr.js?_v=20220407230202"></script>
+	<script src="js/app.min.js?_v=20220501130245"></script>
+	<script src="https://cdn.plyr.io/3.6.3/plyr.js?_v=20220501130245"></script>
 
 </body>

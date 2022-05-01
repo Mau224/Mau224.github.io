@@ -13198,58 +13198,87 @@
         };
         ScrollTrigger_getGSAP() && ScrollTrigger_gsap.registerPlugin(ScrollTrigger_ScrollTrigger);
         gsapWithCSS.registerPlugin(ScrollTrigger_ScrollTrigger);
+        (function() {
+            const throttle = function(type, name, obj) {
+                obj = obj || window;
+                let running = false;
+                const func = function() {
+                    if (running) return;
+                    running = true;
+                    requestAnimationFrame((() => {
+                        obj.dispatchEvent(new CustomEvent(name));
+                        running = false;
+                    }));
+                };
+                obj.addEventListener(type, func);
+            };
+            throttle("resize", "optimizedResize");
+        })();
         let scrolledPreview = false;
         document.addEventListener("DOMContentLoaded", (function(event) {
             window.onload = function() {
-                window.requestAnimationFrame((function() {
-                    window.addEventListener("scroll", (() => {
-                        if (pageYOffset > 1 && !scrolledPreview) {
-                            scrolledPreview = true;
-                            const tl = gsapWithCSS.timeline();
-                            tl.to(".wrapper-preview", {
-                                y: 0,
-                                duration: .5
-                            }).to(".preloader", {
-                                display: "none",
-                                delay: .5
-                            });
-                            setTimeout((() => {
-                                const prevBlockOffset = document.querySelector(".prev__blok > p").getBoundingClientRect().top;
-                                const prevImgOffset = document.querySelector(".prev__img-wrapper").getBoundingClientRect().top;
-                                const translateImage = prevImgOffset - prevBlockOffset;
-                                const tl = gsapWithCSS.timeline({
-                                    scrollTrigger: {
-                                        scrub: true,
-                                        pin: true,
-                                        pinSpacing: true,
-                                        pinReparent: true,
-                                        trigger: ".wrapper-preview"
-                                    }
-                                });
-                                tl.to(".prev__img", {
-                                    y: -translateImage
-                                }).to(".prev__blok p", {
-                                    opacity: 0
-                                }).to(".prev__img-block h2", {
-                                    opacity: 1,
-                                    display: "flex"
-                                }).add("image-downscale").to(".prev__img-wrapper", {
-                                    scale: .6
-                                }, "image-downscale").to(".prev__main-title", {
-                                    opacity: 0,
-                                    display: "none"
-                                }, "image-downscale").to(".prev__text-block", {
-                                    display: "block",
-                                    opacity: 1
-                                }, "image-downscale");
-                            }), 500);
-                        }
-                    }));
+                const wrapperPreview = document.querySelector(".wrapper-preview");
+                const prevBlock = document.querySelector(".prev__blok > p");
+                const prevImg = document.querySelector(".prev__img-wrapper");
+                let prevBlockOffset = prevBlock.getBoundingClientRect().top;
+                let prevImgOffset = prevImg.getBoundingClientRect().top;
+                let translateImage = prevImgOffset - prevBlockOffset;
+                window.addEventListener("optimizedResize", (() => {
+                    prevBlockOffset = prevBlock.getBoundingClientRect().top;
+                    prevImgOffset = prevImg.getBoundingClientRect().top;
+                    translateImage = prevImgOffset - prevBlockOffset;
                 }));
+                if (wrapperPreview) {
+                    if (history.scrollRestoration) history.scrollRestoration = "manual"; else window.onbeforeunload = function() {
+                        window.scrollTo(0, 0);
+                    };
+                    window.requestAnimationFrame((function() {
+                        window.addEventListener("wheel", (e => {
+                            if (e.deltaY > 1 && !scrolledPreview) {
+                                scrolledPreview = true;
+                                const scrollFunction = () => {
+                                    const tl = gsapWithCSS.timeline({
+                                        scrollTrigger: {
+                                            scrub: true,
+                                            pin: true,
+                                            pinSpacing: true,
+                                            pinReparent: true,
+                                            trigger: ".wrapper-preview"
+                                        }
+                                    });
+                                    tl.to(".prev__img", {
+                                        y: -translateImage
+                                    }).to(".prev__blok p", {
+                                        opacity: 0,
+                                        duration: 0
+                                    }).add("image-downscale").to(".prev__img-wrapper", {
+                                        scale: .6
+                                    }, "image-downscale").to(".prev__main-title", {
+                                        opacity: 0,
+                                        display: "none"
+                                    }, "image-downscale").to(".prev__text-block", {
+                                        display: "block",
+                                        opacity: 1
+                                    }, "image-downscale");
+                                };
+                                const tl = gsapWithCSS.timeline({
+                                    onComplete: scrollFunction
+                                });
+                                tl.to(".wrapper-preview", {
+                                    y: 0,
+                                    duration: .5
+                                }).to(".preloader", {
+                                    display: "none"
+                                });
+                            }
+                        }));
+                    }));
+                }
             };
         }));
         document.addEventListener("DOMContentLoaded", (function(event) {
-            document.querySelector(".btn-map").addEventListener("click", (e => {
+            const buttonMap = document.querySelector(".btn-map");
+            buttonMap && buttonMap.addEventListener("click", (e => {
                 e.preventDefault();
                 gsapWithCSS.to("body", {
                     overflow: "hidden"
@@ -13257,6 +13286,136 @@
                 document.querySelector(".prev__map").classList.add("active");
             }));
         }));
+        const playIconContainer = document.getElementById("play-icon");
+        const nextIconContainer = document.getElementById("next-icon");
+        const previousIconContainer = document.getElementById("previous-icon");
+        const seekSlider = document.getElementById("seek-slider");
+        const audioTitle = document.getElementById("audio-title");
+        let playState = "play";
+        const audio = document.getElementById("audio");
+        const durationContainer = document.getElementById("duration");
+        const currentTimeContainer = document.getElementById("current-time");
+        let raf = null;
+        let currentTrackId;
+        const tracks = window.tracks;
+        if (playIconContainer && seekSlider && audio && durationContainer && currentTimeContainer && previousIconContainer && nextIconContainer) {
+            currentTrackId = 0;
+            const loadTrack = nextTrackId => {
+                const nextTrack = tracks[nextTrackId];
+                audio.src = nextTrack.src;
+                audio.load();
+                audioTitle.textContent = nextTrack.name;
+            };
+            const playNextTrack = () => {
+                audio.pause();
+                let nextTrackId = 0;
+                if (currentTrackId < tracks.length - 1) nextTrackId = currentTrackId + 1;
+                currentTrackId = nextTrackId;
+                loadTrack(nextTrackId);
+                audio.play();
+            };
+            const playPreviousTrack = () => {
+                audio.pause();
+                let nextTrackId = tracks.length - 1;
+                if (currentTrackId - 1 >= 0) nextTrackId = currentTrackId - 1;
+                currentTrackId = nextTrackId;
+                loadTrack(nextTrackId);
+                audio.play();
+            };
+            loadTrack(currentTrackId);
+            audio.addEventListener("ended", (() => {
+                playNextTrack();
+            }));
+            playIconContainer.addEventListener("click", (() => {
+                if ("play" === playState) {
+                    audio.play();
+                    playIconContainer.classList.add("active");
+                    requestAnimationFrame(whilePlaying);
+                    playState = "pause";
+                } else {
+                    audio.pause();
+                    cancelAnimationFrame(raf);
+                    playState = "play";
+                    playIconContainer.classList.remove("active");
+                }
+            }));
+            nextIconContainer.addEventListener("click", (() => {
+                playNextTrack();
+            }));
+            previousIconContainer.addEventListener("click", (() => {
+                playPreviousTrack();
+            }));
+            const calculateTime = secs => {
+                const minutes = Math.floor(secs / 60);
+                const seconds = Math.floor(secs % 60);
+                const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+                return `${minutes}:${returnedSeconds}`;
+            };
+            const displayDuration = () => {
+                durationContainer.textContent = calculateTime(audio.duration);
+            };
+            const setSliderMax = () => {
+                seekSlider.max = Math.floor(audio.duration);
+            };
+            const whilePlaying = () => {
+                seekSlider.value = Math.floor(audio.currentTime);
+                currentTimeContainer.textContent = calculateTime(seekSlider.value);
+                seekSlider.style.setProperty("width", `${seekSlider.value / seekSlider.max * 100}%`);
+                raf = requestAnimationFrame(whilePlaying);
+            };
+            if (audio.readyState > 0) {
+                displayDuration();
+                setSliderMax();
+            } else audio.addEventListener("loadedmetadata", (() => {
+                displayDuration();
+                setSliderMax();
+            }));
+        }
+        const videoplayer_playIconContainer = document.getElementById("video-play-icon");
+        const videoplayer_seekSlider = document.getElementById("video-seek-slider");
+        const video = document.getElementById("video");
+        const videoplayer_durationContainer = document.getElementById("video-duration");
+        const videoplayer_currentTimeContainer = document.getElementById("video-current-time");
+        let videoplayer_playState = "play";
+        let videoplayer_raf = null;
+        if (videoplayer_playIconContainer && videoplayer_seekSlider && video && videoplayer_durationContainer && videoplayer_currentTimeContainer) {
+            videoplayer_playIconContainer.addEventListener("click", (() => {
+                if ("play" === videoplayer_playState) {
+                    video.play();
+                    requestAnimationFrame(whilePlaying);
+                    videoplayer_playState = "pause";
+                } else {
+                    video.pause();
+                    cancelAnimationFrame(videoplayer_raf);
+                    videoplayer_playState = "play";
+                }
+            }));
+            const calculateTime = secs => {
+                const minutes = Math.floor(secs / 60);
+                const seconds = Math.floor(secs % 60);
+                const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+                return `${minutes}:${returnedSeconds}`;
+            };
+            const displayDuration = () => {
+                videoplayer_durationContainer.textContent = calculateTime(video.duration);
+            };
+            const setSliderMax = () => {
+                videoplayer_seekSlider.max = Math.floor(video.duration);
+            };
+            const whilePlaying = () => {
+                videoplayer_seekSlider.value = Math.floor(video.currentTime);
+                videoplayer_currentTimeContainer.textContent = calculateTime(videoplayer_seekSlider.value);
+                videoplayer_seekSlider.style.setProperty("width", `${videoplayer_seekSlider.value / videoplayer_seekSlider.max * 100}%`);
+                videoplayer_raf = requestAnimationFrame(whilePlaying);
+            };
+            if (video.readyState > 0) {
+                displayDuration();
+                setSliderMax();
+            } else video.addEventListener("loadedmetadata", (() => {
+                displayDuration();
+                setSliderMax();
+            }));
+        }
         window["FLS"] = true;
         isWebp();
         menuInit();
