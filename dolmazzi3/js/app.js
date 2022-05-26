@@ -13220,8 +13220,8 @@
                 const wrapperPreview = document.querySelector(".wrapper-preview");
                 const prevBlock = document.querySelector(".prev__blok > p");
                 const prevImg = document.querySelector(".prev__img-wrapper");
-                let prevBlockOffset = prevBlock ? prevBlock.getBoundingClientRect().top : 0;
-                let prevImgOffset = prevImg ? prevImg.getBoundingClientRect().top : 0;
+                let prevBlockOffset = prevBlock.getBoundingClientRect().top;
+                let prevImgOffset = prevImg.getBoundingClientRect().top;
                 let translateImage = prevImgOffset - prevBlockOffset;
                 window.addEventListener("optimizedResize", (() => {
                     prevBlockOffset = prevBlock.getBoundingClientRect().top;
@@ -13229,6 +13229,15 @@
                     translateImage = prevImgOffset - prevBlockOffset;
                 }));
                 if (wrapperPreview) {
+                    gsapWithCSS.to(".scroll-text__part", {
+                        xPercent: -100,
+                        repeat: -1,
+                        duration: 10,
+                        ease: "linear"
+                    }).totalProgress(.5);
+                    gsapWithCSS.set(".scroll-text__wrapper", {
+                        xPercent: -50
+                    });
                     if (history.scrollRestoration) history.scrollRestoration = "manual"; else window.onbeforeunload = function() {
                         window.scrollTo(0, 0);
                     };
@@ -13286,176 +13295,138 @@
                 document.querySelector(".prev__map").classList.add("active");
             }));
         }));
-        const audioPlayer = function(element) {
-            const playIconContainer = element.querySelector(".play-icon");
-            const nextIconContainer = element.querySelector(".next-icon");
-            const previousIconContainer = element.querySelector(".previous-icon");
-            const seekSlider = element.querySelector(".seek-slider");
-            const audioTitle = element.querySelector(".audio-title");
-            let playState = "play";
-            const audio = element.querySelector(".audio");
-            const durationContainer = element.querySelector(".duration");
-            const currentTimeContainer = element.querySelector(".current-time");
-            let raf = null;
-            let currentTrackId;
-            let tracks = element.getAttribute("data-src");
-            tracks = JSON.parse(tracks);
-            if (playIconContainer && seekSlider && audio && durationContainer && currentTimeContainer && previousIconContainer && nextIconContainer) {
-                currentTrackId = 0;
-                const loadTrack = nextTrackId => {
-                    const nextTrack = tracks[nextTrackId];
-                    audio.src = nextTrack.src;
-                    audio.load();
-                    audioTitle.textContent = nextTrack.name;
-                };
-                const playNextTrack = () => {
-                    audio.pause();
-                    let nextTrackId = 0;
-                    if (currentTrackId < tracks.length - 1) nextTrackId = currentTrackId + 1;
-                    currentTrackId = nextTrackId;
-                    loadTrack(nextTrackId);
+        const playIconContainer = document.getElementById("play-icon");
+        const nextIconContainer = document.getElementById("next-icon");
+        const previousIconContainer = document.getElementById("previous-icon");
+        const seekSlider = document.getElementById("seek-slider");
+        const audioTitle = document.getElementById("audio-title");
+        let playState = "play";
+        const audio = document.getElementById("audio");
+        const durationContainer = document.getElementById("duration");
+        const currentTimeContainer = document.getElementById("current-time");
+        let raf = null;
+        let currentTrackId;
+        const tracks = window.tracks;
+        if (playIconContainer && seekSlider && audio && durationContainer && currentTimeContainer && previousIconContainer && nextIconContainer) {
+            currentTrackId = 0;
+            const loadTrack = nextTrackId => {
+                const nextTrack = tracks[nextTrackId];
+                audio.src = nextTrack.src;
+                audio.load();
+                audioTitle.textContent = nextTrack.name;
+            };
+            const playNextTrack = () => {
+                audio.pause();
+                let nextTrackId = 0;
+                if (currentTrackId < tracks.length - 1) nextTrackId = currentTrackId + 1;
+                currentTrackId = nextTrackId;
+                loadTrack(nextTrackId);
+                audio.play();
+            };
+            const playPreviousTrack = () => {
+                audio.pause();
+                let nextTrackId = tracks.length - 1;
+                if (currentTrackId - 1 >= 0) nextTrackId = currentTrackId - 1;
+                currentTrackId = nextTrackId;
+                loadTrack(nextTrackId);
+                audio.play();
+            };
+            loadTrack(currentTrackId);
+            audio.addEventListener("ended", (() => {
+                playNextTrack();
+            }));
+            playIconContainer.addEventListener("click", (() => {
+                if ("play" === playState) {
                     audio.play();
-                };
-                const playPreviousTrack = () => {
+                    playIconContainer.classList.add("active");
+                    requestAnimationFrame(whilePlaying);
+                    playState = "pause";
+                } else {
                     audio.pause();
-                    let nextTrackId = tracks.length - 1;
-                    if (currentTrackId - 1 >= 0) nextTrackId = currentTrackId - 1;
-                    currentTrackId = nextTrackId;
-                    loadTrack(nextTrackId);
-                    audio.play();
-                };
-                loadTrack(currentTrackId);
-                audio.addEventListener("ended", (() => {
-                    playNextTrack();
-                }));
-                playIconContainer.addEventListener("click", (() => {
-                    if ("play" === playState) {
-                        audio.play();
-                        playIconContainer.classList.add("active");
-                        requestAnimationFrame(whilePlaying);
-                        playState = "pause";
-                    } else {
-                        audio.pause();
-                        cancelAnimationFrame(raf);
-                        playState = "play";
-                        playIconContainer.classList.remove("active");
-                    }
-                }));
-                nextIconContainer.addEventListener("click", (() => {
-                    playNextTrack();
-                }));
-                previousIconContainer.addEventListener("click", (() => {
-                    playPreviousTrack();
-                }));
-                const calculateTime = secs => {
-                    const minutes = Math.floor(secs / 60);
-                    const seconds = Math.floor(secs % 60);
-                    const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-                    return `${minutes}:${returnedSeconds}`;
-                };
-                const displayDuration = () => {
-                    durationContainer.textContent = calculateTime(audio.duration);
-                };
-                const setSliderMax = () => {
-                    seekSlider.max = Math.floor(audio.duration);
-                };
-                const whilePlaying = () => {
-                    seekSlider.value = Math.floor(audio.currentTime);
-                    currentTimeContainer.textContent = calculateTime(seekSlider.value);
-                    raf = requestAnimationFrame(whilePlaying);
-                };
-                if (audio.readyState > 0) {
-                    displayDuration();
-                    setSliderMax();
-                } else audio.addEventListener("loadedmetadata", (() => {
-                    displayDuration();
-                    setSliderMax();
-                }));
-                seekSlider.addEventListener("input", (e => {
-                    audio.currentTime = e.target.value;
-                }));
-            }
-        };
-        let instance = document.querySelectorAll(".audio-player-container");
-        instance.forEach((element => {
-            audioPlayer(element);
-        }));
-        const videoPlayer = function(element) {
-            const playIconContainer = element.querySelector(".video-play-icon");
-            const seekSlider = element.querySelector(".video-seek-slider");
-            const video = element.querySelector("video");
-            const durationContainer = element.querySelector(".video-duration");
-            const currentTimeContainer = element.querySelector(".video-current-time");
-            let playState = "play";
-            let raf = null;
-            if (playIconContainer && seekSlider && video && durationContainer && currentTimeContainer) {
-                playIconContainer.addEventListener("click", (() => {
-                    if ("play" === playState) {
-                        video.play();
-                        playIconContainer.classList.add("active");
-                        requestAnimationFrame(whilePlaying);
-                        playState = "pause";
-                    } else {
-                        video.pause();
-                        playIconContainer.classList.remove("active");
-                        cancelAnimationFrame(raf);
-                        playState = "play";
-                    }
-                }));
-                const calculateTime = secs => {
-                    const minutes = Math.floor(secs / 60);
-                    const seconds = Math.floor(secs % 60);
-                    const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-                    return `${minutes}:${returnedSeconds}`;
-                };
-                const displayDuration = () => {
-                    durationContainer.textContent = calculateTime(video.duration);
-                };
-                const setSliderMax = () => {
-                    seekSlider.max = Math.floor(video.duration);
-                };
-                const whilePlaying = () => {
-                    seekSlider.value = Math.floor(video.currentTime);
-                    currentTimeContainer.textContent = calculateTime(seekSlider.value);
-                    raf = requestAnimationFrame(whilePlaying);
-                };
-                if (video.readyState > 0) {
-                    displayDuration();
-                    setSliderMax();
-                } else video.addEventListener("loadedmetadata", (() => {
-                    displayDuration();
-                    setSliderMax();
-                }));
-                seekSlider.addEventListener("input", (e => {
-                    video.currentTime = e.target.value;
-                }));
-            }
-        };
-        let videoplayer_instance = document.querySelectorAll(".video-player-container");
-        videoplayer_instance.forEach((element => {
-            videoPlayer(element);
-        }));
-        gsapWithCSS.registerPlugin(ScrollTrigger_ScrollTrigger);
-        gsapWithCSS.timeline({
-            scrollTrigger: {
-                trigger: ".video-background",
-                start: "top top",
-                end: "bottom+=320% bottom",
-                pin: true,
-                scrub: true
-            }
-        });
-        function scrollVideo() {
-            const video = document.querySelector(".video-background");
-            const videoLength = video.duration;
-            const scrollPosition = document.documentElement.scrollTop;
-            const nextSectionOffset = document.querySelector(".case")?.getBoundingClientRect()?.top;
-            const videoSectionOffset = document.querySelector(".video")?.getBoundingClientRect()?.top;
-            video.currentTime = scrollPosition / 2.1 / (nextSectionOffset - videoSectionOffset - window.screen.height) * videoLength;
+                    cancelAnimationFrame(raf);
+                    playState = "play";
+                    playIconContainer.classList.remove("active");
+                }
+            }));
+            nextIconContainer.addEventListener("click", (() => {
+                playNextTrack();
+            }));
+            previousIconContainer.addEventListener("click", (() => {
+                playPreviousTrack();
+            }));
+            const calculateTime = secs => {
+                const minutes = Math.floor(secs / 60);
+                const seconds = Math.floor(secs % 60);
+                const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+                return `${minutes}:${returnedSeconds}`;
+            };
+            const displayDuration = () => {
+                durationContainer.textContent = calculateTime(audio.duration);
+            };
+            const setSliderMax = () => {
+                seekSlider.max = Math.floor(audio.duration);
+            };
+            const whilePlaying = () => {
+                seekSlider.value = Math.floor(audio.currentTime);
+                currentTimeContainer.textContent = calculateTime(seekSlider.value);
+                seekSlider.style.setProperty("width", `${seekSlider.value / seekSlider.max * 100}%`);
+                raf = requestAnimationFrame(whilePlaying);
+            };
+            if (audio.readyState > 0) {
+                displayDuration();
+                setSliderMax();
+            } else audio.addEventListener("loadedmetadata", (() => {
+                displayDuration();
+                setSliderMax();
+            }));
         }
-        window.addEventListener("scroll", (function(e) {
-            scrollVideo();
-        }));
+        const videoplayer_playIconContainer = document.getElementById("video-play-icon");
+        const videoplayer_seekSlider = document.getElementById("video-seek-slider");
+        const video = document.getElementById("video");
+        const videoplayer_durationContainer = document.getElementById("video-duration");
+        const videoplayer_currentTimeContainer = document.getElementById("video-current-time");
+        let videoplayer_playState = "play";
+        let videoplayer_raf = null;
+        if (videoplayer_playIconContainer && videoplayer_seekSlider && video && videoplayer_durationContainer && videoplayer_currentTimeContainer) {
+            videoplayer_playIconContainer.addEventListener("click", (() => {
+                if ("play" === videoplayer_playState) {
+                    video.play();
+                    videoplayer_playIconContainer.classList.add("active");
+                    requestAnimationFrame(whilePlaying);
+                    videoplayer_playState = "pause";
+                } else {
+                    video.pause();
+                    videoplayer_playIconContainer.classList.remove("active");
+                    cancelAnimationFrame(videoplayer_raf);
+                    videoplayer_playState = "play";
+                }
+            }));
+            const calculateTime = secs => {
+                const minutes = Math.floor(secs / 60);
+                const seconds = Math.floor(secs % 60);
+                const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+                return `${minutes}:${returnedSeconds}`;
+            };
+            const displayDuration = () => {
+                videoplayer_durationContainer.textContent = calculateTime(video.duration);
+            };
+            const setSliderMax = () => {
+                videoplayer_seekSlider.max = Math.floor(video.duration);
+            };
+            const whilePlaying = () => {
+                videoplayer_seekSlider.value = Math.floor(video.currentTime);
+                videoplayer_currentTimeContainer.textContent = calculateTime(videoplayer_seekSlider.value);
+                videoplayer_seekSlider.style.setProperty("width", `${videoplayer_seekSlider.value / videoplayer_seekSlider.max * 100}%`);
+                videoplayer_raf = requestAnimationFrame(whilePlaying);
+            };
+            if (video.readyState > 0) {
+                displayDuration();
+                setSliderMax();
+            } else video.addEventListener("loadedmetadata", (() => {
+                displayDuration();
+                setSliderMax();
+            }));
+        }
         window["FLS"] = true;
         isWebp();
         menuInit();
