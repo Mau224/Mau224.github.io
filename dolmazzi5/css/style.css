@@ -1093,14 +1093,10 @@ h2 {
 }
 .blog-item-zip__img img {
   object-fit: contain;
-  height: 100% !important;
 }
 @media (max-width: 61.99875em) {
   .blog-item-zip__img {
     height: 16.875rem;
-  }
-  .blog-item-zip__img img {
-    width: auto !important;
   }
 }
 @media (max-width: 47.99875em) {
@@ -1918,7 +1914,7 @@ h2 {
 @media (max-width: 47.99875em) {
   .blog-item-circle__back .blog-item__text-scroll {
     max-height: 80%;
-    height: 77%;
+    height: 68%;
     padding-left: 0.625rem;
   }
 }
@@ -2199,7 +2195,7 @@ h2 {
 }
 @media (max-width: 47.99875em) {
   .blog-item-tri .blog-item__text-scroll {
-    height: 77%;
+    height: 68%;
   }
 }
 .blog-item-tri:hover .blog-item-tri__flip {
@@ -2292,7 +2288,7 @@ h2 {
 }
 @media (max-width: 47.99875em) {
   .blog-item-cof .blog-item__text-scroll {
-    height: 77%;
+    height: 68%;
   }
 }
 .blog-item-cof:hover .blog-item-cof__flip {
@@ -2555,12 +2551,12 @@ h2 {
 @media (max-width: 61.99875em) {
   .blog-item-zip-2 .blog-item-zip__wrap p {
     top: 23%;
-    right: 11%;
+    right: 10%;
   }
 }
 @media (max-width: 47.99875em) {
   .blog-item-zip-2 .blog-item-zip__wrap p {
-    top: 22%;
+    top: 24%;
   }
 }
 .blog-item-zip-2 .blog-item-zip__wrap .blog-item-zip__img {
@@ -2807,7 +2803,7 @@ h2 {
 }
 @media (max-width: 47.99875em) {
   .blog-item-3 .blog-item__text-scroll {
-    height: 77%;
+    height: 68%;
   }
 }
 .blog-item-3:hover .blog-item-3__flip {
@@ -6291,6 +6287,7 @@ h2 {
 }
 @media (max-width: 47.99875em) {
   .team__text-scroll {
+    height: 100%;
     font-size: 1.125rem;
   }
 }
