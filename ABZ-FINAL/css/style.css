@@ -2210,6 +2210,7 @@ p {
 }
 .header__other {
   padding-left: 3.75rem;
+  background-color: #fff;
 }
 @media (max-width: 47.99875em) {
   .header__other {
