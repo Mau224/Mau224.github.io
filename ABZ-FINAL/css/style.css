@@ -561,7 +561,7 @@ p {
   border-radius: 0.3125rem;
   padding-top: 4rem;
   background: url(../img/nav-img.jpg) no-repeat;
-  background-size: cover;
+  background-size: cover !important;
   min-height: 29rem;
   display: flex;
   flex-direction: column;
@@ -2211,6 +2211,9 @@ p {
 .header__other {
   padding-left: 3.75rem;
   background-color: #fff;
+}
+.header__other .header__slide {
+  background: none;
 }
 @media (max-width: 47.99875em) {
   .header__other {
@@ -6101,7 +6104,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   background: url(../img/header/bg-header.jpg) no-repeat;
-  background-size: cover;
+  background-size: cover !important;
   color: #fff;
   border-radius: 0.3125rem;
 }
