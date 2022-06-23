@@ -2213,7 +2213,7 @@ p {
   background-color: #fff;
 }
 .header__other .header__slide {
-  background: none;
+  background: transparent !important;
 }
 @media (max-width: 47.99875em) {
   .header__other {
