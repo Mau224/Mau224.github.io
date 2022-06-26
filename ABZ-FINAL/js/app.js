@@ -15724,7 +15724,6 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                loop: true,
                 effect: "fade",
                 fadeEffect: {
                     crossFade: true
@@ -16016,18 +16015,16 @@
             document.getElementById("footer-beton").classList.add("active");
             this.classList.remove("active");
         };
-        const chart = document.querySelector(".arrow__chart"), start = Date.now();
-        let timer = setInterval((() => {
-            let timePassed = Date.now() - start;
-            if (timePassed >= 5e3) {
-                clearInterval(timer);
-                return;
-            } else chart.style.setProperty("--p", `0`);
-            circle(timePassed);
-        }), 50);
-        function circle(timePassed) {
-            chart.style.setProperty("--p", `${timePassed / 50}`);
-        }
+        document.getElementById("test3").onclick = function() {
+            document.getElementById("footer-beton2").classList.remove("active");
+            document.getElementById("footer-asfalt2").classList.add("active");
+            this.classList.remove("active");
+        };
+        document.getElementById("test4").onclick = function() {
+            document.getElementById("footer-asfalt2").classList.remove("active");
+            document.getElementById("footer-beton2").classList.add("active");
+            this.classList.remove("active");
+        };
         var react = __webpack_require__(294);
         var client = __webpack_require__(745);
         var _slicedToArray = function() {
@@ -16385,10 +16382,6 @@
                 setTotalPrice(price);
             }), [ counts ]);
             return react.createElement("div", {
-                className: "calc"
-            }, react.createElement("div", {
-                className: "calc__container"
-            }, react.createElement("h2", null, "Калькулятор стоимости"), react.createElement("div", {
                 className: "calc__wrap"
             }, react.createElement("div", {
                 className: "calc__menu"
@@ -16444,9 +16437,9 @@
                     resetCounts(category.values);
                 }
             }, "Сбросить расчет"))), react.createElement("div", {
-                "data-da": ".calc__price,768",
                 className: "calc__bottom"
             }, react.createElement("a", {
+                "data-da": ".calc__price,768",
                 href: "#popup"
             }, "Отправить результат на Email"), react.createElement("div", {
                 className: "calc__price"
@@ -16458,13 +16451,8 @@
                 className: "calc__btn"
             }, react.createElement("button", {
                 type: "btn"
-            }, "Сделать заказ"))))))));
+            }, "Сделать заказ"))))));
         };
-        var container = document.getElementById("calculator");
-        if (container) {
-            var root = (0, client.s)(container);
-            root.render(react.createElement(Calculator, null));
-        }
         var cities = [ {
             distance: 0,
             name: "---"
@@ -20887,7 +20875,8 @@
             parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
             return parts.join(".");
         };
-        var FoundationCalculator = function FoundationCalculator() {
+        var FoundationCalculator = function FoundationCalculator(_ref) {
+            var setCategoryTitle = _ref.setCategoryTitle;
             var _useState = (0, react.useState)(0), _useState2 = foundationCalculator_slicedToArray(_useState, 2), totalPrice = _useState2[0], setTotalPrice = _useState2[1];
             var _useState3 = (0, react.useState)(categories[0]), _useState4 = foundationCalculator_slicedToArray(_useState3, 2), currentCategory = _useState4[0], setCurrentCategory = _useState4[1];
             var _useState5 = (0, react.useState)(concrete[0]), _useState6 = foundationCalculator_slicedToArray(_useState5, 2), concreteType = _useState6[0], setConcreteType = _useState6[1];
@@ -20907,24 +20896,25 @@
                 setTotalPrice(0);
             };
             var changeCategory = function changeCategory(id) {
-                var nextCategory = categories.find((function(_ref) {
-                    var categoryId = _ref.categoryId;
+                var nextCategory = categories.find((function(_ref2) {
+                    var categoryId = _ref2.categoryId;
                     return categoryId === id;
                 }));
                 setCurrentCategory(nextCategory);
+                setCategoryTitle(nextCategory.title);
                 resetForm();
             };
             var changeConcrete = function changeConcrete(e) {
                 var selected = e.target.value;
-                setConcreteType(concrete.find((function(_ref2) {
-                    var id = _ref2.id;
+                setConcreteType(concrete.find((function(_ref3) {
+                    var id = _ref3.id;
                     return id === Number(selected);
                 })));
             };
             var changeCity = function changeCity(e) {
                 var selected = e.target.value;
-                setCity(cities.find((function(_ref3) {
-                    var name = _ref3.name;
+                setCity(cities.find((function(_ref4) {
+                    var name = _ref4.name;
                     return name === selected;
                 })));
             };
@@ -20950,15 +20940,11 @@
                 }
             }), [ firstInput, secondInput, thirdInput, concreteType, city, currentCategory ]);
             return react.createElement("div", {
-                className: "calc"
-            }, react.createElement("div", {
-                className: "calc__container"
-            }, react.createElement("h2", null, "Калькулятор стоимости " + currentCategory.title), react.createElement("div", {
                 className: "calc__wrap"
             }, react.createElement("div", {
                 className: "calc__menu"
-            }, categories.map((function(_ref4) {
-                var categoryName = _ref4.categoryName, categoryId = _ref4.categoryId;
+            }, categories.map((function(_ref5) {
+                var categoryName = _ref5.categoryName, categoryId = _ref5.categoryId;
                 return react.createElement("div", {
                     key: categoryId,
                     className: "calc__menu-item",
@@ -21002,8 +20988,8 @@
                 onChange: changeConcrete,
                 value: concreteType.id,
                 className: "form"
-            }, concrete.map((function(_ref5) {
-                var name = _ref5.name, id = _ref5.id;
+            }, concrete.map((function(_ref6) {
+                var name = _ref6.name, id = _ref6.id;
                 return react.createElement("option", {
                     key: id,
                     value: id
@@ -21026,8 +21012,8 @@
                 onChange: changeCity,
                 value: city.name,
                 className: "form"
-            }, cities.map((function(_ref6) {
-                var distance = _ref6.distance, name = _ref6.name;
+            }, cities.map((function(_ref7) {
+                var distance = _ref7.distance, name = _ref7.name;
                 return react.createElement("option", {
                     key: "" + name + distance,
                     value: name
@@ -21057,12 +21043,72 @@
                 className: "calc__btn"
             }, react.createElement("button", {
                 type: "btn"
-            }, "Сделать заказ"))))))));
+            }, "Сделать заказ"))))));
         };
-        var foundationCalculator_container = document.getElementById("foundation-calculator");
-        if (foundationCalculator_container) {
-            var foundationCalculator_root = (0, client.s)(foundationCalculator_container);
-            foundationCalculator_root.render(react.createElement(FoundationCalculator, null));
+        var min_slicedToArray = function() {
+            function sliceIterator(arr, i) {
+                var _arr = [];
+                var _n = true;
+                var _d = false;
+                var _e = void 0;
+                try {
+                    for (var _s, _i = arr[Symbol.iterator](); !(_n = (_s = _i.next()).done); _n = true) {
+                        _arr.push(_s.value);
+                        if (i && _arr.length === i) break;
+                    }
+                } catch (err) {
+                    _d = true;
+                    _e = err;
+                } finally {
+                    try {
+                        if (!_n && _i["return"]) _i["return"]();
+                    } finally {
+                        if (_d) throw _e;
+                    }
+                }
+                return _arr;
+            }
+            return function(arr, i) {
+                if (Array.isArray(arr)) return arr; else if (Symbol.iterator in Object(arr)) return sliceIterator(arr, i); else throw new TypeError("Invalid attempt to destructure non-iterable instance");
+            };
+        }();
+        var Wrapper = function Wrapper() {
+            var _useState = (0, react.useState)(0), _useState2 = min_slicedToArray(_useState, 2), activeTab = _useState2[0], setActiveTab = _useState2[1];
+            var _useState3 = (0, react.useState)(""), _useState4 = min_slicedToArray(_useState3, 2), categoryTitle = _useState4[0], setCategoryTitle = _useState4[1];
+            var tabs = [ {
+                title: "Асфальт",
+                block: Calculator
+            }, {
+                title: "Бетон",
+                block: FoundationCalculator
+            } ];
+            var changeTab = function changeTab(index) {
+                setActiveTab(index);
+                setCategoryTitle("");
+            };
+            var ActiveBlock = tabs[activeTab].block;
+            return react.createElement("div", {
+                className: "calc"
+            }, react.createElement("div", {
+                className: "calc__container"
+            }, react.createElement("h2", null, "Калькулятор стоимости " + categoryTitle), react.createElement("div", {
+                className: "calc__tabs"
+            }, tabs.map((function(tab, index) {
+                return react.createElement("div", {
+                    key: tab.title,
+                    onClick: function onClick() {
+                        return changeTab(index);
+                    },
+                    className: "calc__item " + (activeTab === index ? "active" : "")
+                }, tab.title);
+            }))), react.createElement(ActiveBlock, {
+                setCategoryTitle
+            })));
+        };
+        var container = document.getElementById("calculator");
+        if (container) {
+            var root = (0, client.s)(container);
+            root.render(react.createElement(Wrapper, null));
         }
         window["FLS"] = true;
         isWebp();
