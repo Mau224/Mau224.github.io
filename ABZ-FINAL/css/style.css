@@ -5797,6 +5797,7 @@ p {
   .auto__body-nav-slide-controls {
     right: 0;
     width: 100%;
+    bottom: 1.875rem;
     justify-content: center;
   }
 }
@@ -5820,7 +5821,7 @@ p {
 @media (max-width: 47.99875em) {
   .garant__slider .garant-swiper-pagination {
     display: flex;
-    margin-top: 4.375rem;
+    margin-top: 2.5rem;
     justify-content: center;
   }
 }
@@ -6078,6 +6079,7 @@ p {
 @media (max-width: 47.99875em) {
   .text__container {
     padding: 0 1rem;
+    margin-top: 3rem;
   }
 }
 .text__body {
