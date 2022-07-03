@@ -15822,6 +15822,10 @@
                         autoHeight: false
                     },
                     768: {
+                        slidesPerView: 1,
+                        spaceBetween: 0
+                    },
+                    991: {
                         slidesPerView: 3,
                         spaceBetween: 0,
                         allowTouchMove: false
